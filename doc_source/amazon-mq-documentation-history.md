@@ -1,0 +1,30 @@
+# Amazon MQ Document History<a name="amazon-mq-documentation-history"></a>
+
+The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazon MQ feature releases and improvements, see [Amazon MQ Release Notes](amazon-mq-release-notes.md)\.
+
+
+| Date | Documentation Update | 
+| --- | --- | 
+| February 26, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 22, 2018 | Clarified and corrected the information in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 21, 2018 | Corrected the Java code in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
+| February 20, 2018 | Clarified and corrected the information in the [Amazon MQ Security](amazon-mq-security.md) and [Best Practices for Amazon MQ](amazon-mq-best-practices.md) sections\.  | 
+| February 19, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 16, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 14, 2018 | Updated the following sections:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
+| February 13, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 2, 2018 | Created the [New and Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
+| January 25, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| January 24, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| January 19, 2018 | Updated the information in the [Apache ActiveMQ Resources](amazon-mq-related-resources.md#activemq-resources) section\. | 
+| January 18, 2018 | Clarified and corrected the information in the [Limits in Amazon MQ](amazon-mq-limits.md) section\. | 
+| January 17, 2018 | Reinstated the recommendation to prefer virtual destinations over durable subscriptions, with an improved explanation\. | 
+| January 11, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| January 3, 2018 | Added DescribeConfigurationRevision to the [API Authentication and Authorization for Amazon MQ](amazon-mq-security.md#amazon-mq-api-authentication-authorization) section\. | 
+| December 15, 2017 | Removed the recommendation against durable subscriptions from the [Best Practices for Amazon MQ](amazon-mq-best-practices.md) section\. | 
+| December 8, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| December 7, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| December 5, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| December 4, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| December 1, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

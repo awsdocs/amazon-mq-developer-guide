@@ -1,0 +1,35 @@
+# Tutorial: Listing Amazon MQ Brokers and Viewing Broker Details<a name="amazon-mq-listing-brokers"></a>
+
+When you request that Amazon MQ create a broker, the creation process can take about 10 minutes\.
+
+The following example shows how you can confirm your broker's existence by listing your brokers in the current region using the AWS Management Console\.
+
+## To list brokers and view broker details<a name="listing-all-brokers-console"></a>
+
+1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
+
+   Your brokers in the current region are listed\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-brokers.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+
+   The following information is displayed for each broker:
+
+   + **Name**
+
+   + **Creation** date
+
+   + **Status**
+
+   + **Deployment mode**
+
+   + **Instance type**
+
+1. Choose your broker's name \(for example, **MyBroker**\)\.
+
+   On the ***MyBroker*** page, the configured **Details** are displayed for your broker:  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-show-broker-details.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+
+   Below the **Details** section, the following information is displayed:
+
+   + In the **Connections** section, the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) URL and the [wire\-level protocol endpoints](http://activemq.apache.org/configuring-transports.html)
+
+   + In the **Users** section, the users associated with the broker
