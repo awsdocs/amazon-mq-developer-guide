@@ -25,7 +25,7 @@ The following examples show how you can edit Amazon MQ broker configurations and
 1. From the broker list, select your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
 1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and choose **View**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-view.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-view.png)
 **Note**  
 Unless you select a configuration when you create a broker, the first configuration revision is always created for you when Amazon MQ creates the broker\.
 
@@ -48,7 +48,7 @@ Unless you select a configuration when you create a broker, the first configurat
 1. On the ***MyBroker*** page, choose **Edit**\.
 
 1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and choose **View**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-view.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-view.png)
 **Note**  
 Unless you select a configuration when you create a broker, the first configuration revision is always created for you when Amazon MQ creates the broker\.
 
@@ -57,7 +57,7 @@ Unless you select a configuration when you create a broker, the first configurat
 1. On the **Configuration details** tab, the configuration revision number, description, and broker configuration in XML format are displayed\.
 **Note**  
 Editing the current configuration creates a new configuration revision\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-edit-configuration.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-edit-configuration.png)
 
 1. Choose **Edit configuration** and make changes to the XML configuration\.
 
@@ -82,7 +82,7 @@ Currently, it isn't possible to delete a configuration\.
 1. From the broker list, select your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
 1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and then choose **Schedule Modifications**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-schedule-modifications.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-schedule-modifications.png)
 
 1. In the **Schedule broker modifications** section, choose whether to apply modifications **During the next scheduled maintenance window** or **Immediately**\.
 **Important**  
@@ -99,7 +99,7 @@ Your broker will be offline while it is being rebooted\.
 1. From the broker list, choose the name of your broker \(for example, **MyBroker**\)\.
 
 1. On the ***MyBroker*** page, choose **Actions**, **Roll back to last configuration**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-roll-back.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-roll-back.png)
 
 1. \(Optional\) To review the **Current configuration** or the **Last configuration**, on the **Roll back to the last configuration** page, in the **Summary** section, choose **View** for either configuration\.
 

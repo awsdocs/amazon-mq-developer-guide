@@ -13,7 +13,7 @@ The following example shows how you can reboot an Amazon MQ broker using the AWS
 1. On the ***MyBroker*** page, choose **Actions**, **Reboot broker**\.
 **Important**  
 Your broker will be offline while it is being rebooted\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-reboot-broker.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-reboot-broker.png)
 
 1. In the **Reboot broker** dialog box, choose **Reboot**\.
 

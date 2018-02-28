@@ -8,7 +8,7 @@ This scenario requires you to point your producer to your Amazon MQ broker's end
 
 | On\-Premises Message Broker | Migration to Amazon MQ with FIFO \(Ordered\) Queues | 
 | --- | --- | 
-|  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-on-premises-single-producer.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)  |  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-ordered-queues-service-interruption.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)  | 
+|  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-on-premises-single-producer.png)  |  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-ordered-queues-service-interruption.png)  | 
 
 ## To migrate to Amazon MQ with service interruption<a name="migrate-with-service-interruption"></a>
 

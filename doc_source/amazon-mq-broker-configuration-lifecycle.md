@@ -7,7 +7,7 @@ The following diagram illustrates the configuration lifecycle\.
 **Important**  
 The next scheduled maintenance window triggers a reboot\. If the broker is rebooted before the next scheduled maintenance window, the changes are applied after the reboot\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-lifecycle.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-lifecycle.png)
 
 For information about creating, editing, and managing configurations, see the following:
 

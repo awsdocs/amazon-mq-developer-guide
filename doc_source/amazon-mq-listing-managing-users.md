@@ -18,7 +18,7 @@ The following examples show how you can create, edit, and delete Amazon MQ broke
 1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
    On the ***MyBroker*** page, in the **Users** section, all the users for this broker are listed\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)
 
 1. Choose **Create user**\.
 
@@ -39,7 +39,7 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
    On the ***MyBroker*** page, in the **Users** section, all the users for this broker are listed\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)
 
 1. Select a username and choose **Edit**\.
 
@@ -62,7 +62,7 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
    On the ***MyBroker*** page, in the **Users** section, all the users for this broker are listed\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)
 
 1. Select a username \(for example, ***MyUser***\) and then choose **Delete**\.
 

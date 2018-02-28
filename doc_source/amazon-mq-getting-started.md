@@ -42,7 +42,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
    Creating the broker takes about 10 minutes\.
 
    When your broker is created successfully, Amazon MQ displays the **Running** status\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-getting-started-create-broker-running.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-getting-started-create-broker-running.png)
 
 1. Choose ***MyBroker***\.
 

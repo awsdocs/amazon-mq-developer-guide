@@ -15,7 +15,7 @@ A *single\-instance broker* is comprised of one *broker* in one Availability Zon
 
 The following diagram illustrates a single\-instance broker\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-single-broker-deployment.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-single-broker-deployment.png)
 
 ## Active/Standby Broker for High Availability<a name="active-standby-broker-deployment"></a>
 
@@ -27,4 +27,4 @@ For an active/standby broker for high availability, Amazon MQ provides two Activ
 
 The following diagram illustrates an active/standby broker for high availability\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-active-standby-deployment.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-active-standby-deployment.png)

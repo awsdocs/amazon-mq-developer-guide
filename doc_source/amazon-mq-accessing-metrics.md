@@ -22,14 +22,14 @@ The following example shows you how to access CloudWatch metrics for Amazon MQ u
 **Note**  
 If you're already signed into the Amazon MQ console, on the broker **Details** page, choose **Actions**, **View CloudWatch metrics**\.  
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-view-cloudwatch-metrics.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-view-cloudwatch-metrics.png)
 
 1. Sign in to the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/)\.
 
 1. On the navigation panel, choose **Metrics**\.
 
 1. Select the **AmazonMQ** metric namespace\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-namespace.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-namespace.png)
 
 1. Select one of the following metric dimensions:
 
@@ -40,7 +40,7 @@ If you're already signed into the Amazon MQ console, on the broker **Details** p
    + **Topic Metrics by Broker**
 
    In this example, **Broker Metrics** is selected\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-dimension.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-dimension.png)
 
 1. You can now examine your Amazon MQ metrics:
 
@@ -49,7 +49,7 @@ If you're already signed into the Amazon MQ console, on the broker **Details** p
    + To graph the metric, select the check box next to the metric\.
 
    + To filter by metric, choose the metric name and then choose **Add to search**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-examine.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-examine.png)
 
 ## AWS Command Line Interface<a name="amazon-mq-accessing-metrics-aws-cli"></a>
 

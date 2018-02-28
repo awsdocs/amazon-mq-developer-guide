@@ -9,7 +9,7 @@ The following example shows how you can confirm your broker's existence by listi
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
    Your brokers in the current region are listed\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-brokers.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-brokers.png)
 
    The following information is displayed for each broker:
 
@@ -26,7 +26,7 @@ The following example shows how you can confirm your broker's existence by listi
 1. Choose your broker's name \(for example, **MyBroker**\)\.
 
    On the ***MyBroker*** page, the configured **Details** are displayed for your broker:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-show-broker-details.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-show-broker-details.png)
 
    Below the **Details** section, the following information is displayed:
 

@@ -8,7 +8,7 @@ This scenario might cause messages to be delivered out of order\. If you're conc
 
 | On\-Premises Message Broker | Migration to Amazon MQ with Standard \(Unordered\) Queues | 
 | --- | --- | 
-|  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-on-premises-multiple-producers.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)  |  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-unordered-queues-no-interruption.png)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)  | 
+|  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-on-premises-multiple-producers.png)  |  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-migration-unordered-queues-no-interruption.png)  | 
 
 ## To migrate to Amazon MQ without service interruption<a name="migrate-without-service-interruption"></a>
 
