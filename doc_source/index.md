@@ -44,4 +44,3 @@ Amazon's trademarks and trade dress may not be used in
 + [Related Resources](amazon-mq-related-resources.md)
 + [Amazon MQ Release Notes](amazon-mq-release-notes.md)
    + [Amazon MQ Document History](amazon-mq-documentation-history.md)
-+ [AWS Glossary](glos-chap.md)
