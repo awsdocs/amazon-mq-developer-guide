@@ -10,12 +10,6 @@ A *configuration* contains all of the settings for your ActiveMQ broker, in XML 
 
 + [Configurations](amazon-mq-limits.md#configuration-limits)
 
-
-+ [Working with Spring XML Configuration Files](#working-with-spring-xml-configuration-files)
-+ [Permitted Elements](#permitted-elements)
-+ [Permitted Attributes](#permitted-attributes)
-+ [Permitted Collections](#permitted-collections)
-
 ## Working with Spring XML Configuration Files<a name="working-with-spring-xml-configuration-files"></a>
 
 ActiveMQ brokers are configured using [Spring XML](https://docs.spring.io/spring/docs/current/spring-framework-reference/) files\. You can configure many aspects of your ActiveMQ broker, such as predefined destinations, destination policies, authorization policies, and plugins\. Amazon MQ controls some of these configuration elements, such as network transports and storage\. Other configuration options, such as creating networks of brokers, aren't currently supported\.
@@ -25,81 +19,8 @@ The full set of supported configuration options is specified in the [Amazon MQ X
 **Note**  
 You can use only static values for attributes\. Amazon MQ sanitizes elements and attributes that contain Spring expressions, variables, and element references from your configuration\.
 
-The following is a detailed listing of the elements permitted in Amazon MQ configurations\. For more information, see [XML Configuration](http://activemq.apache.org/xml-configuration.html) in the Apache ActiveMQ documentation\.
 
-## Permitted Elements<a name="permitted-elements"></a>
-
-If you see an expand arrow \(**↗**\) in the upper\-right corner of the table, you can open the table in a new window\. To close the window, choose the close button \(**X**\) in the lower\-right corner\.
-
-
-| Element | 
-| --- | 
-| abortSlowAckConsumerStrategy | 
-| abortSlowConsumerStrategy | 
-| authorizationEntry | 
-| authorizationMap | 
-| authorizationPlugin | 
-| broker | 
-| cachedMessageGroupMapFactory | 
-| compositeQueue | 
-| compositeTopic | 
-| constantPendingMessageLimitStrategy | 
-| discarding | 
-| discardingDLQBrokerPlugin | 
-| fileCursor | 
-| fileDurableSubscriberCursor | 
-| fileQueueCursor | 
-| filteredDestination | 
-| fixedCountSubscriptionRecoveryPolicy | 
-| fixedSizedSubscriptionRecoveryPolicy | 
-| forcePersistencyModeBrokerPlugin | 
-| individualDeadLetterStrategy | 
-| lastImageSubscriptionRecoveryPolicy | 
-| messageGroupHashBucketFactory | 
-| mirroredQueue | 
-| noSubscriptionRecoveryPolicy | 
-| oldestMessageEvictionStrategy | 
-| oldestMessageWithLowestPriorityEvictionStrategy | 
-| policyEntry | 
-| policyMap | 
-| prefetchRatePendingMessageLimitStrategy | 
-| priorityDispatchPolicy | 
-| priorityNetworkDispatchPolicy | 
-| queryBasedSubscriptionRecoveryPolicy | 
-| queue | 
-| redeliveryPlugin | 
-| redeliveryPolicy | 
-| redeliveryPolicyMap | 
-| retainedMessageSubscriptionRecoveryPolicy | 
-| roundRobinDispatchPolicy | 
-| sharedDeadLetterStrategy | 
-| simpleDispatchPolicy | 
-| simpleMessageGroupMapFactory | 
-| statisticsBrokerPlugin | 
-| storeCursor | 
-| storeDurableSubscriberCursor | 
-| strictOrderDispatchPolicy | 
-| tempDestinationAuthorizationEntry | 
-| tempQueue | 
-| tempTopic | 
-| timedSubscriptionRecoveryPolicy | 
-| timeStampingBrokerPlugin | 
-| topic | 
-| uniquePropertyMessageEvictionStrategy | 
-| virtualDestinationInterceptor | 
-| virtualTopic | 
-| vmCursor | 
-| vmDurableCursor | 
-| vmQueueCursor | 
-
-## Permitted Attributes<a name="permitted-attributes"></a>
-
-If you see an expand arrow \(**↗**\) in the upper\-right corner of the table, you can open the table in a new window\. To close the window, choose the close button \(**X**\) in the lower\-right corner\.
-
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-
-## Permitted Collections<a name="permitted-collections"></a>
-
-If you see an expand arrow \(**↗**\) in the upper\-right corner of the table, you can open the table in a new window\. To close the window, choose the close button \(**X**\) in the lower\-right corner\.
-
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
++ [Working with Spring XML Configuration Files](#working-with-spring-xml-configuration-files)
++ [Permitted Elements](permitted-elements.md)
++ [Permitted Attributes](permitted-attributes.md)
++ [Permitted Collections](permitted-collections.md)

@@ -12,3 +12,4 @@ To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http
 + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
 + [Working Java Example](amazon-mq-working-java-example.md)
++ [Working with Queues](amazon-mq-working-with-queues.md)

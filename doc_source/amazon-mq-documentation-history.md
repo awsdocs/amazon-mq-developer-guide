@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| March 1, 2018 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | February 28, 2018 | Corrected image display in GitHub\. | 
 | February 27, 2018 | In addition to HTML, PDF, and Kindle, the Amazon MQ Developer Guide is available on GitHub\. To leave feedback, choose the GitHub icon in the upper right\-hand corner\.![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/submit-github-feedback.png)  | 
 | February 26, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

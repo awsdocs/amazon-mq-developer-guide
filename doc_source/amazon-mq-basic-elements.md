@@ -22,7 +22,7 @@ For information about creating and managing brokers, see the following:
 
 + [Statuses](#broker-statuses)
 
-### Attributes<a name="broker-attributes"></a>
+### \(attributes\)<a name="broker-attributes"></a>
 
 A broker has several attributes, for example:
 
@@ -111,7 +111,7 @@ For information about creating, editing, and managing configurations, see the fo
 
 To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md) and [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)\.
 
-### Attributes<a name="configuration-attributes"></a>
+### \(attributes\)<a name="configuration-attributes"></a>
 
 A broker configuration has several attributes, for example:
 
@@ -161,7 +161,7 @@ For information about creating, editing, and deleting ActiveMQ users, see the fo
 
 + [Users](amazon-mq-limits.md#activemq-user-limits)
 
-### Attributes<a name="user-attributes"></a>
+### \(attributes\)<a name="user-attributes"></a>
 
 For a full list of user attributes, see the following in the *Amazon MQ REST API Reference*:
 
