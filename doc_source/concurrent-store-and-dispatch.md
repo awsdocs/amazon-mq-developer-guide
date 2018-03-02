@@ -4,7 +4,7 @@ By default, producers **\(1\)** send messages to the Amazon MQ thread pool **\(2
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-concurrent-store-and-dispatch-queues-flag-enabled.png)
 
-By setting the `concurrentStoreAndDispatchQueues` attribute to `false`, you allow messages **\(1\)** to be directed to **\(2\)** and retrieved from **\(3\)** storage, for example:
+By setting the `concurrentStoreAndDispatchQueues` attribute to `false`, you allow messages **\(1\)** to be directed to **\(2\)** and retrieved from **\(3\)** storage\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-concurrent-store-and-dispatch-queues-flag-disabled.png)
 
