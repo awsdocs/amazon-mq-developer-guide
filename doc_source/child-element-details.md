@@ -19,4 +19,4 @@ The following is a detailed explanation of child element attributes\. For more i
 </broker>
 ```
 
-For more information, see [Concurrent Store and Dispatch](amazon-mq-working-with-queues.md#concurrent-store-and-dispatch)\.
+For more information, see [Concurrent Store and Dispatch](concurrent-store-and-dispatch.md)\.
