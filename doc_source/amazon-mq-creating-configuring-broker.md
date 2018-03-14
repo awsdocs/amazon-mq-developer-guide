@@ -36,7 +36,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 **Important**  
 **Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker for high availability requires two subnets\.
 **Security group\(s\)** – Both single\-instance brokers and active/standby brokers for high availability require at least one security group \(for example, the default security group\)\.
-**VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic subnets and security groups aren't supported\.
+**VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\.
 **Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility)\.
 
 1. Expand the **Advanced settings** section\.
