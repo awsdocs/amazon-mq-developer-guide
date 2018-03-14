@@ -36,7 +36,7 @@ Amazon MQ is a managed message broker service that provides compatibility with m
 
 + To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
-+ To learn about Amazon MQ AWS CLI commands, see [Amazon MQ in the *AWS Command Line Interface Reference*](http://docs.aws.amazon.com/cli/latest/reference/mq/index.html)\.
++ To learn about Amazon MQ AWS CLI commands, see [Amazon MQ in the *AWS CLI Command Reference*](http://docs.aws.amazon.com/cli/latest/reference/mq/index.html)\.
 
 ## We Want to Hear from You<a name="amazon-mq-we-want-to-hear-from-you"></a>
 

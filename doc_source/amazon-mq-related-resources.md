@@ -8,7 +8,7 @@ The following table lists useful resources for working with Amazon MQ\.
 | Resource | Description | 
 | --- | --- | 
 | [Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)  | Descriptions of REST resources, example requests, HTTP methods, schemas, parameters, and the errors that the service returns\.  | 
-| [Amazon MQ in the *AWS Command Line Interface Reference*](http://docs.aws.amazon.com/cli/latest/reference/mq/index.html) | Descriptions of the AWS CLI commands that you can use to work with message brokers\. | 
+| [Amazon MQ in the *AWS CLI Command Reference*](http://docs.aws.amazon.com/cli/latest/reference/mq/index.html) | Descriptions of the AWS CLI commands that you can use to work with message brokers\. | 
 | [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#amazon-mq_region) | Information about Amazon MQ regions and endpoints | 
 | [Product Page](https://aws.amazon.com/amazon-mq/) | The primary web page for information about Amazon MQ\. | 
 | [Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=279) | A community\-based forum for developers to discuss technical questions related to Amazon MQ\. | 

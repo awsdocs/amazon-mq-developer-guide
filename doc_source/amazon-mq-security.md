@@ -1,6 +1,6 @@
 # Amazon MQ Security<a name="amazon-mq-security"></a>
 
-This section provides information about Amazon MQ and ActiveMQ authentication and authorization\. For information about security best practices, see [Using Amazon MQ Securely](amazon-mq-best-practices.md#using-amazon-mq-securely)\.
+This section provides information about Amazon MQ and ActiveMQ authentication and authorization\. For information about security best practices, see [Using Amazon MQ Securely](using-amazon-mq-securely.md)\.
 
 
 + [API Authentication and Authorization for Amazon MQ](#amazon-mq-api-authentication-authorization)
@@ -29,7 +29,7 @@ To create a broker, you must either use the `AmazonMQFullAccess` IAM policy or i
 `ec2:DescribeSecurityGroups`
 `ec2:DescribeSubnets`
 `ec2:DescribeVpcs`
-For more information, see [Step 2: Create an IAM User and Get Your AWS Credentials](amazon-mq-setting-up.md#create-iam-user) and [Never Modify or Delete the Amazon MQ Elastic Network Interface](amazon-mq-best-practices.md#never-modify-delete-elastic-network-interface)\.
+For more information, see [Step 2: Create an IAM User and Get Your AWS Credentials](amazon-mq-setting-up.md#create-iam-user) and [Never Modify or Delete the Amazon MQ Elastic Network Interface](communicating-with-amazon-mq.md#never-modify-delete-elastic-network-interface)\.
 
 The following table lists Amazon MQ REST APIs and the corresponding IAM permissions\.
 
@@ -74,7 +74,7 @@ You can access your brokers using the following protocols with TLS enabled:
 
 Amazon MQ uses native ActiveMQ authentication\. For information about restrictions related to ActiveMQ usernames and passwords, see [Users](amazon-mq-limits.md#activemq-user-limits)\.
 
-To authorize ActiveMQ users and groups to works with queues and topics, you must edit your broker's configuration\. For information about configuring Amazon MQ, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
+To authorize ActiveMQ users and groups to works with queues and topics, you must [edit your broker's configuration](amazon-mq-editing-managing-configurations.md)\. For information about configuring Amazon MQ, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
 
 **Note**  
 Currently, Amazon MQ doesn't support Client Certificate Authentication or plugins for Java Authentication and Authorization Service \(JAAS\)\.

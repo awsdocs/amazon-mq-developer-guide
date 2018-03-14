@@ -62,4 +62,4 @@ You can also create and manage brokers programmatically using Amazon MQ [REST AP
 
 ## Next Steps<a name="next-steps-setting-up"></a>
 
-Now that you're prepared to work with Amazon MQ, get started by creating a broker and then connecting a Java application to your broker\.
+Now that you're prepared to work with Amazon MQ, get started by [creating a broker](amazon-mq-getting-started.md) and then [connecting a Java application](amazon-mq-connecting-application.md) to your broker\.

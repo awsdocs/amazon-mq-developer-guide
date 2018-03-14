@@ -1,6 +1,6 @@
 # Amazon MQ Broker Configuration Lifecycle<a name="amazon-mq-broker-configuration-lifecycle"></a>
 
-Making changes to a configuration revision or an ActiveMQ user does *not* apply the changes immediately\. To apply your changes, you must wait for the next maintenance window or reboot the broker\. For more information, see [Amazon MQ Broker Configuration Lifecycle](#amazon-mq-broker-configuration-lifecycle)\.
+Making changes to a configuration revision or an ActiveMQ user does *not* apply the changes immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](#amazon-mq-broker-configuration-lifecycle)\.
 
 The following diagram illustrates the configuration lifecycle\.
 

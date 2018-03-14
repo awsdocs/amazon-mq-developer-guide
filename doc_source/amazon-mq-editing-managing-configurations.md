@@ -72,7 +72,7 @@ Editing the current configuration creates a new configuration revision\.
    The new revision of the configuration is saved\.
 **Important**  
 The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.  
-Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must wait for the next maintenance window or reboot the broker\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
+Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, it isn't possible to delete a configuration\.
 
 ## To apply a configuration revision to your broker<a name="apply-configuration-revision-editing-console"></a>

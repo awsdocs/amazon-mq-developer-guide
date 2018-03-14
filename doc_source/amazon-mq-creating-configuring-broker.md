@@ -33,6 +33,12 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 
 ## Step 2: \(Optional\) Configure advanced broker settings<a name="configure-advanced-broker-settings-console"></a>
 
+**Important**  
+**Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker for high availability requires two subnets\.
+**Security group\(s\)** – Both single\-instance brokers and active/standby brokers for high availability require at least one security group \(for example, the default security group\)\.
+**VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic subnets and security groups aren't supported\.
+**Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility)\.
+
 1. Expand the **Advanced settings** section\.
 
 1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](amazon-mq-basic-elements.md#configuration) and [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
@@ -42,16 +48,10 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
    1. Select the default **Virtual Private Cloud \(VPC\)** or create a new one on the Amazon VPC console\. For more information, see [What is Amazon VPC?](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html) in the *Amazon VPC User Guide*\.
 
    1. Select the default **Subnets** or create new ones on the Amazon VPC console\. For more information, see [VPCs and Subnets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.
-**Note**  
-A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker for high availability requires two subnets\.
 
    1. Select your **Security group\(s\)**\.
-**Note**  
-Both single\-instance brokers and active/standby brokers for high availability require at least one security group \(for example, the default security group\)\.
 
    1. Choose the **Public accessibility** of your broker\.
-**Note**  
-Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Always Create Brokers inside a Virtual Private Cloud \(VPC\)](amazon-mq-best-practices.md#always-create-brokers-in-vpc)\.
 
 1. In the **Maintenance section**, configure your broker's maintenance schedule:
 
@@ -69,7 +69,7 @@ Disabling public accessibility makes the broker accessible only within your VPC\
 
    While Amazon MQ creates your broker, it displays the **Creation in progress** status\. 
 
-   Creating the broker takes about 10 minutes\.
+   Creating the broker takes about 15 minutes\.
 
    When your broker is created successfully, Amazon MQ displays the **Running** status\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-getting-started-create-broker-running.png)

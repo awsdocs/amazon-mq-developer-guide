@@ -17,7 +17,7 @@ The following table lists limits related to Amazon MQ [brokers]()\.
 | Limit | Description | 
 | --- | --- | 
 | Broker name |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
-| Brokers per broker instance type, per AWS account, per region | 20 | 
+| Brokers per [broker instance type](amazon-mq-basic-elements.md#broker-instance-types), per AWS account, per region | 20 | 
 | Broker configuration history depth | 10 | 
 | Security groups per broker | 5 | 
 | Destinations \(queues and topics\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
@@ -35,7 +35,7 @@ The following table lists limits related to Amazon MQ [configurations]()\.
 
 ## Users<a name="activemq-user-limits"></a>
 
-The following table lists limits related to Amazon MQ users\.
+The following table lists limits related to Amazon MQ [users](amazon-mq-basic-elements.md#user)\.
 
 
 | Limit | Description | 

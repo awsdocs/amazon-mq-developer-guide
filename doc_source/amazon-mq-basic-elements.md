@@ -22,7 +22,7 @@ For information about creating and managing brokers, see the following:
 
 + [Statuses](#broker-statuses)
 
-### \(attributes\)<a name="broker-attributes"></a>
+### Attributes<a name="broker-attributes"></a>
 
 A broker has several attributes, for example:
 
@@ -35,6 +35,8 @@ A broker has several attributes, for example:
 + An ActiveMQ Web Console URL \(`https://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:8162`\)
 
   For more information, see [Web Console](http://activemq.apache.org/web-console.html) in the Apache ActiveMQ documentation\.
+**Important**  
+If you specify an authorization map which doesn't include the `activemq-webconsole` group, you won't be able to use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
 
 + Wire\-level protocol endpoints:
 
@@ -76,7 +78,8 @@ The combined description of the broker instance *class* \(`m4`, `t2`\) and *size
 | mq\.t2\.micro | 1 | 1 | Low | 
 
 **Note**  
-The mq\.t2\.micro instance type \(single\-instance brokers only\) qualifies for the [AWS Free Tier](https://aws.amazon.com/free/)\.
+The mq\.t2\.micro instance type \(single\-instance brokers only\) qualifies for the [AWS Free Tier](https://aws.amazon.com/free/)\.  
+Using the `mq.t2.micro` instance type is subject to * [CPU credits and baseline performance](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/t2-credits-baseline-concepts.html)*—with the ability to *burst* above the baseline level\. If your application requires *fixed performance*, consider using an `mq.m4.large` instance type\.
 
 ### Statuses<a name="broker-statuses"></a>
 
@@ -96,7 +99,7 @@ A broker's current condition is indicated by a *status*\. The following table li
 A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\.
 
 **Important**  
-Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must wait for the next maintenance window or reboot the broker\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
+Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, it isn't possible to delete a configuration\.
 
 For information about creating, editing, and managing configurations, see the following:
@@ -111,7 +114,7 @@ For information about creating, editing, and managing configurations, see the fo
 
 To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md) and [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)\.
 
-### \(attributes\)<a name="configuration-attributes"></a>
+### Attributes<a name="configuration-attributes"></a>
 
 A broker configuration has several attributes, for example:
 
@@ -147,7 +150,7 @@ An ActiveMQ *user* is a person or an application that can access the queues and 
 A user can belong to a *group*\. You can configure which users belong to which groups and which groups have permission to send to, receive from, and administer specific queues and topics\.
 
 **Important**  
-Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must wait for the next maintenance window or reboot the broker\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
+Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
 
 For information about users and groups, see the following in the Apache ActiveMQ documentation:
 
@@ -161,7 +164,7 @@ For information about creating, editing, and deleting ActiveMQ users, see the fo
 
 + [Users](amazon-mq-limits.md#activemq-user-limits)
 
-### \(attributes\)<a name="user-attributes"></a>
+### Attributes<a name="user-attributes"></a>
 
 For a full list of user attributes, see the following in the *Amazon MQ REST API Reference*:
 

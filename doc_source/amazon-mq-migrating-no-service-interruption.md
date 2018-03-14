@@ -12,7 +12,7 @@ This scenario might cause messages to be delivered out of order\. If you're conc
 
 ## To migrate to Amazon MQ without service interruption<a name="migrate-without-service-interruption"></a>
 
-1. Create and configure an Amazon MQ broker and note your broker's endpoint, for example:
+1. [Create and configure an Amazon MQ broker](amazon-mq-creating-configuring-broker.md) and note your broker's endpoint, for example:
 
    ```
    ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617

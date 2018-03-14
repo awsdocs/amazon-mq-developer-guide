@@ -39,7 +39,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 
    While Amazon MQ creates your broker, it displays the **Creation in progress** status\. 
 
-   Creating the broker takes about 10 minutes\.
+   Creating the broker takes about 15 minutes\.
 
    When your broker is created successfully, Amazon MQ displays the **Running** status\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-getting-started-create-broker-running.png)
@@ -113,7 +113,7 @@ For wire\-level protocol endpoints, you can allow your application to connect to
    producerConnection.start();
    ```
 **Note**  
-Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](amazon-mq-best-practices.md#always-use-connection-pooling)\.
+Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](communicating-with-amazon-mq.md#always-use-connection-pooling)\.
 
 1. Create a session, a queue named `MyQueue`, and a message producer\.
 
@@ -171,7 +171,7 @@ Always use the `PooledConnectionFactory` class\. For more information, see [Alwa
    consumerConnection.start();
    ```
 **Note**  
-Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](amazon-mq-best-practices.md#always-use-connection-pooling)\.
+Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](communicating-with-amazon-mq.md#always-use-connection-pooling)\.
 
 1. Create a session, a queue named `MyQueue`, and a message consumer\.
 
@@ -240,4 +240,4 @@ Now that you have created a broker, connected an application to it, and sent and
 
 + [Tutorial: Accessing CloudWatch Metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
 
-You can also begin to dive deep into Amazon MQ best practices and [Amazon MQ REST APIs](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/), and then plan to migrate to Amazon MQ\.
+You can also begin to dive deep into [Amazon MQ best practices](amazon-mq-best-practices.md) and [Amazon MQ REST APIs](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/), and then [plan to migrate to Amazon MQ](amazon-mq-migrating.md)\.
