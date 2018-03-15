@@ -2,7 +2,7 @@
 
 A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\. For more information, see the following:
 
-+ [Configuration](amazon-mq-basic-elements.md#configuration)
++ [Configuration](configuration.md)
 
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
 

@@ -15,7 +15,7 @@ When you first [create an Amazon MQ broker](amazon-mq-creating-configuring-broke
 
 **Warning**  
 You must not modify or delete this network interface\. Modifying or deleting the network interface can cause a permanent loss of connection between your VPC and your broker\.  
-**Currently, you can't recover your broker if you delete its network interface\.** You can only recreate your broker\.
+**Currently, you can't recover your broker if you delete its network interface\. You can only recreate your broker\.**
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-network-configuration-architecture-vpc-elastic-network-interface.png)
 

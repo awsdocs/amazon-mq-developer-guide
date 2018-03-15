@@ -12,24 +12,25 @@ This scenario requires you to point your producer to your Amazon MQ broker's end
 
 ## To migrate to Amazon MQ with service interruption<a name="migrate-with-service-interruption"></a>
 
-1. [Create and configure an Amazon MQ broker](amazon-mq-creating-configuring-broker.md) and note your broker's endpoint, for example:
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-1-red.png) [Create and configure an Amazon MQ broker](amazon-mq-creating-configuring-broker.md) and note your broker's endpoint, for example:
 
-   ```
-   ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617
-   ```
+```
+ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617
+```
 
-1. Stop your existing producer, point the producer to your Amazon MQ broker's endpoint, and then restart the producer\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-2-red.png) Stop your existing producer, point the producer to your Amazon MQ broker's endpoint, and then restart the producer\.
+
 **Important**  
 This step requires an interruption of your application's functionality because no consumers are yet consuming messages from the Amazon MQ broker\.
 
-1. Wait for your consumers to drain the destinations on your on\-premises broker\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-3-red.png) Wait for your consumers to drain the destinations on your on\-premises broker\.
 
-1. Do one of the following:
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-4-red.png) Do one of the following:
 
-   + One by one, point each existing consumer to your Amazon MQ broker's endpoint\.
++ One by one, point each existing consumer to your Amazon MQ broker's endpoint\.
 
-   + Create new consumers and point them to your Amazon MQ broker's endpoint\.
++ Create new consumers and point them to your Amazon MQ broker's endpoint\.
 **Note**  
 If you scale up your consumer fleet during the migration process, it is a best practice to scale it down afterward\.
 
-1. Stop your on\-premises broker\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-5-red.png) Stop your on\-premises broker\.

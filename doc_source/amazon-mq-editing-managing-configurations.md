@@ -2,7 +2,7 @@
 
 A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can apply a configuration immediately or during a *maintenance window*\. To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see the following:
 
-+ [Configuration](amazon-mq-basic-elements.md#configuration)
++ [Configuration](configuration.md)
 
 + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
 
@@ -24,7 +24,7 @@ The following examples show how you can edit Amazon MQ broker configurations and
 
 1. From the broker list, select your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
-1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and choose **View**\.  
+1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-1-red.png) and a **Revision** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-2-red.png) and then choose **View** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-3-red.png)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-view.png)
 **Note**  
 Unless you select a configuration when you create a broker, the first configuration revision is always created for you when Amazon MQ creates the broker\.
@@ -47,7 +47,7 @@ Unless you select a configuration when you create a broker, the first configurat
 
 1. On the ***MyBroker*** page, choose **Edit**\.
 
-1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and choose **View**\.  
+1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-1-red.png) and a **Revision** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-2-red.png) and then choose **View** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-3-red.png)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-view.png)
 **Note**  
 Unless you select a configuration when you create a broker, the first configuration revision is always created for you when Amazon MQ creates the broker\.
@@ -81,7 +81,7 @@ Currently, it isn't possible to delete a configuration\.
 
 1. From the broker list, select your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
-1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and then choose **Schedule Modifications**\.  
+1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-1-red.png) and a **Revision** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-2-red.png) and then choose **Schedule Modifications** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-3-red.png)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-schedule-modifications.png)
 
 1. In the **Schedule broker modifications** section, choose whether to apply modifications **During the next scheduled maintenance window** or **Immediately**\.

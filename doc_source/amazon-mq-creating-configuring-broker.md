@@ -1,6 +1,6 @@
 # Tutorial: Creating and Configuring an Amazon MQ Broker<a name="amazon-mq-creating-configuring-broker"></a>
 
-A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. For more information, see [Broker](amazon-mq-basic-elements.md#broker)\.
+A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. For more information, see [Broker](broker.md)\.
 
 The first and most common Amazon MQ task is creating a broker\. The following example shows how you can use the AWS Management Console to create and configure a broker using the AWS Management Console\.
 
@@ -19,7 +19,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
    + If you have created a broker before, on the **Create a broker** page, in the **Broker details** section, type `MyBroker` for **Broker name**\.
 
-1. Choose a **Broker instance type** \(for example, **mq\.m4\.large**\)\. For more information, see [Instance Types](amazon-mq-basic-elements.md#broker-instance-types)\.
+1. Choose a **Broker instance type** \(for example, **mq\.m4\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
 1. Choose a **Deployment mode**:
 
@@ -41,7 +41,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 
 1. Expand the **Advanced settings** section\.
 
-1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](amazon-mq-basic-elements.md#configuration) and [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
+1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](configuration.md) and [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
 
 1. In the **Network and security section**, configure your broker's connectivity:
 
