@@ -28,7 +28,7 @@ You can access your brokers using the following protocols with TLS enabled:
 
 + STOMP over WebSocket
 
-Amazon MQ provides at\-rest encryption using an AWS\-managed Customer Master Key \(CMK\)\. For additional security, we highly recommend to design your application to use client\-side encryption\. For more information, see the *[AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)*\.
+Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\. For additional security, we highly recommend designing your application to use client\-side encryption\. For more information, see the *[AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)*\.
 
 ## Always Configure an Authorization Map<a name="always-configure-authorization-map"></a>
 

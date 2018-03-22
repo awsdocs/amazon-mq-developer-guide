@@ -4,7 +4,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 
 + A *single\-instance broker* is comprised of one *broker* in one Availability Zone\. The broker communicates with your application and with an AWS storage location\.
 
-+ An *active/standby broker for high availability* is comprised of two *brokers* in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate with your application, and with a shared storage location\.
++ An *active/standby broker for high availability* is comprised of two *brokers* in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\.
 
 For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
 
