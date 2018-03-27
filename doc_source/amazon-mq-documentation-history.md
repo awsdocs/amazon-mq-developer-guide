@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| March 27, 2018 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 22, 2018 | Clarified the following statement throughout this guide: Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\. For additional security, we highly recommend designing your application to use client\-side encryption\. For more information, see the [AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\. | 
 | March 19, 2018 | Clarified the following statement throughout this guide: An Active/standby broker for high availability is comprised of two brokers in two different Availability Zones, configured in a redundant pair\. These brokers communicate synchronously with your application, and with a shared storage location\. | 
 | March 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

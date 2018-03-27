@@ -1,4 +1,4 @@
-# Permitted Elements<a name="permitted-elements"></a>
+# Elements Permitted in Amazon MQ Configurations<a name="permitted-elements"></a>
 
 The following is a detailed listing of the elements permitted in Amazon MQ configurations\. For more information, see [XML Configuration](http://activemq.apache.org/xml-configuration.html) in the Apache ActiveMQ documentation\.
 

@@ -8,7 +8,7 @@ This section provides information about Amazon MQ and ActiveMQ authentication an
 
 ## API Authentication and Authorization for Amazon MQ<a name="amazon-mq-api-authentication-authorization"></a>
 
-Amazon MQ uses standard AWS request signing for authentication\. For more information, see [Signing AWS API Requests](http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the *AWS General Reference*\.
+Amazon MQ uses standard AWS request signing for API authentication\. For more information, see [Signing AWS API Requests](http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the *AWS General Reference*\.
 
 **Note**  
 Currently, Amazon MQ doesn't support IAM authentication using resource\-based permissions or resource\-based policies\.

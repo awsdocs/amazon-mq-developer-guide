@@ -6,6 +6,7 @@ Amazon MQ brokers can be created as *single\-instance brokers* or *active/standb
 Amazon MQ uses [Apache KahaDB](http://activemq.apache.org/kahadb.html) as its data store\. Other data stores, such as JDBC and LevelDB, aren't supported\.
 
 
-+ [Single\-Instance Broker](single-broker-deployment.md)
-+ [Active/Standby Broker for High Availability](active-standby-broker-deployment.md)
-+ [Concurrent Store and Dispatch for Queues](concurrent-store-and-dispatch-for-queues.md)
++ [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)
++ [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)
++ [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
++ [Concurrent Store and Dispatch for Queues in Amazon MQ](concurrent-store-and-dispatch-for-queues.md)

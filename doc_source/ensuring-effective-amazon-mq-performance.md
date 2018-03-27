@@ -6,4 +6,4 @@ The following design patterns can improve the effectiveness and performance of y
 
 By default, the `concurrentStoreAndDispatch` flag is set to `true`\. If your consumers are slower than your producers, or if the combined number of your consumers is insufficient, set the flag to `false`\.
 
-For a detailed overview, see [Concurrent Store and Dispatch for Queues](concurrent-store-and-dispatch-for-queues.md)\. For an example configuration, see [concurrentStoreAndDispatchQueues](child-element-details.md#concurrentStoreAndDispatchQueues)\.
+For a detailed overview, see [Concurrent Store and Dispatch for Queues in Amazon MQ](concurrent-store-and-dispatch-for-queues.md)\. For an example configuration, see [concurrentStoreAndDispatchQueues](child-element-details.md#concurrentStoreAndDispatchQueues)\.

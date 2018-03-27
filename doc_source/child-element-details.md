@@ -1,4 +1,4 @@
-# Child Element Attributes<a name="child-element-details"></a>
+# Amazon MQ Child Element Attributes<a name="child-element-details"></a>
 
 The following is a detailed explanation of child element attributes\. For more information, see [XML Configuration](http://activemq.apache.org/xml-configuration.html) in the Apache ActiveMQ documentation\.
 
@@ -43,4 +43,4 @@ For more information, see [Always Configure an Authorization Map](using-amazon-m
 </persistenceAdapter>
 ```
 
-For more information, see [Concurrent Store and Dispatch for Queues](concurrent-store-and-dispatch-for-queues.md)\.
+For more information, see [Concurrent Store and Dispatch for Queues in Amazon MQ](concurrent-store-and-dispatch-for-queues.md)\.

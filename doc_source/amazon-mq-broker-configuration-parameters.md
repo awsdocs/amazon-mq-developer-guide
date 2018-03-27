@@ -21,6 +21,6 @@ You can use only static values for attributes\. Amazon MQ sanitizes elements and
 
 
 + [Working with Spring XML Configuration Files](#working-with-spring-xml-configuration-files)
-+ [Permitted Elements](permitted-elements.md)
-+ [Permitted Attributes](permitted-attributes.md)
-+ [Permitted Collections](permitted-collections.md)
++ [Elements Permitted in Amazon MQ Configurations](permitted-elements.md)
++ [Elements and Their Attributes Permitted in Amazon MQ Configurations](permitted-attributes.md)
++ [Elements, Child Collection Elements, and Their Child Elements Permitted in Amazon MQ Configurations](permitted-collections.md)

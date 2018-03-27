@@ -1,9 +1,9 @@
-# Migrating without Service Interruption<a name="amazon-mq-migrating-no-service-interruption"></a>
+# Migrating to Amazon MQ without Service Interruption<a name="amazon-mq-migrating-no-service-interruption"></a>
 
 The following diagrams illustrate the scenario of migrating from an on\-premises message broker to an Amazon MQ broker in the AWS Cloud without service interruption\.
 
 **Important**  
-This scenario might cause messages to be delivered out of order\. If you're concerned about message ordering, follow the steps in [Migrating with Service Interruption](amazon-mq-migrating-service-interruption.md)\.
+This scenario might cause messages to be delivered out of order\. If you're concerned about message ordering, follow the steps in [Migrating to Amazon MQ with Service Interruption](amazon-mq-migrating-service-interruption.md)\.
 
 
 | On\-Premises Message Broker | Migration to Amazon MQ with Standard \(Unordered\) Queues | 

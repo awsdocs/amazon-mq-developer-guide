@@ -1,9 +1,9 @@
-# Migrating with Service Interruption<a name="amazon-mq-migrating-service-interruption"></a>
+# Migrating to Amazon MQ with Service Interruption<a name="amazon-mq-migrating-service-interruption"></a>
 
 The following diagrams illustrate the scenario of migrating from an on\-premises message broker to an Amazon MQ broker in the AWS Cloud with service interruption\.
 
 **Important**  
-This scenario requires you to point your producer to your Amazon MQ broker's endpoint *before* you do the same for your consumers\. This sequence ensures that any messages in a FIFO \(first\-in\-first\-out\) queue maintain their order during the migration process\. If you're not concerned about message ordering, follow the steps in [Migrating without Service Interruption](amazon-mq-migrating-no-service-interruption.md)\.
+This scenario requires you to point your producer to your Amazon MQ broker's endpoint *before* you do the same for your consumers\. This sequence ensures that any messages in a FIFO \(first\-in\-first\-out\) queue maintain their order during the migration process\. If you're not concerned about message ordering, follow the steps in [Migrating to Amazon MQ without Service Interruption](amazon-mq-migrating-no-service-interruption.md)\.
 
 
 | On\-Premises Message Broker | Migration to Amazon MQ with FIFO \(Ordered\) Queues | 

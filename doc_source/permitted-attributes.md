@@ -1,4 +1,4 @@
-# Permitted Attributes<a name="permitted-attributes"></a>
+# Elements and Their Attributes Permitted in Amazon MQ Configurations<a name="permitted-attributes"></a>
 
 The following is a detailed listing of the elements and their attributes permitted in Amazon MQ configurations\. For more information, see [XML Configuration](http://activemq.apache.org/xml-configuration.html) in the Apache ActiveMQ documentation\.
 
