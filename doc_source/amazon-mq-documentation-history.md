@@ -5,6 +5,9 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| April 4, 2018 | Renamed the Communicating with Amazon MQ section to [Connecting to Amazon MQ](connecting-to-amazon-mq.md)\. | 
+| April 3, 2018 | Clarified and corrected the information in the the [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) section\. | 
+| April 2, 2018 | Moved the Concurrent Store and Dispatch for Queues in Amazon MQ section to the [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) section\. | 
 | March 27, 2018 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 22, 2018 | Clarified the following statement throughout this guide: Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\. For additional security, we highly recommend designing your application to use client\-side encryption\. For more information, see the [AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\. | 
 | March 19, 2018 | Clarified the following statement throughout this guide: An Active/standby broker for high availability is comprised of two brokers in two different Availability Zones, configured in a redundant pair\. These brokers communicate synchronously with your application, and with a shared storage location\. | 
@@ -31,7 +34,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | January 24, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 19, 2018 | Updated the information in the [Apache ActiveMQ Resources](amazon-mq-related-resources.md#activemq-resources) section\. | 
 | January 18, 2018 | Clarified and corrected the information in the [Limits in Amazon MQ](amazon-mq-limits.md) section\. | 
-| January 17, 2018 | Reinstated the [recommendation to prefer virtual destinations over durable subscriptions](communicating-with-amazon-mq.md#prefer-virtual-destinations-to-durable-subscriptions), with an improved explanation\. | 
+| January 17, 2018 | Reinstated the [recommendation to prefer virtual destinations over durable subscriptions](connecting-to-amazon-mq.md#prefer-virtual-destinations-to-durable-subscriptions), with an improved explanation\. | 
 | January 11, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 3, 2018 | Added DescribeConfigurationRevision to the [API Authentication and Authorization for Amazon MQ](amazon-mq-security.md#amazon-mq-api-authentication-authorization) section\. | 
 | December 15, 2017 | Removed the recommendation against durable subscriptions from the [Best Practices for Amazon MQ](amazon-mq-best-practices.md) section\. | 

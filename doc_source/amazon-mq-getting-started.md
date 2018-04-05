@@ -113,7 +113,7 @@ For wire\-level protocol endpoints, you can allow your application to connect to
    producerConnection.start();
    ```
 **Note**  
-Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](communicating-with-amazon-mq.md#always-use-connection-pooling)\.
+Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](connecting-to-amazon-mq.md#always-use-connection-pooling)\.
 
 1. Create a session, a queue named `MyQueue`, and a message producer\.
 
@@ -171,7 +171,7 @@ Always use the `PooledConnectionFactory` class\. For more information, see [Alwa
    consumerConnection.start();
    ```
 **Note**  
-Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](communicating-with-amazon-mq.md#always-use-connection-pooling)\.
+Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](connecting-to-amazon-mq.md#always-use-connection-pooling)\.
 
 1. Create a session, a queue named `MyQueue`, and a message consumer\.
 

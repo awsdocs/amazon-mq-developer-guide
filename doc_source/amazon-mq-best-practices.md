@@ -4,5 +4,5 @@ Use these best practices to make the most of Amazon MQ\.
 
 
 + [Using Amazon MQ Securely](using-amazon-mq-securely.md)
-+ [Communicating with Amazon MQ](communicating-with-amazon-mq.md)
++ [Connecting to Amazon MQ](connecting-to-amazon-mq.md)
 + [Ensuring Effective Amazon MQ Performance](ensuring-effective-amazon-mq-performance.md)

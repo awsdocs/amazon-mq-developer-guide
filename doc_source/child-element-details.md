@@ -43,4 +43,4 @@ For more information, see [Always Configure an Authorization Map](using-amazon-m
 </persistenceAdapter>
 ```
 
-For more information, see [Concurrent Store and Dispatch for Queues in Amazon MQ](concurrent-store-and-dispatch-for-queues.md)\.
+For more information, see [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers)\.

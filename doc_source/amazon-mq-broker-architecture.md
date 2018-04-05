@@ -9,4 +9,3 @@ Amazon MQ uses [Apache KahaDB](http://activemq.apache.org/kahadb.html) as its da
 + [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)
 + [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)
 + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
-+ [Concurrent Store and Dispatch for Queues in Amazon MQ](concurrent-store-and-dispatch-for-queues.md)

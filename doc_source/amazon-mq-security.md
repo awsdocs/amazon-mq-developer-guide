@@ -29,7 +29,7 @@ To create a broker, you must either use the `AmazonMQFullAccess` IAM policy or i
 `ec2:DescribeSecurityGroups`
 `ec2:DescribeSubnets`
 `ec2:DescribeVpcs`
-For more information, see [Step 2: Create an IAM User and Get Your AWS Credentials](amazon-mq-setting-up.md#create-iam-user) and [Never Modify or Delete the Amazon MQ Elastic Network Interface](communicating-with-amazon-mq.md#never-modify-delete-elastic-network-interface)\.
+For more information, see [Step 2: Create an IAM User and Get Your AWS Credentials](amazon-mq-setting-up.md#create-iam-user) and [Never Modify or Delete the Amazon MQ Elastic Network Interface](connecting-to-amazon-mq.md#never-modify-delete-elastic-network-interface)\.
 
 The following table lists Amazon MQ REST APIs and the corresponding IAM permissions\.
 
