@@ -15,7 +15,7 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What Is Amazon MQ?](welcome.md)
-+ [New and Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md)
++ [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md)
 + [Setting Up Amazon MQ](amazon-mq-setting-up.md)
 + [Getting Started with Amazon MQ](amazon-mq-getting-started.md)
 + [Amazon MQ Tutorials](amazon-mq-tutorials.md)

@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| April 6, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
 | April 4, 2018 | Renamed the Communicating with Amazon MQ section to [Connecting to Amazon MQ](connecting-to-amazon-mq.md)\. | 
 | April 3, 2018 | Clarified and corrected the information in the the [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) section\. | 
 | April 2, 2018 | Moved the Concurrent Store and Dispatch for Queues in Amazon MQ section to the [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) section\. | 
@@ -15,7 +16,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | March 12, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 9, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 8, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
-| March 7, 2018 | Updated the [New and Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
+| March 7, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
 | March 6, 2018 | Added the following note throughout this guide:Using the `mq.t2.micro` instance type is subject to * [CPU credits and baseline performance](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/t2-credits-baseline-concepts.html)*—with the ability to *burst* above the baseline level\. If your application requires *fixed performance*, consider using an `mq.m4.large` instance type\. | 
 | March 1, 2018 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | February 28, 2018 | Corrected image display in GitHub\. | 
@@ -29,7 +30,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | February 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | February 14, 2018 | Updated the following sections:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | February 13, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
-| February 2, 2018 | Created the [New and Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
+| February 2, 2018 | Created the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
 | January 25, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 24, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 19, 2018 | Updated the information in the [Apache ActiveMQ Resources](amazon-mq-related-resources.md#activemq-resources) section\. | 
