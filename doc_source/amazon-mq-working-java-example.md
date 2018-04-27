@@ -115,7 +115,6 @@ import javax.jms.*;
 public class AmazonMQExample {
 
     public static void main(String[] args) throws JMSException {
-
         // Specify the connection parameters.
         final String wireLevelEndpoint = "ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617";
         final String activeMqUsername = "MyUsername123";
@@ -128,13 +127,13 @@ public class AmazonMQExample {
         connectionFactory.setUserName(activeMqUsername);
         connectionFactory.setPassword(activeMqPassword);
 
-        // Create a pooled connection factory for the producer.
-        final PooledConnectionFactory pooledConnectionFactoryProducer = new PooledConnectionFactory();
-        pooledConnectionFactoryProducer.setConnectionFactory(connectionFactory);
-        pooledConnectionFactoryProducer.setMaxConnections(10);
+        // Create a pooled connection factory.
+        final PooledConnectionFactory pooledConnectionFactory = new PooledConnectionFactory();
+        pooledConnectionFactory.setConnectionFactory(connectionFactory);
+        pooledConnectionFactory.setMaxConnections(10);
 
         // Establish a connection for the producer.
-        final Connection producerConnection = pooledConnectionFactoryProducer.createConnection();
+        final Connection producerConnection = pooledConnectionFactory.createConnection();
         producerConnection.start();
 
         // Create a session.
@@ -160,13 +159,9 @@ public class AmazonMQExample {
         producerSession.close();
         producerConnection.close();
 
-        // Create a pooled connection factory for the consumer.
-        final PooledConnectionFactory pooledConnectionFactoryConsumer = new PooledConnectionFactory();
-        pooledConnectionFactoryConsumer.setConnectionFactory(connectionFactory);
-        pooledConnectionFactoryConsumer.setMaxConnections(10);
-
         // Establish a connection for the consumer.
-        final Connection consumerConnection = pooledConnectionFactoryProducer.createConnection();
+        // Note: Consumers should not use PooledConnectionFactory.
+        final Connection consumerConnection = connectionFactory.createConnection();
         consumerConnection.start();
 
         // Create a session.
@@ -189,9 +184,8 @@ public class AmazonMQExample {
         consumer.close();
         consumerSession.close();
         consumerConnection.close();
-        pooledConnectionFactoryConsumer.stop();
+        pooledConnectionFactory.stop();
     }
-
 }
 ```
 

@@ -103,17 +103,17 @@ For wire\-level protocol endpoints, you can allow your application to connect to
    connectionFactory.setUserName(activeMqUsername);
    connectionFactory.setPassword(activeMqPassword);
    
-   // Create a pooled connection factory for the producer.
-   final PooledConnectionFactory pooledConnectionFactoryProducer = new PooledConnectionFactory();
-   pooledConnectionFactoryProducer.setConnectionFactory(connectionFactory);
-   pooledConnectionFactoryProducer.setMaxConnections(10);
+   // Create a pooled connection factory.
+   final PooledConnectionFactory pooledConnectionFactory = new PooledConnectionFactory();
+   pooledConnectionFactory.setConnectionFactory(connectionFactory);
+   pooledConnectionFactory.setMaxConnections(10);
    
    // Establish a connection for the producer.
-   final Connection producerConnection = pooledConnectionFactoryProducer.createConnection();
+   final Connection producerConnection = pooledConnectionFactory.createConnection();
    producerConnection.start();
    ```
 **Note**  
-Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](connecting-to-amazon-mq.md#always-use-connection-pooling)\.
+Message producers should always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](connecting-to-amazon-mq.md#always-use-connection-pooling)\.
 
 1. Create a session, a queue named `MyQueue`, and a message producer\.
 
@@ -134,7 +134,7 @@ Always use the `PooledConnectionFactory` class\. For more information, see [Alwa
    ```
    // Create a message.
    final String text = "Hello from Amazon MQ!";
-   final TextMessage producerMessage = producerSession.createTextMessage(text);
+   TextMessage producerMessage = producerSession.createTextMessage(text);
    
    // Send the message.
    producer.send(producerMessage);
@@ -151,7 +151,7 @@ Always use the `PooledConnectionFactory` class\. For more information, see [Alwa
 
 ### Create a Message Consumer and Receive the Message<a name="create-consumer-receive-message-getting-started"></a>
 
-1. Create a JMS pooled connection factory for the message consumer using your broker's endpoint and then call the `createConnection` method against the factory\.
+1. Create a JMS connection factory for the message producer using your broker's endpoint and then call the `createConnection` method against the factory\.
 
    ```
    // Create a connection factory.
@@ -161,17 +161,12 @@ Always use the `PooledConnectionFactory` class\. For more information, see [Alwa
    connectionFactory.setUserName(activeMqUsername);
    connectionFactory.setPassword(activeMqPassword);
    
-   // Create a pooled connection factory for the consumer.
-   final PooledConnectionFactory pooledConnectionFactoryConsumer = new PooledConnectionFactory();
-   pooledConnectionFactoryConsumer.setConnectionFactory(connectionFactory);
-   pooledConnectionFactoryConsumer.setMaxConnections(10);
-   
    // Establish a connection for the consumer.
-   final Connection consumerConnection = pooledConnectionFactoryProducer.createConnection();
+   final Connection consumerConnection = connectionFactory.createConnection();
    consumerConnection.start();
    ```
 **Note**  
-Always use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](connecting-to-amazon-mq.md#always-use-connection-pooling)\.
+Message consumers should *never* use the `PooledConnectionFactory` class\. For more information, see [Always Use Connection Pooling](connecting-to-amazon-mq.md#always-use-connection-pooling)\.
 
 1. Create a session, a queue named `MyQueue`, and a message consumer\.
 
@@ -205,7 +200,7 @@ Unlike AWS messaging services \(such as Amazon SQS\), the consumer is constantly
    consumer.close();
    consumerSession.close();
    consumerConnection.close();
-   pooledConnectionFactoryConsumer.stop();
+   pooledConnectionFactory.stop();
    ```
 
 ## Step 3: Delete Your Broker<a name="delete-broker"></a>

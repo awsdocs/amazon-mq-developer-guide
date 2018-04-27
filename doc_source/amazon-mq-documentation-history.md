@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| April 27, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | April 26, 2018 | Added an MQTT Java example to the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section\. The MQTT example Java code connects to a broker, creates a topic, and publishes and receives a message\. | 
 | April 6, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
 | April 4, 2018 | Renamed the Communicating with Amazon MQ section to [Connecting to Amazon MQ](connecting-to-amazon-mq.md)\. | 

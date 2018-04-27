@@ -36,7 +36,10 @@ final Connection consumerConnection = connectionFactory.createConnection();
 consumerConnection.start();
 ```
 
-However, in more realistic scenarios with multiple producers and consumers, it can be costly and inefficient to create a large number of connections for multiple producers or consumers\. In these scenarios, you should group multiple producer or consumer requests using the [http://activemq.apache.org/maven/apidocs/org/apache/activemq/jms/pool/PooledConnectionFactory.html](http://activemq.apache.org/maven/apidocs/org/apache/activemq/jms/pool/PooledConnectionFactory.html) class for better throughput\. For example:
+However, in more realistic scenarios with multiple producers and consumers, it can be costly and inefficient to create a large number of connections for multiple producers\. In these scenarios, you should group multiple producer requests using the [http://activemq.apache.org/maven/apidocs/org/apache/activemq/jms/pool/PooledConnectionFactory.html](http://activemq.apache.org/maven/apidocs/org/apache/activemq/jms/pool/PooledConnectionFactory.html) class\. For example:
+
+**Note**  
+Message consumers should *never* use the `PooledConnectionFactory` class\.
 
 ```
 // Create a connection factory.
@@ -46,14 +49,14 @@ final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactor
 connectionFactory.setUserName(activeMqUsername);
 connectionFactory.setPassword(activeMqPassword);
 
-// Create a pooled connection factory for the consumer.
-final PooledConnectionFactory pooledConnectionFactoryConsumer = new PooledConnectionFactory();
-pooledConnectionFactoryConsumer.setConnectionFactory(connectionFactory);
-pooledConnectionFactoryConsumer.setMaxConnections(10);
+// Create a pooled connection factory.
+final PooledConnectionFactory pooledConnectionFactory = new PooledConnectionFactory();
+pooledConnectionFactory.setConnectionFactory(connectionFactory);
+pooledConnectionFactory.setMaxConnections(10);
 
-// Establish a connection for the consumer.
-final Connection consumerConnection = pooledConnectionFactoryProducer.createConnection();
-consumerConnection.start();
+// Establish a connection for the producer.
+final Connection producerConnection = pooledConnectionFactory.createConnection();
+producerConnection.start();
 ```
 
 ## Always Use the Failover Transport to Connect to Multiple Broker Endpoints<a name="always-use-failover-transport-connect-to-multiple-broker-endpoints"></a>
