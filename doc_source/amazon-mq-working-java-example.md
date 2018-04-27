@@ -1,6 +1,10 @@
-# Working Example of Using Java Message Service \(JMS\) with ActiveMQ<a name="amazon-mq-working-java-example"></a>
+# Working Examples of Using Java Message Service \(JMS\) with ActiveMQ<a name="amazon-mq-working-java-example"></a>
 
-The following example Java code connects to a broker, creates a queue, and sends and receives a message\. For a detailed breakdown and explanation of this code, see [Tutorial: Connecting a Java Application to Your Amazon MQ Broker](amazon-mq-connecting-application.md)\.
+The following examples show how you can work with ActiveMQ programmatically:
+
++ The OpenWire example Java code connects to a broker, creates a queue, and sends and receives a message\. For a detailed breakdown and explanation, see [Tutorial: Connecting a Java Application to Your Amazon MQ Broker](amazon-mq-connecting-application.md)\.
+
++ The MQTT example Java code connects to a broker, creates a topic, and publishes and receives a message\.
 
 ## Prerequisites<a name="quick-start-prerequisites"></a>
 
@@ -36,6 +40,9 @@ The following example Java code connects to a broker, creates a queue, and sends
 
 ### Add Java Dependencies<a name="quick-start-java-dependencies"></a>
 
+------
+#### [ OpenWire ]
+
 Ensure that the `activemq-client.jar` and `activemq-pool.jar` packages are in your Java build class path\.
 
 The following example shows these dependencies in a Maven project `pom.xml` file\.
@@ -57,7 +64,31 @@ The following example shows these dependencies in a Maven project `pom.xml` file
 
 For more information about `activemq-client.jar`, see [Initial Configuration](http://activemq.apache.org/initial-configuration.html) in the Apache ActiveMQ documentation\.
 
+------
+#### [ MQTT ]
+
+Ensure that the `org.eclipse.paho.client.mqttv3.jar` package is in your Java build class path\.
+
+The following example shows this dependency in a Maven project `pom.xml` file\.
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.eclipse.paho</groupId>
+        <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+        <version>1.2.0</version>
+    </dependency>                               
+</dependencies>
+```
+
+For more information about `org.eclipse.paho.client.mqttv3.jar`, see [Eclipse Paho Java Client](https://www.eclipse.org/paho/clients/java/)\.
+
+------
+
 ## AmazonMQExample\.java<a name="working-java-example"></a>
+
+------
+#### [ OpenWire ]
 
 ```
 /*
@@ -163,3 +194,88 @@ public class AmazonMQExample {
 
 }
 ```
+
+------
+#### [ MQTT ]
+
+```
+/*
+ * Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License").
+ * You may not use this file except in compliance with the License.
+ * A copy of the License is located at
+ *
+ *  https://aws.amazon.com/apache2.0
+ *
+ * or in the "license" file accompanying this file. This file is distributed
+ * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ *
+ */
+                            
+import org.eclipse.paho.client.mqttv3.*;
+
+public class AmazonMQExample implements MqttCallback {
+
+    public static void main(String[] args) throws Exception {
+        new AmazonMQExample().run();
+    }
+
+    private void run() throws MqttException, InterruptedException {
+        // Specify the connection parameters.
+        final String wireLevelEndpoint = "ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617";
+        final String activeMqUsername = "MyUsername123";
+        final String activeMqPassword = "MyPassword456";
+
+        // Specify the topic name and the message text.
+        final String topic = "topic";
+        final String text = "Hello from Amazon MQ!";
+
+        // Create the MQTT client and specify the connection options.
+        final String clientId = "abc123";
+        final MqttClient client = new MqttClient(wireLevelEndpoint, clientId);
+        final MqttConnectOptions connOpts = new MqttConnectOptions();
+
+        // Pass the username and password.
+        connOpts.setUserName(activeMqUsername);
+        connOpts.setPassword(activeMqPassword.toCharArray());
+
+        // Create a session and subscribe to a topic filter.
+        client.connect(connOpts);
+        client.setCallback(this);
+        client.subscribe("+");
+
+        // Create a message.
+        final MqttMessage message = new MqttMessage(text.getBytes());
+
+        // Publish the message to a topic.
+        client.publish(topic, message);
+        System.out.println("Message published: " + text);
+
+        // Wait for the message to be received.
+        Thread.sleep(3000L);
+
+        // Clean up the connection.
+        client.disconnect();
+    }
+
+    @Override
+    public void connectionLost(Throwable cause) {
+        System.out.println("Connection lost.");
+    }
+
+    @Override
+    public void messageArrived(String topic, MqttMessage message) throws MqttException {
+        System.out.println("Received message from topic " + topic + ": " + message);
+    }
+
+    @Override
+    public void deliveryComplete(IMqttDeliveryToken token) {
+        System.out.println("Delivery complete.");
+    }
+}
+```
+
+------

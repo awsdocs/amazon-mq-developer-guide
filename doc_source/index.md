@@ -43,7 +43,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Elements and Their Attributes Permitted in Amazon MQ Configurations](permitted-attributes.md)
       + [Elements, Child Collection Elements, and Their Child Elements Permitted in Amazon MQ Configurations](permitted-collections.md)
          + [Amazon MQ Child Element Attributes](child-element-details.md)
-   + [Working Example of Using Java Message Service (JMS) with ActiveMQ](amazon-mq-working-java-example.md)
+   + [Working Examples of Using Java Message Service (JMS) with ActiveMQ](amazon-mq-working-java-example.md)
 + [Migrating to Amazon MQ](amazon-mq-migrating.md)
    + [Migrating to Amazon MQ without Service Interruption](amazon-mq-migrating-no-service-interruption.md)
    + [Migrating to Amazon MQ with Service Interruption](amazon-mq-migrating-service-interruption.md)
