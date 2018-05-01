@@ -1,6 +1,11 @@
 # Tutorial: Creating and Applying Amazon MQ Broker Configurations<a name="amazon-mq-creating-applying-configurations"></a>
 
-A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\. You can apply a configuration immediately or during a *maintenance window*\. For more information, see the following:
+A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\. You can apply a configuration immediately or during a *maintenance window*\.
+
+**Note**  
+For an active/standby broker for high availability, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\.
+
+For more information, see the following:
 
 + [Configuration](configuration.md)
 

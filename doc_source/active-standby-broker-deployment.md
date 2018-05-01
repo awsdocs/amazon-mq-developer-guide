@@ -2,7 +2,7 @@
 
 An *active/standby broker for high availability* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\.
 
-Normally, only one of the broker instances is active at any time, while the other broker instance is on standby\. If one of the broker instances malfunctions, it takes Amazon MQ a short while to take the malfunctioning instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\. When you reboot a broker, the failover takes only a few seconds\.
+Normally, only one of the broker instances is active at any time, while the other broker instance is on standby\. If one of the broker instances malfunctions or undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\. When you reboot a broker, the failover takes only a few seconds\.
 
 For an active/standby broker for high availability, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For wire\-level protocol endpoints, you can allow your application to connect to either endpoint by using the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html)\.
 
