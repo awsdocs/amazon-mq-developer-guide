@@ -1,6 +1,6 @@
 # Tutorial: Creating and Applying Amazon MQ Broker Configurations<a name="amazon-mq-creating-applying-configurations"></a>
 
-A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\. You can apply a configuration immediately or during a *maintenance window*\.
+A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\. You can apply a configuration immediately or during a 2\-hour *maintenance window*\.
 
 **Note**  
 For an active/standby broker for high availability, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\.
@@ -63,7 +63,7 @@ Editing the current configuration creates a new configuration revision\.
    The new revision of the configuration is saved\.
 **Important**  
 The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.  
-Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
+Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next 2\-hour maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, it isn't possible to delete a configuration\.
 
 ## Step 3: Apply a configuration revision to your broker<a name="apply-configuration-revision-creating-console"></a>

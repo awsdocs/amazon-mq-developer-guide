@@ -17,8 +17,10 @@ To authorize AWS users to work with brokers, configurations, and users, you must
 
 **Important**  
 To create a broker, you must either use the `AmazonMQFullAccess` IAM policy or include the following EC2 permissions in your IAM policy\.  
-`ec2:CreateNetworkInterface`
-`ec2:CreateNetworkInterfacePermission`
+`ec2:CreateNetworkInterface`  
+This permission is required to allow Amazon MQ to create an elastic network interface \(ENI\) on behalf of your account\.
+`ec2:CreateNetworkInterfacePermission`  
+This permission is required to attach the ENI to the broker instance\.
 `ec2:DeleteNetworkInterface`
 `ec2:DeleteNetworkInterfacePermission`
 `ec2:DetachNetworkInterface`

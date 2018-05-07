@@ -5,7 +5,8 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
-| May 1, 2018 |  Clarified the information about the maintenance window for active/standby brokers for high availability in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
+| May 7, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| May 1, 2018 | Clarified the information about the maintenance window for active/standby brokers for high availability in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 27, 2018 | Rewrote the following sections and optimized example Java code to match the recommendation to use connection pooling only for producers, not consumers: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 26, 2018 | Added an MQTT Java example to the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section\. The MQTT example Java code connects to a broker, creates a topic, and publishes and receives a message\. | 
 | April 6, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 

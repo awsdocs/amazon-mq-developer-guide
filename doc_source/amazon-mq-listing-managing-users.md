@@ -30,7 +30,7 @@ The following examples show how you can create, edit, and delete Amazon MQ broke
 
 1. Choose **Create user**\.
 **Important**  
-Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
+Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next 2\-hour maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
 
 ## To edit an existing user<a name="edit-existing-user-console"></a>
 
@@ -53,7 +53,7 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 
 1. To save the changes to the user, choose **Done**\.
 **Important**  
-Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
+Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next 2\-hour maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
 
 ## To delete a existing user<a name="delete-existing-user-console"></a>
 
@@ -68,4 +68,4 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 
 1. To confirm deleting the user, in the **Delete *MyUser*?** dialog box, choose **Delete**\.
 **Important**  
-Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
+Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next 2\-hour maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.

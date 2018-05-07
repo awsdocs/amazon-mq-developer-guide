@@ -1,11 +1,11 @@
 # Amazon MQ Broker Configuration Lifecycle<a name="amazon-mq-broker-configuration-lifecycle"></a>
 
-Making changes to a configuration revision or an ActiveMQ user does *not* apply the changes immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](#amazon-mq-broker-configuration-lifecycle)\.
+Making changes to a configuration revision or an ActiveMQ user does *not* apply the changes immediately\. To apply your changes, you must [wait for the next 2\-hour maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](#amazon-mq-broker-configuration-lifecycle)\.
 
 The following diagram illustrates the configuration lifecycle\.
 
 **Important**  
-The next scheduled maintenance window triggers a reboot\. If the broker is rebooted before the next scheduled maintenance window, the changes are applied after the reboot\.
+The next scheduled 2\-hour maintenance window triggers a reboot\. If the broker is rebooted before the next scheduled maintenance window, the changes are applied after the reboot\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-lifecycle.png)
 

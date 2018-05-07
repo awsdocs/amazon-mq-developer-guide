@@ -8,7 +8,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 
 For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
 
-You can enable *automatic minor version upgrades* to new minor versions of the broker engine, as Apache releases new versions\. Automatic upgrades occur during the *maintenance window*, defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
+You can enable *automatic minor version upgrades* to new minor versions of the broker engine, as Apache releases new versions\. Automatic upgrades occur during the 2\-hour *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 
 For information about creating and managing brokers, see the following:
 

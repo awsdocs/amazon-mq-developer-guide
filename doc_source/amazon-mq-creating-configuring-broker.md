@@ -55,7 +55,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 
 1. In the **Maintenance section**, configure your broker's maintenance schedule:
 
-   1. To upgrade the broker to new versions as Apache releases them, choose **Enable automatic minor version upgrades**\. Automatic upgrades occur during the *maintenance window*, defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
+   1. To upgrade the broker to new versions as Apache releases them, choose **Enable automatic minor version upgrades**\. Automatic upgrades occur during the 2\-hour *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 **Note**  
 For an active/standby broker for high availability, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\.
 
