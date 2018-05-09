@@ -54,6 +54,8 @@ Amazon's trademarks and trade dress may not be used in
 + [Limits in Amazon MQ](amazon-mq-limits.md)
 + [Monitoring Amazon MQ using Amazon CloudWatch](amazon-mq-monitoring-cloudwatch.md)
 + [Amazon MQ Security](amazon-mq-security.md)
+   + [API Authentication and Authorization for Amazon MQ](amazon-mq-api-authentication-authorization.md)
+   + [Messaging Authentication and Authorization for ActiveMQ](activemq-authentication-authorization.md)
 + [Related Resources](amazon-mq-related-resources.md)
 + [Amazon MQ Release Notes](amazon-mq-release-notes.md)
    + [Amazon MQ Document History](amazon-mq-documentation-history.md)

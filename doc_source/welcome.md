@@ -14,7 +14,7 @@ Amazon MQ works with your existing applications and services without the need to
 
 ## What Are the Main Benefits of Amazon MQ?<a name="main-benefits"></a>
 
-+ **Security** – You control [who can create and modify brokers](amazon-mq-security.md#amazon-mq-api-authentication-authorization) and [who can send messages to and receive messages from](amazon-mq-security.md#activemq-authentication-authorization) an ActiveMQ broker\. Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\.
++ **Security** – You control [who can create and modify brokers](amazon-mq-api-authentication-authorization.md) and [who can send messages to and receive messages from](activemq-authentication-authorization.md) an ActiveMQ broker\. Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\.
 
 + **Durability** – To ensure the safety of your messages, Amazon MQ stores them on [redundant shared storage](amazon-mq-broker-architecture.md)\.
 

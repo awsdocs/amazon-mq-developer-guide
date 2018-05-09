@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| May 8, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | May 7, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | May 1, 2018 | Clarified the information about the maintenance window for active/standby brokers for high availability in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 27, 2018 | Rewrote the following sections and optimized example Java code to match the recommendation to use connection pooling only for producers, not consumers: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
@@ -41,7 +42,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | January 18, 2018 | Clarified and corrected the information in the [Limits in Amazon MQ](amazon-mq-limits.md) section\. | 
 | January 17, 2018 | Reinstated the [recommendation to prefer virtual destinations over durable subscriptions](connecting-to-amazon-mq.md#prefer-virtual-destinations-to-durable-subscriptions), with an improved explanation\. | 
 | January 11, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
-| January 3, 2018 | Added DescribeConfigurationRevision to the [API Authentication and Authorization for Amazon MQ](amazon-mq-security.md#amazon-mq-api-authentication-authorization) section\. | 
+| January 3, 2018 | Added DescribeConfigurationRevision to the [API Authentication and Authorization for Amazon MQ](amazon-mq-api-authentication-authorization.md) section\. | 
 | December 15, 2017 | Removed the recommendation against durable subscriptions from the [Best Practices for Amazon MQ](amazon-mq-best-practices.md) section\. | 
 | December 8, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | December 7, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
