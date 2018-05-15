@@ -10,4 +10,4 @@ By default, Amazon MQ optimizes for queues with fast consumers:
 
 + Consumers are considered to be *slow* if a queue builds a backlog of unacknowledged messages, potentially causing a decrease in producer throughput\.
 
-To instruct Amazon MQ to optimize for queues with slow consumers, set the `concurrentStoreAndDispatchQueues` attribute to `true`\. For an example configuration, see [`concurrentStoreAndDispatchQueues`](child-element-details.md#concurrentStoreAndDispatchQueues)\.
+To instruct Amazon MQ to optimize for queues with slow consumers, set the `concurrentStoreAndDispatchQueues` attribute to `false`\. For an example configuration, see [`concurrentStoreAndDispatchQueues`](child-element-details.md#concurrentStoreAndDispatchQueues)\.
