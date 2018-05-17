@@ -42,7 +42,7 @@ The following table lists limits related to Amazon MQ [users](user.md)\.
 | --- | --- | 
 | Username |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Password |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
-| Users per broker | 100 | 
+| Users per broker | 250 | 
 | Groups per user | 5 | 
 
 ## Data Storage<a name="data-storage-limits"></a>

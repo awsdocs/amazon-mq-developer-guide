@@ -5,6 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
+| May 17, 2018 | The limit of number of users per broker is 250\. For more information, see [Users](amazon-mq-limits.md#activemq-user-limits)\. | 
 | March 13, 2018 | Creating a broker takes about 15 minutes\. For more information, see [Finish creating the broker](amazon-mq-creating-configuring-broker.md#finish-creating-broker-console)\. | 
 | March 1, 2018 | You can configure the [concurrent store and dispatch](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) for Apache KahaDB using the [`concurrentStoreAndDispatchQueues`](child-element-details.md#concurrentStoreAndDispatchQueues) attribute\. | 
 | January 10, 2018 |  The following changes affect the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/): [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
