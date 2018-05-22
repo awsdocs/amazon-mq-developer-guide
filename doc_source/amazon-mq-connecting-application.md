@@ -46,7 +46,7 @@ To ensure that your broker is accessible within your VPC, you must enable the `e
 
 ### Add Java Dependencies<a name="connect-application-java-dependencies"></a>
 
-To allow your application to work with ActiveMQ, add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java build class path\. The following example shows these dependencies in your Maven project's `pom.xml` file\.
+Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java class path\. The following example shows these dependencies in a Maven project `pom.xml` file\.
 
 ```
 <dependencies>

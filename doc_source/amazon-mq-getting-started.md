@@ -69,7 +69,7 @@ To ensure that your broker is accessible within your VPC, you must enable the `e
 
 ### Prerequisites<a name="connect-application-prerequisites-getting-started"></a>
 
-Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java build class path\. The following example shows these dependencies in a Maven project `pom.xml` file\.
+Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java class path\. The following example shows these dependencies in a Maven project `pom.xml` file\.
 
 ```
 <dependencies>

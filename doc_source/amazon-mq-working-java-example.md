@@ -43,9 +43,7 @@ The following examples show how you can work with ActiveMQ programmatically:
 ------
 #### [ OpenWire ]
 
-Ensure that the `activemq-client.jar` and `activemq-pool.jar` packages are in your Java build class path\.
-
-The following example shows these dependencies in a Maven project `pom.xml` file\.
+Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java class path\. The following example shows these dependencies in a Maven project `pom.xml` file\.
 
 ```
 <dependencies>
@@ -67,9 +65,7 @@ For more information about `activemq-client.jar`, see [Initial Configuration](ht
 ------
 #### [ MQTT ]
 
-Ensure that the `org.eclipse.paho.client.mqttv3.jar` package is in your Java build class path\.
-
-The following example shows this dependency in a Maven project `pom.xml` file\.
+Add the `org.eclipse.paho.client.mqttv3.jar` package to your Java class path\. The following example shows this dependency in a Maven project `pom.xml` file\.
 
 ```
 <dependencies>
