@@ -215,7 +215,7 @@ public class AmazonMQExample implements MqttCallback {
 
     private void run() throws MqttException, InterruptedException {
         // Specify the connection parameters.
-        final String wireLevelEndpoint = "ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617";
+        final String wireLevelEndpoint = "ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:8883";
         final String activeMqUsername = "MyUsername123";
         final String activeMqPassword = "MyPassword456";
 
