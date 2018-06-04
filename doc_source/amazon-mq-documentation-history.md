@@ -5,7 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
-| June 4, 2018 | In addition to GitHub, HTML, PDF, and Kindle, the Amazon MQ Developer Guide release notes are available as an RSS feed\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-rss-release-notes.png)  | 
+| June 4, 2018 | In addition to GitHub, HTML, PDF, and Kindle, the*Amazon MQ Developer Guide* release notes are available asan RSS feed\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-rss-release-notes.png)  | 
 | May 29, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | May 24, 2018 | Corrected the wire\-level endpoint port in the MQTT Java example in the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section\. | 
 | May 22, 2018 | Corrected the information in all Java dependency sections\. | 
