@@ -5,7 +5,6 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
-| June 29, 2018 | In addition to mq\.t2\.micro and mq\.m4\.large, the following broker instance types are available for regular development, testing, and production workloads that require high throughput: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)For more information, see [Instance Types](broker.md#broker-instance-types)\. | 
 | June 7, 2018 | The Amazon MQ console supports German, Brazilian Portuguese, Spanish, Italian, and Traditional Chinese\. | 
 | May 17, 2018 | The limit of number of users per broker is 250\. For more information, see [Users](amazon-mq-limits.md#activemq-user-limits)\. | 
 | March 13, 2018 | Creating a broker takes about 15 minutes\. For more information, see [Finish creating the broker](amazon-mq-creating-configuring-broker.md#finish-creating-broker-console)\. | 
