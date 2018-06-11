@@ -1,6 +1,6 @@
 # Broker<a name="broker"></a>
 
-A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. For more information, see [Instance Types](#broker-instance-types)\.
+A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance Types](#broker-instance-types)\.
 
 + A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\.
 
@@ -63,19 +63,34 @@ For a full list of broker attributes, see the following in the *Amazon MQ REST A
 
 ## Instance Types<a name="broker-instance-types"></a>
 
-The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. The following table lists the available Amazon MQ broker instance types\.
+The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. The following table lists the available Amazon MQ broker instance types\.
 
 
 | Instance Type | vCPU | Memory \(GiB\) | Network Performance | 
 | --- | --- | --- | --- | 
-| Standard | 
-| mq\.m4\.large | 2 | 8 | Moderate | 
-| Micro\-Instance | 
 | mq\.t2\.micro | 1 | 1 | Low | 
+| mq\.m5\.large | 2 | 8 | High | 
+| mq\.m5\.xlarge | 4 | 16 | High | 
+| mq\.m5\.2xlarge | 8 | 32 | High | 
+| mq\.m5\.4xlarge | 16 | 64 | High | 
+| mq\.m4\.large | 2 | 8 | Moderate | 
 
-**Note**  
-The mq\.t2\.micro instance type \(single\-instance brokers only\) qualifies for the [AWS Free Tier](https://aws.amazon.com/free/)\.  
-Using the `mq.t2.micro` instance type is subject to * [CPU credits and baseline performance](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/t2-credits-baseline-concepts.html)*—with the ability to *burst* above the baseline level\. If your application requires *fixed performance*, consider using an `mq.m4.large` instance type\.
+### Choosing a Broker Instance Type<a name="broker-instance-types-choosing"></a>
+
+**mq\.t2\.micro**  
+Use the `mq.t2.micro` instance type for basic evaluation of Amazon MQ\. This instance type \(single\-instance brokers only\) qualifies for the [AWS Free Tier](https://aws.amazon.com/free/)\.  
+Using the `mq.t2.micro` instance type is subject to * [CPU credits and baseline performance](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/t2-credits-baseline-concepts.html)*—with the ability to *burst* above the baseline level\. If your application requires *fixed performance*, consider using an `mq.m5.large` instance type\.
+
+**mq\.m5\.large**  
+Use the `mq.m5.large` instance for regular development, testing, and production workloads\.
+
+**mq\.m5\.\***  
+Use the `mq.m5.xlarge`, `mq.m5.2xlarge`, or `mq.m5.4xlarge` instance for regular development, testing and production workloads that require high throughput\.  
+To improve your system's performance when using persistent messages, you must use fast consumers\.  
+Your system will *not* experience a performance improvement with persistent messages if you use slow consumers\. To improve performance, you must set the `concurrentStoreAndDispatchQueues` attribute to `false`\. For more information, see [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers)\.
+
+**mq\.m4\.large**  
+Use the `mq.m4.large` instance type for compatibility with existing broker deployments\. We recommend using an `mq.m5.*` instance for new brokers\.
 
 ## Statuses<a name="broker-statuses"></a>
 

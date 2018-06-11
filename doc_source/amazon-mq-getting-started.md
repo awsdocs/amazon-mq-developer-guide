@@ -15,7 +15,7 @@ Before you begin, complete the steps in [Setting Up Amazon MQ](amazon-mq-setting
 
 ## Step 1: Create an ActiveMQ Broker<a name="create-activemq-broker"></a>
 
-A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. For more information, see [Broker](broker.md)\.
+A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Broker](broker.md)\.
 
 The first and most common Amazon MQ task is creating a broker\. The following example shows how you can use the AWS Management Console to create a basic broker\.
 
@@ -27,7 +27,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
    + If you have created a broker before, on the **Create a broker** page, in the **Broker details** section, type `MyBroker` for **Broker name**\.
 
-1. Choose a **Broker instance type** \(for example, **mq\.m4\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
+1. Choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
 1. For **Deployment mode**, ensure that **Single\-instance broker** is selected\.
 **Note**  
