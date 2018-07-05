@@ -57,10 +57,10 @@ The following table lists limits related to Amazon MQ data storage\.
 
 ## API Throttling<a name="api-throttling-limits"></a>
 
-The following throttling limits are aggregated per AWS account, *across all [Amazon MQ APIs](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)* to maintain service bandwidth\.
+The following throttling limits are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information on Amazon MQ APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
-**Note**  
-These limits don't apply to ActiveMQ messaging APIs\.
+**Important**  
+These limits don't apply to ActiveMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
 
 
 | Bucket Size | Refill Rate per Second | 
