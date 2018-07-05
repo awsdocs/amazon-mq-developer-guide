@@ -14,9 +14,9 @@ You can access your brokers using the following protocols with TLS enabled:
 
 + STOMP over WebSocket
 
-Amazon MQ uses native ActiveMQ authentication\. For information about restrictions related to ActiveMQ usernames and passwords, see [Users](amazon-mq-limits.md#activemq-user-limits)\.
+Amazon MQ uses native ActiveMQ authentication to manage user permissions\. For information about restrictions related to ActiveMQ usernames and passwords, see [Users](amazon-mq-limits.md#activemq-user-limits)\.
 
-To authorize ActiveMQ users and groups to works with queues and topics, you must [edit your broker's configuration](amazon-mq-editing-managing-configurations.md)\. For information about configuring Amazon MQ, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
+To authorize ActiveMQ users and groups to works with queues and topics, you must [edit your broker's configuration](amazon-mq-editing-managing-configurations.md)\. Amazon MQ uses ActiveMQ's [Simple Authentication Plugin](http://activemq.apache.org/security.html#Security-SimpleAuthenticationPlugin) to restrict reading and writing to destinations\. For more information and examples, see [Always Configure an Authorization Map](using-amazon-mq-securely.md#always-configure-authorization-map) and [authorizationEntry](child-element-details.md#authorizationEntry)\.
 
 **Note**  
 Currently, Amazon MQ doesn't support Client Certificate Authentication or plugins for Java Authentication and Authorization Service \(JAAS\)\.

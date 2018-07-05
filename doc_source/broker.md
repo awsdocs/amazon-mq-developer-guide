@@ -1,6 +1,6 @@
 # Broker<a name="broker"></a>
 
-A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. For more information, see [Instance Types](#broker-instance-types)\.
+A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance Types](#broker-instance-types)\.
 
 + A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\.
 
@@ -63,19 +63,11 @@ For a full list of broker attributes, see the following in the *Amazon MQ REST A
 
 ## Instance Types<a name="broker-instance-types"></a>
 
-The combined description of the broker instance *class* \(`m4`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m4.large`\)\. The following table lists the available Amazon MQ broker instance types\.
+The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. The following table lists the available Amazon MQ broker instance types\.
 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker.html)
 
-| Instance Type | vCPU | Memory \(GiB\) | Network Performance | 
-| --- | --- | --- | --- | 
-| Standard | 
-| mq\.m4\.large | 2 | 8 | Moderate | 
-| Micro\-Instance | 
-| mq\.t2\.micro | 1 | 1 | Low | 
-
-**Note**  
-The mq\.t2\.micro instance type \(single\-instance brokers only\) qualifies for the [AWS Free Tier](https://aws.amazon.com/free/)\.  
-Using the `mq.t2.micro` instance type is subject to * [CPU credits and baseline performance](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/t2-credits-baseline-concepts.html)*—with the ability to *burst* above the baseline level\. If your application requires *fixed performance*, consider using an `mq.m4.large` instance type\.
+For more information about throughput considerations, see [Choose the Correct Broker Instance Type for the Best Throughput](ensuring-effective-amazon-mq-performance.md#broker-instance-types-choosing)\.
 
 ## Statuses<a name="broker-statuses"></a>
 
