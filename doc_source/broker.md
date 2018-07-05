@@ -32,7 +32,7 @@ A broker has several attributes, for example:
 
   For more information, see [Web Console](http://activemq.apache.org/web-console.html) in the Apache ActiveMQ documentation\.
 **Important**  
-If you specify an authorization map which doesn't include the `activemq-webconsole` group, you won't be able to use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
+If you specify an authorization map which doesn't include the `activemq-webconsole` group, you can't use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
 
 + Wire\-level protocol endpoints:
 

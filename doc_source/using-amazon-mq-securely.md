@@ -41,4 +41,4 @@ Amazon MQ uses a *system group* \(called `activemq-webconsole`\) to allow the [A
 The settings for the `activemq-webconsole` group in the authorization map restrict which operations can be performed on queues or topics from the web console\. For more information and an example configuration, see `[authorizationEntry](child-element-details.md#authorizationEntry)`\.
 
 **Important**  
-If you specify an authorization map which doesn't include the `activemq-webconsole` group, you won't be able to use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
+If you specify an authorization map which doesn't include the `activemq-webconsole` group, you can't use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
