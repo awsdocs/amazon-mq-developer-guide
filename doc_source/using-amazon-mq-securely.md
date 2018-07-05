@@ -32,13 +32,13 @@ Amazon MQ encrypts messages at rest and in transit using encryption keys that it
 
 ## Always Configure an Authorization Map<a name="always-configure-authorization-map"></a>
 
-Because ActiveMQ has no authorization map configured by default, any authenticated user can perform any action on the broker\. Thus, it is a best practice to restrict permissions *by group*\. For more information, see [authorizationEntry](child-element-details.md#authorizationEntry)\.
+Because ActiveMQ has no authorization map configured by default, any authenticated user can perform any action on the broker\. Thus, it is a best practice to restrict permissions *by group*\. For more information, see `[authorizationEntry](child-element-details.md#authorizationEntry)`\.
 
 ## Always Configure a System Group<a name="always-configure-system-group"></a>
 
 Amazon MQ uses a *system group* \(called `activemq-webconsole`\) to allow the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) to communicate with the ActiveMQ broker\.
 
-The settings for the `activemq-webconsole` group in the authorization map restrict which operations can be performed on queues or topics from the web console\. For more information and an example configuration, see [authorizationEntry](child-element-details.md#authorizationEntry)\.
+The settings for the `activemq-webconsole` group in the authorization map restrict which operations can be performed on queues or topics from the web console\. For more information and an example configuration, see `[authorizationEntry](child-element-details.md#authorizationEntry)`\.
 
 **Important**  
 If you specify an authorization map which doesn't include the `activemq-webconsole` group, you won't be able to use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
