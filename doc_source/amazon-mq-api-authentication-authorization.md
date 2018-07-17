@@ -18,9 +18,9 @@ To create a broker, you must either use the `AmazonMQFullAccess` IAM policy or i
 The following custom policy is comprised of two statements \(one conditional\) which grant permissions to manipulate the resources which Amazon MQ requires to create an ActiveMQ broker\.
 
 **Important**  
-The `ec2:CreateNetworkInterface` action is required to allow Amazon MQ to create an elastic network interface \(ENI\) in your account on your behalf\.
-The `ec2:CreateNetworkInterfacePermission` action authorizes Amazon MQ to attach the ENI to an ActiveMQ broker\.
-The `ec2:AuthorizedService` condition key ensures that ENI permissions can be granted only to Amazon MQ service accounts\.
+`ec2:CreateNetworkInterface` is required to allow Amazon MQ to create an elastic network interface \(ENI\) in your account on your behalf\.
+`ec2:CreateNetworkInterfacePermission` authorizes Amazon MQ to attach the ENI to an ActiveMQ broker\.
+`ec2:AuthorizedService` ensures that ENI permissions can be granted only to Amazon MQ service accounts\.
 
 ```
 {
