@@ -18,7 +18,7 @@ Amazon MQ works with your existing applications and services without the need to
 
 + **Durability** – To ensure the safety of your messages, Amazon MQ stores them on [redundant shared storage](amazon-mq-broker-architecture.md)\.
 
-+ **Availability** – You can create a [single\-instance broker](single-broker-deployment.md) \(comprised of one broker in one Availability Zone\), or an [active/standby broker for high availability](active-standby-broker-deployment.md) \(comprised of two brokers in two different Availability Zones\)\. For either broker type, Amazon MQ automatically provisions infrastructure for high availability\.
++ **Availability** – You can create a [single\-instance broker](single-broker-deployment.md) \(comprised of one broker in one Availability Zone\), or an [active/standby broker for high availability](active-standby-broker-deployment.md) \(comprised of two brokers in two different Availability Zones\)\. For either broker type, Amazon MQ automatically provisions infrastructure for high durability\.
 
 + **Enterprise readiness** – Amazon MQ supports industry\-standard APIs and protocols so you can [migrate from your existing message broker](amazon-mq-migrating.md) without rewriting [application code](amazon-mq-working-java-example.md)\.
 
