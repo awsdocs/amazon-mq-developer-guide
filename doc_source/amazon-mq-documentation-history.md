@@ -5,7 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
-| July 19, 2018 |  Corrected the information in the [What Are the Main Benefits of Amazon MQ?](welcome.md#main-benefits) section\.  | 
+| July 19, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | July 5, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | June 29, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | June 26, 2018 | Added a link to a related resource to the [Migrating to Amazon MQ](amazon-mq-migrating.md) section\. | 

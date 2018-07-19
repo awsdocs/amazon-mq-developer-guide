@@ -2,7 +2,7 @@
 
 Amazon MQ and Amazon CloudWatch are integrated so you can use CloudWatch to view and analyze metrics for your ActiveMQ broker and the broker's destinations \(queues and topics\)\. You can view and analyze your Amazon MQ metrics from the CloudWatch console, the AWS CLI, or the CloudWatch CLI\. CloudWatch metrics for Amazon MQ are automatically polled from the broker and then pushed to CloudWatch every minute\.
 
-For a full list of Amazon MQ metrics, see [Monitoring Amazon MQ using Amazon CloudWatch](amazon-mq-monitoring-cloudwatch.md)\.
+For a full list of Amazon MQ metrics, see [Monitoring Amazon MQ Brokers Using Amazon CloudWatch](amazon-mq-monitoring-cloudwatch.md)\.
 
 For information about creating a CloudWatch alarm for a metrics, see [Create or Edit a CloudWatch Alarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
 
