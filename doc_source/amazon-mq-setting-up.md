@@ -2,7 +2,7 @@
 
 Before you can use Amazon MQ, you must complete the following steps\.
 
-
+**Topics**
 + [Create an AWS Account and an IAM Administrator User](#create-aws-account)
 + [Create an IAM User and Get Your AWS Credentials](#create-iam-user)
 + [Get Ready to Use the Example Code](#get-ready-to-use-example-code)

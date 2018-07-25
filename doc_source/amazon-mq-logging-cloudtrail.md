@@ -12,25 +12,16 @@ Using the information that CloudTrail collects, you can identify a specific requ
 When you create your AWS account, CloudTrail is enabled\. When a supported Amazon MQ event activity occurs, it is recorded in a CloudTrail event with other AWS service events in the event history\. You can view, search, and download recent events for your AWS account\. For more information, see [Viewing Events with CloudTrail Event History](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html) in the *AWS CloudTrail User Guide*\.
 
 A trail allows CloudTrail to deliver log files to an Amazon S3 bucket\. You can create a trail to keep an ongoing record of events in your AWS account\. By default, when you create a trail using the AWS Management Console, the trail applies to all AWS Regions\. The trail logs events from all AWS Regions and delivers log files to the specified Amazon S3 bucket\. You can also configure other AWS services to further analyze and act on the event data collected in CloudTrail logs\. For more information, see the following topics in the *AWS CloudTrail User Guide*: 
-
 + [CloudTrail Supported Services and Integrations](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-aws-service-specific-topics.html#cloudtrail-aws-service-specific-topics-integrations)
-
 + [Configuring Amazon SNS Notifications for CloudTrail](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
-
 + [Receiving CloudTrail Log Files from Multiple Regions](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html)
-
 + [Receiving CloudTrail Log Files from Multiple Accounts](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
 Amazon MQ supports logging both the request parameters and the responses for the following APIs as events in CloudTrail log files:
-
 + [http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#rest-api-configurations-methods-post](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#rest-api-configurations-methods-post)
-
 + [http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-delete](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-delete)
-
 + [http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-delete](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-delete)
-
 + [http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#rest-api-broker-reboot-methods-post](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#rest-api-broker-reboot-methods-post)
-
 + [http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-put](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-put)
 
 **Important**  
@@ -50,11 +41,8 @@ For the following APIs, the `data` and `password` request parameters are hidden 
 [http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-put](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-put) \(`PUT`\)
 
 Every event or log entry contains information about the requester\. This information helps you determine the following: 
-
 + Was the request made with root or IAM user credentials?
-
 + Was the request made with temporary security credentials for a role or a federated user?
-
 + Was the request made by another AWS service?
 
 For more information, see [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html) in the *AWS CloudTrail User Guide*\.

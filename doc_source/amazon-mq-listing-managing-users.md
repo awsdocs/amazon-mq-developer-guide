@@ -6,7 +6,7 @@ A user can belong to a *group*\. You can configure which users belong to which g
 
 The following examples show how you can create, edit, and delete Amazon MQ broker users using the AWS Management Console\.
 
-
+**Topics**
 + [To create a new user](#create-new-user-console)
 + [To edit an existing user](#edit-existing-user-console)
 + [To delete a existing user](#delete-existing-user-console)

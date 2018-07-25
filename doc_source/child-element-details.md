@@ -6,7 +6,7 @@ The following is a detailed explanation of child element attributes\. For more i
 
 `authorizationEntry` is a child of the `authorizationEntries` child collection element\.
 
-### admin|read|write<a name="admin-read-write"></a>
+### admin\|read\|write<a name="admin-read-write"></a>
 
 **Amazon MQ Default:** Not configured\.
 

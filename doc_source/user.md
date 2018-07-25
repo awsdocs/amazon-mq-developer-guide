@@ -8,21 +8,15 @@ A user can belong to a *group*\. You can configure which users belong to which g
 Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next 2\-hour maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
 
 For information about users and groups, see the following in the Apache ActiveMQ documentation:
-
 + [Authorization](http://activemq.apache.org/security.html#Security-Authorization)
-
 + [Authorization Example](http://activemq.apache.org/security.html#Security-AuthorizationExample)
 
 For information about creating, editing, and deleting ActiveMQ users, see the following:
-
 + [Tutorial: Creating and Managing Amazon MQ Broker Users](amazon-mq-listing-managing-users.md)
-
 + [Users](amazon-mq-limits.md#activemq-user-limits)
 
 ## Attributes<a name="user-attributes"></a>
 
 For a full list of user attributes, see the following in the *Amazon MQ REST API Reference*:
-
 + [REST Operation ID: User](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html)
-
 + [REST Operation ID: Users](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html)

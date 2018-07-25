@@ -1,11 +1,8 @@
 # Working Examples of Using Java Message Service \(JMS\) with ActiveMQ<a name="amazon-mq-working-java-example"></a>
 
 The following examples show how you can work with ActiveMQ programmatically:
-
 + The OpenWire example Java code connects to a broker, creates a queue, and sends and receives a message\. For a detailed breakdown and explanation, see [Tutorial: Connecting a Java Application to Your Amazon MQ Broker](amazon-mq-connecting-application.md)\.
-
 + The MQTT example Java code connects to a broker, creates a topic, and publishes and receives a message\.
-
 + The STOMP\+WSS example Java code connects to a broker, creates a queue, and publishes and receives a message\.
 
 ## Prerequisites<a name="quick-start-prerequisites"></a>
@@ -85,17 +82,11 @@ For more information about `org.eclipse.paho.client.mqttv3.jar`, see [Eclipse Pa
 #### [ STOMP\+WSS ]
 
 Add the following packages to your Java class path:
-
 + `spring-messaging.jar`
-
 + `spring-websocket.jar`
-
 + `javax.websocket-api.jar`
-
 + `jetty-all.jar`
-
 + `slf4j-simple.jar`
-
 + `jackson-databind.jar`
 
 The following example shows these dependencies in a Maven project `pom.xml` file\.

@@ -6,18 +6,14 @@ A *configuration* contains all of the settings for your ActiveMQ broker, in XML 
 For an active/standby broker for high availability, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\.
 
 For more information, see the following:
-
 + [Configuration](configuration.md)
-
 + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
-
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
-
 + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
 
 The following example shows how you can create and apply an Amazon MQ broker configuration using the AWS Management Console\.
 
-
+**Topics**
 + [Step 1: Create a configuration from scratch](#creating-configuration-from-scratch-console)
 + [Step 2: Create a new configuration revision](#creating-new-configuration-revision-console)
 + [Step 3: Apply a configuration revision to your broker](#apply-configuration-revision-creating-console)

@@ -2,7 +2,7 @@
 
 The following design patterns can improve the effectiveness of your application's connection to your Amazon MQ broker\.
 
-
+**Topics**
 + [Never Modify or Delete the Amazon MQ Elastic Network Interface](#never-modify-delete-elastic-network-interface)
 + [Always Use Connection Pooling](#always-use-connection-pooling)
 + [Always Use the Failover Transport to Connect to Multiple Broker Endpoints](#always-use-failover-transport-connect-to-multiple-broker-endpoints)

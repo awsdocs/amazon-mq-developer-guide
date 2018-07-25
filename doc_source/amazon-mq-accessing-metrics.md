@@ -10,7 +10,7 @@ For information about creating a CloudWatch alarm for a metrics, see [Create or 
 There is no charge for the Amazon MQ metrics reported in CloudWatch\. These metrics are provided as part of the Amazon MQ service\.  
 CloudWatch monitors only the first 200 destinations\.
 
-
+**Topics**
 + [AWS Management Console](#amazon-mq-accessing-metrics-console)
 + [AWS Command Line Interface](#amazon-mq-accessing-metrics-aws-cli)
 + [Amazon CloudWatch API](#amazon-mq-accessing-metrics-cw-api)
@@ -32,22 +32,16 @@ If you're already signed into the Amazon MQ console, on the broker **Details** p
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-namespace.png)
 
 1. Select one of the following metric dimensions:
-
    + **Broker Metrics**
-
    + **Queue Metrics by Broker**
-
    + **Topic Metrics by Broker**
 
    In this example, **Broker Metrics** is selected\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-dimension.png)
 
 1. You can now examine your Amazon MQ metrics:
-
    + To sort the metrics, use the column heading\.
-
    + To graph the metric, select the check box next to the metric\.
-
    + To filter by metric, choose the metric name and then choose **Add to search**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-cloudwatch-queue-metrics-examine.png)
 

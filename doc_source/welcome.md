@@ -6,22 +6,17 @@ Amazon MQ is a managed message broker service for [Apache ActiveMQ](http://activ
 
 Amazon MQ works with your existing applications and services without the need to manage, operate, or maintain your own messaging system\.
 
-
+**Topics**
 + [What Are the Main Benefits of Amazon MQ?](#main-benefits)
 + [How is Amazon MQ Different from Amazon SQS or Amazon SNS?](#difference-from-sqs-sns)
 + [How Can I Get Started with Amazon MQ?](#get-started)
 + [We Want to Hear from You](#amazon-mq-we-want-to-hear-from-you)
 
 ## What Are the Main Benefits of Amazon MQ?<a name="main-benefits"></a>
-
 + **Security** – You control [who can create and modify brokers](amazon-mq-api-authentication-authorization.md) and [who can send messages to and receive messages from](activemq-authentication-authorization.md) an ActiveMQ broker\. Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\.
-
 + **Durability** – To ensure the safety of your messages, Amazon MQ stores them on [redundant shared storage](amazon-mq-broker-architecture.md)\.
-
 + **Availability** – You can create a [single\-instance broker](single-broker-deployment.md) \(comprised of one broker in one Availability Zone\), or an [active/standby broker for high availability](active-standby-broker-deployment.md) \(comprised of two brokers in two different Availability Zones\)\. For either broker type, Amazon MQ automatically provisions infrastructure for high durability\.
-
 + **Enterprise readiness** – Amazon MQ supports industry\-standard APIs and protocols so you can [migrate from your existing message broker](amazon-mq-migrating.md) without rewriting [application code](amazon-mq-working-java-example.md)\.
-
 + **Operation offloading** – You can [configure many aspects of your ActiveMQ broker](amazon-mq-broker-configuration-parameters.md), such as predefined destinations, destination policies, authorization policies, and plugins\. Amazon MQ controls some of these configuration elements, such as network transports and storage, simplifying the maintenance and administration of your messaging system in the cloud\.
 
 ## How Is Amazon MQ Different from Amazon SQS or Amazon SNS?<a name="difference-from-sqs-sns"></a>
@@ -31,15 +26,10 @@ Amazon MQ is a managed message broker service that provides compatibility with m
 [Amazon SQS](https://aws.amazon.com/sqs/) and [Amazon SNS](https://aws.amazon.com/sns/) are queue and topic services that are highly scalable, simple to use, and don't require you to set up message brokers\. We recommend these services for new applications that can benefit from nearly unlimited scalability and simple APIs\.
 
 ## How Can I Get Started with Amazon MQ?<a name="get-started"></a>
-
 + To create your first broker with Amazon MQ, see [Getting Started with Amazon MQ](amazon-mq-getting-started.md)\.
-
 + To discover the functionality and architecture of Amazon MQ, see [How Amazon MQ Works](amazon-mq-how-it-works.md)\.
-
 + To find out the guidelines and caveats that will help you make the most of Amazon MQ, see [Best Practices for Amazon MQ](amazon-mq-best-practices.md)\.
-
 + To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
-
 + To learn about Amazon MQ AWS CLI commands, see [Amazon MQ in the *AWS CLI Command Reference*](http://docs.aws.amazon.com/cli/latest/reference/mq/index.html)\.
 
 ## We Want to Hear from You<a name="amazon-mq-we-want-to-hear-from-you"></a>

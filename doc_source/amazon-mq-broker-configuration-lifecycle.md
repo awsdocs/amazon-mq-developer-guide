@@ -10,15 +10,10 @@ The next scheduled 2\-hour maintenance window triggers a reboot\. If the broker 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-lifecycle.png)
 
 For information about creating, editing, and managing configurations, see the following:
-
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
-
 + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
-
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
 
 For information about creating, editing, and deleting ActiveMQ users, see the following:
-
 + [Tutorial: Creating and Managing Amazon MQ Broker Users](amazon-mq-listing-managing-users.md)
-
 + [Users](amazon-mq-limits.md#activemq-user-limits)

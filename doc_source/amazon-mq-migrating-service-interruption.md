@@ -26,9 +26,7 @@ This step requires an interruption of your application's functionality because n
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-3-red.png) Wait for your consumers to drain the destinations on your on\-premises broker\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-4-red.png) Do one of the following:
-
 + One by one, point each existing consumer to your Amazon MQ broker's endpoint\.
-
 + Create new consumers and point them to your Amazon MQ broker's endpoint\.
 **Note**  
 If you scale up your consumer fleet during the migration process, it is a best practice to scale it down afterward\.

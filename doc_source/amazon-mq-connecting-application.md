@@ -7,7 +7,7 @@ You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://acti
 **Important**  
 To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
 
-
+**Topics**
 + [Prerequisites](#connect-application-prerequisites-tutorial)
 + [To create a message producer and send a message](#create-producer-send-message-tutorial)
 + [To create a message consumer and receive the message](#create-consumer-receive-message-tutorial)

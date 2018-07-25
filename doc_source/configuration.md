@@ -7,13 +7,9 @@ Making changes to a configuration does *not* apply the changes to the broker imm
 Currently, it isn't possible to delete a configuration\.
 
 For information about creating, editing, and managing configurations, see the following:
-
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
-
 + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
-
 + [Configurations](amazon-mq-limits.md#configuration-limits)
-
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
 
 To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md) and [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)\.
@@ -21,21 +17,14 @@ To keep track of the changes you make to your configuration, you can create *con
 ## Attributes<a name="configuration-attributes"></a>
 
 A broker configuration has several attributes, for example:
-
 + A name \(`MyConfiguration`\)
-
 + An ID \(`c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\)
-
 + An Amazon Resource Name \(ARN\) \(`arn:aws:mq:us-east-2:123456789012:configuration:MyConfiguration:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\)
 
 For a full list of configuration attributes, see the following in the *Amazon MQ REST API Reference*:
-
 + [REST Operation ID: Configuration](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html)
-
 + [REST Operation ID: Configurations](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html)
 
 For a full list of configuration revision attributes, see the following:
-
 + [REST Operation ID: Configuration Revision](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html)
-
 + [REST Operation ID: Configuration Revisions](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html)

@@ -7,7 +7,7 @@ Currently, Amazon MQ doesn't support IAM authentication using resource\-based pe
 
 To authorize AWS users to work with brokers, configurations, and users, you must edit your IAM policy permissions\.
 
-
+**Topics**
 + [IAM Permissions Required to Create an Amazon MQ Broker](#amazon-mq-permissions-required-to-create-broker)
 + [Amazon MQ REST API Permissions Reference](#amazon-mq-api-permissions-reference)
 

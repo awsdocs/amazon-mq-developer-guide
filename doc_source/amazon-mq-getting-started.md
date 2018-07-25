@@ -2,7 +2,7 @@
 
 This section will help you become more familiar with Amazon MQ by showing you how to create a broker and how to connect your application to it\.
 
-
+**Topics**
 + [Prerequisites](#create-broker-prerequisites)
 + [Create an ActiveMQ Broker](#create-activemq-broker)
 + [Connect a Java Application to Your Broker](#connect-java-application)
@@ -22,9 +22,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
 1. Do one of the following:
-
    + If this is your first time using Amazon MQ, in the **Create a broker** section, type `MyBroker` for **Broker name** and then choose **Next step**\.
-
    + If you have created a broker before, on the **Create a broker** page, in the **Broker details** section, type `MyBroker` for **Broker name**\.
 
 1. Choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
@@ -220,19 +218,12 @@ The following example shows how you can delete a broker using the AWS Management
 ## Next Steps<a name="next-steps-tutorials"></a>
 
 Now that you have created a broker, connected an application to it, and sent and received a message, you might want to try the following:
-
 + [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md) \(Advanced Settings\)
-
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
-
 + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
-
 + [Tutorial: Listing Amazon MQ Brokers and Viewing Broker Details](amazon-mq-listing-brokers.md)
-
 + [Tutorial: Creating and Managing Amazon MQ Broker Users](amazon-mq-listing-managing-users.md)
-
 + [Tutorial: Rebooting an Amazon MQ Broker](amazon-mq-rebooting-broker.md)
-
 + [Tutorial: Accessing CloudWatch Metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
 
 You can also begin to dive deep into [Amazon MQ best practices](amazon-mq-best-practices.md) and [Amazon MQ REST APIs](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/), and then [plan to migrate to Amazon MQ](amazon-mq-migrating.md)\.

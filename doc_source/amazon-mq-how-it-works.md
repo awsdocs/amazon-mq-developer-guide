@@ -6,7 +6,7 @@ This section describes the basic elements of a message broker, lists available A
 
 To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
-
+**Topics**
 + [Amazon MQ Basic Elements](amazon-mq-basic-elements.md)
 + [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)

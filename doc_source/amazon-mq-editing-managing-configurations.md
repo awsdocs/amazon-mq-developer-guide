@@ -8,18 +8,14 @@ For an active/standby broker for high availability, if one of the broker instanc
 To keep track of the changes you make to your configuration, you can create *configuration revisions*\.
 
 For more information, see the following:
-
 + [Configuration](configuration.md)
-
 + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
-
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
-
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
 
 The following examples show how you can edit Amazon MQ broker configurations and manage broker configuration revisions using the AWS Management Console\.
 
-
+**Topics**
 + [To view a previous configuration revision](#view-previous-configuration-console)
 + [To edit the current configuration revision](#edit-current-configuration-console)
 + [To apply a configuration revision to your broker](#apply-configuration-revision-editing-console)

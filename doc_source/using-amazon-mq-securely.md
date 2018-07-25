@@ -2,7 +2,7 @@
 
 The following design patterns can improve the security of your Amazon MQ broker\.
 
-
+**Topics**
 + [Prefer Brokers without Public Accessibility](#prefer-brokers-without-public-accessibility)
 + [Always Use Client\-Side Encryption as a Complement to TLS](#always-use-client-side-encryption-complement-tls)
 + [Always Configure an Authorization Map](#always-configure-authorization-map)
@@ -15,17 +15,11 @@ Brokers created without public accessibility can't be accessed from outside of y
 ## Always Use Client\-Side Encryption as a Complement to TLS<a name="always-use-client-side-encryption-complement-tls"></a>
 
 You can access your brokers using the following protocols with TLS enabled:
-
 + [AMQP](http://activemq.apache.org/amqp.html)
-
 + [MQTT](http://activemq.apache.org/mqtt.html)
-
 + MQTT over [WebSocket](http://activemq.apache.org/websockets.html)
-
 + [OpenWire](http://activemq.apache.org/openwire.html)
-
 + [STOMP](http://activemq.apache.org/stomp.html)
-
 + STOMP over WebSocket
 
 Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\. For additional security, we highly recommend designing your application to use client\-side encryption\. For more information, see the *[AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)*\.

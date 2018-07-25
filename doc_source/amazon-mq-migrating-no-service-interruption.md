@@ -25,9 +25,7 @@ failover:(ssl://on-premises-broker.example.com:61617,ssl://b-1234a5b6-78cd-901e-
 ```
 
 Do one of the following:
-
 + One by one, point each existing consumer to your Amazon MQ broker's endpoint\.
-
 + Create new consumers and point them to your Amazon MQ broker's endpoint\.
 **Note**  
 If you scale up your consumer fleet during the migration process, it is a best practice to scale it down afterward\.

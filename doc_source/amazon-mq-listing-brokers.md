@@ -12,15 +12,10 @@ The following example shows how you can confirm your broker's existence by listi
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-brokers.png)
 
    The following information is displayed for each broker:
-
    + **Name**
-
    + **Creation** date
-
    + [**Status**](broker.md#broker-statuses)
-
    + [**Deployment mode**](amazon-mq-broker-architecture.md)
-
    + [**Instance type**](broker.md#broker-instance-types)
 
 1. Choose your broker's name \(for example, **MyBroker**\)\.
@@ -29,7 +24,5 @@ The following example shows how you can confirm your broker's existence by listi
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-show-broker-details.png)
 
    Below the **Details** section, the following information is displayed:
-
    + In the **Connections** section, the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) URL and the [wire\-level protocol endpoints](http://activemq.apache.org/configuring-transports.html)
-
    + In the **Users** section, the [users](user.md) associated with the broker
