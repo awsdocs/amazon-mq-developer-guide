@@ -2,6 +2,10 @@
 
 This section will help you become more familiar with Amazon MQ by showing you how to create a broker and how to connect your application to it\.
 
+The following 3\-minute video provides a preview of creating and using an Amazon MQ broker\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/ibvCmegX0Io?rel=0&amp;controls=0&amp;showinfo=0/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/ibvCmegX0Io?rel=0&amp;controls=0&amp;showinfo=0)
+
 **Topics**
 + [Prerequisites](#create-broker-prerequisites)
 + [Create an ActiveMQ Broker](#create-activemq-broker)

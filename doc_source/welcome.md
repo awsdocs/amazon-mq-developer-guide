@@ -2,7 +2,7 @@
 
 Amazon MQ is a managed message broker service for [Apache ActiveMQ](http://activemq.apache.org/) that makes it easy to migrate to a message broker in the cloud\. A *message broker* allows software applications and components to communicate using various programming languages, operating systems, and formal messaging protocols\.
 
-[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/ibvCmegX0Io?rel=0&amp;controls=0&amp;showinfo=0/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/ibvCmegX0Io?rel=0&amp;controls=0&amp;showinfo=0)
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/iDT1zFpy1kE?rel=0&amp;controls=0&amp;showinfo=0/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/iDT1zFpy1kE?rel=0&amp;controls=0&amp;showinfo=0)
 
 Amazon MQ works with your existing applications and services without the need to manage, operate, or maintain your own messaging system\.
 
