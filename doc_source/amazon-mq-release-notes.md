@@ -5,6 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
+| July 30, 2018 | You can configure Amazon MQ to publish general and audit logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\. | 
 | July 25, 2018 | Amazon MQ is available in the Asia Pacific \(Tokyo\) and Asia Pacific \(Seoul\) Regions in addition to the following regions:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | July 19, 2018 | You can use AWS CloudTrail to log Amazon MQ API calls\. For more information, see [Logging Amazon MQ API Calls Using AWS CloudTrail](amazon-mq-logging-cloudtrail.md)\. | 
 | June 29, 2018 | In addition to mq\.t2\.micro and mq\.m4\.large, the following broker instance types are available for regular development, testing, and production workloads that require high throughput: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)For more information, see [Instance Types](broker.md#broker-instance-types)\. | 

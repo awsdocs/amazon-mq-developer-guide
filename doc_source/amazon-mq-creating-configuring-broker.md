@@ -6,7 +6,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 **Topics**
 + [Step 1: Configure basic broker settings](#configure-basic-broker-settings-console)
-+ [Step 2: \(Optional\) Configure advanced broker settings](#configure-advanced-broker-settings-console)
++ [Configure advanced broker settings](#configure-advanced-broker-settings-console)
 + [Step 3: Finish creating the broker](#finish-creating-broker-console)
 
 ## Step 1: Configure basic broker settings<a name="configure-basic-broker-settings-console"></a>
@@ -38,6 +38,11 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 1. Expand the **Advanced settings** section\.
 
 1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](configuration.md) and [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
+
+1. In the **Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\.
+**Important**  
+To allow Amazon MQ to publish logs to CloudWatch Logs, you must [add a permission to your Amazon MQ user](amazon-mq-configuring-cloudwatch-logs.md#add-createloggroup-permission-to-user) and also [configure a resource\-based policy for Amazon MQ](amazon-mq-configuring-cloudwatch-logs.md#configure-resource-based-policy) before you create or restart the broker\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-enable-cloudwatch-logs.png)
 
 1. In the **Network and security section**, configure your broker's connectivity:
 

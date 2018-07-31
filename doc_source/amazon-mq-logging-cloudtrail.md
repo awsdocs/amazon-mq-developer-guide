@@ -3,7 +3,7 @@
 Amazon MQ is integrated with AWS CloudTrail, a service that provides a record of the Amazon MQ calls that a user, role, or AWS service makes\. CloudTrail captures API calls related to Amazon MQ brokers and configurations as events, including calls from the Amazon MQ console and code calls from Amazon MQ APIs\. For more information about CloudTrail, see the *[AWS CloudTrail User Guide](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/)*\.
 
 **Note**  
-CloudTrail doesn't log API calls related to ActiveMQ operations \(for example, sending and receiving messages\) or to the ActiveMQ Web Console\.
+CloudTrail doesn't log API calls related to ActiveMQ operations \(for example, sending and receiving messages\) or to the ActiveMQ Web Console\. To log information related to ActiveMQ operations, you can [configure Amazon MQ to publish general and audit logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\.
 
 Using the information that CloudTrail collects, you can identify a specific request to an Amazon MQ API, the IP address of the requester, the requester's identity, the date and time of the request, and so on\. If you configure a *trail*, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket\. If you don't configure a trail, you can view the most recent events in the event history in the CloudTrail console\. For more information, see [Overview for Creating a Trail](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html) in the *[AWS CloudTrail User Guide](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/)*\.
 
