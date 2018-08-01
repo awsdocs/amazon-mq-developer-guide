@@ -66,10 +66,43 @@ After you create an Amazon MQ broker, you can connect your application to it\. T
 
 You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client/5.15.0)\.
 
-**Important**  
+### Prerequisites<a name="connect-application-prerequisites-getting-started"></a>
+
+#### Enable VPC Attributes<a name="connect-application-enable-vpc-attributes-getting-started"></a>
+
 To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
 
-### Prerequisites<a name="connect-application-prerequisites-getting-started"></a>
+#### Enable Inbound Connections<a name="connect-application-allow-inbound-connections-getting-started"></a>
+
+1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
+
+1. From the broker list, choose the name of your broker \(for example, **MyBroker**\)\.
+
+1. On the ***MyBroker*** page, in the **Connections** section, note the addresses and ports of the broker's ActiveMQ Web Console URL and wire\-level protocols\.
+
+1. In the **Details** section, under **Security and network**, choose the name of your security group or ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-broker-details-link.png)\.
+
+   The **Security Groups** page of the EC2 Dashboard is displayed\.
+
+1. From the security group list, choose your security group\.
+
+1. At the bottom of the page, choose **Inbound**, and then choose **Edit**\.
+
+1. In the **Edit inbound rules** dialog box, add a rule for every URL or endpoint that you want to be publicly accessible \(the following example shows how to do this for an ActiveMQ Web Console\)\.
+
+   1. Choose **Add Rule**\.
+
+   1. For **Type**, select **Custom TCP**\.
+
+   1. For **Port Range**, type the ActiveMQ Web Console port \(`8162`\)\.
+
+   1. For **Source**, leave **Custom** selected and then type the IP address of the system that you want to be able to access the ActiveMQ Web Console \(for example, `192.0.2.1`\)\.
+
+   1. Choose **Save**\.
+
+      Your broker can now accept inbound connections\.
+
+#### Add Java Dependencies<a name="connect-application-java-dependencies-getting-started"></a>
 
 Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java class path\. The following example shows these dependencies in a Maven project `pom.xml` file\.
 

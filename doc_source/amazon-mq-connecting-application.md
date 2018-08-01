@@ -4,9 +4,6 @@ After you create an Amazon MQ broker, you can connect your application to it\. T
 
 You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client/5.15.0)\.
 
-**Important**  
-To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
-
 **Topics**
 + [Prerequisites](#connect-application-prerequisites-tutorial)
 + [To create a message producer and send a message](#create-producer-send-message-tutorial)
@@ -14,7 +11,11 @@ To ensure that your broker is accessible within your VPC, you must enable the `e
 
 ## Prerequisites<a name="connect-application-prerequisites-tutorial"></a>
 
-### Enable Inbound Connections<a name="connect-application-allow-inbound-connections"></a>
+### Enable VPC Attributes<a name="connect-application-enable-vpc-attributes-tutorial"></a>
+
+To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
+
+### Enable Inbound Connections<a name="connect-application-allow-inbound-connections-tutorial"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
@@ -44,7 +45,7 @@ To ensure that your broker is accessible within your VPC, you must enable the `e
 
       Your broker can now accept inbound connections\.
 
-### Add Java Dependencies<a name="connect-application-java-dependencies"></a>
+### Add Java Dependencies<a name="connect-application-java-dependencies-tutorial"></a>
 
 Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java class path\. The following example shows these dependencies in a Maven project `pom.xml` file\.
 
