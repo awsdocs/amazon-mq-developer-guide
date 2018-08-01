@@ -15,7 +15,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | June 8, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
 | June 4, 2018 | In addition to GitHub, HTML, PDF, and Kindle, the *Amazon MQ Developer Guide* release notes are available as an RSS feed\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-rss-release-notes.png)  | 
 | May 29, 2018 |  Made the following changes in the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
-| May 24, 2018 | Corrected the wire\-level endpoint port in the MQTT Java example in the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section\. | 
+| May 24, 2018 | Corrected the wire\-level protocol endpoint port in the MQTT Java example in the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section\. | 
 | May 22, 2018 | Corrected the information in all Java dependency sections\. | 
 | May 17, 2018 | Corrected the information in the [Users](amazon-mq-limits.md#activemq-user-limits) section\. | 
 | May 15, 2018 | Corrected the information in the [Ensuring Effective Amazon MQ Performance](ensuring-effective-amazon-mq-performance.md) section\. | 
