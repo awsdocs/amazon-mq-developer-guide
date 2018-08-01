@@ -15,15 +15,13 @@ For more information about configuring Amazon MQ to publish general and audit lo
 
 You can enable *general* and *audit* logging when you [configure advanced broker settings](amazon-mq-creating-configuring-broker.md#configure-advanced-broker-settings-console) when you create a broker, or when you edit a broker\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-enable-cloudwatch-logs-edit-broker.png)
-
 General logging enables the default `INFO` logging level \(`DEBUG` logging isn't supported\) and publishes `activemq.log` to a log group in your CloudWatch account\. The log group has a format similar to the following:
 
 ```
 /aws/amazonmq/broker/b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9/general
 ```
 
-[Audit logging](http://activemq.apache.org/audit-logging.html) enables logging of management actions taken using JMX or using the ActiveMQ Web Console and publishes `audit.log` to a log group iin your CloudWatch account\. The log group has a format similar to the following:
+[Audit logging](http://activemq.apache.org/audit-logging.html) enables logging of management actions taken using JMX or using the ActiveMQ Web Console and publishes `audit.log` to a log group in your CloudWatch account\. The log group has a format similar to the following:
 
 ```
 /aws/amazonmq/broker/b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9/audit
