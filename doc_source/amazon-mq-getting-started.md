@@ -123,6 +123,9 @@ Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java clas
 
 For more information about `activemq-client.jar`, see [Initial Configuration](http://activemq.apache.org/initial-configuration.html) in the Apache ActiveMQ documentation\.
 
+**Important**  
+In the following example code, producers and consumers run in a single thread\. For production systems \(or to test broker instance failover\), make sure that your producers and consumers run on separate hosts or threads\.
+
 ### Create a Message Producer and Send a Message<a name="create-producer-send-message-getting-started"></a>
 
 1. Create a JMS pooled connection factory for the message producer using your broker's endpoint and then call the `createConnection` method against the factory\.

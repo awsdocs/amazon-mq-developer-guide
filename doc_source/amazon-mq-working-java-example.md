@@ -133,6 +133,9 @@ For more information, see [STOMP Support](https://docs.spring.io/spring-integrat
 
 ## AmazonMQExample\.java<a name="working-java-example"></a>
 
+**Important**  
+In the following example code, producers and consumers run in a single thread\. For production systems \(or to test broker instance failover\), make sure that your producers and consumers run on separate hosts or threads\.
+
 ------
 #### [ OpenWire ]
 
