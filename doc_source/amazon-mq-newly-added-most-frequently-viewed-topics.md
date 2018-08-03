@@ -1,6 +1,6 @@
 # Frequently Viewed Amazon MQ Topics<a name="amazon-mq-newly-added-most-frequently-viewed-topics"></a>
 
-**Latest update:** July 5, 2018
+**Latest update:** August 3, 2018
 
 
 | *Amazon MQ Developer Guide* | *Amazon MQ REST API Reference* | 
