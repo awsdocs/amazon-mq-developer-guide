@@ -8,6 +8,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 + [Step 1: Configure basic broker settings](#configure-basic-broker-settings-console)
 + [Configure advanced broker settings](#configure-advanced-broker-settings-console)
 + [Step 3: Finish creating the broker](#finish-creating-broker-console)
++ [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)
 
 ## Step 1: Configure basic broker settings<a name="configure-basic-broker-settings-console"></a>
 
@@ -33,7 +34,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 **Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker for high availability requires two subnets\.
 **Security group\(s\)** – Both single\-instance brokers and active/standby brokers for high availability require at least one security group \(for example, the default security group\)\.
 **VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\.
-**Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility)\.
+**Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility) and [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)\.
 
 1. Expand the **Advanced settings** section\.
 
