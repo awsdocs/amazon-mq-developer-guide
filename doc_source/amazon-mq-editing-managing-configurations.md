@@ -66,9 +66,9 @@ Editing the current configuration creates a new configuration revision\.
 
 1. Choose **Save**\.
 
-   The **Save revisions** dialog box is displayed\.
+   The **Save revision** dialog box is displayed\.
 
-1. \(Optional\) Type **A description of the changes in this revision**\.
+1. \(Optional\) Type `A description of the changes in this revision`\.
 
 1. Choose **Save**\.
 
