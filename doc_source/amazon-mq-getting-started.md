@@ -31,7 +31,9 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
-1. For **Deployment mode**, ensure that **Single\-instance broker** is selected\.
+1. Choose a **Deployment mode**\. In this example, **Single\-instance broker** is selected\.
+   + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
+   + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
 **Note**  
 Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0`\.
 
