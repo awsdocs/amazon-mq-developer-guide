@@ -28,7 +28,7 @@ General logging enables the default `INFO` logging level \(`DEBUG` logging isn't
 /aws/amazonmq/broker/b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9/audit
 ```
 
-Depending on whether you have a [single\-instance broker](single-broker-deployment.md) or an [active/standby broker for high availability](active-standby-broker-deployment.md), Amazon MQ creates either one or two log streams within each log group\. The log streams have a format similar to the following\.
+Depending on whether you have a [single\-instance broker](single-broker-deployment.md) or an [active/standby broker](active-standby-broker-deployment.md), Amazon MQ creates either one or two log streams within each log group\. The log streams have a format similar to the following\.
 
 ```
 activemq-b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.log

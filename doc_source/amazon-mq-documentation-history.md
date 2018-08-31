@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| August 31, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | August 15, 2018 | Corrected the information in the [](amazon-mq-getting-started.md#create-activemq-broker) section\. | 
 | August 13, 2018 | Added the [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md) section\. | 
 | August 3, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
@@ -26,7 +27,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | May 8, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | May 7, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | May 4, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
-| May 1, 2018 | Clarified the information about the maintenance window for active/standby brokers for high availability in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
+| May 1, 2018 | Clarified the information about the maintenance window for active/standby brokers in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 27, 2018 | Rewrote the following sections and optimized example Java code to match the recommendation to use connection pooling only for producers, not consumers: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 26, 2018 | Added an MQTT Java example to the [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md) section\. The MQTT example Java code connects to a broker, creates a topic, and publishes and receives a message\. | 
 | April 6, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
@@ -35,7 +36,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | April 2, 2018 | Moved the Concurrent Store and Dispatch for Queues in Amazon MQ section to the [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) section\. | 
 | March 27, 2018 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 22, 2018 | Clarified the following statement throughout this guide: Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\. For additional security, we highly recommend designing your application to use client\-side encryption\. For more information, see the [AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\. | 
-| March 19, 2018 | Clarified the following statement throughout this guide: An Active/standby broker for high availability is comprised of two brokers in two different Availability Zones, configured in a redundant pair\. These brokers communicate synchronously with your application, and with a shared storage location\. | 
+| March 19, 2018 | Clarified the following statement throughout this guide: An Active/standby broker is comprised of two brokers in two different Availability Zones, configured in a redundant pair\. These brokers communicate synchronously with your application, and with a shared storage location\. | 
 | March 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 12, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 9, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

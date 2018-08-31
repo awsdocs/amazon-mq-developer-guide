@@ -6,7 +6,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 
 For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
 
-You can enable *automatic minor version upgrades* to new minor versions of the broker engine, as Apache releases new versions\. Automatic upgrades occur during the 2\-hour *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
+You can enable *automatic minor version upgrades* to new minor versions of the broker engine, as Apache releases new versions\. Automatic upgrades occur during the *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 
 For information about creating and managing brokers, see the following:
 + [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md)
@@ -36,7 +36,7 @@ This is an OpenWire endpoint\.
   For more information, see [Configuring Transports](http://activemq.apache.org/configuring-transports.html) in the Apache ActiveMQ documentation\.
 
 **Note**  
-For an active/standby broker for high availability, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\.
+For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\.
 
 For a full list of broker attributes, see the following in the *Amazon MQ REST API Reference*:
 + [REST Operation ID: Broker](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html)
