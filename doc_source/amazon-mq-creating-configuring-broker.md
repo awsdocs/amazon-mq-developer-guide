@@ -18,7 +18,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
    + If this is your first time using Amazon MQ, in the **Create a broker** section, type `MyBroker` for **Broker name** and then choose **Next step**\.
    + If you have created a broker before, on the **Create a broker** page, in the **Broker details** section, type `MyBroker` for **Broker name**\.
 
-1. Choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
+1. In the **Broker details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
 1. Choose a **Deployment mode**:
    + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
@@ -48,11 +48,15 @@ If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-config
 
 1. In the **Network and security section**, configure your broker's connectivity:
 
-   1. Select the default **Virtual Private Cloud \(VPC\)** or create a new one on the Amazon VPC console\. For more information, see [What is Amazon VPC?](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html) in the *Amazon VPC User Guide*\.
+   1. Do one of the following:
+      + Choose **Use the default VPC, subnet\(s\), and security group\(s\)\.**
+      + Choose **Select existing VPC, subnet\(s\), and security group\(s\)\.**
 
-   1. Select the default **Subnets** or create new ones on the Amazon VPC console\. For more information, see [VPCs and Subnets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.
+        1. If you choose this option, you can create a new **Virtual Private Cloud \(VPC\)** on the Amazon VPC console, select an existing VPC, or select the default VPC\. For more information, see [What is Amazon VPC?](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html) in the *Amazon VPC User Guide*\.
 
-   1. Select your **Security group\(s\)**\.
+        1. After you create or select a VPC, you can create new **Subnet\(s\)** on the Amazon VPC console or select existing ones\. For more information, see [VPCs and Subnets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.
+
+        1. After you create or select subnets, you can select the **Security group\(s\)**\.
 
    1. Choose the **Public accessibility** of your broker\.
 
