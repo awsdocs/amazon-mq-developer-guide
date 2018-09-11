@@ -5,7 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
-| August 31, 2018 |  The following metrics are available: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) For more information, see the [Broker Metrics](amazon-mq-monitoring-cloudwatch.md#broker-metrics) section\. | 
+| August 31, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | August 30, 2018 | Amazon MQ is available in the Asia Pacific \(Singapore\) Region in addition to the following regions:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | July 30, 2018 | You can configure Amazon MQ to publish general and audit logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\. | 
 | July 25, 2018 | Amazon MQ is available in the Asia Pacific \(Tokyo\) and Asia Pacific \(Seoul\) Regions in addition to the following regions:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
