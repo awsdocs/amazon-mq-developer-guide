@@ -2,7 +2,10 @@
 
 An ActiveMQ *user* is a person or an application that can access the queues and topics of an ActiveMQ broker\. You can configure users to have specific permissions\. For example, you can allow some users to access the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html)\.
 
-A user can belong to a *group*\. You can configure which users belong to which groups and which groups have permission to send to, receive from, and administer specific queues and topics\.
+A *group* is a semantic label\. You can assign a group to a user and configure permissions for groups to send to, receive from, and administer specific queues and topics\.
+
+**Note**  
+You can't configure groups independently of users\. A group label is created when you add at least one user to it and deleted when you remove all users from it\.
 
 The following examples show how you can create, edit, and delete Amazon MQ broker users using the AWS Management Console\.
 
