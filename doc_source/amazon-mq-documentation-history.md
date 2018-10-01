@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| October 1, 2018 | Corrected the [Next Steps](amazon-mq-getting-started.md#next-steps-tutorials) section\. | 
 | September 27, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | September 18, 2018 | Added the following note to the [Tutorial: Creating and Managing Amazon MQ Broker Users](amazon-mq-listing-managing-users.md) section: You can't configure groups independently of users\. A group label is created when you add at least one user to it and deleted when you remove all users from it\. | 
 | September 10, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
