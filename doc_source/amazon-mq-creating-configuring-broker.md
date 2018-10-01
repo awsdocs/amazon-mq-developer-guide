@@ -5,12 +5,12 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 The first and most common Amazon MQ task is creating a broker\. The following example shows how you can use the AWS Management Console to create and configure a broker using the AWS Management Console\.
 
 **Topics**
-+ [Step 1: Configure basic broker settings](#configure-basic-broker-settings-console)
-+ [Configure advanced broker settings](#configure-advanced-broker-settings-console)
-+ [Step 3: Finish creating the broker](#finish-creating-broker-console)
++ [Configure Basic Broker Settings](#configure-basic-broker-settings-console)
++ [Configure Advanced Broker Settings](#configure-advanced-broker-settings-console)
++ [Step 3: Finish Creating the Broker](#finish-creating-broker-console)
 + [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)
 
-## Step 1: Configure basic broker settings<a name="configure-basic-broker-settings-console"></a>
+## Step 1: Configure Basic Broker Settings<a name="configure-basic-broker-settings-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
@@ -23,12 +23,14 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 1. Choose a **Deployment mode**:
    + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
    + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
+
+1. Choose a **Broker engine** version\.
 **Note**  
-Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0`\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6` and `5.15.0`\.
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 
-## Step 2: \(Optional\) Configure advanced broker settings<a name="configure-advanced-broker-settings-console"></a>
+## Step 2: \(Optional\) Configure Advanced Broker Settings<a name="configure-advanced-broker-settings-console"></a>
 
 **Important**  
 **Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker requires two subnets\.
@@ -43,8 +45,7 @@ Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0
 1. In the **Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\.
 **Important**  
 If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](amazon-mq-configuring-cloudwatch-logs.md#add-createloggroup-permission-to-user) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
-If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-configuring-cloudwatch-logs.md#configure-resource-based-policy), the broker can't publish the logs to CloudWatch Logs\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-enable-cloudwatch-logs.png)
+If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-configuring-cloudwatch-logs.md#configure-resource-based-policy), the broker can't publish the logs to CloudWatch Logs\.
 
 1. In the **Network and security section**, configure your broker's connectivity:
 
@@ -70,7 +71,7 @@ For an active/standby broker, if one of the broker instances undergoes maintenan
       + To allow Amazon MQ to select the maintenance window automatically, choose **No preference**\.
       + To set a custom maintenance window, choose **Select maintenance window** and then specify the **Start day** and **Start time** of the upgrades\.
 
-## Step 3: Finish creating the broker<a name="finish-creating-broker-console"></a>
+## Step 3: Finish Creating the Broker<a name="finish-creating-broker-console"></a>
 
 1. Choose **Create broker**\.
 

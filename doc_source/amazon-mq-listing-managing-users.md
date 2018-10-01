@@ -10,11 +10,11 @@ You can't configure groups independently of users\. A group label is created whe
 The following examples show how you can create, edit, and delete Amazon MQ broker users using the AWS Management Console\.
 
 **Topics**
-+ [To create a new user](#create-new-user-console)
++ [To Create a New User](#create-new-user-console)
 + [To edit an existing user](#edit-existing-user-console)
-+ [To delete a existing user](#delete-existing-user-console)
++ [To Delete an Existing User](#delete-existing-user-console)
 
-## To create a new user<a name="create-new-user-console"></a>
+## To Create a New User<a name="create-new-user-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
@@ -58,7 +58,7 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 **Important**  
 Making changes to a user does *not* apply the changes to the user immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
 
-## To delete a existing user<a name="delete-existing-user-console"></a>
+## To Delete an Existing User<a name="delete-existing-user-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 

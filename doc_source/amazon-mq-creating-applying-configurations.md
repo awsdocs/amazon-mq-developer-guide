@@ -14,11 +14,11 @@ For more information, see the following:
 The following example shows how you can create and apply an Amazon MQ broker configuration using the AWS Management Console\.
 
 **Topics**
-+ [Step 1: Create a configuration from scratch](#creating-configuration-from-scratch-console)
-+ [Step 2: Create a new configuration revision](#creating-new-configuration-revision-console)
-+ [Step 3: Apply a configuration revision to your broker](#apply-configuration-revision-creating-console)
++ [Step 1: Create a Configuration from Scratch](#creating-configuration-from-scratch-console)
++ [Step 2: Create a New Configuration Revision](#creating-new-configuration-revision-console)
++ [Step 3: Apply a Configuration Revision to Your Broker](#apply-configuration-revision-creating-console)
 
-## Step 1: Create a configuration from scratch<a name="creating-configuration-from-scratch-console"></a>
+## Step 1: Create a Configuration from Scratch<a name="creating-configuration-from-scratch-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
@@ -27,19 +27,19 @@ The following example shows how you can create and apply an Amazon MQ broker con
 
 1. On the **Configurations** page, choose **Create configuration**\.
 
-1. On the **Create configuration** page, in the **Details** section, type the **Configuration name** \(for example, `MyConfiguration`\)\.
+1. On the **Create configuration** page, in the **Details** section, type the **Configuration name** \(for example, `MyConfiguration`\) and select a **Broker engine** version\.
 **Note**  
-Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0`\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6` and `5.15.0`\.
 
 1. Choose **Create configuration**\.
 
-## Step 2: Create a new configuration revision<a name="creating-new-configuration-revision-console"></a>
+## Step 2: Create a New Configuration Revision<a name="creating-new-configuration-revision-console"></a>
 
 1. From the configuration list, choose ***MyConfiguration***\.
 **Note**  
 The first configuration revision is always created for you when Amazon MQ creates the configuration\.
 
-   On the ***MyConfiguration*** page, the broker engine type and version that your new configuration revision uses \(for example, **Apache ActiveMQ 5\.15\.0**\) are displayed\.
+   On the ***MyConfiguration*** page, the broker engine type and version that your new configuration revision uses \(for example, **Apache ActiveMQ 5\.15\.6**\) are displayed\.
 
 1. On the **Configuration details** tab, the configuration revision number, description, and broker configuration in XML format are displayed\.
 **Note**  
@@ -62,15 +62,14 @@ The Amazon MQ console automatically sanitizes invalid and prohibited configurati
 Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, it isn't possible to delete a configuration\.
 
-## Step 3: Apply a configuration revision to your broker<a name="apply-configuration-revision-creating-console"></a>
+## Step 3: Apply a Configuration Revision to Your Broker<a name="apply-configuration-revision-creating-console"></a>
 
 1. On the left, expand the navigation panel and choose **Brokers**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-apply-configuration.png)
 
 1. From the broker list, select your broker \(for example, **MyBroker**\) and then choose **Edit**\.
 
-1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-1-red.png) and a **Revision** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-2-red.png) and then choose **Schedule Modifications** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/number-3-red.png)\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-configuration-schedule-modifications.png)
+1. On the **Edit *MyBroker*** page, in the **Configuration** section, select a **Configuration** and a **Revision** and then choose **Schedule Modifications**\.
 
 1. In the **Schedule broker modifications** section, choose whether to apply modifications **During the next scheduled maintenance window** or **Immediately**\.
 **Important**  

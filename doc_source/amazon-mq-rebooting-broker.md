@@ -4,7 +4,7 @@ To apply a new configuration to a broker, you can reboot the broker\. In additio
 
 The following example shows how you can reboot an Amazon MQ broker using the AWS Management Console\.
 
-## To reboot an Amazon MQ broker<a name="rebooting-broker-console"></a>
+## To Reboot an Amazon MQ Broker<a name="rebooting-broker-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 

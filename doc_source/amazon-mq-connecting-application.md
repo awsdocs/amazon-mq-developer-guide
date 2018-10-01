@@ -6,8 +6,8 @@ You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://acti
 
 **Topics**
 + [Prerequisites](#connect-application-prerequisites-tutorial)
-+ [To create a message producer and send a message](#create-producer-send-message-tutorial)
-+ [To create a message consumer and receive the message](#create-consumer-receive-message-tutorial)
++ [To Create a Message Producer and Send a Message](#create-producer-send-message-tutorial)
++ [To Create a Message Consumer and Receive the Message](#create-consumer-receive-message-tutorial)
 
 ## Prerequisites<a name="connect-application-prerequisites-tutorial"></a>
 
@@ -54,12 +54,12 @@ Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java clas
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-client</artifactId>
-        <version>5.15.0</version>
+        <version>5.15.6</version>
     </dependency>
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-pool</artifactId>
-        <version>5.15.0</version>
+        <version>5.15.6</version>
     </dependency>
 </dependencies>
 ```
@@ -69,7 +69,7 @@ For more information about `activemq-client.jar`, see [Initial Configuration](ht
 **Important**  
 In the following example code, producers and consumers run in a single thread\. For production systems \(or to test broker instance failover\), make sure that your producers and consumers run on separate hosts or threads\.
 
-## To create a message producer and send a message<a name="create-producer-send-message-tutorial"></a>
+## To Create a Message Producer and Send a Message<a name="create-producer-send-message-tutorial"></a>
 
 1. Create a JMS pooled connection factory for the message producer using your broker's endpoint and then call the `createConnection` method against the factory\.
 **Note**  
@@ -130,7 +130,7 @@ Message producers should always use the `PooledConnectionFactory` class\. For mo
    producerConnection.close();
    ```
 
-## To create a message consumer and receive the message<a name="create-consumer-receive-message-tutorial"></a>
+## To Create a Message Consumer and Receive the Message<a name="create-consumer-receive-message-tutorial"></a>
 
 1. Create a JMS connection factory for the message producer using your broker's endpoint and then call the `createConnection` method against the factory\.
 

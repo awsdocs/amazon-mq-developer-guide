@@ -4,7 +4,7 @@ When you request that Amazon MQ create a broker, the creation process can take a
 
 The following example shows how you can confirm your broker's existence by listing your brokers in the current region using the AWS Management Console\.
 
-## To list brokers and view broker details<a name="listing-all-brokers-console"></a>
+## To List Brokers and View Broker Details<a name="listing-all-brokers-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 

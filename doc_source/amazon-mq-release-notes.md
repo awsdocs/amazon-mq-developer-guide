@@ -5,6 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
+| September 27, 2018 | Amazon MQ supports ActiveMQ 5\.15\.6, in addition to 5\.15\.0\. For more information, see the following:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | August 31, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | August 30, 2018 | Amazon MQ is available in the Asia Pacific \(Singapore\) Region in addition to the following regions:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | July 30, 2018 | You can configure Amazon MQ to publish general and audit logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\. | 

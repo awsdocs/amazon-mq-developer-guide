@@ -4,7 +4,7 @@ If you don't use an Amazon MQ broker \(and don't foresee using it in the near fu
 
 The following example shows how you can delete a broker using the AWS Management Console\.
 
-## To delete an Amazon MQ broker<a name="deleting-broker-console"></a>
+## To Delete an Amazon MQ Broker<a name="deleting-broker-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 

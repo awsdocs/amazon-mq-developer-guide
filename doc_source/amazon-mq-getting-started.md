@@ -34,8 +34,10 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 1. Choose a **Deployment mode**\. In this example, **Single\-instance broker** is selected\.
    + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
    + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
+
+1. Choose a **Broker engine** version\.
 **Note**  
-Currently, Amazon MQ supports only the `ActiveMQ` broker engine, version `5.15.0`\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6` and `5.15.0`\.
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 
@@ -113,12 +115,12 @@ Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java clas
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-client</artifactId>
-        <version>5.15.0</version>
+        <version>5.15.6</version>
     </dependency>
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-pool</artifactId>
-        <version>5.15.0</version>
+        <version>5.15.6</version>
     </dependency>
 </dependencies>
 ```
