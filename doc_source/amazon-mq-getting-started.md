@@ -74,7 +74,7 @@ You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://acti
 
 #### Enable VPC Attributes<a name="connect-application-enable-vpc-attributes-getting-started"></a>
 
-To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
+To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
 
 #### Enable Inbound Connections<a name="connect-application-allow-inbound-connections-getting-started"></a>
 
@@ -271,4 +271,4 @@ Now that you have created a broker, connected an application to it, and sent and
 + [Tutorial: Rebooting an Amazon MQ Broker](amazon-mq-rebooting-broker.md)
 + [Tutorial: Accessing CloudWatch Metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
 
-You can also begin to dive deep into [Amazon MQ best practices](amazon-mq-best-practices.md) and [Amazon MQ REST APIs](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/), and then [plan to migrate to Amazon MQ](amazon-mq-migrating.md)\.
+You can also begin to dive deep into [Amazon MQ best practices](amazon-mq-best-practices.md) and [Amazon MQ REST APIs](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/), and then [plan to migrate to Amazon MQ](amazon-mq-migrating.md)\.

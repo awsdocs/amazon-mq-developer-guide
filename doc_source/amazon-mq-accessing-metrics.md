@@ -4,7 +4,7 @@ Amazon MQ and Amazon CloudWatch are integrated so you can use CloudWatch to view
 
 For a full list of Amazon MQ metrics, see [Monitoring Amazon MQ Brokers Using Amazon CloudWatch](amazon-mq-monitoring-cloudwatch.md)\.
 
-For information about creating a CloudWatch alarm for a metrics, see [Create or Edit a CloudWatch Alarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
+For information about creating a CloudWatch alarm for a metrics, see [Create or Edit a CloudWatch Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
 
 **Note**  
 There is no charge for the Amazon MQ metrics reported in CloudWatch\. These metrics are provided as part of the Amazon MQ service\.  
@@ -47,12 +47,12 @@ If you're already signed into the Amazon MQ console, on the broker **Details** p
 
 ## AWS Command Line Interface<a name="amazon-mq-accessing-metrics-aws-cli"></a>
 
-To access Amazon MQ metrics using the AWS CLI, use the `[get\-metric\-statistics](http://docs.aws.amazon.com/cli/latest/reference/cloudwatch/get-metric-statistics.html)` command\.
+To access Amazon MQ metrics using the AWS CLI, use the `[get\-metric\-statistics](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/get-metric-statistics.html)` command\.
 
-For more information, see [Get Statistics for a Metric](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/getting-metric-statistics.html) in the *Amazon CloudWatch User Guide*\.
+For more information, see [Get Statistics for a Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/getting-metric-statistics.html) in the *Amazon CloudWatch User Guide*\.
 
 ## Amazon CloudWatch API<a name="amazon-mq-accessing-metrics-cw-api"></a>
 
-To access Amazon MQ metrics using the CloudWatch API, use the `[GetMetricStatistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html)` action\.
+To access Amazon MQ metrics using the CloudWatch API, use the `[GetMetricStatistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html)` action\.
 
-For more information, see [Get Statistics for a Metric](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/getting-metric-statistics.html) in the *Amazon CloudWatch User Guide*\.
+For more information, see [Get Statistics for a Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/getting-metric-statistics.html) in the *Amazon CloudWatch User Guide*\.

@@ -29,8 +29,8 @@ Amazon MQ is a managed message broker service that provides compatibility with m
 + To create your first broker with Amazon MQ, see [Getting Started with Amazon MQ](amazon-mq-getting-started.md)\.
 + To discover the functionality and architecture of Amazon MQ, see [How Amazon MQ Works](amazon-mq-how-it-works.md)\.
 + To find out the guidelines and caveats that will help you make the most of Amazon MQ, see [Best Practices for Amazon MQ](amazon-mq-best-practices.md)\.
-+ To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
-+ To learn about Amazon MQ AWS CLI commands, see [Amazon MQ in the *AWS CLI Command Reference*](http://docs.aws.amazon.com/cli/latest/reference/mq/index.html)\.
++ To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
++ To learn about Amazon MQ AWS CLI commands, see [Amazon MQ in the *AWS CLI Command Reference*](https://docs.aws.amazon.com/cli/latest/reference/mq/index.html)\.
 
 ## We Want to Hear from You<a name="amazon-mq-we-want-to-hear-from-you"></a>
 

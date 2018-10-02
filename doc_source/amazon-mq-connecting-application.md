@@ -13,7 +13,7 @@ You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://acti
 
 ### Enable VPC Attributes<a name="connect-application-enable-vpc-attributes-tutorial"></a>
 
-To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
+To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
 
 ### Enable Inbound Connections<a name="connect-application-allow-inbound-connections-tutorial"></a>
 

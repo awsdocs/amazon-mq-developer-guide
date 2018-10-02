@@ -4,7 +4,7 @@ Amazon MQ makes it easy to create a message broker with the computing and storag
 
 This section describes the basic elements of a message broker, lists available Amazon MQ broker instance types and their statuses, provides an overview of broker architecture, explains broker configuration parameters and offers a working example of using Java Message Service \(JMS\) with an ActiveMQ broker\.
 
-To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
+To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
 **Topics**
 + [Amazon MQ Basic Elements](amazon-mq-basic-elements.md)

@@ -1,6 +1,6 @@
 # Limits in Amazon MQ<a name="amazon-mq-limits"></a>
 
-This topic lists limits within Amazon MQ\. Many of the following limits can be changed for specific AWS accounts\. To request an increase for a limit, see [AWS Service Limits](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *Amazon Web Services General Reference*\.
+This topic lists limits within Amazon MQ\. Many of the following limits can be changed for specific AWS accounts\. To request an increase for a limit, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *Amazon Web Services General Reference*\.
 
 **Topics**
 + [Limits Related to Brokers](#broker-limits)
@@ -57,7 +57,7 @@ The following table lists limits related to Amazon MQ data storage\.
 
 ## API Throttling<a name="api-throttling-limits"></a>
 
-The following throttling limits are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information about Amazon MQ APIs, see the *[Amazon MQ REST API Reference](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
+The following throttling limits are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information about Amazon MQ APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
 **Important**  
 These limits don't apply to ActiveMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.

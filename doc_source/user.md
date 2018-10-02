@@ -18,5 +18,5 @@ For information about creating, editing, and deleting ActiveMQ users, see the fo
 ## Attributes<a name="user-attributes"></a>
 
 For a full list of user attributes, see the following in the *Amazon MQ REST API Reference*:
-+ [REST Operation ID: User](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html)
-+ [REST Operation ID: Users](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html)
++ [REST Operation ID: User](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html)
++ [REST Operation ID: Users](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html)

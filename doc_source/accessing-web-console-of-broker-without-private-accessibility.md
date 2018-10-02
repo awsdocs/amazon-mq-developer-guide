@@ -11,7 +11,7 @@ To perform the following steps, you must configure the following:
 + **VPCs**
   + The VPC without an internet gateway, to which the Amazon MQ broker is attached, named `private-vpc`\.
   + A second VPC, with an internet gateway, named `public-vpc`\.
-  + Both VPCs must be connected \(for example, using [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html)\) so that the Amazon EC2 instances in the public VPC can communicate with the EC2 instances in the private VPC\.
+  + Both VPCs must be connected \(for example, using [VPC peering](https://docs.aws.amazon.com/vpc/latest/peering/Welcome.html)\) so that the Amazon EC2 instances in the public VPC can communicate with the EC2 instances in the private VPC\.
   + If you use VPC peering, the route tables for both VPCs must be configured for the peering connection\.
 + **Security Groups**
   + The security group used to create the Amazon MQ broker, named `private-sg`\.

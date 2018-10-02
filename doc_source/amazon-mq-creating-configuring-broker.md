@@ -53,9 +53,9 @@ If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-config
       + Choose **Use the default VPC, subnet\(s\), and security group\(s\)\.**
       + Choose **Select existing VPC, subnet\(s\), and security group\(s\)\.**
 
-        1. If you choose this option, you can create a new **Virtual Private Cloud \(VPC\)** on the Amazon VPC console, select an existing VPC, or select the default VPC\. For more information, see [What is Amazon VPC?](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html) in the *Amazon VPC User Guide*\.
+        1. If you choose this option, you can create a new **Virtual Private Cloud \(VPC\)** on the Amazon VPC console, select an existing VPC, or select the default VPC\. For more information, see [What is Amazon VPC?](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html) in the *Amazon VPC User Guide*\.
 
-        1. After you create or select a VPC, you can create new **Subnet\(s\)** on the Amazon VPC console or select existing ones\. For more information, see [VPCs and Subnets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.
+        1. After you create or select a VPC, you can create new **Subnet\(s\)** on the Amazon VPC console or select existing ones\. For more information, see [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.
 
         1. After you create or select subnets, you can select the **Security group\(s\)**\.
 

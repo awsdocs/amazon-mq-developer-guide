@@ -39,9 +39,9 @@ This is an OpenWire endpoint\.
 For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\.
 
 For a full list of broker attributes, see the following in the *Amazon MQ REST API Reference*:
-+ [REST Operation ID: Broker](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html)
-+ [REST Operation ID: Brokers](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html)
-+ [REST Operation ID: Broker Reboot](http://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html)
++ [REST Operation ID: Broker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html)
++ [REST Operation ID: Brokers](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html)
++ [REST Operation ID: Broker Reboot](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html)
 
 ## Instance Types<a name="broker-instance-types"></a>
 
