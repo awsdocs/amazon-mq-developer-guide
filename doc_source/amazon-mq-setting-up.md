@@ -56,7 +56,7 @@ You can view or download your secret access key *only* when you create your cred
 
 ## Step 3: Get Ready to Use the Example Code<a name="get-ready-to-use-example-code"></a>
 
-The following tutorials show how you can work with Amazon MQ and ActiveMQ using the AWS Management Console and Java\. To use the example code, you must install the [Java Standard Edition Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/) and make some changes to the code\.
+The following tutorials show how you can work with Amazon MQ and ActiveMQ using the AWS Management Console and Java\. To use the example code, you must install the [Java Standard Edition Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and make some changes to the code\.
 
 You can also create and manage brokers programmatically using Amazon MQ [REST API](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/) and AWS SDKs\.
 
