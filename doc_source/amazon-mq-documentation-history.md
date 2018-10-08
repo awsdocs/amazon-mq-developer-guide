@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| October 8, 2018 | Updated the [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md) section\. | 
 | October 3, 2018 | Corrected outdated links in the [Setting Up Amazon MQ](amazon-mq-setting-up.md) and [Amazon MQ Tutorials](amazon-mq-tutorials.md) sections\. | 
 | October 1, 2018 | Corrected the information in the [Next Steps](amazon-mq-getting-started.md#next-steps-tutorials) section\. | 
 | September 27, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
