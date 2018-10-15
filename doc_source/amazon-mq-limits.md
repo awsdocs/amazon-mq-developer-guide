@@ -19,6 +19,7 @@ The following table lists limits related to Amazon MQ [brokers]()\.
 | Broker name |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Brokers per [broker instance type](broker.md#broker-instance-types), per AWS account, per region | 20 | 
 | Broker configuration history depth | 10 | 
+| Connections per wire\-level protocol | 1,000 | 
 | Security groups per broker | 5 | 
 | Destinations \(queues and topics\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
 
@@ -43,7 +44,7 @@ The following table lists limits related to Amazon MQ [users](user.md)\.
 | Username |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Password |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Users per broker | 250 | 
-| Groups per user | 5 | 
+| Groups per user | 20 | 
 
 ## Data Storage<a name="data-storage-limits"></a>
 

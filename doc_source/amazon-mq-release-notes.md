@@ -5,6 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
+| October 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | October 2, 2018 | AWS has expanded its HIPAA compliance program to include Amazon MQ as a [HIPAA Eligible Service](https://aws.amazon.com/compliance/hipaa-compliance/)\. | 
 | September 27, 2018 | Amazon MQ supports ActiveMQ 5\.15\.6, in addition to 5\.15\.0\. For more information, see the following:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | August 31, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
