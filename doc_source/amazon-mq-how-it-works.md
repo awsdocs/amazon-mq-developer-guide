@@ -11,3 +11,4 @@ To learn about Amazon MQ REST APIs, see the *[Amazon MQ REST API Reference](http
 + [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
 + [Working Java Example](amazon-mq-working-java-example.md)
++ [Tagging resources](amazon-mq-tagging.md)

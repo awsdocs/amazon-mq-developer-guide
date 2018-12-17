@@ -26,7 +26,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Choose a **Broker engine** version\.
 **Note**  
-Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6` and `5.15.0`\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6`, `5.15.6` and `5.15.0`\.
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 

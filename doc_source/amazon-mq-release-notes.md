@@ -5,6 +5,9 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Feature Release | 
 | --- | --- | 
+| December 11, 2018 | Amazon MQ supports ActiveMQ 5\.15\.8, 5\.15\.6, and 5\.15\.0\. For more information, see the following:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| December 5, 2018 | AWS supports resource tagging to help track your cost allocation\. You can tag resources when creating them, or by viewing the details of that resource\. See [Tagging resources](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-tagging.html)\. | 
+| November 19, 2018 | AWS has expanded its SOC compliance program to include Amazon MQ as an [SOC compliant service](https://aws.amazon.com/compliance/soc-faqs/)\. | 
 | October 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | October 2, 2018 | AWS has expanded its HIPAA compliance program to include Amazon MQ as a [HIPAA Eligible Service](https://aws.amazon.com/compliance/hipaa-compliance/)\. | 
 | September 27, 2018 | Amazon MQ supports ActiveMQ 5\.15\.6, in addition to 5\.15\.0\. For more information, see the following:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
