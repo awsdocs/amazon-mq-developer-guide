@@ -4,6 +4,7 @@ The following tutorials show how you can work with Amazon MQ and ActiveMQ using 
 
 **Topics**
 + [Creating and Configuring a Broker](amazon-mq-creating-configuring-broker.md)
++ [Creating and Configuring a Network of Brokers](amazon-mq-creating-configuring-network-of-brokers.md)
 + [Editing Broker Engine Version, CloudWatch Logs, and Maintenance Preferences](amazon-mq-editing-broker-preferences.md)
 + [Creating and Applying Broker Configurations](amazon-mq-creating-applying-configurations.md)
 + [Editing and Managing Broker Configurations](amazon-mq-editing-managing-configurations.md)

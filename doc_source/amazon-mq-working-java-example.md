@@ -7,6 +7,10 @@ The following examples show how you can work with ActiveMQ programmatically:
 
 ## Prerequisites<a name="quick-start-prerequisites"></a>
 
+### Enable VPC Attributes<a name="quick-start-enable-vpc-attributes"></a>
+
+To ensure that your broker is accessible within your VPC, you must enable the `enableDnsHostnames` and `enableDnsSupport` VPC attributes\. For more information, see [DNS Support in your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC User Guide*\.
+
 ### Enable Inbound Connections<a name="quick-start-allow-inbound-connections"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
@@ -49,12 +53,12 @@ Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java clas
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-client</artifactId>
-        <version>5.15.6</version>
+        <version>5.15.8</version>
     </dependency>
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-pool</artifactId>
-        <version>5.15.6</version>
+        <version>5.15.8</version>
     </dependency>
 </dependencies>
 ```

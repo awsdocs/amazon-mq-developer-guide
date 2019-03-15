@@ -23,10 +23,13 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 1. Choose a **Deployment mode**:
    + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
    + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
+   + For more information on the sample blueprints for a network of brokers, see [Sample Blueprints](network-of-brokers.md#sample-deployments)\.
+**Note**  
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `5.15.6` and `5.15.0`\.
 
 1. Choose a **Broker engine** version\.
 **Note**  
-Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6`, `5.15.6` and `5.15.0`\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `5.15.6` and `5.15.0`\.
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 
@@ -35,7 +38,7 @@ Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6`, `
 **Important**  
 **Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker requires two subnets\.
 **Security group\(s\)** – Both single\-instance brokers and active/standby brokers require at least one security group \(for example, the default security group\)\.
-**VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\.
+**VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\. Amazon MQ only supports default VPC tenancy, and does not support dedicated VPC tenancy\.
 **Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility) and [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)\.
 
 1. Expand the **Advanced settings** section\.

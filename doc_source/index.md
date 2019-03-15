@@ -1,7 +1,7 @@
 # Amazon MQ Developer Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -21,6 +21,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Amazon MQ Tutorials](amazon-mq-tutorials.md)
    + [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md)
       + [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)
+   + [Tutorial: Creating and Configuring an Amazon MQ Network of Brokers](amazon-mq-creating-configuring-network-of-brokers.md)
    + [Tutorial: Editing Broker Engine Version, CloudWatch Logs, and Maintenance Preferences](amazon-mq-editing-broker-preferences.md)
    + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
    + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
@@ -39,6 +40,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)
       + [Amazon MQ Single-Instance Broker](single-broker-deployment.md)
       + [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)
+      + [Amazon MQ Network of Brokers](network-of-brokers.md)
       + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
    + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
       + [Elements Permitted in Amazon MQ Configurations](permitted-elements.md)

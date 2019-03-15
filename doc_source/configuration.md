@@ -4,7 +4,7 @@ A *configuration* contains all of the settings for your ActiveMQ broker, in XML 
 
 **Important**  
 Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
-Currently, it isn't possible to delete a configuration\.
+Currently, you can't delete a configuration\.
 
 For information about creating, editing, and managing configurations, see the following:
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)

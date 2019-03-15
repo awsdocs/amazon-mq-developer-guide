@@ -37,26 +37,27 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 
 | Dimension | Description | 
 | --- | --- | 
-| Broker |  The name of the broker\. A single\-instance broker has the suffix `-1`\. An active\-standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.  | 
+| Broker |  The name of the broker\.  A single\-instance broker has the suffix `-1`\. An active\-standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.   | 
 
 ## Destination \(Queue and Topic\) Metrics<a name="destination-queue-topic-metrics"></a>
 
 **Important**  
-The following metrics record only values since CloudWatch polled the metrics last:  
+The following metrics include per\-minute counts for the CloudWatch polling period\.  
 `EnqueueCount`
 `ExpiredCount`
 `DequeueCount`
 `DispatchCount`
+For instance, in a 5 minute [CloudWatch period](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#CloudWatchPeriods), `EnqueueCount` has 5 count values, each for a 1 minute portion of the period\. The `Minimum` and `Maximum` statistics provide the lowest and highest per\-minute value during the specified period\.
 
 
 | Metric | Unit | Description | 
 | --- | --- | --- | 
 | ConsumerCount | Count | The number of consumers subscribed to the destination\. | 
-| EnqueueCount | Count | The number of messages sent to the destination\. | 
-| EnqueueTime | Time \(milliseconds\) | The amount of time it takes the broker to accept a message from the producer and send it to the destination\. | 
-| ExpiredCount | Count | The number of messages that couldn't be delivered because they expired\. | 
-| DispatchCount | Count | The number of messages sent to consumers\. | 
-| DequeueCount | Count | The number of messages acknowledged by consumers\. | 
+| EnqueueCount | Count | The number of messages sent to the destination, per minute\. | 
+| EnqueueTime | Time \(milliseconds\) | The end\-to\-end latency from when a message arrives at a broker until it is delivered to a consumer\. | 
+| ExpiredCount | Count | The number of messages that couldn't be delivered because they expired, per minute\. | 
+| DispatchCount | Count | The number of messages sent to consumers, per minute\. | 
+| DequeueCount | Count | The number of messages acknowledged by consumers, per minute\. | 
 | MemoryUsage | Percent | The percentage of the memory limit that the destination currently uses\. | 
 | ProducerCount | Count | The number of producers for the destination\. | 
 | QueueSize | Count | The number of messages in the queue\. This metric applies only to queues\.  | 
@@ -66,5 +67,5 @@ The following metrics record only values since CloudWatch polled the metrics las
 
 | Dimension | Description | 
 | --- | --- | 
-| Broker |  The name of the broker\. A single\-instance broker has the suffix `-1`\. An active\-standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.  | 
+| Broker |  The name of the broker\.  A single\-instance broker has the suffix `-1`\. An active\-standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.   | 
 | Topic or Queue | The name of the topic or queue\. | 

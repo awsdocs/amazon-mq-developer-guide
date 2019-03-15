@@ -31,7 +31,7 @@ The following examples show how you can edit Amazon MQ broker configurations and
 **Note**  
 Unless you select a configuration when you create a broker, the first configuration revision is always created for you when Amazon MQ creates the broker\.
 
-   On the ***MyBroker*** page, the broker engine type and version that the configuration uses \(for example, **Apache ActiveMQ 5\.15\.6**\) are displayed\.
+   On the ***MyBroker*** page, the broker engine type and version that the configuration uses \(for example, **Apache ActiveMQ 5\.15\.8**\) are displayed\.
 
 1. Choose **Revision history**\.
 
@@ -53,7 +53,7 @@ Unless you select a configuration when you create a broker, the first configurat
 **Note**  
 Unless you select a configuration when you create a broker, the first configuration revision is always created for you when Amazon MQ creates the broker\.
 
-   On the ***MyBroker*** page, the broker engine type and version that the configuration uses \(for example, **Apache ActiveMQ 5\.15\.6**\) are displayed\.
+   On the ***MyBroker*** page, the broker engine type and version that the configuration uses \(for example, **Apache ActiveMQ 5\.15\.8**\) are displayed\.
 
 1. On the **Configuration details** tab, the configuration revision number, description, and broker configuration in XML format are displayed\.
 **Note**  
@@ -74,7 +74,7 @@ Editing the current configuration creates a new configuration revision\.
 **Important**  
 The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.  
 Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
-Currently, it isn't possible to delete a configuration\.
+Currently, you can't delete a configuration\.
 
 ## To Apply a Configuration Revision to Your Broker<a name="apply-configuration-revision-editing-console"></a>
 

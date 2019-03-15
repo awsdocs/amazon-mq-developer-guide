@@ -5,6 +5,8 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| January 5, 2019 | Improved documentation on some per\-minute metrics\. See: [Destination \(Queue and Topic\) Metrics](amazon-mq-monitoring-cloudwatch.md#destination-queue-topic-metrics)\. | 
+| December 19, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | December 11, 2018 | Updated documentation to reflect availability of ActiveMQ version 5\.15\.8\.  | 
 | December 5, 2018 | Added a new topic on cost allocation tagging\. See: [Tagging resources](amazon-mq-tagging.md)\. | 
 | October 26, 2018 | Added a new Best Practices topic\. See: [Avoid Slow Restarts by Recovering Prepared XA Transactions](recover-xa-transactions.md)\. | 
