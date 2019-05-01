@@ -76,7 +76,7 @@ Because CloudTrail log files aren't an ordered stack trace of public APIs, they 
     "sourceIPAddress": "203.0.113.0",
     "userAgent": "PostmanRuntime/7.1.5",
     "requestParameters": {
-        "engineVersion": "5.15.8",
+        "engineVersion": "5.15.9",
         "deploymentMode": "ACTIVE_STANDBY_MULTI_AZ",
         "maintenanceWindowStartTime": {
             "dayOfWeek": "THURSDAY",

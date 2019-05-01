@@ -54,7 +54,6 @@ The following table lists limits related to Amazon MQ data storage\.
 | Limit | Description | 
 | --- | --- | 
 | Storage capacity per broker | 200 GB | 
-| Data store | Amazon MQ uses [Apache KahaDB](http://activemq.apache.org/kahadb.html) as its data store\. Other data stores, such as JDBC and LevelDB, aren't supported\. | 
 
 ## API Throttling<a name="api-throttling-limits"></a>
 

@@ -52,10 +52,12 @@ After you create your brokers, you must allow traffic between them\.
    1. For **Port Range**, type the OpenWire port \(`61617`\)\.
 
    1. Do one of the following:
-      + If you want to restrict access to a particular IP address or one of your brokers is in a different security group, for **Source**, leave **Custom** selected, and then enter the IP address of `MyBroker1`, followed by `/32`\. \(This converts the IP address to a valid CIDR record\)\. For more information see [Elastic Network Interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html)\.
+      + If you want to restrict access to a particular IP address, for **Source**, leave **Custom** selected, and then enter the IP address of `MyBroker1`, followed by `/32`\. \(This converts the IP address to a valid CIDR record\)\. For more information see [Elastic Network Interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html)\.
 **Tip**  
 To retrieve the IP address of `MyBroker1`, on the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/), choose the name of the broker and navigate to the **Details** section\.
-      + If one of your brokers belong to the same security group, for **Source**, leave **Custom** selected and then type the ID of the security group you are editing\.
+      + If all the brokers are private and belong to the same VPC, for **Source**, leave **Custom** selected and then type the ID of the security group you are editing\.
+**Note**  
+For public brokers, you must restrict access using IP addresses\.
 
    1. Choose **Save**\.
 

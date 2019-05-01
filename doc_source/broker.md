@@ -13,6 +13,16 @@ For information about creating and managing brokers, see the following:
 + [Brokers](amazon-mq-limits.md#broker-limits)
 + [Statuses](#broker-statuses)
 
+## Supported Wire\-level Protocols<a name="broker-protocols"></a>
+
+You can access your brokers by using [any programming language that ActiveMQ supports](http://activemq.apache.org/cross-language-clients.html) and by enabling TLS explicitly for the following protocols:
++ [AMQP](http://activemq.apache.org/amqp.html)
++ [MQTT](http://activemq.apache.org/mqtt.html)
++ MQTT over [WebSocket](http://activemq.apache.org/websockets.html)
++ [OpenWire](http://activemq.apache.org/openwire.html)
++ [STOMP](http://activemq.apache.org/stomp.html)
++ STOMP over WebSocket
+
 ## Attributes<a name="broker-attributes"></a>
 
 A broker has several attributes, for example:

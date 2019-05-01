@@ -22,6 +22,7 @@ The following are benefits of using a network of brokers:
 + [Sample Blueprints](#sample-deployments)
 + [Network of Brokers Topologies](#nob-topologies)
 + [ Cross Region](#how-to-configure-cross-region)
++ [Dynamic Failover With Transport Connectors](#transport-connectors)
 
 ## How Does a Network of Brokers Work?<a name="how-does-it-work"></a>
 
@@ -40,7 +41,7 @@ A network of brokers ensures that messages flow from one broker instance to anot
 
 ## How Does a Network of Brokers Handle Credentials?<a name="how-does-it-handle-credentials"></a>
 
-For broker A to connect to broker B in a network, broker A must use valid credentials, like any other producer or consumer\. Instead of providing a password in broker A's `<networkConnnector>` configuration, you must first create a user on broker A with the same values as another user on broker B \(these are *separate, unique* users that share the same username and password values\)\. When you specify the `userName` attribute in the `<networkConnector>` configuration, Amazon MQ will add the password automatically at runtime\.
+For broker A to connect to broker B in a network, broker A must use valid credentials, like any other producer or consumer\. Instead of providing a password in broker A's `<networkConnector>` configuration, you must first create a user on broker A with the same values as another user on broker B \(these are *separate, unique* users that share the same username and password values\)\. When you specify the `userName` attribute in the `<networkConnector>` configuration, Amazon MQ will add the password automatically at runtime\.
 
 **Important**  
 Don't specify the `password` attribute for the `<networkConnector>`\. We don't recommend storing plaintext passwords in broker configuration files, because this makes the passwords visible in the Amazon MQ console\. For more information, see [Step 2: Configure Network Connectors for Your Broker](amazon-mq-creating-configuring-network-of-brokers.md#creating-configuring-network-of-brokers-configure-network-connectors)\.
@@ -214,3 +215,30 @@ To configure a network of brokers like this example, you could add `networkConne
         uri="static:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-west-2.amazonaws.com)"/>        
 </networkConnectors>
 ```
+
+## Dynamic Failover With Transport Connectors<a name="transport-connectors"></a>
+
+In addition to configuring `networkConnector` elements, you can configure your broker `transportConnector` options to enable dynamic failover, and to rebalance connections when brokers are added or removed from the network\. 
+
+```
+<transportConnectors>
+  <transportConnector name="openwire" updateClusterClients="true" rebalanceClusterClients="true" updateClusterClientsOnRemove="true"/>
+</transportConnectors>
+```
+
+In this example both `updateClusterClients` and `rebalanceClusterClients` are set to `true`\. In this case clients will be provided a list of brokers in the network, and will request them to rebalance if a new broker joins\.
+
+Available options:
++ `updateClusterClients`: Passes information to clients about changes in the network of broker topology\.
++ `rebalanceClusterClients`: Causes clients to re\-balance across brokers when a new broker is added to a network of brokers\.
++ `updateClusterClientsOnRemove`: Updates clients with topology information when a broker leaves a network of brokers\.
+
+When `updateClusterClients` is set to true, clients can be configured to connect to a single broker in a network of brokers\. 
+
+```
+failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)
+```
+
+When a new broker connects, it will be receive a list of URIs of all brokers in the network\. If the connection to the broker fails, it can dynamically switch to one of the brokers provided when it connected\.
+
+For more information on failover, see [Broker\-side Options for Failover](http://activemq.apache.org/failover-transport-reference.html#FailoverTransportReference-Broker-sideOptionsforFailover) in the Active MQ documentation\.

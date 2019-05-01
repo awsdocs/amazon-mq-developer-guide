@@ -3,8 +3,12 @@
 The following table lists Amazon MQ feature releases and improvements\. For changes to the *Amazon MQ Developer Guide*, see [Amazon MQ Document History](amazon-mq-documentation-history.md)\.
 
 
-| Date | Feature Release | 
+| Date | Documentation Update | 
 | --- | --- | 
+| April 29, 2019 | You can now use tag\-based policies and resource\-level permissions\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
+| April 16, 2019 | You can now retrieve information about broker engine and broker instance options using the REST API\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| April 8, 2019 | Amazon MQ supports ActiveMQ 5\.15\.9\. For more information, see the following\. Resolved bugs and improvements in ActiveMQ: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) For more information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| March 4, 2019 | Improved the documentation for configuring dynamic failover and the rebalancing of clients for a network of brokers\. Enable dynamic failover by configuring transportConnectors along with networkConnectors configuration options\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | February 27, 2019 | Amazon MQ is available in the EU \(London\) Region in addition to the following regions:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | January 24, 2019 | The default configuration now includes a policy to purge inactive destinations\.  | 
 | January 17, 2019 | Amazon MQ `mq.t2.micro` instance types now support only 100 connections per wire\-level protocol\. See, [Limits in Amazon MQ](amazon-mq-limits.md)\. | 

@@ -5,6 +5,8 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| April 22, 2019 | Added new topics for tag\-based policies and resource\-level permissions\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
+| March 4, 2019 | Improved the documentation for configuring dynamic failover and the rebalancing of clients for a network of brokers\. Enable dynamic failover by configuring transportConnectors along with networkConnectors configuration options\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | January 5, 2019 | Improved documentation on some per\-minute metrics\. See: [Destination \(Queue and Topic\) Metrics](amazon-mq-monitoring-cloudwatch.md#destination-queue-topic-metrics)\. | 
 | December 19, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | December 11, 2018 | Updated documentation to reflect availability of ActiveMQ version 5\.15\.8\.  | 

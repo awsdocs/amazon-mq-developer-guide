@@ -7,6 +7,7 @@ The following design patterns can improve the security of your Amazon MQ broker\
 + [Always Use Client\-Side Encryption as a Complement to TLS](#always-use-client-side-encryption-complement-tls)
 + [Always Configure an Authorization Map](#always-configure-authorization-map)
 + [Always Configure a System Group](#always-configure-system-group)
++ [Block Unnecessary Protocols with VPC Security Groups](#amazon-mq-vpc-security-groups)
 
 ## Prefer Brokers without Public Accessibility<a name="prefer-brokers-without-public-accessibility"></a>
 
@@ -36,3 +37,20 @@ The settings for the `activemq-webconsole` group in the authorization map restri
 
 **Important**  
 If you specify an authorization map which doesn't include the `activemq-webconsole` group, you can't use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
+
+## Block Unnecessary Protocols with VPC Security Groups<a name="amazon-mq-vpc-security-groups"></a>
+
+To improve security, you should restrict the connections of unnecessary protocols and ports by properly configuring your Amazon VPC Security Group\. For instance, to restrict access to most protocols while allowing access to OpenWire and the ActiveMQ web console, you could allow access to only 61617 and 8162\. This limits your exposure by blocking protocols you are not using, while allowing OpenWire and the ActiveMQ web console to function normally\.
+
+Allow only the protocol ports that you are using\.
++ AMQP: 5671
++ MQTT: 8883
++ OpenWire: 61617
++ STOMP: 61614
++ WebSocket: 61619
+
+For more information see\.
++ [Step 2: \(Optional\) Configure Advanced Broker Settings](amazon-mq-creating-configuring-broker.md#configure-advanced-broker-settings-console)
++ [Security Groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
++ [Default Security Group for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup)
++ [Working with Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#WorkingWithSecurityGroups)
