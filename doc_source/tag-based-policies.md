@@ -16,7 +16,7 @@ Amazon MQ supports policies based on tags\. For instance, you could deny access 
             "Resource": "*",
             "Condition": {
                 "StringEquals": {
-                    "aws:RequestTag/environment": "production"
+                    "aws:ResourceTag/environment": "production"
                 }
             }
         }

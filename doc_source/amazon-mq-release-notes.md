@@ -5,6 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Documentation Update | 
 | --- | --- | 
+| May 10, 2019 | Data storage for new `mq.t2.micro` instance types are limited to 20 GB\. See: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | April 29, 2019 | You can now use tag\-based policies and resource\-level permissions\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | April 16, 2019 | You can now retrieve information about broker engine and broker instance options using the REST API\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | April 8, 2019 | Amazon MQ supports ActiveMQ 5\.15\.9\. For more information, see the following\. Resolved bugs and improvements in ActiveMQ: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) For more information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
