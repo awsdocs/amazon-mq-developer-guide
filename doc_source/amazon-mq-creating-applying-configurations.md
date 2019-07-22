@@ -29,7 +29,7 @@ The following example shows how you can create and apply an Amazon MQ broker con
 
 1. On the **Create configuration** page, in the **Details** section, type the **Configuration name** \(for example, `MyConfiguration`\) and select a **Broker engine** version\.
 **Note**  
-Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6` and `5.15.0`\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `5.15.6` and `5.15.0`\.
 
 1. Choose **Create configuration**\.
 
@@ -39,7 +39,7 @@ Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.6` an
 **Note**  
 The first configuration revision is always created for you when Amazon MQ creates the configuration\.
 
-   On the ***MyConfiguration*** page, the broker engine type and version that your new configuration revision uses \(for example, **Apache ActiveMQ 5\.15\.6**\) are displayed\.
+   On the ***MyConfiguration*** page, the broker engine type and version that your new configuration revision uses \(for example, **Apache ActiveMQ 5\.15\.8**\) are displayed\.
 
 1. On the **Configuration details** tab, the configuration revision number, description, and broker configuration in XML format are displayed\.
 **Note**  
@@ -60,7 +60,7 @@ Editing the current configuration creates a new configuration revision\.
 **Important**  
 The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.  
 Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
-Currently, it isn't possible to delete a configuration\.
+Currently, you can't delete a configuration\.
 
 ## Step 3: Apply a Configuration Revision to Your Broker<a name="apply-configuration-revision-creating-console"></a>
 

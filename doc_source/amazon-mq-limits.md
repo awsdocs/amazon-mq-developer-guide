@@ -11,7 +11,7 @@ This topic lists limits within Amazon MQ\. Many of the following limits can be c
 
 ## Brokers<a name="broker-limits"></a>
 
-The following table lists limits related to Amazon MQ [brokers]()\.
+The following table lists limits related to Amazon MQ brokers\.
 
 
 | Limit | Description | 
@@ -19,13 +19,13 @@ The following table lists limits related to Amazon MQ [brokers]()\.
 | Broker name |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Brokers per [broker instance type](broker.md#broker-instance-types), per AWS account, per region | 20 | 
 | Broker configuration history depth | 10 | 
-| Connections per wire\-level protocol | 1,000 | 
+| Connections per wire\-level protocol | 1,000 \(100 for mq\.t2\.micro brokers\) | 
 | Security groups per broker | 5 | 
 | Destinations \(queues and topics\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
 
 ## Configurations<a name="configuration-limits"></a>
 
-The following table lists limits related to Amazon MQ [configurations]()\.
+The following table lists limits related to Amazon MQ configurations\.
 
 
 | Limit | Description | 
@@ -36,7 +36,7 @@ The following table lists limits related to Amazon MQ [configurations]()\.
 
 ## Users<a name="activemq-user-limits"></a>
 
-The following table lists limits related to Amazon MQ [users](user.md)\.
+The following table lists limits related to Amazon MQ users\.
 
 
 | Limit | Description | 
@@ -53,8 +53,12 @@ The following table lists limits related to Amazon MQ data storage\.
 
 | Limit | Description | 
 | --- | --- | 
-| Storage capacity per broker | 200 GB | 
-| Data store | Amazon MQ uses [Apache KahaDB](http://activemq.apache.org/kahadb.html) as its data store\. Other data stores, such as JDBC and LevelDB, aren't supported\. | 
+| Storage capacity per new mq\.t2\.micro broker\. See [ Instance Types  Lists the Amazon MQ broker instance types\.   The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. The following table lists the available Amazon MQ broker instance types\. 
+
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker.html) For more information about throughput considerations, see [Choose the Correct Broker Instance Type for the Best Throughput](ensuring-effective-amazon-mq-performance.md#broker-instance-types-choosing)\. ](broker.md#broker-instance-types)\. | 20 GB | 
+| Storage capacity per broker for other instance types\. See [ Instance Types  Lists the Amazon MQ broker instance types\.   The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. The following table lists the available Amazon MQ broker instance types\. 
+
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker.html) For more information about throughput considerations, see [Choose the Correct Broker Instance Type for the Best Throughput](ensuring-effective-amazon-mq-performance.md#broker-instance-types-choosing)\. ](broker.md#broker-instance-types)\. | 200 GB | 
 
 ## API Throttling<a name="api-throttling-limits"></a>
 

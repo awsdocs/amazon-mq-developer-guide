@@ -10,6 +10,7 @@ To authorize AWS users to work with brokers, configurations, and users, you must
 **Topics**
 + [IAM Permissions Required to Create an Amazon MQ Broker](#amazon-mq-permissions-required-to-create-broker)
 + [Amazon MQ REST API Permissions Reference](#amazon-mq-api-permissions-reference)
++ [Resource\-Level Permissions for Amazon MQ API Actions](#amq-supported-iam-actions-resources)
 
 ## IAM Permissions Required to Create an Amazon MQ Broker<a name="amazon-mq-permissions-required-to-create-broker"></a>
 
@@ -44,7 +45,7 @@ The `ec2:AuthorizedService` condition key ensures that ENI permissions can be gr
         "Action": [
             "[ec2:CreateNetworkInterfacePermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterfacePermission.html)",
             "[ec2:DeleteNetworkInterfacePermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteNetworkInterfacePermission.html)",
-            "[ec2:DescribeNetworkInterfacePermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkInterfacePermissions.html)"
+            "[ec2:DescribeNetworkInterfacePermissions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkInterfacePermissions.html)"
         ],
         "Effect": "Allow",
         "Resource": "*",
@@ -68,20 +69,52 @@ The following table lists Amazon MQ REST APIs and the corresponding IAM permissi
 
 | Amazon MQ REST APIs | Required Permissions | 
 | --- | --- | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#rest-api-brokers-methods-post](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#rest-api-brokers-methods-post) | mq:CreateBroker | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#rest-api-configurations-methods-post](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#rest-api-configurations-methods-post) | mq:CreateConfiguration | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-post](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-post) | mq:CreateUser | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-delete](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-delete) | mq:DeleteBroker | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-delete](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-delete) | mq:DeleteUser | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-get) | mq:DescribeBroker | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#rest-api-configuration-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#rest-api-configuration-methods-get) | mq:DescribeConfiguration | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html#rest-api-configuration-revision-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html#rest-api-configuration-revision-methods-get) | mq:DescribeConfigurationRevision | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-get) | mq:DescribeUser | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#rest-api-brokers-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#rest-api-brokers-methods-get) | mq:ListBrokers | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#CreateBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#CreateBroker) | mq:CreateBroker | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#CreateConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#CreateConfiguration) | mq:CreateConfiguration | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags) | mg:CreateTags | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#CreateUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#CreateUser) | mq:CreateUser | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DeleteBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DeleteBroker) | mq:DeleteBroker | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#DeleteUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#DeleteUser) | mq:DeleteUser | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DescribeBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DescribeBroker) | mq:DescribeBroker | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#DescribeConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#DescribeConfiguration) | mq:DescribeConfiguration | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html#DescribeConfigurationRevision](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html#DescribeConfigurationRevision) | mq:DescribeConfigurationRevision | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-users-username.html#DescribeUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-users-username.html#DescribeUser) | mq:DescribeUser | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#ListBrokers](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#ListBrokers) | mq:ListBrokers | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html#rest-api-configuration-revisions-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html#rest-api-configuration-revisions-methods-get) | mq:ListConfigurationRevisions | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#rest-api-configurations-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#rest-api-configurations-methods-get) | mq:ListConfigurations | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html#rest-api-users-methods-get](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html#rest-api-users-methods-get) | mq:ListUsers | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#rest-api-broker-reboot-methods-post](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#rest-api-broker-reboot-methods-post) | mq:RebootBroker  | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-put](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#rest-api-broker-methods-put) | mq:UpdateBroker | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#rest-api-configuration-methods-put](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#rest-api-configuration-methods-put) | mq:UpdateConfiguration | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-put](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#rest-api-user-methods-put) | mq:UpdateUser | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#ListConfigurations](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#ListConfigurations) | mq:ListConfigurations | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#ListTags](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#ListTags) | mq:ListTags | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html#ListUsers](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html#ListUsers) | mq:ListUsers | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#RebootBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#RebootBroker) | mq:RebootBroker  | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#UpdateBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#UpdateBroker) | mq:UpdateBroker | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#UpdateConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#UpdateConfiguration) | mq:UpdateConfiguration | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#UpdateUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#UpdateUser) | mq:UpdateUser | 
+
+## Resource\-Level Permissions for Amazon MQ API Actions<a name="amq-supported-iam-actions-resources"></a>
+
+The term *resource\-level permissions* refers to the ability to specify the resources on which users are allowed to perform actions\. Amazon MQ has partial support for resource\-level permissions\. For certain Amazon MQ actions, you can control when users are allowed to use those actions based on conditions that have to be fulfilled, or specific resources that users are allowed to use\. 
+
+The following table describes the Amazon MQ API actions that currently support resource\-level permissions, as well as the supported resources, resource ARNs, and condition keys for each action\.
+
+**Important**  
+If an Amazon MQ API action is not listed in this table, then it does not support resource\-level permissions\. If an Amazon MQ API action does not support resource\-level permissions, you can grant users permission to use the action, but you have to specify a \* wildcard for the resource element of your policy statement\.
+
+
+| API Action | Resource Types \(\*required\) | 
+| --- | --- | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#CreateConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#CreateConfiguration) | [configurations\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags) | [brokers](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies), [configurations](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#CreateUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#CreateUser) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DeleteBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DeleteBroker) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#DeleteUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#DeleteUser) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DescribeBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DescribeBroker) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#DescribeConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#DescribeConfiguration) | [configurations\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html#DescribeConfigurationRevision](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revision.html#DescribeConfigurationRevision) | [configurations\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-users-username.html#DescribeUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-users-username.html#DescribeUser) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html#ListConfigurationRevisions](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html#ListConfigurationRevisions) | [configurations\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html#ListConfigurationRevisions](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration-revisions.html#ListConfigurationRevisions) | [configurations\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#ListTags](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#ListTags) | [brokers](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies), [configurations](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html#ListUsers](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-users.html#ListUsers) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#RebootBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html#RebootBroker) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#UpdateBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#UpdateBroker) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#UpdateConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#UpdateConfiguration) | [configurations\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#UpdateUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#UpdateUser) | [brokers\*](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-resources-for-iam-policies) | 

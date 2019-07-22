@@ -3,8 +3,23 @@
 The following table lists Amazon MQ feature releases and improvements\. For changes to the *Amazon MQ Developer Guide*, see [Amazon MQ Document History](amazon-mq-documentation-history.md)\.
 
 
-| Date | Feature Release | 
+| Date | Documentation Update | 
 | --- | --- | 
+| June 19, 2019 | Amazon MQ is available in the EU \(Paris\) and Asia Pacific \(Mumbai\) regions\. For information on available regions, see [AWS Regions and Endpoints](https://docs.aws.amazon.com//general/latest/gr/rande.html#amazon-mq_region)\. | 
+| June 12, 2019 | Amazon MQ is available in the Canada \(Central\) region\. For information on available regions, see [AWS Regions and Endpoints](https://docs.aws.amazon.com//general/latest/gr/rande.html#amazon-mq_region)\. | 
+| June 3, 2019 | Two new Amazon CloudWatch metrics are available: `EstablishedConnectionsCount` and `InactiveDurableSubscribers`\. See: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
+| May 10, 2019 | Data storage for new `mq.t2.micro` instance types are limited to 20 GB\. See: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
+| April 29, 2019 | You can now use tag\-based policies and resource\-level permissions\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
+| April 16, 2019 | You can now retrieve information about broker engine and broker instance options using the REST API\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| April 8, 2019 | Amazon MQ supports ActiveMQ 5\.15\.9\. For more information, see the following\. Resolved bugs and improvements in ActiveMQ: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) For more information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| March 4, 2019 | Improved the documentation for configuring dynamic failover and the rebalancing of clients for a network of brokers\. Enable dynamic failover by configuring transportConnectors along with networkConnectors configuration options\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| February 27, 2019 | Amazon MQ is available in the EU \(London\) Region in addition to the following regions:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| January 24, 2019 | The default configuration now includes a policy to purge inactive destinations\.  | 
+| January 17, 2019 | Amazon MQ `mq.t2.micro` instance types now support only 100 connections per wire\-level protocol\. See, [Limits in Amazon MQ](amazon-mq-limits.md)\. | 
+| December 19, 2018 | You can configure a series of Amazon MQ brokers in a network of brokers\. For more information, see the following sections:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| December 11, 2018 | Amazon MQ supports ActiveMQ 5\.15\.8, 5\.15\.6, and 5\.15\.0\. For more information, see the following:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
+| December 5, 2018 | AWS supports resource tagging to help track your cost allocation\. You can tag resources when creating them, or by viewing the details of that resource\. See [Tagging resources](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-tagging.html)\. | 
+| November 19, 2018 | AWS has expanded its SOC compliance program to include Amazon MQ as an [SOC compliant service](https://aws.amazon.com/compliance/soc-faqs/)\. | 
 | October 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | October 2, 2018 | AWS has expanded its HIPAA compliance program to include Amazon MQ as a [HIPAA Eligible Service](https://aws.amazon.com/compliance/hipaa-compliance/)\. | 
 | September 27, 2018 | Amazon MQ supports ActiveMQ 5\.15\.6, in addition to 5\.15\.0\. For more information, see the following:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 

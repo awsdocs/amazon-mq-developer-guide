@@ -10,7 +10,13 @@ A *configuration* contains all of the settings for your ActiveMQ broker, in XML 
 
 ActiveMQ brokers are configured using [Spring XML](https://docs.spring.io/spring/docs/current/spring-framework-reference/) files\. You can configure many aspects of your ActiveMQ broker, such as predefined destinations, destination policies, authorization policies, and plugins\. Amazon MQ controls some of these configuration elements, such as network transports and storage\. Other configuration options, such as creating networks of brokers, aren't currently supported\.
 
-The full set of supported configuration options is specified in the [Amazon MQ XML schema](https://s3-us-west-2.amazonaws.com/amazon-mq-docs/XML/amazon-mq-active-mq-5.15.6.xsd)\. You can use this schema to validate and sanitize your configuration files\. Amazon MQ also lets you provide configurations by uploading XML files\. When you upload an XML file, Amazon MQ automatically sanitizes and removes invalid and prohibited configuration parameters according to the schema\.
+The full set of supported configuration options is specified in the Amazon MQ XML schemas:
++ [Amazon MQ XML schema — 5\.15\.9](https://s3-us-west-2.amazonaws.com/amazon-mq-docs/XML/amazon-mq-active-mq-5.15.9.xsd)
++ [Amazon MQ XML schema — 5\.15\.8](https://s3-us-west-2.amazonaws.com/amazon-mq-docs/XML/amazon-mq-active-mq-5.15.8.xsd)
++ [Amazon MQ XML schema — 5\.15\.6](https://s3-us-west-2.amazonaws.com/amazon-mq-docs/XML/amazon-mq-active-mq-5.15.6.xsd)
++ [Amazon MQ XML schema — 5\.15\.0](https://s3-us-west-2.amazonaws.com/amazon-mq-docs/XML/amazon-mq-active-mq-5.15.0.xsd)
+
+You can use these schemas to validate and sanitize your configuration files\. Amazon MQ also lets you provide configurations by uploading XML files\. When you upload an XML file, Amazon MQ automatically sanitizes and removes invalid and prohibited configuration parameters according to the schema\.
 
 **Note**  
 You can use only static values for attributes\. Amazon MQ sanitizes elements and attributes that contain Spring expressions, variables, and element references from your configuration\.

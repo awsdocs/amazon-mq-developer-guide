@@ -54,12 +54,12 @@ Add the `activemq-client.jar` and `activemq-pool.jar` packages to your Java clas
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-client</artifactId>
-        <version>5.15.6</version>
+        <version>5.15.8</version>
     </dependency>
     <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-pool</artifactId>
-        <version>5.15.6</version>
+        <version>5.15.8</version>
     </dependency>
 </dependencies>
 ```

@@ -56,6 +56,7 @@ The following is a detailed listing of the elements permitted in Amazon MQ confi
 | timedSubscriptionRecoveryPolicy [\(attributes\)](permitted-attributes.md#timedSubscriptionRecoveryPolicy.attributes) | 
 | timeStampingBrokerPlugin [\(attributes\)](permitted-attributes.md#timeStampingBrokerPlugin.attributes) | 
 | topic [\(attributes\)](permitted-attributes.md#topic.attributes) | 
+| transportConnector [\(attributes\)](permitted-attributes.md#transportConnector.attributes) | 
 | uniquePropertyMessageEvictionStrategy [\(attributes\)](permitted-attributes.md#uniquePropertyMessageEvictionStrategy.attributes) | 
 | virtualDestinationInterceptor [\(child collection elements\)](permitted-collections.md#virtualDestinationInterceptor.collections) | 
 | virtualTopic [\(attributes\)](permitted-attributes.md#virtualTopic.attributes) | 

@@ -2,7 +2,7 @@
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance Types](#broker-instance-types)\.
 + A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\.
-+ An *active/standby broker for high availability* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\.
++ An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\.
 
 For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
 
@@ -12,6 +12,16 @@ For information about creating and managing brokers, see the following:
 + [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md)
 + [Brokers](amazon-mq-limits.md#broker-limits)
 + [Statuses](#broker-statuses)
+
+## Supported Wire\-level Protocols<a name="broker-protocols"></a>
+
+You can access your brokers by using [any programming language that ActiveMQ supports](http://activemq.apache.org/cross-language-clients.html) and by enabling TLS explicitly for the following protocols:
++ [AMQP](http://activemq.apache.org/amqp.html)
++ [MQTT](http://activemq.apache.org/mqtt.html)
++ MQTT over [WebSocket](http://activemq.apache.org/websockets.html)
++ [OpenWire](http://activemq.apache.org/openwire.html)
++ [STOMP](http://activemq.apache.org/stomp.html)
++ STOMP over WebSocket
 
 ## Attributes<a name="broker-attributes"></a>
 
