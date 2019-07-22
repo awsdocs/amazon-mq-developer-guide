@@ -134,7 +134,7 @@ To configure the hub and spoke network of brokers in this example, you could add
 
 ### Concentrator Topology<a name="nob-topologies-concentrator"></a>
 
-In this example topology, the three brokers on the bottom can handle a large number of connections, and those messages are concentrated to *Broker1* and *Broker2*\. Each of the other brokers has a non\-duplex connection to the more central brokers\. To scale the capacity of this topology, you can add additional brokers that receive messages and concentrate those messages in *Broker1* and *Broker2*\. 
+In this example topology, the three brokers on the bottom can handle a large number of connections, and those messages are concentrated to *Broker1* and *Broker2*\. Each of the other brokers has a non\-duplex connection to the more central brokers\. To scale the capacity of this topology, you can add additonal brokers that receive messages and concentrate those messages in *Broker1* and *Broker2*\. 
 
 ![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-concentrator.png)![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
 

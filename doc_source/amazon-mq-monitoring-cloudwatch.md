@@ -22,7 +22,7 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 | CpuUtilization | Percent | The percentage of allocated EC2 compute units that the broker currently uses\. | 
 | CurrentConnectionsCount | Count | The current number of active connections on the current broker\. | 
 | EstablishedConnectionsCount | Count | The total number of connections, active and inactive, that have been established on the broker\. | 
-| InactiveDurableTopicSubscribersCount | Count | The number of inactive durable topic subscribers, up to a maximum of 2000\.  | 
+| InactiveDurableSubscribers | Count | The number of inactive topic subscribers, up to a maximum of 2000\.  | 
 | JournalFilesForFastRecovery | Count | The number of journal files that will be replayed after a clean shutdown\. | 
 | JournalFilesForFullRecovery | Count | The number of journal files that will be replayed after an unclean shutdown\. | 
 | HeapUsage | Percent | The percentage of the ActiveMQ JVM memory limit that the broker currently uses\. | 
@@ -61,7 +61,6 @@ For instance, in a 5 minute [CloudWatch period](https://docs.aws.amazon.com/Amaz
 | ExpiredCount | Count | The number of messages that couldn't be delivered because they expired, per minute\. | 
 | DispatchCount | Count | The number of messages sent to consumers, per minute\. | 
 | DequeueCount | Count | The number of messages acknowledged by consumers, per minute\. | 
-| ReceiveCount | Count | The number of messages that have been received from the remote broker for a duplex network connector\. | 
 | InFlightCount | Count | The number of messages sent to consumers that have not been acknowledged\. | 
 | MemoryUsage | Percent | The percentage of the memory limit that the destination currently uses\. | 
 | ProducerCount | Count | The number of producers for the destination\. | 
@@ -74,4 +73,3 @@ For instance, in a 5 minute [CloudWatch period](https://docs.aws.amazon.com/Amaz
 | --- | --- | 
 | Broker |  The name of the broker\.  A single\-instance broker has the suffix `-1`\. An active\-standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.   | 
 | Topic or Queue | The name of the topic or queue\. | 
-| NetworkConnector  | The name of the network connector\. | 

@@ -99,7 +99,7 @@ For more information, see [Step 2: Configure Network Connectors for Your Broker]
 
 #### A Network of Brokers with Multiple Brokers<a name="example-network-of-brokers-multiple-brokers"></a>
 
-In this configuration, multiple brokers are connected in a network of brokers\. The name of the network connector is `connector_1_to_2`, the username common to the brokers is `myCommonUser`, the connection is `duplex`, and the comma\-separated list of OpenWire endpoint URIs is prefixed by `masterslave:`, indicating a failover connection between the brokers\. The failover from broker to broker isn't randomized and reconnection attempts continue indefinitely\.
+In this configuration, multiple brokers are connected in a network of brokers\. The name of the network connector is `connector_1_to_2`, the username common to the the brokers is `myCommonUser`, the connection is `duplex`, and the comma\-separated list of OpenWire endpoint URIs is prefixed by `masterslave:`, indicating a failover connection between the brokers\. The failover from broker to broker isn't randomized and reconnection attempts continue indefinitely\.
 
 ```
 <networkConnectors>
