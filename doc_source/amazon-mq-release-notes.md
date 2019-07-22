@@ -5,6 +5,9 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Documentation Update | 
 | --- | --- | 
+| June 19, 2019 | Amazon MQ is available in the EU \(Paris\) and Asia Pacific \(Mumbai\) regions\. For information on available regions, see [AWS Regions and Endpoints](https://docs.aws.amazon.com//general/latest/gr/rande.html#amazon-mq_region)\. | 
+| June 12, 2019 | Amazon MQ is available in the Canada \(Central\) region\. For information on available regions, see [AWS Regions and Endpoints](https://docs.aws.amazon.com//general/latest/gr/rande.html#amazon-mq_region)\. | 
+| June 3, 2019 | Two new Amazon CloudWatch metrics are available: `EstablishedConnectionsCount` and `InactiveDurableSubscribers`\. See: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | May 10, 2019 | Data storage for new `mq.t2.micro` instance types are limited to 20 GB\. See: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | April 29, 2019 | You can now use tag\-based policies and resource\-level permissions\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | April 16, 2019 | You can now retrieve information about broker engine and broker instance options using the REST API\. For more information, see: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
