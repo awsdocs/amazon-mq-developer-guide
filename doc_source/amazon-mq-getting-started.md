@@ -27,9 +27,9 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Do one of the following:
    + If this is your first time using Amazon MQ, in the **Create a broker** section, type `MyBroker` for **Broker name** and then choose **Next step**\.
-   + If you have created a broker before, on the **Create a broker** page, in the **Broker details** section, type `MyBroker` for **Broker name**\.
+   + If you have created a broker before, on the **Create a broker** page, in the **Details** section, type `MyBroker` for **Broker name**\.
 
-1. In the **Broker details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
+1. In the **Details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
 1. Choose a **Deployment mode**\. In this example, **Single\-instance broker** is selected\.
    + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
@@ -262,7 +262,7 @@ The following example shows how you can delete a broker using the AWS Management
 ## Next Steps<a name="next-steps-tutorials"></a>
 
 Now that you have created a broker, connected an application to it, and sent and received a message, you might want to try the following:
-+ [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md) \(Advanced Settings\)
++ [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md) \(Additional Settings\)
 + [](amazon-mq-editing-broker-preferences.md)
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
 + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)

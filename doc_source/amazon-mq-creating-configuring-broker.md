@@ -6,7 +6,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 **Topics**
 + [Configure Basic Broker Settings](#configure-basic-broker-settings-console)
-+ [Configure Advanced Broker Settings](#configure-advanced-broker-settings-console)
++ [Configure Additional Broker Settings](#configure-advanced-broker-settings-console)
 + [Step 3: Finish Creating the Broker](#finish-creating-broker-console)
 + [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)
 
@@ -16,9 +16,9 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Do one of the following:
    + If this is your first time using Amazon MQ, in the **Create a broker** section, type `MyBroker` for **Broker name** and then choose **Next step**\.
-   + If you have created a broker before, on the **Create a broker** page, in the **Broker details** section, type `MyBroker` for **Broker name**\.
+   + If you have created a broker before, on the **Create a broker** page, in the **Details** section, type `MyBroker` for **Broker name**\.
 
-1. In the **Broker details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
+1. In the **Details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
 1. Choose a **Deployment mode**:
    + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
@@ -33,15 +33,16 @@ Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 
-## Step 2: \(Optional\) Configure Advanced Broker Settings<a name="configure-advanced-broker-settings-console"></a>
+## Step 2: \(Optional\) Configure Additional Broker Settings<a name="configure-advanced-broker-settings-console"></a>
 
 **Important**  
 **Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker requires two subnets\.
 **Security group\(s\)** – Both single\-instance brokers and active/standby brokers require at least one security group \(for example, the default security group\)\.
 **VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\. Amazon MQ only supports default VPC tenancy, and does not support dedicated VPC tenancy\.
+**Encryption** – Choose the customer master key to encrypt your data\. See [Encryption at Rest](amazon-mq-encryption.md#encryption-at-rest)\.
 **Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility) and [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)\.
 
-1. Expand the **Advanced settings** section\.
+1. Expand the **Additional settings** section\.
 
 1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](configuration.md) and [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
 
@@ -61,6 +62,8 @@ If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-config
         1. After you create or select a VPC, you can create new **Subnet\(s\)** on the Amazon VPC console or select existing ones\. For more information, see [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.
 
         1. After you create or select subnets, you can select the **Security group\(s\)**\.
+
+   1. Choose the customer master key \(CMK\) that will be used to encrypt your data\. See [Encryption at Rest](amazon-mq-encryption.md#encryption-at-rest)\.
 
    1. Choose the **Public accessibility** of your broker\.
 

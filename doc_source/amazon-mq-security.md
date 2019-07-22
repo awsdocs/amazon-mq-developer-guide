@@ -5,6 +5,7 @@ This section provides information about Amazon MQ and ActiveMQ authentication an
 **Topics**
 + [Tag\-based Policies](tag-based-policies.md)
 + [Authentication](#authentication)
++ [Encryption](amazon-mq-encryption.md)
 + [API Authentication and Authorization for Amazon MQ](amazon-mq-api-authentication-authorization.md)
 + [Messaging Authentication and Authorization for ActiveMQ](activemq-authentication-authorization.md)
 

@@ -64,6 +64,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)
 + [Amazon MQ Security](amazon-mq-security.md)
    + [Tag-based Policies](tag-based-policies.md)
+   + [Encryption](amazon-mq-encryption.md)
    + [API Authentication and Authorization for Amazon MQ](amazon-mq-api-authentication-authorization.md)
    + [Messaging Authentication and Authorization for ActiveMQ](activemq-authentication-authorization.md)
 + [Related Resources](amazon-mq-related-resources.md)
