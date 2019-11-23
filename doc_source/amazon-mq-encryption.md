@@ -8,7 +8,7 @@ Amazon MQ encrypts messages at rest and in transit using encryption keys that it
 
 ## Encryption at Rest<a name="encryption-at-rest"></a>
 
-Amazon MQ integrates with AWS Key Management Service \(KMS\) to offer transparent server\-side encryption\. Amazon MQ always encrypts your data at rest\. When you create a broker, you can specify the AWS KMS customer master key \(CMK\) that you want Amazon MQ to use to encrypt your data at rest\. If you don't specify a CMK, Amazon MQ creates an AWS managed CMK for you and uses it on your behalf\. For more information about CMKs, see [Customer Master Keys \(CMKs\)]() in the AWS Key Management Service Developer Guide\.
+Amazon MQ integrates with AWS Key Management Service \(KMS\) to offer transparent server\-side encryption\. Amazon MQ always encrypts your data at rest\. When you create a broker, you can specify the AWS KMS customer master key \(CMK\) that you want Amazon MQ to use to encrypt your data at rest\. If you don't specify a CMK, Amazon MQ creates an AWS managed CMK for you and uses it on your behalf\. For more information about CMKs, see [Customer Master Keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the AWS Key Management Service Developer Guide\.
 
 When creating a broker, you can configure what Amazon MQ uses for your encryption key by selecting one of the following\.
 + **AWS owned CMK** — The key is owned by Amazon MQ and is not in your account\.

@@ -17,7 +17,7 @@ The following table lists limits related to Amazon MQ brokers\.
 | Limit | Description | 
 | --- | --- | 
 | Broker name |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
-| Brokers per [broker instance type](broker.md#broker-instance-types), per AWS account, per region | 20 | 
+| Brokers per AWS account, per region | 20 | 
 | Broker configuration history depth | 10 | 
 | Connections per wire\-level protocol | 1,000 \(100 for mq\.t2\.micro brokers\) | 
 | Security groups per broker | 5 | 

@@ -181,5 +181,4 @@ Unlike AWS messaging services \(such as Amazon SQS\), the consumer is constantly
    consumer.close();
    consumerSession.close();
    consumerConnection.close();
-   pooledConnectionFactory.stop();
    ```

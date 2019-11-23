@@ -6,4 +6,5 @@ This section introduces key concepts essential to understanding Amazon MQ\.
 + [Broker](broker.md)
 + [Configuration](configuration.md)
 + [Broker Engine](broker-engine.md)
++ [Broker Storage](broker-storage.md)
 + [User](user.md)

@@ -129,7 +129,7 @@ Don't include the password for the ActiveMQ user\.
 After you configure your network of brokers, you can test it by producing and consuming messages\.
 
 **Important**  
-Make sure that you [enable inbound connections](amazon-mq-working-java-example.md#quick-start-allow-inbound-connections) *from your local machine* for broker `MyBroker1` on port 8162 \(for the ActiveMQ Web Console\) and port 6167 \(for the OpenWire endpoint\)\.  
+Make sure that you [enable inbound connections](amazon-mq-working-java-example.md#quick-start-allow-inbound-connections) *from your local machine* for broker `MyBroker1` on port 8162 \(for the ActiveMQ Web Console\) and port 61617 \(for the OpenWire endpoint\)\.  
 You might also need to adjust your security group\(s\) settings to allow the producer and consumer to connect to the network of brokers\.
 
 1. On the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/), navigate to the **Connections** section and note the ActiveMQ Web Console endpoint for broker `MyBroker1`\.

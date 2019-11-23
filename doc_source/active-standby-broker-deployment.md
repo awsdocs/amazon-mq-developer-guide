@@ -1,6 +1,6 @@
 # Amazon MQ Active/Standby Broker for High Availability<a name="active-standby-broker-deployment"></a>
 
-An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\.
+An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\. For more information, see [Storage](broker-storage.md)\.
 
 Normally, only one of the broker instances is active at any time, while the other broker instance is on standby\. If one of the broker instances malfunctions or undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\. When you reboot a broker, the failover takes only a few seconds\.
 

@@ -14,8 +14,7 @@ The following design patterns can improve the effectiveness of your application'
 When you first [create an Amazon MQ broker](amazon-mq-creating-configuring-broker.md), Amazon MQ provisions an [elastic network interface](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ElasticNetworkInterfaces.html) in the [Virtual Private Cloud \(VPC\)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html) under your account and, thus, requires a number of [EC2 permissions](amazon-mq-api-authentication-authorization.md)\. The network interface allows your client \(producer or consumer\) to communicate with the Amazon MQ broker\. The network interface is considered to be within the *service scope* of Amazon MQ, despite being part of your account's VPC\.
 
 **Warning**  
-You must not modify or delete this network interface\. Modifying or deleting the network interface can cause a permanent loss of connection between your VPC and your broker\.  
-**Currently, you can't recover your broker if you delete its network interface\. You can only recreate your broker\.**
+You must not modify or delete this network interface\. Modifying or deleting the network interface can cause a permanent loss of connection between your VPC and your broker\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-network-configuration-architecture-vpc-elastic-network-interface.png)
 
