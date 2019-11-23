@@ -25,28 +25,23 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
-1. One the **Select deployment and storage** page, in the **Deployment mode and storage type** section, do the following:
+1. Do one of the following:
+   + If this is your first time using Amazon MQ, in the **Create a broker** section, type `MyBroker` for **Broker name** and then choose **Next step**\.
+   + If you have created a broker before, on the **Create a broker** page, in the **Details** section, type `MyBroker` for **Broker name**\.
 
-   1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
-      + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(by default\) or EBS\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
-      + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
-      + For more information on the sample blueprints for a network of brokers, see [Sample Blueprints](network-of-brokers.md#sample-deployments)\.
+1. In the **Details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
-   1. Choose the **Storage type** \(for example, **EBS**\)\. For more information, see [Storage](broker-storage.md)\.
+1. Choose a **Deployment mode**\. In this example, **Single\-instance broker** is selected\.
+   + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
+   + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
+
+1. Choose a **Broker engine** version\.
 **Note**  
-Amazon EBS within a single Availability Zone doesn't support [active/standby brokers](active-standby-broker-deployment.md)\.
-
-   1. Choose **Next**\.
-
-1. On the **Configure settings** page, in the **Details** section, do the following:
-
-   1. Enter the **Broker name**\.
-
-   1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
+Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `5.15.6` and `5.15.0`\.
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 
-1. Choose **Deploy**\.
+1. Choose **Create broker**\.
 
    While Amazon MQ creates your broker, it displays the **Creation in progress** status\. 
 

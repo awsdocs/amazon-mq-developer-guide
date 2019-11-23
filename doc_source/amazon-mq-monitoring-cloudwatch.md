@@ -18,15 +18,14 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 
 | Metric | Unit | Description | 
 | --- | --- | --- | 
-| BurstBalance | Percent | The remaining percentage of the underlying storage layer's EBS volume burst credits\. | 
 | CpuCreditBalance | Credits \(vCPU\-minutes\) |   This metric is available only for the `mq.t2.micro` broker instance type\. CPU credit metrics are available only at five\-minute intervals\.  The number of earned CPU credits that an instance has accrued since it was launched or started \(including the number of launch credits\)\. The credit balance is available for the broker instance to spend on bursts beyond the baseline CPU utilization\. Credits are accrued in the credit balance after they're earned and removed from the credit balance after they're spent\. The credit balance has a maximum limit\. Once the limit is reached, any newly earned credits are discarded\.  | 
 | CpuUtilization | Percent | The percentage of allocated EC2 compute units that the broker currently uses\. | 
 | CurrentConnectionsCount | Count | The current number of active connections on the current broker\. | 
 | EstablishedConnectionsCount | Count | The total number of connections, active and inactive, that have been established on the broker\. | 
-| HeapUsage | Percent | The percentage of the ActiveMQ JVM memory limit that the broker currently uses\. | 
 | InactiveDurableTopicSubscribersCount | Count | The number of inactive durable topic subscribers, up to a maximum of 2000\.  | 
 | JournalFilesForFastRecovery | Count | The number of journal files that will be replayed after a clean shutdown\. | 
 | JournalFilesForFullRecovery | Count | The number of journal files that will be replayed after an unclean shutdown\. | 
+| HeapUsage | Percent | The percentage of the ActiveMQ JVM memory limit that the broker currently uses\. | 
 | NetworkIn | Bytes | The volume of incoming traffic for the broker\. | 
 | NetworkOut | Bytes | The volume of outgoing traffic for the broker\. | 
 | OpenTransactionCount | Count | The total number of transactions in progress\. | 
@@ -34,8 +33,6 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 | TotalConsumerCount | Count | The number of message consumers subscribed to destinations on the current broker\. | 
 | TotalMessageCount | Count | The number of messages stored on the broker\. | 
 | TotalProducerCount | Count | The number of message producers active on destinations on the current broker\. | 
-| VolumeReadOps | Count | The number of read operations performed on the EBS volume\. | 
-| VolumeWriteOps | Count | The number of write operations performed on the EBS volume\. | 
 
 ### Dimension for Broker Metrics<a name="broker-metrics-dimensions"></a>
 

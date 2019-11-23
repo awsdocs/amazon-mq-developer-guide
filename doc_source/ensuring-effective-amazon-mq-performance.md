@@ -5,7 +5,6 @@ The following design patterns can improve the effectiveness and performance of y
 **Topics**
 + [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers)
 + [Choose the Correct Broker Instance Type for the Best Throughput](#broker-instance-types-choosing)
-+ [Choose the Correct Broker Storage Type for the Best Throughput](#broker-storage-types-choosing)
 + [Configure Your Network of Brokers Correctly](#network-of-brokers-configure-correctly)
 
 ## Disable Concurrent Store and Dispatch for Queues with Slow Consumers<a name="disable-concurrent-store-and-dispatch-queues-flag-slow-consumers"></a>
@@ -40,10 +39,6 @@ There are three common use cases when larger broker instance types improve throu
 + **Non\-persistent mode** – When your application is less sensitive to losing messages during [broker instance failover](active-standby-broker-deployment.md) \(for example, when broadcasting sports scores\), you can often use ActiveMQ's non\-persistent mode\. In this mode, ActiveMQ writes messages to persistent storage only if the heap memory of the broker instance is full\. Systems that use non\-persistent mode can benefit from the higher amount of memory, faster CPU, and faster network available on larger broker instance types\.
 + **Fast consumers** – When active consumers are available and the [`concurrentStoreAndDispatchQueues`](child-element-details.md#concurrentStoreAndDispatchQueues) flag is enabled, ActiveMQ allows messages to flow directly from producer to consumer without sending messages to storage \(even in persistent mode\)\. If your application can consume messages quickly \(or if you can design your consumers to do this\), your application can benefit from a larger broker instance type\. To let your application consume messages more quickly, add consumer threads to your application instances or scale up your application instances vertically or horizontally\.
 + **Batched transactions** – When you use persistent mode and send multiple messages per transaction, you can achieve an overall higher message throughput by using larger broker instance types\. For more information, see [Should I Use Transactions?](http://activemq.apache.org/should-i-use-transactions.html) in the ActiveMQ documentation\.
-
-## Choose the Correct Broker Storage Type for the Best Throughput<a name="broker-storage-types-choosing"></a>
-
-We recommend that you use [active/standby brokers](active-standby-broker-deployment.md) with Amazon EFS storage and [networks of brokers](network-of-brokers.md) with EBS storage\. For more information, see [Storage](broker-storage.md)\.
 
 ## Configure Your Network of Brokers Correctly<a name="network-of-brokers-configure-correctly"></a>
 

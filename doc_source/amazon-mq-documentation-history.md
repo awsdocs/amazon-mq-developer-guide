@@ -5,7 +5,6 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
-| December 16, 2019 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | July 19, 2019 | Modified and added content on encryption management in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 22, 2019 | Added the following sections for tag\-based policies and resource\-level permissions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | March 4, 2019 | Improved the documentation for configuring dynamic failover and the rebalancing of clients for a network of brokers\. Enable dynamic failover by configuring transportConnectors along with networkConnectors configuration options\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
@@ -46,7 +45,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | April 2, 2018 | Moved the Concurrent Store and Dispatch for Queues in Amazon MQ section to the [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](ensuring-effective-amazon-mq-performance.md#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers) section\. | 
 | March 27, 2018 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 22, 2018 | Clarified the following statement throughout this guide: Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\. For additional security, we highly recommend designing your application to use client\-side encryption\. For more information, see the [AWS Encryption SDK Developer Guide](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\. | 
-| March 19, 2018 | Clarified the following statement throughout this guide: An Active/standby broker is comprised of two brokers in two different Availability Zones, configured in a redundant pair\. These brokers communicate synchronously with your application, and with Amazon EFS\. | 
+| March 19, 2018 | Clarified the following statement throughout this guide: An Active/standby broker is comprised of two brokers in two different Availability Zones, configured in a redundant pair\. These brokers communicate synchronously with your application, and with a shared storage location\. | 
 | March 15, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 12, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | March 9, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
