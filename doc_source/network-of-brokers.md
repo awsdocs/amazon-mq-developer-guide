@@ -56,7 +56,7 @@ To get started using a Network of Brokers, Amazon MQ provides sample blueprints\
 
 1. Mesh network of active/standby brokers
 
-![\[Sample deployments\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-sample-deployments.png)![\[Sample deployments\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Sample deployments\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Sample deployments\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-sample-deployments.png)
 
 From the **Create brokers** page, select one of the sample blueprints and choose **Next**\. Once the resources have been created, review the generated brokers and their configurations in the Amazon MQ console\.
 
@@ -66,13 +66,13 @@ By creating brokers and configuring different `networkConnector` elements in the
 
 By deploying brokers, and then configuring `networkConnector` entries in their configurations, you can build a network of brokers using different network topologies\. A network connector provides on\-demand message forwarding between connected brokers\. Connections can be configured as duplex, where messages are forwarded both ways between brokers, or not duplex, where the forwarding only propagates from one broker to the other\. For example, if we have a duplex connection between *Broker1* and *Broker2*, messages will be forwarded from each to the other if there is a consumer\.
 
-![\[Duplex connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-duplex.png)![\[Duplex connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Duplex connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Duplex connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-duplex.png)
 
 With a duplex network connector, messages are forwarded from each broker to the other\. These are forwarded *on\-demand*: if there is a consumer on *Broker2* for a message on *Broker1*, the message is forwarded\. Similarly, if there is a consumer on *Broker1* for a message on *Broker2* the message is also forwarded\.
 
 For non\-duplex connections, messages are forwarded only from one broker to the other\. In this example, if there is a consumer on *Broker2* for a message on *Broker1*, the message is forwarded\. But messages will not be forwarded from *Broker2* to *Broker1*\.
 
-![\[One way connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-notduplex.png)![\[One way connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[One way connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[One way connector\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-notduplex.png)
 
 Using both duplex and non\-duplex network connectors, it is possible to build a network of brokers in any number of network topologies\. 
 
@@ -83,7 +83,7 @@ In each of the network topology examples, the `networkConnector` elements refere
 
 A mesh topology provides multiple brokers that are all connected to each other\. This simple example connects three single\-instance brokers, but you can configure more brokers as a mesh\. 
 
-![\[Mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-mesh.png)![\[Mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-mesh.png)
 
 This topology, and one that includes a mesh of *active/standby* pairs of brokers, can be created using sample blueprints in the Amazon MQ console\. You can create these sample blueprint deployment to see a working network of brokers, and review how they are configured\. 
 
@@ -115,7 +115,7 @@ By adding the above connectors to the configurations of *Broker1* and *Broker2*,
 
 In a hub and spoke topology, messages are preserved if there is a disruption to any broker on a spoke\. Messages are forwarded throughout, and only the central *Broker1* is critical to the network’s operation\. 
 
-![\[Hub and spoke topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-hub.png)![\[Hub and spoke topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Hub and spoke topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Hub and spoke topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-hub.png)
 
 To configure the hub and spoke network of brokers in this example, you could add a `networkConnector` to each of the brokers on the spokes in the configuration of *Broker1*\. 
 
@@ -136,7 +136,7 @@ To configure the hub and spoke network of brokers in this example, you could add
 
 In this example topology, the three brokers on the bottom can handle a large number of connections, and those messages are concentrated to *Broker1* and *Broker2*\. Each of the other brokers has a non\-duplex connection to the more central brokers\. To scale the capacity of this topology, you can add additional brokers that receive messages and concentrate those messages in *Broker1* and *Broker2*\. 
 
-![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-concentrator.png)![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Concentrator topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-concentrator.png)
 
 To configure this topology, each of the brokers on the bottom would contain a network connector to each of the brokers they are concentrating messages to\.
 
@@ -177,7 +177,7 @@ To configure this topology, each of the brokers on the bottom would contain a ne
 
 To configure a network of brokers that spans AWS regions, deploy brokers in those regions, and configure network connectors to the endpoints of those brokers\.
 
-![\[Cross-region mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-cross-region.png)![\[Cross-region mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Cross-region mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Cross-region mesh topology\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-nob-cross-region.png)
 
 To configure a network of brokers like this example, you could add `networkConnectors` entries to the configurations of *Broker1* and *Broker4* that reference the wire\-level endpoints of those brokers\.
 
