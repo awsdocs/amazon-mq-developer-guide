@@ -28,7 +28,7 @@ If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-config
 
    To upgrade the broker to new versions as AWS releases them, choose **Enable automatic minor version upgrades**\. Automatic upgrades occur during the *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 **Note**  
-For an active/standby broker, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\.
+For an active/standby broker, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service\. This allows the healthy standby instance to become active and to begin accepting incoming communications\.
 
 1. Choose **Schedule modifications**\.
 **Note**  

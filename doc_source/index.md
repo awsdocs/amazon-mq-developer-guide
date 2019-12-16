@@ -35,6 +35,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Broker](broker.md)
       + [Configuration](configuration.md)
       + [Engine](broker-engine.md)
+      + [Storage](broker-storage.md)
       + [User](user.md)
    + [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)
       + [Amazon MQ Single-Instance Broker](single-broker-deployment.md)

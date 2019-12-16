@@ -14,22 +14,24 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
-1. Do one of the following:
-   + If this is your first time using Amazon MQ, in the **Create a broker** section, type `MyBroker` for **Broker name** and then choose **Next step**\.
-   + If you have created a broker before, on the **Create a broker** page, in the **Details** section, type `MyBroker` for **Broker name**\.
+1. One the **Select deployment and storage** page, in the **Deployment mode and storage type** section, do the following:
 
-1. In the **Details** section, choose a **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
+   1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
+      + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(by default\) or with Amazon EBS\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
+      + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
+      + For more information on the sample blueprints for a network of brokers, see [Sample Blueprints](network-of-brokers.md#sample-deployments)\.
 
-1. Choose a **Deployment mode**:
-   + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.
-   + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\. For more information, see [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)\.
-   + For more information on the sample blueprints for a network of brokers, see [Sample Blueprints](network-of-brokers.md#sample-deployments)\.
+   1. Choose the **Storage type** \(for example, **EBS**\)\. For more information, see [Storage](broker-storage.md)\.
 **Note**  
-Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `5.15.6` and `5.15.0`\.
+Amazon EBS replicates data within a single Availability Zone and doesn't support the [active/standby](active-standby-broker-deployment.md) deployment mode\.
 
-1. Choose a **Broker engine** version\.
-**Note**  
-Currently, Amazon MQ supports only `ActiveMQ` broker engine versions `5.15.8`, `5.15.6` and `5.15.0`\.
+   1. Choose **Next**\.
+
+1. On the **Configure settings** page, in the **Details** section, do the following:
+
+   1. Enter the **Broker name**\.
+
+   1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance Types](broker.md#broker-instance-types)\.
 
 1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
 
@@ -71,7 +73,7 @@ If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-config
 
    1. To upgrade the broker to new versions as Apache releases them, choose **Enable automatic minor version upgrades**\. Automatic upgrades occur during the *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 **Note**  
-For an active/standby broker, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service, allowing the healthy standby instance to become active and to begin accepting incoming communications\.
+For an active/standby broker, if one of the broker instances undergoes maintenance, it takes Amazon MQ a short while to take the inactive instance out of service\. This allows the healthy standby instance to become active and to begin accepting incoming communications\.
 
    1. Do one of the following:
       + To allow Amazon MQ to select the maintenance window automatically, choose **No preference**\.
@@ -79,7 +81,7 @@ For an active/standby broker, if one of the broker instances undergoes maintenan
 
 ## Step 3: Finish Creating the Broker<a name="finish-creating-broker-console"></a>
 
-1. Choose **Create broker**\.
+1. Choose **Deploy**\.
 
    While Amazon MQ creates your broker, it displays the **Creation in progress** status\. 
 
