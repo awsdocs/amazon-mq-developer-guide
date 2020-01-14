@@ -14,7 +14,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | December 11, 2018 | Updated documentation to reflect availability of ActiveMQ version 5\.15\.8\.  | 
 | December 5, 2018 | Added the [Tagging resources](amazon-mq-tagging.md) section\. | 
 | October 26, 2018 | Added the [Avoid Slow Restarts by Recovering Prepared XA Transactions](recover-xa-transactions.md) section\. | 
-| October 15, 2018 | Updated the [Limits in Amazon MQ](amazon-mq-limits.md) section\. | 
+| October 15, 2018 | Updated the [Quotas in Amazon MQ](amazon-mq-limits.md) section\. | 
 | October 3, 2018 | Corrected outdated links in the [Setting Up Amazon MQ](amazon-mq-setting-up.md) and [Amazon MQ Tutorials](amazon-mq-tutorials.md) sections\. | 
 | October 1, 2018 | Corrected the information in the [Next Steps](amazon-mq-getting-started.md#next-steps-tutorials) section\. | 
 | September 27, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
@@ -67,7 +67,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | January 25, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 24, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 19, 2018 | Updated the information in the [Apache ActiveMQ Resources](amazon-mq-related-resources.md#activemq-resources) section\. | 
-| January 18, 2018 | Clarified and corrected the information in the [Limits in Amazon MQ](amazon-mq-limits.md) section\. | 
+| January 18, 2018 | Clarified and corrected the information in the [Quotas in Amazon MQ](amazon-mq-limits.md) section\. | 
 | January 17, 2018 | Reinstated the [recommendation to prefer virtual destinations over durable subscriptions](connecting-to-amazon-mq.md#prefer-virtual-destinations-to-durable-subscriptions), with an improved explanation\. | 
 | January 11, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 3, 2018 | Added DescribeConfigurationRevision to the [API Authentication and Authorization for Amazon MQ](amazon-mq-api-authentication-authorization.md) section\. | 

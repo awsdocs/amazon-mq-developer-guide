@@ -57,7 +57,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Connecting to Amazon MQ](connecting-to-amazon-mq.md)
    + [Ensuring Effective Amazon MQ Performance](ensuring-effective-amazon-mq-performance.md)
    + [Avoid Slow Restarts by Recovering Prepared XA Transactions](recover-xa-transactions.md)
-+ [Limits in Amazon MQ](amazon-mq-limits.md)
++ [Quotas in Amazon MQ](amazon-mq-limits.md)
 + [Monitoring and Logging Amazon MQ Brokers](amazon-mq-monitoring-logging.md)
    + [Monitoring Amazon MQ Brokers Using Amazon CloudWatch](amazon-mq-monitoring-cloudwatch.md)
    + [Logging Amazon MQ API Calls Using AWS CloudTrail](amazon-mq-logging-cloudtrail.md)

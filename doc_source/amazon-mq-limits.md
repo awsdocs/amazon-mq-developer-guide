@@ -1,6 +1,6 @@
-# Limits in Amazon MQ<a name="amazon-mq-limits"></a>
+# Quotas in Amazon MQ<a name="amazon-mq-limits"></a>
 
-This topic lists limits within Amazon MQ\. Many of the following limits can be changed for specific AWS accounts\. To request an increase for a limit, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *Amazon Web Services General Reference*\.
+This topic lists quotas within Amazon MQ\. Many of the following quotas can be changed for specific AWS accounts\. To request an increase for a limit, see [AWS Service Quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *Amazon Web Services General Reference*\.
 
 **Topics**
 + [Limits Related to Brokers](#broker-limits)
@@ -11,7 +11,7 @@ This topic lists limits within Amazon MQ\. Many of the following limits can be c
 
 ## Brokers<a name="broker-limits"></a>
 
-The following table lists limits related to Amazon MQ brokers\.
+The following table lists quotas related to Amazon MQ brokers\.
 
 
 | Limit | Description | 
@@ -25,7 +25,7 @@ The following table lists limits related to Amazon MQ brokers\.
 
 ## Configurations<a name="configuration-limits"></a>
 
-The following table lists limits related to Amazon MQ configurations\.
+The following table lists quotas related to Amazon MQ configurations\.
 
 
 | Limit | Description | 
@@ -36,7 +36,7 @@ The following table lists limits related to Amazon MQ configurations\.
 
 ## Users<a name="activemq-user-limits"></a>
 
-The following table lists limits related to Amazon MQ users\.
+The following table lists quotas related to Amazon MQ users\.
 
 
 | Limit | Description | 
@@ -48,7 +48,7 @@ The following table lists limits related to Amazon MQ users\.
 
 ## Data Storage<a name="data-storage-limits"></a>
 
-The following table lists limits related to Amazon MQ data storage\.
+The following table lists quotas related to Amazon MQ data storage\.
 
 
 | Limit | Description | 
@@ -62,10 +62,10 @@ The following table lists limits related to Amazon MQ data storage\.
 
 ## API Throttling<a name="api-throttling-limits"></a>
 
-The following throttling limits are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information about Amazon MQ APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
+The following throttling quotas are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information about Amazon MQ APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
 **Important**  
-These limits don't apply to ActiveMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
+These quotas don't apply to ActiveMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
 
 
 | Bucket Size | Refill Rate per Second | 

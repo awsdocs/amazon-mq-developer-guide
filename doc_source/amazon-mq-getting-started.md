@@ -25,7 +25,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
-1. One the **Select deployment and storage** page, in the **Deployment mode and storage type** section, do the following:
+1. On the **Select deployment and storage** page, in the **Deployment mode and storage type** section, do the following:
 
    1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
       + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(by default\) or with Amazon EBS\. For more information, see [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)\.

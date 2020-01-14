@@ -6,7 +6,7 @@ Unresolved prepared XA transactions are replayed on every restart\. If these rem
 
 One cause of these unresolved transactions is an issue with Apache ActiveMQ\. This may cause unresolved prepared transactions when Amazon MQ restarts\. For more information, see the related Apache [ ActiveMQ defect](https://issues.apache.org/jira/browse/AMQ-7067)\.
 
-To monitor your unresolved prepared XA transactions, you can use the `JournalFilesForFastRecovery` metric in Amazon CloudWatch Logs\. If this number is increasing, or is consistently higher than `1`, you should recover your unresolved transactions with code similar to the following example\. For more information, see [Limits in Amazon MQ](amazon-mq-limits.md)\.
+To monitor your unresolved prepared XA transactions, you can use the `JournalFilesForFastRecovery` metric in Amazon CloudWatch Logs\. If this number is increasing, or is consistently higher than `1`, you should recover your unresolved transactions with code similar to the following example\. For more information, see [Quotas in Amazon MQ](amazon-mq-limits.md)\.
 
 The following example code walks through prepared XA transactions and closes them with a `rollback()`\. 
 
