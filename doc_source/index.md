@@ -1,7 +1,7 @@
 # Amazon MQ Developer Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -15,14 +15,13 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What Is Amazon MQ?](welcome.md)
-+ [Frequently Viewed Amazon MQ Topics](amazon-mq-newly-added-most-frequently-viewed-topics.md)
 + [Setting Up Amazon MQ](amazon-mq-setting-up.md)
 + [Getting Started with Amazon MQ](amazon-mq-getting-started.md)
 + [Amazon MQ Tutorials](amazon-mq-tutorials.md)
    + [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md)
       + [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)
    + [Tutorial: Creating and Configuring an Amazon MQ Network of Brokers](amazon-mq-creating-configuring-network-of-brokers.md)
-   + [Tutorial: Editing Broker Engine Version, CloudWatch Logs, and Maintenance Preferences](amazon-mq-editing-broker-preferences.md)
+   + [Tutorial: Editing Broker Engine Version, Instance Type, CloudWatch Logs, and Maintenance Preferences](amazon-mq-editing-broker-preferences.md)
    + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
    + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
    + [Tutorial: Connecting a Java Application to Your Amazon MQ Broker](amazon-mq-connecting-application.md)
@@ -36,6 +35,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Broker](broker.md)
       + [Configuration](configuration.md)
       + [Engine](broker-engine.md)
+      + [Storage](broker-storage.md)
       + [User](user.md)
    + [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)
       + [Amazon MQ Single-Instance Broker](single-broker-deployment.md)
@@ -57,13 +57,14 @@ Amazon's trademarks and trade dress may not be used in
    + [Connecting to Amazon MQ](connecting-to-amazon-mq.md)
    + [Ensuring Effective Amazon MQ Performance](ensuring-effective-amazon-mq-performance.md)
    + [Avoid Slow Restarts by Recovering Prepared XA Transactions](recover-xa-transactions.md)
-+ [Limits in Amazon MQ](amazon-mq-limits.md)
++ [Quotas in Amazon MQ](amazon-mq-limits.md)
 + [Monitoring and Logging Amazon MQ Brokers](amazon-mq-monitoring-logging.md)
    + [Monitoring Amazon MQ Brokers Using Amazon CloudWatch](amazon-mq-monitoring-cloudwatch.md)
    + [Logging Amazon MQ API Calls Using AWS CloudTrail](amazon-mq-logging-cloudtrail.md)
    + [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)
 + [Amazon MQ Security](amazon-mq-security.md)
    + [Tag-based Policies](tag-based-policies.md)
+   + [Encryption](amazon-mq-encryption.md)
    + [API Authentication and Authorization for Amazon MQ](amazon-mq-api-authentication-authorization.md)
    + [Messaging Authentication and Authorization for ActiveMQ](activemq-authentication-authorization.md)
 + [Related Resources](amazon-mq-related-resources.md)

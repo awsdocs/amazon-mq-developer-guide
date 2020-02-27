@@ -14,8 +14,7 @@ The following design patterns can improve the effectiveness of your application'
 When you first [create an Amazon MQ broker](amazon-mq-creating-configuring-broker.md), Amazon MQ provisions an [elastic network interface](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ElasticNetworkInterfaces.html) in the [Virtual Private Cloud \(VPC\)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html) under your account and, thus, requires a number of [EC2 permissions](amazon-mq-api-authentication-authorization.md)\. The network interface allows your client \(producer or consumer\) to communicate with the Amazon MQ broker\. The network interface is considered to be within the *service scope* of Amazon MQ, despite being part of your account's VPC\.
 
 **Warning**  
-You must not modify or delete this network interface\. Modifying or deleting the network interface can cause a permanent loss of connection between your VPC and your broker\.  
-**Currently, you can't recover your broker if you delete its network interface\. You can only recreate your broker\.**
+You must not modify or delete this network interface\. Modifying or deleting the network interface can cause a permanent loss of connection between your VPC and your broker\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-network-configuration-architecture-vpc-elastic-network-interface.png)
 
@@ -61,7 +60,7 @@ producerConnection.start();
 
 ## Always Use the Failover Transport to Connect to Multiple Broker Endpoints<a name="always-use-failover-transport-connect-to-multiple-broker-endpoints"></a>
 
-If you need your application to connect to multiple broker endpoints—for example, when you use an [active/standby broker](amazon-mq-creating-configuring-broker.md) or when you [migrate from an on\-premises message broker to Amazon MQ]()—use the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html) to allow your consumers to randomly connect to either one\. For example:
+If you need your application to connect to multiple broker endpoints—for example, when you use an [active/standby](amazon-mq-creating-configuring-broker.md) deployment mode or when you [migrate from an on\-premises message broker to Amazon MQ](amazon-mq-migrating.md)—use the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html) to allow your consumers to randomly connect to either one\. For example:
 
 ```
 failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617,ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)?randomize=true

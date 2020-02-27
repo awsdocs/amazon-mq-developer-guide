@@ -35,7 +35,7 @@ activemq-b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.log
 activemq-b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-2.log
 ```
 
-The `-1` and `-2` suffixes denote individual broker instances\. For more information, see [Working with Log Groups and Log Streams]() in the *[Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)*\. 
+The `-1` and `-2` suffixes denote individual broker instances\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html) in the *[Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)*\. 
 
 ## Add the CreateLogGroup Permission to Your Amazon MQ User<a name="add-createloggroup-permission-to-user"></a>
 

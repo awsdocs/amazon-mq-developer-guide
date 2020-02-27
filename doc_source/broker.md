@@ -1,8 +1,8 @@
 # Broker<a name="broker"></a>
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance Types](#broker-instance-types)\.
-+ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an AWS storage location\.
-+ An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with a shared storage location\.
++ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(by default\) or with Amazon EBS\.
++ An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\.
 
 For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\.
 
@@ -56,6 +56,9 @@ For a full list of broker attributes, see the following in the *Amazon MQ REST A
 ## Instance Types<a name="broker-instance-types"></a>
 
 The combined description of the broker instance *class* \(`m5`, `t2`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. The following table lists the available Amazon MQ broker instance types\.
+
+**Important**  
+You can use Amazon EBS only with the `mq.m5` broker instance type family\. For more information, see [Storage](broker-storage.md)\.
 
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker.html)
 

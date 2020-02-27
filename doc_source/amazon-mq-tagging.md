@@ -32,7 +32,7 @@ Amazon MQ lets you to add tags to resources as they are created\. You can quickl
 1. Under **Tags**, select **Add tag**\.
 
 1. Enter a **Key** and **Value** pair\.  
-![\[Add tags when creating resources\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-create-tag.png)![\[Add tags when creating resources\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)![\[Add tags when creating resources\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/)
+![\[Add tags when creating resources\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-create-tag.png)
 
 1. \(Optional\) Select **Add tag** to add multiple tags to your broker\.
 
