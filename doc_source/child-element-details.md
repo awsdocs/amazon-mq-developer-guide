@@ -6,6 +6,7 @@ The following is a detailed explanation of child element attributes\. For more i
 + [authorizationEntry](#authorizationEntry)
 + [networkConnector](#networkConnector)
 + [kahaDB](#kahaDB)
++ [systemUsage](#systemUsage)
 
 ## authorizationEntry<a name="authorizationEntry"></a>
 
@@ -116,7 +117,7 @@ We recommend using the `masterslave:` prefix for networks of brokers\. The prefi
 
 `kahaDB` is a child of the `persistenceAdapter` child collection element\.
 
-### Attribute<a name="kahaDB-attributes"></a>
+### Attributes<a name="kahaDB-attributes"></a>
 
 #### concurrentStoreAndDispatchQueues<a name="concurrentStoreAndDispatchQueues"></a>
 
@@ -124,12 +125,86 @@ Specifies whether to use concurrent store and dispatch for queues\. For more inf
 
 **Default:** `true`
 
+#### journalDiskSyncInterval<a name="journalDiskSyncInterval"></a>
+
+Interval \(ms\) for when to perform a disk sync if `journalDiskSyncStrategy=periodic`\. For more information, see the [Apache ActiveMQ kahaDB documentation](https://activemq.apache.org/kahadb)\.
+
+**Default:** `1000`
+
+#### journalDiskSyncStrategy<a name="journalDiskSyncStrategy"></a>
+
+From ActiveMQ 5\.14\.0: this setting configures the disk sync policy\. For more information, see the [Apache ActiveMQ kahaDB documentation](https://activemq.apache.org/kahadb)\.
+
+**Default:** `always`
+
+**Note**  
+The [ActiveMQ documentation](https://activemq.apache.org/kahadb) states that the data loss is limited to the duration of `journalDiskSyncInterval`, which has a default of 1s\. The data loss can be longer than the interval, but it is difficult to be precise\. Use caution\. 
+
+#### preallocationStrategy<a name="preallocationStrategy"></a>
+
+Configures how the broker will try to preallocate the journal files when a new journal file is needed\. For more information, see the [Apache ActiveMQ kahaDB documentation](https://activemq.apache.org/kahadb)\.
+
+**Default:** `sparse_file`
+
 ### Example Configuration<a name="kahaDB-example"></a>
 
 **Example**  
 
 ```
-<persistenceAdapter>
-   <kahaDB concurrentStoreAndDispatchQueues="false"/>
+<broker xmlns="http://activemq.apache.org/schema/core">
+    <persistenceAdapter>
+       <kahaDB preallocationStrategy="zeros" concurrentStoreAndDispatchQueues="false" journalDiskSyncInterval="10000" journalDiskSyncStrategy="periodic"/>
+   </persistenceAdapter>
+</broker>
+```
+
+## systemUsage<a name="systemUsage"></a>
+
+`systemUsage` is a child of the `systemUsage` child collection element\. It controls the maximum amount of space the broker will use before slowing down producers\. For more information, see [Producer Flow Control](http://activemq.apache.org/producer-flow-control.html) in the Apache ActiveMQ documentation\. 
+
+### Child Element<a name="systemUsage-child"></a>
+
+#### memoryUsage<a name="memoryUsage"></a>
+
+ `memoryUsage` is a child of the `systemUsage` child element\. It manages memory usage\. Use `memoryUsage` to keep track of how much of something is being used so that you can control working set usage productively\. For more information, see [the schema](http://activemq.apache.org/schema/core/activemq-core-5.15.12-schema.html) in the Apache ActiveMQ documentation\.
+
+##### Child Element<a name="memoryUsage-child"></a>
+
+ `memoryUsage` is a child of the `memoryUsage` child element\. 
+
+##### Attribute<a name="memeoryUsage-attribute"></a>
+
+##### percentOfJvmHeap<a name="percentOfJvmHeap"></a>
+
+Integer between 0 \(inclusive\) and 70 \(inclusive\)\.
+
+*Default:* `70` 
+
+### Attributes<a name="systemUsage-attributes"></a>
+
+#### sendFailIfNoSpace<a name="sendFailIfNoSpace"></a>
+
+Sets whether a `send()` method should fail if there is no space free\. The default value is false, which blocks the `send()` method until space becomes available\. For more information, see the [schema](http://activemq.apache.org/schema/core/activemq-core-5.15.12-schema.html) in the Apache Active MQ documentation\.
+
+**Default:** `false`
+
+#### sendFailIfNoSpaceAfterTimeout<a name="sendFailIfNoSpaceAfterTimeout"></a>
+
+**Default:** `null`
+
+#### Example Configuration<a name="systemUsage-example"></a>
+
+**Example**  
+
+```
+<broker xmlns="http://activemq.apache.org/schema/core">
+    <systemUsage>
+      <systemUsage sendFailIfNoSpace="true" sendFailIfNoSpaceAfterTimeout="2000">
+          <memoryUsage>
+              <memoryUsage  percentOfJvmHeap="60" />
+          </memoryUsage>>
+      </systemUsage>
+    </systemUsage>
+</broker>
 </persistenceAdapter>
 ```

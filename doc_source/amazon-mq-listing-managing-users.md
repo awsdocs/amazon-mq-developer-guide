@@ -18,7 +18,7 @@ The following examples show how you can create, edit, and delete Amazon MQ broke
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
-1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **Edit**\.
+1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **View details**\.
 
    On the ***MyBroker*** page, in the **Users** section, all the users for this broker are listed\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)
@@ -39,7 +39,7 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
-1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **Edit**\.
+1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **View details**\.
 
    On the ***MyBroker*** page, in the **Users** section, all the users for this broker are listed\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)
@@ -62,7 +62,7 @@ Making changes to a user does *not* apply the changes to the user immediately\. 
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
-1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **Edit**\.
+1. From the broker list, choose the name of your broker \(for example, **MyBroker**\) and then choose **View details**\.
 
    On the ***MyBroker*** page, in the **Users** section, all the users for this broker are listed\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-list-users.png)

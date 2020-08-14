@@ -19,10 +19,10 @@ The following example shows how you can edit Amazon MQ broker preferences using 
 
 1. In the **Security and network** section, select a group from the **Security group\(s\)** drop\-down, or choose **Create a new security group** to open the Amazon VPC console\.
 
-1. In the **CloudWatch Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\.
+1. In the **CloudWatch Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](security-logging-monitoring-configure-cloudwatch.md)\.
 **Important**  
-If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](amazon-mq-configuring-cloudwatch-logs.md#add-createloggroup-permission-to-user) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
-If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-configuring-cloudwatch-logs.md#configure-resource-based-policy), the broker can't publish the logs to CloudWatch Logs\.
+If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](security-logging-monitoring-configure-cloudwatch.md#security-logging-monitoring-configure-cloudwatch-permissions) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
+If you don't [configure a resource\-based policy for Amazon MQ](security-logging-monitoring-configure-cloudwatch.md#security-logging-monitoring-configure-cloudwatch-resource-permissions), the broker can't publish the logs to CloudWatch Logs\.
 
 1. In the **Maintenance** section, configure your broker's maintenance schedule:
 

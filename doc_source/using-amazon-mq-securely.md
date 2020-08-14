@@ -1,4 +1,4 @@
-# Using Amazon MQ Securely<a name="using-amazon-mq-securely"></a>
+# Security Best Practices for Amazon MQ<a name="using-amazon-mq-securely"></a>
 
 The following design patterns can improve the security of your Amazon MQ broker\.
 
@@ -26,7 +26,7 @@ Amazon MQ encrypts messages at rest and in transit using encryption keys that it
 
 ## Always Configure an Authorization Map<a name="always-configure-authorization-map"></a>
 
-Because ActiveMQ has no authorization map configured by default, any authenticated user can perform any action on the broker\. Thus, it is a best practice to restrict permissions *by group*\. For more information, see `[authorizationEntry](child-element-details.md#authorizationEntry)`\.
+Because ActiveMQ has no authorization map configured by default, any authenticated user can perform any action on the broker\. Thus, it is a best practice to restrict permissions *by group*\. For more information, see ``\.
 
 ## Block Unnecessary Protocols with VPC Security Groups<a name="amazon-mq-vpc-security-groups"></a>
 

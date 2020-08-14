@@ -13,11 +13,12 @@ Amazon MQ works with your existing applications and services without the need to
 + [We Want to Hear from You](#amazon-mq-we-want-to-hear-from-you)
 
 ## What Are the Main Benefits of Amazon MQ?<a name="main-benefits"></a>
-+ **Security** – You control [who can create and modify brokers](amazon-mq-api-authentication-authorization.md) and [who can send messages to and receive messages from](activemq-authentication-authorization.md) an ActiveMQ broker\. Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\.
++ **Security** – You control [who can create and modify brokers](security-api-authentication-authorization.md) and [who can send messages to and receive messages from](security-authentication-authorization.md) an ActiveMQ broker\. Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely\.
 + **Durability** – To ensure the safety of your messages, Amazon MQ stores them on [redundant shared storage](broker-storage.md)\.
 + **Availability** – You can create a [single\-instance broker](single-broker-deployment.md) \(comprised of one broker in one Availability Zone\), or an [active/standby broker for high availability](active-standby-broker-deployment.md) \(comprised of two brokers in two different Availability Zones\)\. For either broker type, Amazon MQ automatically provisions infrastructure for high durability\.
 + **Compatibility** – Amazon MQ supports industry\-standard APIs and protocols so you can [migrate from your existing message broker](amazon-mq-migrating.md) without rewriting [application code](amazon-mq-working-java-example.md)\.
 + **Operation offloading** – You can [configure many aspects of your ActiveMQ broker](amazon-mq-broker-configuration-parameters.md), such as predefined destinations, destination policies, authorization policies, and plugins\. Amazon MQ controls some of these configuration elements, such as network transports and storage, simplifying the maintenance and administration of your messaging system in the cloud\.
++ **Simplified authentication** – You can [authenticate Amazon MQ users ](security-authentication-authorization.md#integrate-ldap)through the credentials stored in your lightweight directory access protocol \(LDAP\) server\. You can also add, delete, and modify Amazon MQ users and assign permissions to topics and queues through it\. Management operations like creating, updating and deleting brokers still require IAM credentials and are not integrated with LDAP\. 
 
 ## How Is Amazon MQ Different from Amazon SQS or Amazon SNS?<a name="difference-from-sqs-sns"></a>
 

@@ -1,18 +1,18 @@
-# Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs<a name="amazon-mq-configuring-cloudwatch-logs"></a>
+# Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs<a name="security-logging-monitoring-configure-cloudwatch"></a>
 
 Amazon MQ is integrated with Amazon CloudWatch Logs, a service that monitors, stores, and accesses your log files from a variety of sources\. For example, you can [configure CloudWatch alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html) to receive notifications of [broker reboots](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker-reboot.html) or troubleshoot [broker configuration](amazon-mq-broker-configuration-parameters.md) errors\. For more information about CloudWatch Logs, see the *[Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)*\.
 
-To allow Amazon MQ to publish logs to CloudWatch Logs, you must [add a permission to your Amazon MQ user](#add-createloggroup-permission-to-user) and also [configure a resource\-based policy for Amazon MQ](#configure-resource-based-policy) before you create or restart the broker\.
+To allow Amazon MQ to publish logs to CloudWatch Logs, you must [add a permission to your Amazon MQ user](#security-logging-monitoring-configure-cloudwatch-permissions) and also [configure a resource\-based policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions) before you create or restart the broker\.
 
 For more information about configuring Amazon MQ to publish general and audit logs to CloudWatch Logs, see [Configure Advanced Broker Settings](amazon-mq-creating-configuring-broker.md#configure-advanced-broker-settings-console)\.
 
 **Topics**
-+ [Understanding the Structure of Logging in CloudWatch Logs](#structure-of-logging-cloudwatch-logs)
-+ [Add the CreateLogGroup Permission to Your Amazon MQ User](#add-createloggroup-permission-to-user)
-+ [Configure a Resource\-Based Policy for Amazon MQ](#configure-resource-based-policy)
-+ [Troubleshooting CloudWatch Logs Configuration](#troubleshooting-cloudwatch-logs-configuration)
++ [Understanding the Structure of Logging in CloudWatch Logs](#security-logging-monitoring-configure-cloudwatch-structure)
++ [Add the CreateLogGroup Permission to Your Amazon MQ User](#security-logging-monitoring-configure-cloudwatch-permissions)
++ [Configure a Resource\-Based Policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions)
++ [Troubleshooting CloudWatch Logs Configuration](#security-logging-monitoring-configure-cloudwatch-troubleshoot)
 
-## Understanding the Structure of Logging in CloudWatch Logs<a name="structure-of-logging-cloudwatch-logs"></a>
+## Understanding the Structure of Logging in CloudWatch Logs<a name="security-logging-monitoring-configure-cloudwatch-structure"></a>
 
 You can enable *general* and *audit* logging when you [configure advanced broker settings](amazon-mq-creating-configuring-broker.md#configure-advanced-broker-settings-console) when you create a broker, or when you edit a broker\.
 
@@ -37,9 +37,9 @@ activemq-b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-2.log
 
 The `-1` and `-2` suffixes denote individual broker instances\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html) in the *[Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)*\. 
 
-## Add the CreateLogGroup Permission to Your Amazon MQ User<a name="add-createloggroup-permission-to-user"></a>
+## Add the CreateLogGroup Permission to Your Amazon MQ User<a name="security-logging-monitoring-configure-cloudwatch-permissions"></a>
 
-To allow Amazon MQ to create a CloudWatch Logs log group, you must ensure that the user who creates or reboots the broker has the `logs:CreateLogGroup` permission\.
+To allow Amazon MQ to create a CloudWatch Logs log group, you must ensure that the IAM user who creates or reboots the broker has the `logs:CreateLogGroup` permission\.
 
 **Important**  
 If you don't add the `CreateLogGroup` permission to your Amazon MQ user before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.
@@ -62,9 +62,12 @@ The following example [IAM\-based policy](https://docs.aws.amazon.com/AmazonClou
 }
 ```
 
+**Note**  
+Here, the term user refers to *IAM Users* and not *Amazon MQ users*, which are created when a new broker is configured\. For more information regarding setting up IAM users and configuring IAM policies, please refer to the [Identity Management Overview](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html) section of the IAM User Guide\. 
+
 For more information, see `[CreateLogGroup](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateLogGroup.html)` in the *Amazon CloudWatch Logs API Reference*\.
 
-## Configure a Resource\-Based Policy for Amazon MQ<a name="configure-resource-based-policy"></a>
+## Configure a Resource\-Based Policy for Amazon MQ<a name="security-logging-monitoring-configure-cloudwatch-resource-permissions"></a>
 
 To allow Amazon MQ to publish logs to your CloudWatch Logs log group, configure a resource\-based policy to give Amazon MQ access to the following CloudWatch Logs API actions:
 + `[CreateLogStream](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateLogStream.html)` – Creates a CloudWatch Logs log stream for the specified log group\.
@@ -107,14 +110,14 @@ aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-logs \
 		"Resource" : "arn:aws:logs:*:*:log-group:/aws/amazonmq/*" } ] }'
 ```
 
-## Troubleshooting CloudWatch Logs Configuration<a name="troubleshooting-cloudwatch-logs-configuration"></a>
+## Troubleshooting CloudWatch Logs Configuration<a name="security-logging-monitoring-configure-cloudwatch-troubleshoot"></a>
 
 In some cases, CloudWatch Logs might not always behave as expected\. This section gives an overview of common issues and shows how to resolve them\.
 
-### Log Groups Don't Appear in CloudWatch<a name="log-groups-do-not-appear-in-cloudwatch"></a>
+### Log Groups Don't Appear in CloudWatch<a name="security-logging-monitoring-configure-cloudwatch-do-not-appear"></a>
 
-[Add the `CreateLogGroup` permission to your Amazon MQ user](#add-createloggroup-permission-to-user) and reboot the broker\. This allows Amazon MQ to create the log group\.
+[Add the `CreateLogGroup` permission to your Amazon MQ user](#security-logging-monitoring-configure-cloudwatch-permissions) and reboot the broker\. This allows Amazon MQ to create the log group\.
 
-### Log Streams Don't Appear in CloudWatch Log Groups<a name="log-streams-do-not-appear-in-cloudwatch-log-groups"></a>
+### Log Streams Don't Appear in CloudWatch Log Groups<a name="security-logging-monitoring-configure-cloudwatch-streams-do-not-appear"></a>
 
-[Configure a resource\-based policy for Amazon MQ](#configure-resource-based-policy)\. This allows your broker to publish its logs\.
+[Configure a resource\-based policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions)\. This allows your broker to publish its logs\.

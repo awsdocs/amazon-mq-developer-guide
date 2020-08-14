@@ -267,7 +267,7 @@ The following example shows how you can delete a broker using the AWS Management
 
 Now that you have created a broker, connected an application to it, and sent and received a message, you might want to try the following:
 + [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md) \(Additional Settings\)
-+ [](amazon-mq-editing-broker-preferences.md)
++ [Tutorial: Editing Broker Engine Version, Instance Type, CloudWatch Logs, and Maintenance Preferences](amazon-mq-editing-broker-preferences.md)
 + [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
 + [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
 + [Tutorial: Listing Amazon MQ Brokers and Viewing Broker Details](amazon-mq-listing-brokers.md)

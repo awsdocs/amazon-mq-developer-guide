@@ -7,8 +7,8 @@ A *network of brokers* is comprised of multiple simultaneously active [single\-i
 For a tutorial and detailed configuration information, see the following:
 + [Tutorial: Creating and Configuring an Amazon MQ Network of Brokers](amazon-mq-creating-configuring-network-of-brokers.md)
 + [Configure Your Network of Brokers Correctly](ensuring-effective-amazon-mq-performance.md#network-of-brokers-configure-correctly)
-+ `[networkConnector](child-element-details.md#networkConnector)`
-+ `[networkConnectionStartAsync](permitted-attributes.md#networkConnectionStartAsync)`
++ ``
++ ``
 + [Networks of Brokers](http://activemq.apache.org/networks-of-brokers.html) in the ActiveMQ documentation
 
 The following are benefits of using a network of brokers:
@@ -186,7 +186,7 @@ To configure a network of brokers like this example, you could add `networkConne
 ```
 <networkConnectors>
     <networkConnector name="1_to_2" userName="myCommonUser" duplex="true"
-        uri="static:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-2.mq.us-west-2.amazonaws.com)"/>
+        uri="static:(ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)"/>
     <networkConnector name="1_to_3" userName="myCommonUser" duplex="true"
         uri="static:(ssl://b-743c885d-2244-4c95-af67-a85017ff234e-3.mq.us-east-2.amazonaws.com:61617)"/>
     <networkConnector name="1_to_4" userName="myCommonUser" duplex="true"
@@ -210,9 +210,7 @@ To configure a network of brokers like this example, you could add `networkConne
     <networkConnector name="4_to_3" userName="myCommonUser" duplex="true"
         uri="static:(ssl://b-743c885d-2244-4c95-af67-a85017ff234e-3.mq.us-east-2.amazonaws.com:61617)"/>
     <networkConnector name="4_to_2" userName="myCommonUser" duplex="true"
-        uri="static:(ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-west-2.amazonaws.com)"/>
-    <networkConnector name="4_to_1" userName="myCommonUser" duplex="true"
-        uri="static:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-west-2.amazonaws.com)"/>        
+        uri="static:(ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)"/>      
 </networkConnectors>
 ```
 

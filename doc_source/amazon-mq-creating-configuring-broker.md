@@ -41,17 +41,17 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 **Subnet\(s\)** – A single\-instance broker requires one subnet \(for example, the default subnet\)\. An active/standby broker requires two subnets\.
 **Security group\(s\)** – Both single\-instance brokers and active/standby brokers require at least one security group \(for example, the default security group\)\.
 **VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\. Amazon MQ only supports default VPC tenancy, and does not support dedicated VPC tenancy\.
-**Encryption** – Choose the customer master key to encrypt your data\. See [Encryption at Rest](amazon-mq-encryption.md#encryption-at-rest)\.
+**Encryption** – Choose the customer master key to encrypt your data\. See [Encryption at Rest](data-protection.md#data-protection-encryption-at-rest)\.
 **Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer Brokers without Public Accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility) and [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](accessing-web-console-of-broker-without-private-accessibility.md)\.
 
 1. Expand the **Additional settings** section\.
 
 1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](configuration.md) and [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
 
-1. In the **Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](amazon-mq-configuring-cloudwatch-logs.md)\.
+1. In the **Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](security-logging-monitoring-configure-cloudwatch.md)\.
 **Important**  
-If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](amazon-mq-configuring-cloudwatch-logs.md#add-createloggroup-permission-to-user) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
-If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-configuring-cloudwatch-logs.md#configure-resource-based-policy), the broker can't publish the logs to CloudWatch Logs\.
+If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](security-logging-monitoring-configure-cloudwatch.md#security-logging-monitoring-configure-cloudwatch-permissions) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
+If you don't [configure a resource\-based policy for Amazon MQ](security-logging-monitoring-configure-cloudwatch.md#security-logging-monitoring-configure-cloudwatch-resource-permissions), the broker can't publish the logs to CloudWatch Logs\.
 
 1. In the **Network and security section**, configure your broker's connectivity:
 
@@ -65,7 +65,7 @@ If you don't [configure a resource\-based policy for Amazon MQ](amazon-mq-config
 
         1. After you create or select subnets, you can select the **Security group\(s\)**\.
 
-   1. Choose the customer master key \(CMK\) that will be used to encrypt your data\. See [Encryption at Rest](amazon-mq-encryption.md#encryption-at-rest)\.
+   1. Choose the customer master key \(CMK\) that will be used to encrypt your data\. See [Encryption at Rest](data-protection.md#data-protection-encryption-at-rest)\.
 
    1. Choose the **Public accessibility** of your broker\.
 

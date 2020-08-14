@@ -1,4 +1,4 @@
-# API Authentication and Authorization for Amazon MQ<a name="amazon-mq-api-authentication-authorization"></a>
+# API Authentication and Authorization for Amazon MQ<a name="security-api-authentication-authorization"></a>
 
 Amazon MQ uses standard AWS request signing for API authentication\. For more information, see [Signing AWS API Requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the *AWS General Reference*\.
 
@@ -8,11 +8,11 @@ Currently, Amazon MQ doesn't support IAM authentication using resource\-based pe
 To authorize AWS users to work with brokers, configurations, and users, you must edit your IAM policy permissions\.
 
 **Topics**
-+ [IAM Permissions Required to Create an Amazon MQ Broker](#amazon-mq-permissions-required-to-create-broker)
-+ [Amazon MQ REST API Permissions Reference](#amazon-mq-api-permissions-reference)
-+ [Resource\-Level Permissions for Amazon MQ API Actions](#amq-supported-iam-actions-resources)
++ [IAM Permissions Required to Create an Amazon MQ Broker](#security-permissions-required-to-create-broker)
++ [Amazon MQ REST API Permissions Reference](#security-api-permissions-reference)
++ [Resource\-Level Permissions for Amazon MQ API Actions](#security-supported-iam-actions-resources)
 
-## IAM Permissions Required to Create an Amazon MQ Broker<a name="amazon-mq-permissions-required-to-create-broker"></a>
+## IAM Permissions Required to Create an Amazon MQ Broker<a name="security-permissions-required-to-create-broker"></a>
 
 To create a broker, you must either use the `AmazonMQFullAccess` IAM policy or include the following EC2 permissions in your IAM policy\.
 
@@ -60,7 +60,7 @@ The `ec2:AuthorizedService` condition key ensures that ENI permissions can be gr
 
 For more information, see [Step 2: Create an IAM User and Get Your AWS Credentials](amazon-mq-setting-up.md#create-iam-user) and [Never Modify or Delete the Amazon MQ Elastic Network Interface](connecting-to-amazon-mq.md#never-modify-delete-elastic-network-interface)\.
 
-## Amazon MQ REST API Permissions Reference<a name="amazon-mq-api-permissions-reference"></a>
+## Amazon MQ REST API Permissions Reference<a name="security-api-permissions-reference"></a>
 
 The following table lists Amazon MQ REST APIs and the corresponding IAM permissions\.
 
@@ -89,7 +89,7 @@ The following table lists Amazon MQ REST APIs and the corresponding IAM permissi
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#UpdateConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configuration.html#UpdateConfiguration) | mq:UpdateConfiguration | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#UpdateUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#UpdateUser) | mq:UpdateUser | 
 
-## Resource\-Level Permissions for Amazon MQ API Actions<a name="amq-supported-iam-actions-resources"></a>
+## Resource\-Level Permissions for Amazon MQ API Actions<a name="security-supported-iam-actions-resources"></a>
 
 The term *resource\-level permissions* refers to the ability to specify the resources on which users are allowed to perform actions\. Amazon MQ has partial support for resource\-level permissions\. For certain Amazon MQ actions, you can control when users are allowed to use those actions based on conditions that have to be fulfilled, or specific resources that users are allowed to use\. 
 

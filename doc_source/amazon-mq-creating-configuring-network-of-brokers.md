@@ -5,8 +5,8 @@ A *network of brokers* is comprised of multiple simultaneously active [single\-i
 For a conceptual overview and detailed configuration information, see the following:
 + [Amazon MQ Network of Brokers](network-of-brokers.md)
 + [Configure Your Network of Brokers Correctly](ensuring-effective-amazon-mq-performance.md#network-of-brokers-configure-correctly)
-+ `[networkConnector](child-element-details.md#networkConnector)`
-+ `[networkConnectionStartAsync](permitted-attributes.md#networkConnectionStartAsync)`
++ ``
++ ``
 + [Networks of Brokers](http://activemq.apache.org/networks-of-brokers.html) in the ActiveMQ documentation
 
 You can use the Amazon MQ console to create an Amazon MQ network of brokers\. Because you can start the creation of the two brokers in parallel, this process takes approximately 15 minutes\. 

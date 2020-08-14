@@ -17,7 +17,7 @@ For instance, you could add tags that represent the cost center and purpose of y
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-tagging.html)
 
-This tagging scheme allows you to group two state machines performing related tasks in the same cost center, while tagging an unrelated broker with a different cost allocation tag\.
+This tagging scheme allows you to group two brokers performing related tasks in the same cost center, while tagging an unrelated broker with a different cost allocation tag\.
 
 ## Managing Tags in the Amazon MQ Console<a name="tagging-manage-console"></a>
 
