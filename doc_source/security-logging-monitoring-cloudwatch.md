@@ -62,7 +62,7 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | --- | --- | --- | 
 | ConsumerCount | Count | The number of consumers subscribed to the destination\. | 
 | EnqueueCount | Count | The number of messages sent to the destination, per minute\. | 
-| EnqueueTime | Time \(milliseconds\) | The end\-to\-end latency from when a message arrives at a broker until it is delivered to a consumer\. | 
+| EnqueueTime | Time \(milliseconds\) | The end\-to\-end latency from when a message arrives at a broker until it is delivered to a consumer\. Please note that `EnqueueTime` does *not* measure the end\-to\-end latency from when a message is sent by a producer until it reaches a consumer\. Rather, it is the number of milliseconds from the moment a message is recieved by the broker until it is successfully delivered\.   | 
 | ExpiredCount | Count | The number of messages that couldn't be delivered because they expired, per minute\. | 
 | DispatchCount | Count | The number of messages sent to consumers, per minute\. | 
 | DequeueCount | Count | The number of messages acknowledged by consumers, per minute\. | 

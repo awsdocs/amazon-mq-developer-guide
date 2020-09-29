@@ -71,7 +71,7 @@ The following table lists Amazon MQ REST APIs and the corresponding IAM permissi
 | --- | --- | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#CreateBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-brokers.html#CreateBroker) | mq:CreateBroker | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#CreateConfiguration](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-configurations.html#CreateConfiguration) | mq:CreateConfiguration | 
-| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags) | mg:CreateTags | 
+| [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/tags-resource-arn.html#CreateTags) | mq:CreateTags | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#CreateUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#CreateUser) | mq:CreateUser | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DeleteBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-broker.html#DeleteBroker) | mq:DeleteBroker | 
 | [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#DeleteUser](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-user.html#DeleteUser) | mq:DeleteUser | 

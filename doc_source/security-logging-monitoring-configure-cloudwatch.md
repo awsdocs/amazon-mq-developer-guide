@@ -76,39 +76,18 @@ To allow Amazon MQ to publish logs to your CloudWatch Logs log group, configure 
 **Important**  
 If you don't configure a resource\-based policy for Amazon MQ, the broker can't publish the logs to CloudWatch Logs\.
 
-The following example [resource\-based policy](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#resource-based-policies-cwl) grants permission for `logs:CreateLogStream` and `logs:PutLogEvents` to AWS\.
+This resource\-based policy *must* be configured by using the AWS CLI\. The following command grants permission for `logs:CreateLogStream` and `logs:PutLogEvents` to AWS\.
 
 ```
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "mq.amazonaws.com"
-      },
-      "Action":[
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource" : "arn:aws:logs:*:*:log-group:/aws/amazonmq/*"
-    }
-  ]
-}
+aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-logs \
+        		--policy-document '{ "Version": "2012-10-17", "Statement": [ { 
+        		"Effect": "Allow", "Principal": { "Service": "mq.amazonaws.com" }, 
+        		"Action":[ "logs:CreateLogStream", "logs:PutLogEvents" ],
+        		"Resource" : "arn:aws:logs:*:*:log-group:/aws/amazonmq/*" } ] }'
 ```
 
 **Note**  
 Because this example uses the `/aws/amazonmq/` prefix, you need to configure the resource\-based policy only once per AWS account, per region\.
-
-You can achieve the same effect using the following AWS CLI command:
-
-```
-aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-logs \
-		--policy-document '{ "Version": "2012-10-17", "Statement": [ { 
-		"Effect": "Allow", "Principal": { "Service": "mq.amazonaws.com" }, 
-		"Action":[ "logs:CreateLogStream", "logs:PutLogEvents" ],
-		"Resource" : "arn:aws:logs:*:*:log-group:/aws/amazonmq/*" } ] }'
-```
 
 ## Troubleshooting CloudWatch Logs Configuration<a name="security-logging-monitoring-configure-cloudwatch-troubleshoot"></a>
 

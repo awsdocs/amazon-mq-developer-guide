@@ -39,7 +39,7 @@ Allow only the protocol ports that you are using\.
 + STOMP: 61614
 + WebSocket: 61619
 
-For more information see\.
+For more information see:
 + [Step 2: \(Optional\) Configure Additional Broker Settings](amazon-mq-creating-configuring-broker.md#configure-advanced-broker-settings-console)
 + [Security Groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
 + [Default Security Group for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup)

@@ -9,6 +9,9 @@ For data protection purposes, we recommend that you protect AWS account credenti
 + Use AWS encryption solutions, along with all default security controls within AWS services\.
 + Use advanced managed security services such as Amazon Macie, which assists in discovering and securing personal data that is stored in Amazon S3\.
 
+**Important**  
+If you require FIPS 140\-2 validated cryptographic modules when accessing AWS through a command line interface or an API, use a FIPS endpoint\. For more information about the available FIPS endpoints, see [Federal Information Processing Standard \(FIPS\) 140\-2](http://aws.amazon.com/compliance/fips/)\.
+
 We strongly recommend that you never put sensitive identifying information, such as your customers' account numbers, into free\-form fields such as a **Name** field\. This includes when you work with Amazon MQ or other AWS services using the console, API, AWS CLI, or AWS SDKs\. Any data that you enter into Amazon MQ or other services might get picked up for inclusion in diagnostic logs\. When you provide a URL to an external server, don't include credentials information in the URL to validate your request to that server\.
 
 For more information about data protection, see the [AWS Shared Responsibility Model and GDPR](http://aws.amazon.com/blogs/security/the-aws-shared-responsibility-model-and-gdpr/) blog post on the *AWS Security Blog*\.
@@ -37,6 +40,8 @@ Amazon MQ uses Amazon Elastic File System \(EFS\) to store message data\. If you
 
 Amazon MQ encrypts data in transit between the brokers of your Amazon MQ deployment\. All data that passes between Amazon MQ brokers is encrypted using Transport layer Security \(TLS\)\. This is true for all available protocols\. 
 
+ By default, Amazon MQ brokers use the recommended TLS 1\.2 to encrypt data\. Amazon MQ does not currently support configuring brokers to use different TLS versions\. 
+
 You can access your brokers using the following protocols with TLS enabled:
 + [AMQP](http://activemq.apache.org/amqp.html)
 + [MQTT](http://activemq.apache.org/mqtt.html)
@@ -44,3 +49,25 @@ You can access your brokers using the following protocols with TLS enabled:
 + [OpenWire](http://activemq.apache.org/openwire.html)
 + [STOMP](http://activemq.apache.org/stomp.html)
 + STOMP over WebSocket
+
+### Supported TLS Cipher Suites<a name="activemq-tls-support"></a>
+
+Amazon MQ supports the following cipher suites:
++ TLS\_ECDHE\_RSA\_WITH\_AES\_256\_GCM\_SHA384
++ TLS\_ECDHE\_RSA\_WITH\_AES\_256\_CBC\_SHA384
++ TLS\_ECDHE\_RSA\_WITH\_AES\_256\_CBC\_SHA
++ TLS\_DHE\_RSA\_WITH\_AES\_256\_GCM\_SHA384
++ TLS\_DHE\_RSA\_WITH\_AES\_256\_CBC\_SHA256
++ TLS\_DHE\_RSA\_WITH\_AES\_256\_CBC\_SHA
++ TLS\_RSA\_WITH\_AES\_256\_GCM\_SHA384
++ TLS\_RSA\_WITH\_AES\_256\_CBC\_SHA256
++ TLS\_RSA\_WITH\_AES\_256\_CBC\_SHA
++ TLS\_ECDHE\_RSA\_WITH\_AES\_128\_GCM\_SHA256
++ TLS\_ECDHE\_RSA\_WITH\_AES\_128\_CBC\_SHA256
++ TLS\_ECDHE\_RSA\_WITH\_AES\_128\_CBC\_SHA
++ TLS\_DHE\_RSA\_WITH\_AES\_128\_GCM\_SHA256
++ TLS\_DHE\_RSA\_WITH\_AES\_128\_CBC\_SHA256
++ TLS\_DHE\_RSA\_WITH\_AES\_128\_CBC\_SHA
++ TLS\_RSA\_WITH\_AES\_128\_GCM\_SHA256
++ TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA256
++ TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA
