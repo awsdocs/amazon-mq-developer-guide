@@ -1,8 +1,8 @@
-# Monitoring Amazon MQ Brokers Using Amazon CloudWatch<a name="security-logging-monitoring-cloudwatch"></a>
+# Monitoring Amazon MQ brokers using Amazon CloudWatch<a name="security-logging-monitoring-cloudwatch"></a>
 
 Amazon MQ and Amazon CloudWatch are integrated so you can use CloudWatch to view and analyze metrics for your ActiveMQ broker and the broker's destinations \(queues and topics\)\. You can view and analyze your Amazon MQ metrics from the CloudWatch console, the AWS CLI, or the CloudWatch CLI\. CloudWatch metrics for Amazon MQ are automatically polled from the broker and then pushed to CloudWatch every minute\.
 
-For information, see [Tutorial: Accessing CloudWatch Metrics for Amazon MQ](amazon-mq-accessing-metrics.md)\.
+For information, see [Accessing CloudWatch metrics for Amazon MQ](amazon-mq-accessing-metrics.md)\.
 
 **Note**  
 The following statistics are valid for all of the metrics:  
@@ -13,7 +13,13 @@ The following statistics are valid for all of the metrics:
 
 The `AWS/AmazonMQ` namespace includes the following metrics\.
 
-## Broker Metrics<a name="security-logging-monitoring-cloudwatch-metrics"></a>
+**Topics**
++ [Logging and monitoring ActievMQ brokers](#activemq-logging-monitoring)
++ [Logging and monitoring RabbitMQ brokers](#rabbitmq-logging-monitoring)
+
+## Logging and monitoring ActievMQ brokers<a name="activemq-logging-monitoring"></a>
+
+### ActiveMQ broker metrics<a name="security-logging-monitoring-cloudwatch-metrics"></a>
 
 
 | Metric | Unit | Description | 
@@ -39,14 +45,14 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 | VolumeReadOps | Count | The number of read operations performed on the Amazon EBS volume\. | 
 | VolumeWriteOps | Count | The number of write operations performed on the Amazon EBS volume\. | 
 
-### Dimension for Broker Metrics<a name="security-logging-monitoring-cloudwatch-dimensions"></a>
+#### Dimensions for ActiveMQ broker metrics<a name="security-logging-monitoring-cloudwatch-dimensions"></a>
 
 
 | Dimension | Description | 
 | --- | --- | 
-| Broker |  The name of the broker\.  A single\-instance broker has the suffix `-1`\. An active/standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.   | 
+| Broker |  The name of the broker A single\-instance broker has the suffix \-1\. An active/standby broker for high availability has the suffixes \-1 and \-2 for its redundant pair\.  | 
 
-## Destination \(Queue and Topic\) Metrics<a name="security-logging-monitoring-cloudwatch-destination-metrics"></a>
+### ActiveMQ destination \(queue and topic\) metrics<a name="security-logging-monitoring-cloudwatch-destination-metrics"></a>
 
 **Important**  
 The following metrics include per\-minute counts for the CloudWatch polling period\.  
@@ -77,7 +83,7 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 **Note**  
 `TotalEnqueueCount` and `TotalDequeueCount` metrics include messages for advisory topics\. For more information about advisory topic messages, see the [ActiveMQ documentation](https://activemq.apache.org/advisory-message.html)\.
 
-### Dimensions for Destination \(Queue and Topic\) Metrics<a name="security-logging-monitoring-cloudwatch-destination-dimensions"></a>
+#### Dimensions for ActiveMQ destination \(queue and topic\) metrics<a name="security-logging-monitoring-cloudwatch-destination-dimensions"></a>
 
 
 | Dimension | Description | 
@@ -85,3 +91,67 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | Broker |  The name of the broker\.  A single\-instance broker has the suffix `-1`\. An active/standby broker for high availability has the suffixes `-1` and `-2` for its redundant pair\.   | 
 | Topic or Queue | The name of the topic or queue\. | 
 | NetworkConnector  | The name of the network connector\. | 
+
+## Logging and monitoring RabbitMQ brokers<a name="rabbitmq-logging-monitoring"></a>
+
+### RabbitMQ broker metrics<a name="security-logging-monitoring-cloudwatch-metrics-rabbitmq"></a>
+
+
+| Metric | Unit | Description | 
+| --- | --- | --- | 
+| ExchangeCount | Count | The total number of exchanges configured on the broker\. | 
+| QueueCount | Count | The total number of queues configured on the broker\. | 
+| ConnectionCount | Count | The total number of connections established on the broker\. | 
+| ChannelCount | Count | The total number of channels established on the broker\. | 
+| ConsumerCount | Count | The total number of consumers connected to the broker\. | 
+| MessageCount | Count | The total number of messages in the queues\.  The number produced is the total sum of ready and unackknowledged messages on the broker\.  | 
+| MessageReadyCount | Count | The total number of ready messages in the queues\. | 
+| MessageUnacknowledgedCount | Count | The total number of unacknowledged messages in the queues\. | 
+| PublishRate | Count | The rate at which messages are published to the broker\. The number produced represents the number of messages per second at the time of sampling\.  | 
+| ConfirmRate | Count | The rate at which the RabbitMQ server is confirming published messages\. You can compare this metric with PublishRate to better understand how your broker is performing\. The number produced represents the number of messages per second at the time of sampling\. | 
+| AckRate | Count | The rate at which messages are being acknowledged by consumers\. The number produced represents the number of messages per second at the time of sampling\. | 
+
+### Dimensions for RabbitMQ broker metrics<a name="security-logging-monitoring-cloudwatch-dimensions-rabbitmq"></a>
+
+
+| Dimension | Description | 
+| --- | --- | 
+| Broker |  The name of the broker\.  | 
+
+### RabbitMQ node metrics<a name="security-logging-monitoring-cloudwatch-destination-metrics-rabbitmq"></a>
+
+
+| Metric | Unit | Description | 
+| --- | --- | --- | 
+| SystemCpuUtilization | Percent | The percentage of allocated Amazon EC2 compute units that the broker currently uses\. | 
+| RabbitMQMemLimit | Bytes | The RAM limit for a RabbitMQ node\. | 
+| RabbitMQMemUsed | Bytes | The volume of RAM used by a RabbitMQ node\. When memory use goes above the limit, the cluster will block all producer connections\. | 
+| RabbitMQDiskFreeLimit | Bytes | The disk limit for a RabbitMQ node\. This metric is different per instance size\. For more information about Amazon MQ instance types, see  | 
+| RabbitMQDiskFree | Bytes | The total volume of free disk space available in a RabbitMQ node\. When disk usage goes above its limit, the cluster will block all producer connections\. | 
+| RabbitMQFdUsed | Count | Number of file descriptors used\. | 
+
+### Dimensions for RabbitMQ node metrics<a name="security-logging-monitoring-cloudwatch-destination-dimensions-rabbitmq"></a>
+
+
+| Dimension | Description | 
+| --- | --- | 
+| Node | The name of the node\.  A node name consists of two parts: a prefix \(usuallly `rabbit`\) and a hostname\. For example, `rabbit@ip-10-0-0-230.us-west-2.compute.internal` is a node name with the prefix `rabbit` and the hostname `ip-10-0-0-230.us-west-2.compute.internal`\.   | 
+| Broker |  The name of the broker\.  | 
+
+### RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-metrics-rabbitmq"></a>
+
+
+| Metric | Unit | Description | 
+| --- | --- | --- | 
+| ConsumerCount | Count | The number of consumers subscribed to the queue\. | 
+| MessageReadyCount | Counter | The number of messages that are currently available to be delivered\. | 
+| MessageUnacknowledgedCount | Count | The number of messages for which the server is awaiting acknowledgement\. | 
+| MessageCount | Counter | The total number of MessageReadyCount and MessageUnacknowledgedCount \(also known as queue depth\)\. | 
+
+### Dimensions for RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-dimensions-rabbitmq"></a>
+
+
+| Dimension | Description | 
+| --- | --- | 
+| Queue | The name of the queue\. | 
+| Virtual host | Name of the virtual host\. | 

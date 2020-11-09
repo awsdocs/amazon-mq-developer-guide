@@ -3,16 +3,16 @@
 A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\.
 
 **Important**  
-Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
+Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, you can't delete a configuration\.
 
 For information about creating, editing, and managing configurations, see the following:
-+ [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md)
-+ [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
++ [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md)
++ [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 + [Configurations](amazon-mq-limits.md#configuration-limits)
-+ [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
++ [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
 
-To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Tutorial: Creating and Applying Amazon MQ Broker Configurations](amazon-mq-creating-applying-configurations.md) and [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)\.
+To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md) and [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)\.
 
 ## Attributes<a name="configuration-attributes"></a>
 

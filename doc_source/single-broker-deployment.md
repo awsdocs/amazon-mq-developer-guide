@@ -1,6 +1,6 @@
-# Amazon MQ Single\-Instance Broker<a name="single-broker-deployment"></a>
+# Amazon MQ single\-instance broker<a name="single-broker-deployment"></a>
 
-A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(by default\) or with Amazon EBS\. For more information, see [Storage](broker-storage.md)\.
+A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(applicable only to ActiveMQ brokers\) or with Amazon EBS\. For more information, see [Storage](broker-storage.md)\.
 
 The following diagram illustrates a single\-instance broker with Amazon EFS storage replicated across multiple Availability Zones \(AZs\)\.
 

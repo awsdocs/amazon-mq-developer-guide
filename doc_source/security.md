@@ -9,11 +9,9 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using Amazon MQ\. The following topics show you how to configure Amazon MQ to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your Amazon MQ resources\. 
 
 **Topics**
-+ [Data Protection in Amazon MQ](data-protection.md)
-+ [Identity and Access Management for Amazon MQ](security-iam.md)
-+ [Monitoring and Logging Amazon MQ Brokers](security-logging-monitoring.md)
-+ [Messaging Authentication and Authorization for ActiveMQ](security-authentication-authorization.md)
-+ [Compliance Validation for Amazon MQ](AMQ-compliance.md)
++ [Data protection in Amazon MQ](data-protection.md)
++ [Identity and access Management for Amazon MQ](security-iam.md)
++ [Compliance validation for Amazon MQ](AMQ-compliance.md)
 + [Resilience in Amazon MQ](disaster-recovery-resiliency.md)
-+ [Infrastructure Security in Amazon MQ](infrastructure-security.md)
-+ [Security Best Practices for Amazon MQ](using-amazon-mq-securely.md)
++ [Infrastructure security in Amazon MQ](infrastructure-security.md)
++ [Security best practices for Amazon MQ](using-amazon-mq-securely.md)

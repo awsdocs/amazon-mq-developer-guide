@@ -1,4 +1,4 @@
-# Tutorial: Rebooting an Amazon MQ Broker<a name="amazon-mq-rebooting-broker"></a>
+# Rebooting an Amazon MQ broker<a name="amazon-mq-rebooting-broker"></a>
 
 To apply a new configuration to a broker, you can reboot the broker\. In addition, if your broker becomes unresponsive, you can reboot it to recover from a faulty state\.
 

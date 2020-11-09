@@ -20,7 +20,7 @@ You must not modify or delete this network interface\. Modifying or deleting the
 
 ## Always Use Connection Pooling<a name="always-use-connection-pooling"></a>
 
-In a scenario with a single producer and single consumer \(such as the [Getting Started with Amazon MQ](amazon-mq-getting-started.md) tutorial\), you can use a single [http://activemq.apache.org/maven/apidocs/org/apache/activemq/ActiveMQConnectionFactory.html](http://activemq.apache.org/maven/apidocs/org/apache/activemq/ActiveMQConnectionFactory.html) class for every producer and consumer\. For example:
+In a scenario with a single producer and single consumer \(such as the [Getting started with Amazon MQ](amazon-mq-getting-started.md) tutorial\), you can use a single [http://activemq.apache.org/maven/apidocs/org/apache/activemq/ActiveMQConnectionFactory.html](http://activemq.apache.org/maven/apidocs/org/apache/activemq/ActiveMQConnectionFactory.html) class for every producer and consumer\. For example:
 
 ```
 // Create a connection factory.
@@ -60,7 +60,7 @@ producerConnection.start();
 
 ## Always Use the Failover Transport to Connect to Multiple Broker Endpoints<a name="always-use-failover-transport-connect-to-multiple-broker-endpoints"></a>
 
-If you need your application to connect to multiple broker endpoints—for example, when you use an [active/standby](amazon-mq-creating-configuring-broker.md) deployment mode or when you [migrate from an on\-premises message broker to Amazon MQ](amazon-mq-migrating.md)—use the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html) to allow your consumers to randomly connect to either one\. For example:
+If you need your application to connect to multiple broker endpoints—for example, when you use an [active/standby](amazon-mq-creating-configuring-broker.md) deployment mode or when you [migrate from an on\-premises message broker to Amazon MQ](https://docs.aws.amazon.com/amazon-mq/latest/migration-guide/)—use the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html) to allow your consumers to randomly connect to either one\. For example:
 
 ```
 failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617,ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)?randomize=true

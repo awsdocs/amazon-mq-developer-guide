@@ -16,7 +16,7 @@ The following is a detailed explanation of child element attributes\. For more i
 
 #### admin\|read\|write<a name="admin-read-write"></a>
 
-The permissions granted to a group of users\. For more information, see [Always Configure an Authorization Map](using-amazon-mq-securely.md#always-configure-authorization-map)\.
+The permissions granted to a group of users\. For more information, see [Always configure an authorization map](using-amazon-mq-securely.md#always-configure-authorization-map)\.
 
 **Default:** `null`
 

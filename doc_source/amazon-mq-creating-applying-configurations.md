@@ -1,4 +1,4 @@
-# Tutorial: Creating and Applying Amazon MQ Broker Configurations<a name="amazon-mq-creating-applying-configurations"></a>
+# Creating and applying ActiveMQ broker onfigurations<a name="amazon-mq-creating-applying-configurations"></a>
 
 A *configuration* contains all of the settings for your ActiveMQ broker, in XML format \(similar to ActiveMQ's `activemq.xml` file\)\. You can create a configuration before creating any brokers\. You can then apply the configuration to one or more brokers\. You can apply a configuration immediately or during a *maintenance window*\.
 
@@ -7,9 +7,9 @@ For an active/standby broker, if one of the broker instances undergoes maintenan
 
 For more information, see the following:
 + [Configuration](configuration.md)
-+ [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)
-+ [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
-+ [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)
++ [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)
++ [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
++ [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 
 The following example shows how you can create and apply an Amazon MQ broker configuration using the AWS Management Console\.
 
@@ -58,8 +58,8 @@ Editing the current configuration creates a new configuration revision\.
 
    The new revision of the configuration is saved\.
 **Important**  
-The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.  
-Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
+The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.  
+Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, you can't delete a configuration\.
 
 ## Step 3: Apply a Configuration Revision to Your Broker<a name="apply-configuration-revision-creating-console"></a>

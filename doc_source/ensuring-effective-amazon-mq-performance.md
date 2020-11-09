@@ -1,4 +1,4 @@
-# Ensuring Effective Amazon MQ Performance<a name="ensuring-effective-amazon-mq-performance"></a>
+# Ensuring effective Amazon MQ performance<a name="ensuring-effective-amazon-mq-performance"></a>
 
 The following design patterns can improve the effectiveness and performance of your Amazon MQ broker\.
 
@@ -18,7 +18,7 @@ To instruct Amazon MQ to optimize for queues with slow consumers, set the `concu
 
 ## Choose the Correct Broker Instance Type for the Best Throughput<a name="broker-instance-types-choosing"></a>
 
-The message throughput of a [broker instance type](broker.md#broker-instance-types) depends on your application's use case and the following factors:
+The message throughput of a [broker instance type](broker-instance-types.md) depends on your application's use case and the following factors:
 + Use of ActiveMQ in persistent mode
 + Message size
 + The number of producers and consumers
@@ -32,7 +32,7 @@ Depending on your use case, a larger broker instance type might not necessarily 
 
 When you use ActiveMQ in persistent mode, writing to storage normally occurs when there are either few consumers or when the consumers are slow\. In non\-persistent mode, writing to storage also occurs with slow consumers if the heap memory of the broker instance is full\.
 
-To determine the best broker instance type for your application, we recommend testing different broker instance types\. For more information, see [Instance Types](broker.md#broker-instance-types) and also [Measuring the Throughput for Amazon MQ using the JMS Benchmark](https://aws.amazon.com/blogs/compute/measuring-the-throughput-for-amazon-mq-using-the-jms-benchmark/)\.
+To determine the best broker instance type for your application, we recommend testing different broker instance types\. For more information, see [Instance types](broker-instance-types.md) and also [Measuring the Throughput for Amazon MQ using the JMS Benchmark](https://aws.amazon.com/blogs/compute/measuring-the-throughput-for-amazon-mq-using-the-jms-benchmark/)\.
 
 ### Use Cases for Larger Broker Instance Types<a name="broker-instance-types-larger-use-cases"></a>
 

@@ -1,12 +1,12 @@
-# Tutorial: Creating and Configuring an Amazon MQ Network of Brokers<a name="amazon-mq-creating-configuring-network-of-brokers"></a>
+# Creating and configuring an Amazon MQ network of brokers<a name="amazon-mq-creating-configuring-network-of-brokers"></a>
 
 A *network of brokers* is comprised of multiple simultaneously active [single\-instance brokers](single-broker-deployment.md) or [active/standby brokers](active-standby-broker-deployment.md)\. You can configure networks of brokers in a variety of [topologies](network-of-brokers.md#nob-topologies) \(for example, *concentrator*, *hub\-and\-spokes*, *tree*, or *mesh*\), depending on your application's needs, such as high availability and scalability\. For instance, a [hub and spoke](network-of-brokers.md#nob-topologies-hub) network of brokers can increase resiliency, preserving messages if one broker is not reachable\. A network of brokers with a [concentrator](network-of-brokers.md#nob-topologies-concentrator) topology can collect messages from a larger number of brokers accepting incoming messages, and concentrate them to more central brokers, to better handle the load of many incoming messages\. In this tutorial, you learn how to create a two\-broker network of brokers with a *source and sink* topology\. 
 
 For a conceptual overview and detailed configuration information, see the following:
-+ [Amazon MQ Network of Brokers](network-of-brokers.md)
++ [Amazon MQ Network of brokers](network-of-brokers.md)
 + [Configure Your Network of Brokers Correctly](ensuring-effective-amazon-mq-performance.md#network-of-brokers-configure-correctly)
-+ ``
-+ ``
++ `networkConnector`
++ `networkConnectionStartAsync`
 + [Networks of Brokers](http://activemq.apache.org/networks-of-brokers.html) in the ActiveMQ documentation
 
 You can use the Amazon MQ console to create an Amazon MQ network of brokers\. Because you can start the creation of the two brokers in parallel, this process takes approximately 15 minutes\. 
@@ -20,14 +20,14 @@ You can use the Amazon MQ console to create an Amazon MQ network of brokers\. Be
 ## Prerequisites<a name="creating-configuring-network-of-brokers-create-brokers"></a>
 
 To create a network of brokers, you must have the following:
-+ Two or more simultaneously active brokers \(named `MyBroker1` and `MyBroker2` in this tutorial\)\. For more information about creating brokers, see [Tutorial: Creating and Configuring an Amazon MQ Broker](amazon-mq-creating-configuring-broker.md)\.
++ Two or more simultaneously active brokers \(named `MyBroker1` and `MyBroker2` in this tutorial\)\. For more information about creating brokers, see [Creating and configuring an ActiveMQ broker](amazon-mq-creating-configuring-broker.md)\.
 + The two brokers must be in the same VPC or in peered VPCs\. For more information about VPCs, see [What is Amazon VPC?](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) in the *Amazon VPC User Guide* and [What is VPC Peering?](https://docs.aws.amazon.com/vpc/latest/peering/Welcome.html) in the *Amazon VPC Peering Guide*\.
 **Important**  
 If you don't have a default VPC, subnet\(s\), or security group, you must create them first\. For more information, see the following in the *Amazon VPC User Guide*:  
 [Creating a Default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-vpc)
 [Creating a Default Subnet](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-subnet)
 [Creating a Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#CreatingSecurityGroups)
-+ Two users with identical usernames and passwords for both brokers\. For more information about creating users, see [Tutorial: Creating and Managing Amazon MQ Broker Users](amazon-mq-listing-managing-users.md)\.
++ Two users with identical usernames and passwords for both brokers\. For more information about creating users, see [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)\.
 
 The following example uses two [single\-instance brokers](single-broker-deployment.md)\. However, you can create networks of brokers using [active/standby brokers](active-standby-broker-deployment.md) or a combination of broker deployment modes\.
 
@@ -149,7 +149,7 @@ You might also need to adjust your security group\(s\) settings to allow the pro
    	--destination queue://MyQueue
    ```
 
-   The consumer connects to the OpenWire endpoint of `MyBroker1` and begins to consume messages from queue `MyQueue`\.
+   The consumer connects to the OpenWire endpoint of `MyBroker2` and begins to consume messages from queue `MyQueue`\.
 
 1. From any machine that has access to broker `MyBroker1`, create a producer and send some messages\. For example:
 
@@ -164,3 +164,6 @@ You might also need to adjust your security group\(s\) settings to allow the pro
    ```
 
    The producer connects to the OpenWire endpoint of `MyBroker1` and begins to produce persistent messages to queue `MyQueue`\.
+
+**Note**  
+When integrating LDAP authentication with a network of brokers, make sure that the user exists both as an ActiveMQ brokers, as well as an LDAP user\.

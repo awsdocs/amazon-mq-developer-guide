@@ -1,14 +1,14 @@
-# Amazon MQ Network of Brokers<a name="network-of-brokers"></a>
+# Amazon MQ Network of brokers<a name="network-of-brokers"></a>
 
 Amazon MQ supports ActiveMQ's network of brokers feature\.
 
 A *network of brokers* is comprised of multiple simultaneously active [single\-instance brokers](single-broker-deployment.md) or [active/standby brokers](active-standby-broker-deployment.md)\. You can configure networks of brokers in a variety of [topologies](#nob-topologies) \(for example, *concentrator*, *hub\-and\-spokes*, *tree*, or *mesh*\), depending on your application's needs, such as high availability and scalability\. For instance, a [hub and spoke](#nob-topologies-hub) network of brokers can increase resiliency, preserving messages if one broker is not reachable\. A network of brokers with a [concentrator](#nob-topologies-concentrator) topology can collect messages from a larger number of brokers accepting incoming messages, and concentrate them to more central brokers, to better handle the load of many incoming messages\.
 
 For a tutorial and detailed configuration information, see the following:
-+ [Tutorial: Creating and Configuring an Amazon MQ Network of Brokers](amazon-mq-creating-configuring-network-of-brokers.md)
++ [Creating and configuring an Amazon MQ network of brokers](amazon-mq-creating-configuring-network-of-brokers.md)
 + [Configure Your Network of Brokers Correctly](ensuring-effective-amazon-mq-performance.md#network-of-brokers-configure-correctly)
-+ ``
-+ ``
++ `networkConnector`
++ `networkConnectionStartAsync`
 + [Networks of Brokers](http://activemq.apache.org/networks-of-brokers.html) in the ActiveMQ documentation
 
 The following are benefits of using a network of brokers:
@@ -17,14 +17,14 @@ The following are benefits of using a network of brokers:
 + Because producers and consumers can reconnect to another node in the network of brokers immediately, and because there's no need to wait for a standby broker instance to become promoted, client reconnection within a network of brokers is faster than for an [active/standby broker for high availability](active-standby-broker-deployment.md)\.
 
 **Topics**
-+ [How Does a Network of Brokers Work?](#how-does-it-work)
++ [How does a network of brokers work?](#how-does-it-work)
 + [How Does a Network of Brokers Handle Credentials?](#how-does-it-handle-credentials)
-+ [Sample Blueprints](#sample-deployments)
-+ [Network of Brokers Topologies](#nob-topologies)
-+ [ Cross Region](#how-to-configure-cross-region)
++ [Sample blueprints](#sample-deployments)
++ [Network of brokers topologies](#nob-topologies)
++ [ Cross region](#how-to-configure-cross-region)
 + [Dynamic Failover With Transport Connectors](#transport-connectors)
 
-## How Does a Network of Brokers Work?<a name="how-does-it-work"></a>
+## How does a network of brokers work?<a name="how-does-it-work"></a>
 
 Amazon MQ supports the ActiveMQ network of brokers feature in a number of ways\. First, you can edit the parameters within each broker's configuration to create a network of brokers, just as you would with native ActiveMQ\. Second, Amazon MQ has sample blueprints that use AWS CloudFormation to automate the creation of a network of brokers\. You can deploy these sample blueprints directly from the Amazon MQ console, or you can edit the related AWS CloudFormation templates to create your own topologies and configurations\.
 
@@ -46,9 +46,9 @@ For broker A to connect to broker B in a network, broker A must use valid creden
 **Important**  
 Don't specify the `password` attribute for the `<networkConnector>`\. We don't recommend storing plaintext passwords in broker configuration files, because this makes the passwords visible in the Amazon MQ console\. For more information, see [Step 2: Configure Network Connectors for Your Broker](amazon-mq-creating-configuring-network-of-brokers.md#creating-configuring-network-of-brokers-configure-network-connectors)\.
 
-Brokers must be in the same VPC or in peered VPCs\. For more information, see [Prerequisites](amazon-mq-creating-configuring-network-of-brokers.md#creating-configuring-network-of-brokers-create-brokers) in the [Creating and Configuring a Network of Brokers](amazon-mq-creating-configuring-network-of-brokers.md) tutorial\.
+Brokers must be in the same VPC or in peered VPCs\. For more information, see [Prerequisites](amazon-mq-creating-configuring-network-of-brokers.md#creating-configuring-network-of-brokers-create-brokers) in the [Creating and configuring a network of brokers](amazon-mq-creating-configuring-network-of-brokers.md) tutorial\.
 
-## Sample Blueprints<a name="sample-deployments"></a>
+## Sample blueprints<a name="sample-deployments"></a>
 
 To get started using a Network of Brokers, Amazon MQ provides sample blueprints\. These sample blueprints create a Network of Brokers deployment, and all related resources using, AWS CloudFormation\. The two sample blueprints available are: 
 
@@ -62,7 +62,7 @@ From the **Create brokers** page, select one of the sample blueprints and choose
 
 By creating brokers and configuring different `networkConnector` elements in the broker configurations, you can create a network of brokers in many different topologies\. For more information on configuring a network of brokers, see [Networks of Brokers](http://activemq.apache.org/networks-of-brokers.html) in the ActiveMQ documentation\.
 
-## Network of Brokers Topologies<a name="nob-topologies"></a>
+## Network of brokers topologies<a name="nob-topologies"></a>
 
 By deploying brokers, and then configuring `networkConnector` entries in their configurations, you can build a network of brokers using different network topologies\. A network connector provides on\-demand message forwarding between connected brokers\. Connections can be configured as duplex, where messages are forwarded both ways between brokers, or not duplex, where the forwarding only propagates from one broker to the other\. For example, if we have a duplex connection between *Broker1* and *Broker2*, messages will be forwarded from each to the other if there is a consumer\.
 
@@ -77,9 +77,9 @@ For non\-duplex connections, messages are forwarded only from one broker to the 
 Using both duplex and non\-duplex network connectors, it is possible to build a network of brokers in any number of network topologies\. 
 
 **Note**  
-In each of the network topology examples, the `networkConnector` elements reference the endpoint of the brokers they connect to\. Replace the broker endpoint entries in the `uri` attributes with the endpoints of your brokers\. See, [Tutorial: Listing Amazon MQ Brokers and Viewing Broker Details](amazon-mq-listing-brokers.md)\.
+In each of the network topology examples, the `networkConnector` elements reference the endpoint of the brokers they connect to\. Replace the broker endpoint entries in the `uri` attributes with the endpoints of your brokers\. See, [Listing Amazon MQ brokers and viewing broker details](amazon-mq-listing-brokers.md)\.
 
-### Mesh Topology<a name="nob-topologies-mesh"></a>
+### Mesh topology<a name="nob-topologies-mesh"></a>
 
 A mesh topology provides multiple brokers that are all connected to each other\. This simple example connects three single\-instance brokers, but you can configure more brokers as a mesh\. 
 
@@ -109,7 +109,7 @@ This topology, and one that includes a mesh of *active/standby* pairs of brokers
 </networkConnectors>
 ```
 
-By adding the above connectors to the configurations of *Broker1* and *Broker2*, you can create a mesh between these three brokers that forwards message between all the brokers on demand\. For more information, see [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)\.
+By adding the above connectors to the configurations of *Broker1* and *Broker2*, you can create a mesh between these three brokers that forwards message between all the brokers on demand\. For more information, see [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.
 
 ### Hub and Spoke Topology<a name="nob-topologies-hub"></a>
 
@@ -132,7 +132,7 @@ To configure the hub and spoke network of brokers in this example, you could add
 </networkConnectors>
 ```
 
-### Concentrator Topology<a name="nob-topologies-concentrator"></a>
+### Concentrator topology<a name="nob-topologies-concentrator"></a>
 
 In this example topology, the three brokers on the bottom can handle a large number of connections, and those messages are concentrated to *Broker1* and *Broker2*\. Each of the other brokers has a non\-duplex connection to the more central brokers\. To scale the capacity of this topology, you can add additional brokers that receive messages and concentrate those messages in *Broker1* and *Broker2*\. 
 
@@ -173,7 +173,7 @@ To configure this topology, each of the brokers on the bottom would contain a ne
 </networkConnectors>
 ```
 
-##  Cross Region<a name="how-to-configure-cross-region"></a>
+##  Cross region<a name="how-to-configure-cross-region"></a>
 
 To configure a network of brokers that spans AWS regions, deploy brokers in those regions, and configure network connectors to the endpoints of those brokers\.
 

@@ -1,6 +1,6 @@
-# Tutorial: Connecting a Java Application to Your Amazon MQ Broker<a name="amazon-mq-connecting-application"></a>
+# Connecting a Java application to your Amazon MQ broker<a name="amazon-mq-connecting-application"></a>
 
-After you create an Amazon MQ broker, you can connect your application to it\. The following examples show how you can use the Java Message Service \(JMS\) to create a connection to the broker, create a queue, and send a message\. For a complete, working Java example, see [Working Examples of Using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md)\.
+After you create an Amazon MQ ActiveMQ broker, you can connect your application to it\. The following examples show how you can use the Java Message Service \(JMS\) to create a connection to the broker, create a queue, and send a message\. For a complete, working Java example, see [Working examples of using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md)\.
 
 You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client/5.15.0)\.
 
@@ -21,7 +21,7 @@ To ensure that your broker is accessible within your VPC, you must enable the `e
 
 1. From the broker list, choose the name of your broker \(for example, **MyBroker**\)\.
 
-1. On the ***MyBroker*** page, in the **Connections** section, note the addresses and ports of the broker's ActiveMQ Web Console URL and wire\-level protocols\.
+1. On the ***MyBroker*** page, in the **Connections** section, note the addresses and ports of the broker's web console URL and wire\-level protocols\.
 
 1. In the **Details** section, under **Security and network**, choose the name of your security group or ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-tutorials-broker-details-link.png)\.
 
@@ -31,15 +31,15 @@ To ensure that your broker is accessible within your VPC, you must enable the `e
 
 1. At the bottom of the page, choose **Inbound**, and then choose **Edit**\.
 
-1. In the **Edit inbound rules** dialog box, add a rule for every URL or endpoint that you want to be publicly accessible \(the following example shows how to do this for an ActiveMQ Web Console\)\.
+1. In the **Edit inbound rules** dialog box, add a rule for every URL or endpoint that you want to be publicly accessible \(the following example shows how to do this for a broker web console\)\.
 
    1. Choose **Add Rule**\.
 
    1. For **Type**, select **Custom TCP**\.
 
-   1. For **Port Range**, type the ActiveMQ Web Console port \(`8162`\)\.
+   1. For **Port Range**, type the web console port \(`8162`\)\.
 
-   1. For **Source**, leave **Custom** selected and then type the IP address of the system that you want to be able to access the ActiveMQ Web Console \(for example, `192.0.2.1`\)\.
+   1. For **Source**, leave **Custom** selected and then type the IP address of the system that you want to be able to access the web console \(for example, `192.0.2.1`\)\.
 
    1. Choose **Save**\.
 
@@ -73,7 +73,7 @@ In the following example code, producers and consumers run in a single thread\. 
 
 1. Create a JMS pooled connection factory for the message producer using your broker's endpoint and then call the `createConnection` method against the factory\.
 **Note**  
-For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For more information, see [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)\)\.  
+For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For more information, see [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)\)\.  
 For wire\-level protocol endpoints, you can allow your application to connect to either endpoint by using the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html)\.
 
    ```

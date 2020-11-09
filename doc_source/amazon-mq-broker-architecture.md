@@ -1,6 +1,6 @@
-# Amazon MQ Broker Architecture<a name="amazon-mq-broker-architecture"></a>
+# Amazon MQ Broker architecture<a name="amazon-mq-broker-architecture"></a>
 
-Amazon MQ brokers can be created as *single\-instance brokers* or *active/standby brokers*\. For both deployment modes, Amazon MQ provides high durability by storing its data redundantly\.
+ActiveMQ brokers can be created as *single\-instance brokers* or *active/standby brokers*\. For both deployment modes, Amazon MQ provides high durability by storing its data redundantly\.
 
 **Note**  
 Amazon MQ uses [Apache KahaDB](http://activemq.apache.org/kahadb.html) as its data store\. Other data stores, such as JDBC and LevelDB, aren't supported\.
@@ -14,7 +14,7 @@ You can access your brokers by using [any programming language that ActiveMQ sup
 + STOMP over WebSocket
 
 **Topics**
-+ [Amazon MQ Single\-Instance Broker](single-broker-deployment.md)
-+ [Amazon MQ Active/Standby Broker for High Availability](active-standby-broker-deployment.md)
-+ [Amazon MQ Network of Brokers](network-of-brokers.md)
++ [Amazon MQ single\-instance broker](single-broker-deployment.md)
++ [Amazon MQ active/standby broker for high availability](active-standby-broker-deployment.md)
++ [Amazon MQ Network of brokers](network-of-brokers.md)
 + [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)

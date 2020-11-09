@@ -1,4 +1,4 @@
-# Amazon MQ Active/Standby Broker for High Availability<a name="active-standby-broker-deployment"></a>
+# Amazon MQ active/standby broker for high availability<a name="active-standby-broker-deployment"></a>
 
 An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\. For more information, see [Storage](broker-storage.md)\.
 

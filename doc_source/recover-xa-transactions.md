@@ -1,4 +1,4 @@
-# Avoid Slow Restarts by Recovering Prepared XA Transactions<a name="recover-xa-transactions"></a>
+# Avoid slow restarts by recovering prepared XA transactions<a name="recover-xa-transactions"></a>
 
 ActiveMQ supports distributed \(XA\) transactions\. Knowing how ActiveMQ processes XA transactions can help avoid slow recovery times for broker restarts and failovers in Amazon MQ
 

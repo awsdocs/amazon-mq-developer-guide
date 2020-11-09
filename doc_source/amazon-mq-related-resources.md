@@ -1,6 +1,6 @@
-# Related Resources<a name="amazon-mq-related-resources"></a>
+# Related resources<a name="amazon-mq-related-resources"></a>
 
-## Amazon MQ Resources<a name="amazon-mq-resources"></a>
+## Amazon MQ resources<a name="amazon-mq-resources"></a>
 
 The following table lists useful resources for working with Amazon MQ\.
 
@@ -15,7 +15,7 @@ The following table lists useful resources for working with Amazon MQ\.
 | [Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=279) | A community\-based forum for developers to discuss technical questions related to Amazon MQ\. | 
 | [AWS Premium Support Information](https://aws.amazon.com/premiumsupport/) | The primary web page for information about AWS Premium Support, a one\-on\-one, fast\-response support channel to help you build and run applications on AWS infrastructure services | 
 
-## Apache ActiveMQ Resources<a name="activemq-resources"></a>
+## Apache ActiveMQ resources<a name="activemq-resources"></a>
 
 The following table lists useful resources for working with Apache ActiveMQ\.
 
@@ -25,3 +25,14 @@ The following table lists useful resources for working with Apache ActiveMQ\.
 | [Apache ActiveMQ Getting Started Guide](http://activemq.apache.org/getting-started.html) | The official documentation of Apache ActiveMQ\. | 
 | [ActiveMQ in Action](https://www.manning.com/books/activemq-in-action) | A guide to Apache ActiveMQ that covers the anatomy of JMS messages, connectors, message persistence, authentication, and authorization\. | 
 | [Cross\-Language Clients](http://activemq.apache.org/cross-language-clients.html) | A list of programming languages and corresponding Apache ActiveMQ libraries\. See also [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client) and [QpidJMS Client](https://mvnrepository.com/artifact/org.apache.qpid/qpid-jms-client)\. | 
+
+## RabbitMQ resources<a name="rabbitmq-resources"></a>
+
+The following table lists useful resources for working with RabbitMQ\.
+
+
+| Resource | Description | 
+| --- | --- | 
+| [The RabbitMQ Getting Started Guide](https://www.rabbitmq.com/getstarted.html) | The official documentation of RabbitMQ\. | 
+| [RabbitMQ Client Libraries and Developer Tools](https://www.rabbitmq.com/devtools.html) | A guide to the officially supported client libraries and devloper tools for working with RabbitMQ using a variety of programming languages and platforms\. | 
+| [RabbitMQ Best Practices](https://www.cloudamqp.com/blog/2017-12-29-part1-rabbitmq-best-practice.html) | CloudAMQP's guide on best practices and recommendations for working with RabbitMQ\. | 

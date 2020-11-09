@@ -19,13 +19,16 @@ The following table lists quotas related to Amazon MQ brokers\.
 | Broker name |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Brokers per AWS account, per region | 20 | 
 | Broker configuration history depth | 10 | 
-| Connections per wire\-level protocol | 1,000 \(100 for mq\.t3\.micro and mq\.t2\.micro brokers\) | 
+| Connections per wire\-level protocol |   Does not apply to RabbitMQ brokers\.  1,000 \(100 for mq\.t3\.micro and mq\.t2\.micro brokers\)  | 
 | Security groups per broker | 5 | 
 | Destinations \(queues and topics\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
 
 ## Configurations<a name="configuration-limits"></a>
 
 The following table lists quotas related to Amazon MQ configurations\.
+
+**Important**  
+Does not apply to RabbitMQ brokers\.
 
 
 | Limit | Description | 
@@ -37,6 +40,9 @@ The following table lists quotas related to Amazon MQ configurations\.
 ## Users<a name="activemq-user-limits"></a>
 
 The following table lists quotas related to Amazon MQ users\.
+
+**Important**  
+Does not apply to RabbitMQ brokers\.
 
 
 | Limit | Description | 
@@ -53,17 +59,17 @@ The following table lists quotas related to Amazon MQ data storage\.
 
 | Limit | Description | 
 | --- | --- | 
-| Storage capacity per new mq\.t3\.micro or mq\.t2\.micro broker\. See [Instance Types](broker.md#broker-instance-types)\. | 20 GB | 
-| Storage capacity per broker for other instance types\. See [Instance Types](broker.md#broker-instance-types)\. | 200 GB | 
-| Storage for scheduled jobs \([JobSchedulerUsage](https://activemq.apache.org/maven/apidocs/org/apache/activemq/usage/JobSchedulerUsage.html)\) that are [backed by Amazon EBS](broker-storage.md) | 50 GB | 
-| Temporary storage for brokers\. | 50 GB | 
+| Storage capacity per new mq\.t3\.micro or mq\.t2\.micro broker\. See [Instance types](broker-instance-types.md)\. | 20 GB | 
+| Storage capacity per broker for other instance types\. See [Instance types](broker-instance-types.md)\. | 200 GB | 
+| Storage for scheduled jobs \([JobSchedulerUsage](https://activemq.apache.org/maven/apidocs/org/apache/activemq/usage/JobSchedulerUsage.html)\) that are [backed by Amazon EBS](broker-storage.md) |   Does not apply to RabbitMQ brokers\.  50 GB  | 
+| Temporary storage for brokers\. |   Does not apply to RabbitMQ brokers\.  50 GB  | 
 
 ## API Throttling<a name="api-throttling-limits"></a>
 
 The following throttling quotas are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information about Amazon MQ APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
 **Important**  
-These quotas don't apply to ActiveMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
+These quotas don't apply to ActiveMQ or RabbitMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
 
 
 | Bucket Size | Refill Rate per Second | 

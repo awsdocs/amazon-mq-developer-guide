@@ -1,6 +1,6 @@
-# Accessing the ActiveMQ Web Console of a Broker without Public Accessibility<a name="accessing-web-console-of-broker-without-private-accessibility"></a>
+# Accessing the RabbitMQ and ActiveMQ web consoles without public accessibility<a name="accessing-web-console-of-broker-without-private-accessibility"></a>
 
-If you disable public accessibility for your broker, you must perform the following steps to be able to access your broker's ActiveMQ Web Console\.
+If you disable public accessibility for your broker, you must perform the following steps to be able to access your broker's web console\.
 
 **Note**  
 The names of the VPCs and security groups are specific to the following example\.
@@ -19,7 +19,7 @@ To perform the following steps, you must configure the following:
   + `private-sg` must allow inbound connections from `public-sg`\. We recommend restricting this security group to port 8162\.
   + `public-sg` must allow inbound connections from your machine on port 22\.
 
-## To Access the ActiveMQ Web Console of a Broker without Public Accessibility<a name="accessing-web-console-of-broker-without-private-accessibility-tutorial"></a>
+## To Access a broker's web console of a Broker without Public Accessibility<a name="accessing-web-console-of-broker-without-private-accessibility-tutorial"></a>
 
 1. Create a Linux EC2 instance in `public-vpc` \(with a public IP, if necessary\)\.
 
@@ -43,4 +43,4 @@ To perform the following steps, you must configure the following:
    + For the URL pattern, specify `*.mq.*.amazonaws.com*`
    + For the connection type, specify `HTTP(S)`\.
 
-   When you enable your proxy client, you can access the ActiveMQ Web Console on your machine\.
+   When you enable your proxy client, you can access the web console on your machine\.

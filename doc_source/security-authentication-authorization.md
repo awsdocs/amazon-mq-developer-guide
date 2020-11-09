@@ -1,6 +1,9 @@
-# Messaging Authentication and Authorization for ActiveMQ<a name="security-authentication-authorization"></a>
+# Integrating ActiveMQ brokers with LDAP<a name="security-authentication-authorization"></a>
 
-You can access your brokers using the following protocols with TLS enabled:
+**Important**  
+LDAP integration is not supported for RabbitMQ brokers\.
+
+You can access your ActiveMQ brokers using the following protocols with TLS enabled:
 + [AMQP](http://activemq.apache.org/amqp.html)
 + [MQTT](http://activemq.apache.org/mqtt.html)
 + MQTT over [WebSocket](http://activemq.apache.org/websockets.html)
@@ -10,10 +13,16 @@ You can access your brokers using the following protocols with TLS enabled:
 
 Amazon MQ offers a choice between native ActiveMQ authentication and LDAP authentication and authorization to manage user permissions\. For information about restrictions related to ActiveMQ usernames and passwords, see [Users](amazon-mq-limits.md#activemq-user-limits)\.
 
-To authorize ActiveMQ users and groups to works with queues and topics, you must [edit your broker's configuration](amazon-mq-editing-managing-configurations.md)\. Amazon MQ uses ActiveMQ's [Simple Authentication Plugin](http://activemq.apache.org/security.html#Security-SimpleAuthenticationPlugin) to restrict reading and writing to destinations\. For more information and examples, see [Always Configure an Authorization Map](using-amazon-mq-securely.md#always-configure-authorization-map) and ``\.
+To authorize ActiveMQ users and groups to works with queues and topics, you must [edit your broker's configuration](amazon-mq-editing-managing-configurations.md)\. Amazon MQ uses ActiveMQ's [Simple Authentication Plugin](http://activemq.apache.org/security.html#Security-SimpleAuthenticationPlugin) to restrict reading and writing to destinations\. For more information and examples, see [Always configure an authorization map](using-amazon-mq-securely.md#always-configure-authorization-map) and `authorizationEntry`\.
 
 **Note**  
 Currently, Amazon MQ doesn't support Client Certificate Authentication\.
+
+**Topics**
++ [Integrate LDAP with ActiveMQ](#integrate-ldap)
++ [Prerequisites](#ldap-prerequisites)
++ [Getting Started with LDAP](#ldap-get-started)
++ [How LDAP Integration Works](#ldap-support-details)
 
 ## Integrate LDAP with ActiveMQ<a name="integrate-ldap"></a>
 
@@ -39,6 +48,10 @@ To get started, navigate to the Amazon MQ console and choose **LDAP authenticati
 
 Provide the following information about the service account:
 + **Fully qualified domain name** The location of the LDAP server to which authentication and authorization requests are to be issued\.
+**Note**  
+The fully qualified domain name of the LDAP server you supply must not include the protocol or port number\. Amazon MQ will prepend the fully qualified domain name with the protocol `ldaps`, and will append the port number `636`\.  
+For example, if you provide the following fully qualified domain: `example.com`, Amazon MQ will access your LDAP server using the following URL: `ldaps://example.com:636`\.  
+For the broker host to be able to successfully communicate with the LDAP server, the fully qualified domain name must be publicly resolvable\. To keep the LDAP server private and secure, restrict inbound traffic in the server's inbound rules to only allow traffic originated from within the broker's VPC\.
 + **Service account username** The distinguished name of the user that will be used to perform the initial bind to the LDAP server\.
 + **Service account password** The password of the user performing the initial bind\.
 
@@ -76,7 +89,7 @@ The ActiveMQ broker would search at this location in the DIT for users in order 
 
 Because the ActiveMQ source code hardcodes the attribute name for users to `uid`, you must make sure that each user has this attribute set\. For simplicity, you can use the user’s connection username\. For more information, see the [activemq](https://github.com/apache/activemq/blob/c3d9b388e4f1fe73e348bf466122fe6862e064a0/activemq-broker/src/main/java/org/apache/activemq/security/SimpleCachedLDAPAuthorizationMap.java#L89) source code and [Configuring ID mappings in Active Directory Users and Computers for Windows Server 2016 \(and subsequent\) versions](https://www.ibm.com/support/knowledgecenter/en/STXKQY_5.0.3/com.ibm.spectrum.scale.v5r03.doc/bl1adm_confidmapaduc.htm)\.
 
- To enable ActiveMQ console access for specific users, make sure they belong to the `amazonmq-admin-console` group\. 
+ To enable ActiveMQ console access for specific users, make sure they belong to the `amazonmq-console-admins` group\. 
 
 ### Authorization<a name="ldap-authorization"></a>
 

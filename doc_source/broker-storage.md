@@ -1,12 +1,15 @@
 # Storage<a name="broker-storage"></a>
 
-By default, Amazon MQ uses Amazon Elastic File System \(Amazon EFS\) for broker storage\. To take advantage of high durability and replication across multiple Availability Zones, use Amazon EFS\. To take advantage of low latency and high throughput, use Amazon EBS\.
+Amazon MQ supports Amazon Elastic File System \(EFS\) and Amazon Elastic Block Store \(EBS\)\. By default, ActiveMQ brokers use Amazon EFS for broker storage\. To take advantage of high durability and replication across multiple Availability Zones, use Amazon EFS\. To take advantage of low latency and high throughput, use Amazon EBS\.
+
+**Note**  
+Amazon MQ only supports Amazon EBS for RabbitMQ broker storage\.
 
 **Important**  
 You can use Amazon EBS only with the `mq.m5` broker instance type family\.
 Although you can change the *broker instance type*, you can't change the *broker storage type* after you create the broker\.
-Amazon EBS replicates data within a single Availability Zone and doesn't support the [active/standby](active-standby-broker-deployment.md) deployment mode\.
-When working with Amazon EBS, we recommend creating mechanisms that would allow your application to recreate the message data \(if necessary\), rather than using Amazon EBS as the sole message storage location for your broker\. For example, you can use [JMS or XA transactions](https://activemq.apache.org/how-do-transactions-work) or store your messages at a location from which they can be replayed or regenerated\.
+Amazon EBS replicates data within a single Availability Zone and doesn't support the [ActiveMQ active/standby](active-standby-broker-deployment.md) deployment mode\.
+When working with Amazon EBS, we recommend creating mechanisms that would allow your application to recreate the message data \(if necessary\), rather than using Amazon EBS as the sole message storage location for your broker\. For example, you can use [JMS or XA transactions for ActiveMQ](https://activemq.apache.org/how-do-transactions-work) or store your messages at a location from which they can be replayed or regenerated\.
 
 ## Differences between Storage Types<a name="differences-between-storage-types"></a>
 

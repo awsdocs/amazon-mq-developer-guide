@@ -1,13 +1,13 @@
-# Tutorial: Editing Broker Engine Version, Instance Type, CloudWatch Logs, and Maintenance Preferences<a name="amazon-mq-editing-broker-preferences"></a>
+# Editing broker engine version, instance type, CloudWatch logs, and maintenance preferences<a name="amazon-mq-editing-broker-preferences"></a>
 
 In addition to [editing broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md), you can configure preferences specific to the broker\.
 
 **Note**  
-All preferences except for those for automatic minor version upgrades require you to schedule modifications\. For more information, see [Amazon MQ Broker Configuration Lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
+All preferences except for those for automatic minor version upgrades require you to schedule modifications\. For more information, see [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.
 
-The following example shows how you can edit Amazon MQ broker preferences using the AWS Management Console\.
+The following example shows how you can edit Amazon MQ ActiveMQ broker preferences using the AWS Management Console\.
 
-## To Edit Broker Options<a name="edit-current-configuration-console"></a>
+## Edit ActiveMQ broker options<a name="edit-current-configuration-console"></a>
 
 1. Sign in to the [Amazon MQ console](https://console.aws.amazon.com/amazon-mq/)\.
 
@@ -15,14 +15,16 @@ The following example shows how you can edit Amazon MQ broker preferences using 
 
 1. On the **Edit *MyBroker*** page, in the **Specifications** section, select a **Broker engine version** or a **Broker Instance type**\.
 
-1. In the **Configuration** section, select the configuration and revision for your broker\. For more information, see [Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions](amazon-mq-editing-managing-configurations.md)\.
+1. In the **Configuration** section, select the configuration and revision for your broker\. For more information, see [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)\.
 
 1. In the **Security and network** section, select a group from the **Security group\(s\)** drop\-down, or choose **Create a new security group** to open the Amazon VPC console\.
 
-1. In the **CloudWatch Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs](security-logging-monitoring-configure-cloudwatch.md)\.
+1. In the **CloudWatch Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\.
+
+   For more information about configuring CloudWatch logs for ActiveMQ brokers, see [Configuring Amazon MQ to publish logs to Amazon CloudWatch Logs](security-logging-monitoring-configure-cloudwatch.md)\.
 **Important**  
-If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](security-logging-monitoring-configure-cloudwatch.md#security-logging-monitoring-configure-cloudwatch-permissions) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
-If you don't [configure a resource\-based policy for Amazon MQ](security-logging-monitoring-configure-cloudwatch.md#security-logging-monitoring-configure-cloudwatch-resource-permissions), the broker can't publish the logs to CloudWatch Logs\.
+If you don't [add the `CreateLogGroup` permission to your Amazon MQ user](configure-logging-monitoring-activemq.md#security-logging-monitoring-configure-cloudwatch-permissions) before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.  
+If you don't [configure a resource\-based policy for Amazon MQ](configure-logging-monitoring-activemq.md#security-logging-monitoring-configure-cloudwatch-resource-permissions), the broker can't publish the logs to CloudWatch Logs\.
 
 1. In the **Maintenance** section, configure your broker's maintenance schedule:
 
