@@ -10,18 +10,39 @@ Amazon MQ provides support for the [RabbitMQ management plugin](https://www.rabb
 
 ## Shovel plugin<a name="rabbitmq-shovel-plugin"></a>
 
-Amazon MQ managed brokers support [RabbitMQ shovel](https://www.rabbitmq.com/shovel.html), allowing you to move messages from queues or exchanges to other queues or exchanges in other brokers\. You can use shovels to connect loosely coupled brokers and distribute messages from brokers with heavier message loads to other brokers that may use different users altogether
+Amazon MQ managed brokers support [RabbitMQ shovel](https://www.rabbitmq.com/shovel.html), allowing you to move messages from queues and exchanges on one broker instance to another\. You can use shovel to connect loosely coupled brokers and distribute messages away from nodes with heavier message loads\.
 
-[Dynamic shovels](https://www.rabbitmq.com/shovel-dynamic.html) are configured using runtime parameters, and therefore can be started and stopeed at any time\. For more information about using dynamic shovels, see [Configuring dynamic shovels](https://www.rabbitmq.com/shovel-dynamic.html) in the RabbitMQ documentation\.
+Amazon MQ managed RabbitMQ brokers support dynamic shovels\. Dynamic shovels are configured using runtime parameters, and can be started and stopeed at any time programatically by a client connection\. For example, using the RabbitMQ management API, you can create a `POST` request to the following API endpoint to configure a dynamic shovel\. In the example, `{vhost}` can be replaced by the name of the broker's vhost, and `{name}` replaced by the name of the new dynamic shovel\.
+
+```
+/api/parameters/shovel/{vhost}/{name}
+```
+
+In the request body, you must specify either a queue or an exchange but not both\. This example below configures a dynamic shovel between a local queue specified in `src-queue` and a remote queue defined in `dest-queue`\. Similairly, you can use `src-exchange` and `dest-exchange` parameters to configure a shovel between two exchanges\.
+
+```
+{
+  "value": {
+    "src-protocol": "amqp091",
+    "src-uri":  "amqp://localhost",
+    "src-queue":  "source-queue-name",
+    "dest-protocol": "amqp091",
+    "dest-uri": "amqps://b-745679a6-e007-4e7f-85e4-de98a5598869.mq.us-west-2.amazonaws.com:5671",
+    "dest-queue": "destination-queue-name"
+  }
+}
+```
+
+For more information about using dynamic shovels, see [Configuring dynamic shovels](https://www.rabbitmq.com/shovel-dynamic.html) in the *RabbitMQ Documentation*\.
 
 **Note**  
 Amazon MQ does not support using static shovels\.
 
 ## Federation plugin<a name="rabbitmq-federation-plugin"></a>
 
- Amazon MQ supports federated exchanges and queues\. You can use federation to connect loosely coupled brokers on different broker instances and replicate the flow of messages between queues, exchages and consumers\.
+ Amazon MQ supports federated exchanges and queues\. With federation, you can replicate the flow of messages between queues, exchages and consumers on separate brokers\. Federated queues and exchanges use point\-to\-point links to connect to peers in other brokers\. While federated exchcanges, by default, route messages once, federated queues can move messages any number of times as needed by consumers\.
 
-For example, one of your application's RabbitMQ servers can connect to another server and consume a message from one of its exchanges without creating multiple connections\. In this case, the first server becomes a *downstream* and the second the *upstream*\. Configuring and enabling federattion is done only on downstream brokers\. You can enable federation by using the RabbitMQ web console or the management API\.
+You can use federation to allow a *downstream* broker to consume a message from an exchange or a queue on an *upstream*\. You can enable federation on downstream brokers by using the RabbitMQ web console or the management API\.
 
 For example, using the managment API, you can configure federation by doing the following\.
 + Configure one or more upstreams that define federation connections to other nodes\. You can define federation connections by using the RabbitMQ web console or the management API\. Using the management API, you can create a `POST` requrest to `/api/parameters/federation-upstream/%2f/my-upstream` with the following request body\.
@@ -29,7 +50,7 @@ For example, using the managment API, you can configure federation by doing the 
   ```
   {"value":{"uri":"amqp://server-name","expires":3600000}}
   ```
-+ Configure a policy to enable your queues or exchanges to become federated\. You can configure policies by usng the RabbitMQ web console, or the management API\. Using the management API, you can create a `POST` requrest to `/api/policies/%2f/federate-me` with the following request body\.
++ Configure a policy to enable your queues or exchanges to become federated\. You can configure policies by using the RabbitMQ web console, or the management API\. Using the management API, you can create a `POST` requrest to `/api/policies/%2f/federate-me` with the following request body\.
 
   ```
   {"pattern":"^amq\.", "definition":{"federation-upstream-set":"all"}, "apply-to":"exchanges"}
