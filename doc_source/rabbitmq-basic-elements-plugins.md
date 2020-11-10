@@ -1,8 +1,8 @@
 # Plugins<a name="rabbitmq-basic-elements-plugins"></a>
 
-Amazon MQ provides support for the [RabbitMQ management plugin](https://www.rabbitmq.com/management.html) which powers the management API and the RabbitMQ web console\. You can use the web console and the management API to create and manage broker users as well as broker policies\.To learn about how Amazon MQ automatically manages your broker policy to ensure high availability for cluster deployments, see [Cluster deployment for high availability](rabbitmq-broker-architecture-cluster.md)\.
+Amazon MQ supports the [RabbitMQ management plugin](https://www.rabbitmq.com/management.html) which powers the management API and the RabbitMQ web console\. You can use the web console and the management API to create and manage broker users and policies\. To learn about how Amazon MQ automatically manages broker policies to ensure high availability for cluster deployments, see [Cluster deployment for high availability](rabbitmq-broker-architecture-cluster.md)\.
 
- Amazon MQ also supports the shovel, and federation plugins, which you can configured to move messages from queues and exchanges in one broker to queues and exchanges in other broker instances\.
+ Amazon MQ also supports the shovel, and federation plugins, which you can configure and use to move messages from queues and exchanges in one broker to queues and exchanges in other broker instances\.
 
 **Topics**
 + [Shovel plugin](#rabbitmq-shovel-plugin)
@@ -12,7 +12,7 @@ Amazon MQ provides support for the [RabbitMQ management plugin](https://www.rabb
 
 Amazon MQ managed brokers support [RabbitMQ shovel](https://www.rabbitmq.com/shovel.html), allowing you to move messages from queues and exchanges on one broker instance to another\. You can use shovel to connect loosely coupled brokers and distribute messages away from nodes with heavier message loads\.
 
-Amazon MQ managed RabbitMQ brokers support dynamic shovels\. Dynamic shovels are configured using runtime parameters, and can be started and stopeed at any time programatically by a client connection\. For example, using the RabbitMQ management API, you can create a `POST` request to the following API endpoint to configure a dynamic shovel\. In the example, `{vhost}` can be replaced by the name of the broker's vhost, and `{name}` replaced by the name of the new dynamic shovel\.
+Amazon MQ managed RabbitMQ brokers support dynamic shovels\. Dynamic shovels are configured using runtime parameters, and can be started and stopped at any time programatically by a client connection\. For example, using the RabbitMQ management API, you can create a `POST` request to the following API endpoint to configure a dynamic shovel\. In the example, `{vhost}` can be replaced by the name of the broker's vhost, and `{name}` replaced by the name of the new dynamic shovel\.
 
 ```
 /api/parameters/shovel/{vhost}/{name}
@@ -27,7 +27,7 @@ In the request body, you must specify either a queue or an exchange but not both
     "src-uri":  "amqp://localhost",
     "src-queue":  "source-queue-name",
     "dest-protocol": "amqp091",
-    "dest-uri": "amqps://b-745679a6-e007-4e7f-85e4-de98a5598869.mq.us-west-2.amazonaws.com:5671",
+    "dest-uri": "amqps://amqps://b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671",
     "dest-queue": "destination-queue-name"
   }
 }

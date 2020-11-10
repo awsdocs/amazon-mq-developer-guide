@@ -51,7 +51,7 @@ The **Additional settings** section provides options to enable CloudWatch logs a
    https://b-c8349341-ec91-4a78-ad9c-a57f23f235bb.mq.us-west-2.amazonaws.com
    ```
 
-   Also, note your broker's [secure\-AMQP **Endpoints**](https://www.rabbitmq.com/connections.html)\. The following is an example of an OpenWire endpoint:
+   Also, note your broker's [secure\-AMQP **Endpoint**](https://www.rabbitmq.com/connections.html)\. The following is an example of an `amqps` endpoint exposing listener port `5671`\.
 
    ```
    amqps://b-c8349341-ec91-4a78-ad9c-a57f23f235bb.mq.us-west-2.amazonaws.com:5671

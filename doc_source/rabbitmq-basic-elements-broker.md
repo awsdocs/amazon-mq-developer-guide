@@ -8,10 +8,16 @@ For more information, see [Amazon MQ Broker architecture](rabbitmq-broker-archit
 
 You can enable *automatic minor version upgrades* to new minor versions of the broker engine, as new versions of the RabbitMQ engine are released\. Automatic upgrades occur during the *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 
-## Supported wire\-level protocols<a name="broker-protocols"></a>
+## Supported protocols<a name="broker-protocols"></a>
 
 You can access your RabbitMQ brokers by using [any programming language that RabbitMQ supports](https://www.rabbitmq.com/devtools.html) and by enabling TLS for the following protocols:
 + [AMQP \(0\-9\-1\)](https://www.rabbitmq.com/specification.html)
+
+## Listener ports<a name="rabbitmq-broker-listeners"></a>
+
+ Amazon MQ managed RabbitMQ brokers support the following listener ports for application\-level connectivity via `amqps`, as well as client connections using the RabbitMQ web console and the management API\. 
++ Listener port `5671` \- Used for connections via the secure AMQP URL\. For example, given a broker with broker ID `b-c8352341-ec91-4a78-ad9c-a43f23d325bb`, deployed in the `us-west-2` region, the following is the broker's full `amqp` URL: `amqps://b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671`\.
++ Listener ports `443` and `15671` \- Both listener ports can be used interchangably to access a broker via the RabbitMQ web console or the mangement API\.
 
 ## Attributes<a name="broker-attributes"></a>
 
