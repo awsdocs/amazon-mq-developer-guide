@@ -1,4 +1,4 @@
-# Acknowledgement and confirmation<a name="best-practices-rabbitmq-channels"></a>
+# Acknowledgement and confirmation<a name="best-practices-rabbitmq-ack"></a>
 
  When a client application sends confirmation of delivery and consumption of messages back to the broker, it is known as *consumer acknowledgment*\. Similairly, the process of sending confirmation to a publisher is known as *publisher confirm*\. Both acknowledgement and confirmation are essential to ensuring data safety when working with RabbitMQ brokers\.
 
@@ -28,4 +28,4 @@ channel.basicConsume(queueName, autoAck, "a-consumer-tag",
 ```
 
 **Note**  
- Unacknowledged messages must be cached in memory\. You can limit the number of messages that a consumer pre\-fetches by configuring pre\-fetch settings for a client application\.
+ Unacknowledged messages must be cached in memory\. You can limit the number of messages that a consumer pre\-fetches by configuring [pre\-fetch](best-practices-rabbitmq-prefetch.md) settings for a client application\.

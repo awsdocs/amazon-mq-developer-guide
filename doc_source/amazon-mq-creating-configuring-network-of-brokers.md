@@ -27,7 +27,9 @@ If you don't have a default VPC, subnet\(s\), or security group, you must create
 [Creating a Default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-vpc)
 [Creating a Default Subnet](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-subnet)
 [Creating a Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#CreatingSecurityGroups)
-+ Two users with identical usernames and passwords for both brokers\. For more information about creating users, see [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)\.
++ Two users with identical usernames and passwords for both brokers\. For more information about creating users, see [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)\. 
+**Note**  
+When integrating LDAP authentication with a network of brokers, make sure that the user exists both as an ActiveMQ brokers, as well as an LDAP user\.
 
 The following example uses two [single\-instance brokers](single-broker-deployment.md)\. However, you can create networks of brokers using [active/standby brokers](active-standby-broker-deployment.md) or a combination of broker deployment modes\.
 
@@ -164,6 +166,3 @@ You might also need to adjust your security group\(s\) settings to allow the pro
    ```
 
    The producer connects to the OpenWire endpoint of `MyBroker1` and begins to produce persistent messages to queue `MyQueue`\.
-
-**Note**  
-When integrating LDAP authentication with a network of brokers, make sure that the user exists both as an ActiveMQ brokers, as well as an LDAP user\.

@@ -1,12 +1,12 @@
-# Supported engine versions<a name="supported-engine-versions"></a>
+# Supported engine versions<a name="broker-engine"></a>
 
  A *broker engine* is a type of message broker that runs on Amazon MQ\. 
 
 **Topics**
-+ [ActiveMQ engine versions](#broker-engine)
++ [ActiveMQ engine versions](#activemq-broker-engine)
 + [RabbitMQ engine versions](#rabbitmq-broker-engine)
 
-## ActiveMQ engine versions<a name="broker-engine"></a>
+## ActiveMQ engine versions<a name="activemq-broker-engine"></a>
 
 Amazon MQ supports the following versions of ActiveMQ:
 + ActiveMQ 5\.15\.13 \(recommended\)
