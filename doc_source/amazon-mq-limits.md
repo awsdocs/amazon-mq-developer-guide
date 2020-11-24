@@ -19,7 +19,7 @@ The following table lists quotas related to Amazon MQ brokers\.
 | Broker name |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html)  | 
 | Number of brokers, per region | 20 | 
 | Wire\-level connections per smaller broker |   Does not apply to RabbitMQ brokers\.  100 for mq\.\*\.micro instance type brokers\.  | 
-| Wire\-level connections per larger broker |   Does not apply to RabbitMQ brokers\.  1,000 for mq\.\*\.medium and mq\.\*\.\*large instance type brokers\.  | 
+| Wire\-level connections per larger broker |   Does not apply to RabbitMQ brokers\.  1,000 for mq\.\*\.\*large instance type brokers\.  | 
 | Security groups per broker | 5 | 
 | Destinations \(queues, ActiveMQ topics, and RabbitMQ exchanges\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
 | Tags per broker | 50 | 
@@ -60,10 +60,10 @@ The following table lists quotas related to Amazon MQ data storage\.
 | Limit | Description | 
 | --- | --- | 
 | Storage capacity per smaller broker | 20 GB for mq\.\*\.micro instance type brokers\. For more information regarding Amazon MQ instance types, see [Instance types](broker-instance-types.md)\. | 
-| Storage capacity per larger broker | 200 GB for mq\.\*\.medium and mq\.\*\.\*large instance type brokers\. For more information regarding Amazon MQ instance types, see [Instance types](broker-instance-types.md)\. | 
+| Storage capacity per larger broker | 200 GB for mq\.\*\.\*large instance type brokers\. For more information regarding Amazon MQ instance types, see [Instance types](broker-instance-types.md)\. | 
 | Job scheduler usage limit per broker [backed by Amazon EBS](broker-storage.md) |   Does not apply to RabbitMQ brokers\.  50 GB\. For more information about job scheduler usage, see [JobSchedulerUsage](https://activemq.apache.org/maven/apidocs/org/apache/activemq/usage/JobSchedulerUsage.html) in the Apache ActiveMQ API Documentation\.  | 
 | Temporary storage capacity per smaller broker\. |   Does not apply to RabbitMQ brokers\.  5 GB for mq\.\*\.micro instance type brokers\.  | 
-| Temporary storage capacity per larger broker\. |   Does not apply to RabbitMQ brokers\.  50 GB for mq\.\*\.medium and mq\.\*\.\*large instance type brokers\.  | 
+| Temporary storage capacity per larger broker\. |   Does not apply to RabbitMQ brokers\.  50 GB for mq\.\*\.\*large instance type brokers\.  | 
 
 ## API Throttling<a name="api-throttling-limits"></a>
 

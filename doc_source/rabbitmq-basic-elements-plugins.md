@@ -40,7 +40,7 @@ Amazon MQ does not support using static shovels\.
 
 ## Federation plugin<a name="rabbitmq-federation-plugin"></a>
 
- Amazon MQ supports federated exchanges and queues\. With federation, you can replicate the flow of messages between queues, exchages and consumers on separate brokers\. Federated queues and exchanges use point\-to\-point links to connect to peers in other brokers\. While federated exchcanges, by default, route messages once, federated queues can move messages any number of times as needed by consumers\.
+ Amazon MQ supports federated exchanges and queues\. With federation, you can replicate the flow of messages between queues, exchages and consumers on separate brokers\. Federated queues and exchanges use point\-to\-point links to connect to peers in other brokers\. While federated exchanges, by default, route messages once, federated queues can move messages any number of times as needed by consumers\.
 
 You can use federation to allow a *downstream* broker to consume a message from an exchange or a queue on an *upstream*\. You can enable federation on downstream brokers by using the RabbitMQ web console or the management API\.
 
