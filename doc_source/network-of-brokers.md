@@ -21,7 +21,7 @@ The following are benefits of using a network of brokers:
 + [How Does a Network of Brokers Handle Credentials?](#how-does-it-handle-credentials)
 + [Sample blueprints](#sample-deployments)
 + [Network of brokers topologies](#nob-topologies)
-+ [ Cross region](#how-to-configure-cross-region)
++ [Cross region](#how-to-configure-cross-region)
 + [Dynamic Failover With Transport Connectors](#transport-connectors)
 
 ## How does a network of brokers work?<a name="how-does-it-work"></a>
