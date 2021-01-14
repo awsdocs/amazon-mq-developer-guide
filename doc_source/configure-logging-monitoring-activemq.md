@@ -50,9 +50,6 @@ The following example [IAM\-based policy](https://docs.aws.amazon.com/AmazonClou
    "Statement": [
       {
          "Effect": "Allow",
-         "Principal": {
-            "AWS": "111122223333"
-         },
          "Action": "logs:CreateLogGroup",
          "Resource": "arn:aws:logs:*:*:log-group:/aws/amazonmq/*"
       }

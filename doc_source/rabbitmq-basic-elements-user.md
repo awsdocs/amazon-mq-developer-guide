@@ -11,7 +11,7 @@
 ```
 
 **Note**  
-The `tags` key is mandatory, and is a comma\-separated list of tags for the user\. Currently, RabbitMQ supports `administrator`, `management`, and `monitoring` tage\.
+The `tags` key is mandatory, and is a comma\-separated list of tags for the user\. Currently, RabbitMQ supports `administrator`, `management`, and `monitoring` tags\.
 
 To add a permission set for a virtual host to an individual user, you can create a `POST` request to `/api/users/vhost/user` with the following request body\.
 

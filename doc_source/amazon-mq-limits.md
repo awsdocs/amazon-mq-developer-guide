@@ -21,7 +21,8 @@ The following table lists quotas related to Amazon MQ brokers\.
 | Wire\-level connections per smaller broker |   Does not apply to RabbitMQ brokers\.  100 for mq\.\*\.micro instance type brokers\.  | 
 | Wire\-level connections per larger broker |   Does not apply to RabbitMQ brokers\.  1,000 for mq\.\*\.\*large instance type brokers\.  | 
 | Security groups per broker | 5 | 
-| Destinations \(queues, ActiveMQ topics, and RabbitMQ exchanges\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
+| ActiveMQ destinations \(queues, and topics\) monitored in CloudWatch | CloudWatch monitors only the first 200 destinations\. | 
+| RabbitMQ destinations \(queues\) monitored in CloudWatch | CloudWatch monitors only the first 500 destinations, ordered by number of consumers\. | 
 | Tags per broker | 50 | 
 
 ## Configurations<a name="configuration-limits"></a>

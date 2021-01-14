@@ -17,7 +17,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. On the **Select deployment and storage** page, in the **Deployment mode and storage type** section, do the following:
 
-   1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)\.
+   1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Broker architecture](amazon-mq-broker-architecture.md)\.
       + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(applicable only to ActiveMQ brokers\) or with Amazon EBS\. For more information, see [Amazon MQ single\-instance broker](single-broker-deployment.md)\.
       + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\. For more information, see [Amazon MQ active/standby broker for high availability](active-standby-broker-deployment.md)\.
       + For more information on the sample blueprints for a network of brokers, see [Sample blueprints](network-of-brokers.md#sample-deployments)\.
@@ -43,7 +43,7 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 **Security group\(s\)** – Both single\-instance brokers and active/standby brokers require at least one security group \(for example, the default security group\)\.
 **VPC** – A broker's subnet\(s\) and security group\(s\) must be in the same VPC\. EC2\-Classic resources aren't supported\. Amazon MQ only supports default VPC tenancy, and does not support dedicated VPC tenancy\.
 **Encryption** – Choose the customer master key to encrypt your data\. See [Encryption at rest](data-protection.md#data-protection-encryption-at-rest)\.
-**Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer brokers without public accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility) and [Accessing the RabbitMQ and ActiveMQ web consoles without public accessibility](accessing-web-console-of-broker-without-private-accessibility.md)\.
+**Public accessibility** – Disabling public accessibility makes the broker accessible only within your VPC\. For more information, see [Prefer brokers without public accessibility](using-amazon-mq-securely.md#prefer-brokers-without-public-accessibility) and [Accessing the broker web console without public accessibility](accessing-web-console-of-broker-without-public-accessibility.md)\.
 
 1. Expand the **Additional settings** section\.
 
@@ -106,5 +106,5 @@ For an active/standby broker, if one of the broker instances undergoes maintenan
    ```
 
 **Note**  
-For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For more information, see [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)\)\.  
+For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For more information, see [Broker architecture](amazon-mq-broker-architecture.md)\)\.  
 For wire\-level protocol endpoints, you can allow your application to connect to either endpoint by using the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html)\.

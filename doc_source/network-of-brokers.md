@@ -173,7 +173,7 @@ To configure this topology, each of the brokers on the bottom would contain a ne
 </networkConnectors>
 ```
 
-##  Cross region<a name="how-to-configure-cross-region"></a>
+## Cross region<a name="how-to-configure-cross-region"></a>
 
 To configure a network of brokers that spans AWS regions, deploy brokers in those regions, and configure network connectors to the endpoints of those brokers\.
 

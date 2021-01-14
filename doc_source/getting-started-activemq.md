@@ -18,7 +18,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
 1. On the **Select deployment and storage** page, in the **Deployment mode and storage type** section, do the following:
 
-   1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)\.
+   1. Choose the **Deployment mode** \(for example, **Active/standby broker**\)\. For more information, see [Broker architecture](amazon-mq-broker-architecture.md)\.
       + A **Single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(applicable only to ActiveMQ brokers\) or with Amazon EBS\. For more information, see [Amazon MQ single\-instance broker](single-broker-deployment.md)\.
       + An **Active/standby broker for high availability** is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\. For more information, see [Amazon MQ active/standby broker for high availability](active-standby-broker-deployment.md)\.
       + For more information on the sample blueprints for a network of brokers, see [Sample blueprints](network-of-brokers.md#sample-deployments)\.
@@ -130,7 +130,7 @@ In the following example code, producers and consumers run in a single thread\. 
 
 1. Create a JMS pooled connection factory for the message producer using your broker's endpoint and then call the `createConnection` method against the factory\.
 **Note**  
-For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For more information, see [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)\)\.  
+For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time\. Likewise, Amazon MQ provides two endpoints for each wire\-level protocol, but only one endpoint is active in each pair at a time\. The `-1` and `-2` suffixes denote a redundant pair\. For more information, see [Broker architecture](amazon-mq-broker-architecture.md)\)\.  
 For wire\-level protocol endpoints, you can allow your application to connect to either endpoint by using the [Failover Transport](http://activemq.apache.org/failover-transport-reference.html)\.
 
    ```
@@ -259,7 +259,7 @@ The following example shows how you can delete a broker using the AWS Management
 Now that you have created a broker, connected an application to it, and sent and received a message, you might want to try the following:
 + [Creating and configuring an ActiveMQ broker](amazon-mq-creating-configuring-broker.md) \(Additional Settings\)
 + [Editing broker engine version, instance type, CloudWatch logs, and maintenance preferences](amazon-mq-editing-broker-preferences.md)
-+ [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md)
++ [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
 + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 + [Listing Amazon MQ brokers and viewing broker details](amazon-mq-listing-brokers.md)
 + [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)

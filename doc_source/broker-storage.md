@@ -1,9 +1,6 @@
 # Storage<a name="broker-storage"></a>
 
-Amazon MQ supports Amazon Elastic File System \(EFS\) and Amazon Elastic Block Store \(EBS\)\. By default, ActiveMQ brokers use Amazon EFS for broker storage\. To take advantage of high durability and replication across multiple Availability Zones, use Amazon EFS\. To take advantage of low latency and high throughput, use Amazon EBS\.
-
-**Note**  
-Amazon MQ only supports Amazon EBS for RabbitMQ broker storage\.
+Amazon MQ for ActiveMQ supports Amazon Elastic File System \(EFS\) and Amazon Elastic Block Store \(EBS\)\. By default, ActiveMQ brokers use Amazon EFS for broker storage\. To take advantage of high durability and replication across multiple Availability Zones, use Amazon EFS\. To take advantage of low latency and high throughput, use Amazon EBS\.
 
 **Important**  
 You can use Amazon EBS only with the `mq.m5` broker instance type family\.
@@ -13,7 +10,7 @@ When working with Amazon EBS, we recommend creating mechanisms that would allow 
 
 ## Differences between Storage Types<a name="differences-between-storage-types"></a>
 
-The following table provides a brief overview of the differences between in\-memory, Amazon EFS, and Amazon EBS storage types\.
+The following table provides a brief overview of the differences between in\-memory, Amazon EFS, and Amazon EBS storage types for ActiveMQ brokers\.
 
 
 | Storage Type | Persistence | Example Use Case | Approximate Maximum Number of Messages Enqueued per Producer, per Second \(1KB Message\) | Replication | 

@@ -27,13 +27,13 @@ In the request body, you must specify either a queue or an exchange but not both
     "src-uri":  "amqp://localhost",
     "src-queue":  "source-queue-name",
     "dest-protocol": "amqp091",
-    "dest-uri": "amqps://amqps://b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671",
+    "dest-uri": "amqps://b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671",
     "dest-queue": "destination-queue-name"
   }
 }
 ```
 
-For more information about using dynamic shovels, see [Configuring dynamic shovels](https://www.rabbitmq.com/shovel-dynamic.html) in the *RabbitMQ Documentation*\.
+For more information about using dynamic shovels, see [RabbitMQ dynamic shovel plugin](https://www.rabbitmq.com/shovel-dynamic.html)\.
 
 **Note**  
 Amazon MQ does not support using static shovels\.
@@ -58,4 +58,4 @@ For example, using the managment API, you can configure federation by doing the 
 **Note**  
 The request body assumes exchanges on the server are named beginning with `amq`\. Using regular expression `^amq\.` will ensure that federation is enabled for all exchanges whose names begin with "amq\." The exchanges on your RabbitMQ server can be named differently\.
 
-For more information, see [RabbitMQ Federation Plugin](https://www.rabbitmq.com/federation.html) documentation\.
+For more information about configuring the federation plugin, see [RabbitMQ federation plugin](https://www.rabbitmq.com/federation.html)\.

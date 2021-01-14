@@ -1,4 +1,4 @@
-# Amazon MQ Broker architecture<a name="amazon-mq-broker-architecture"></a>
+# Broker architecture<a name="amazon-mq-broker-architecture"></a>
 
 ActiveMQ brokers can be created as *single\-instance brokers* or *active/standby brokers*\. For both deployment modes, Amazon MQ provides high durability by storing its data redundantly\.
 

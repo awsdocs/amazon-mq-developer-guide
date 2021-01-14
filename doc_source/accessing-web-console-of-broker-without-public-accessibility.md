@@ -1,11 +1,11 @@
-# Accessing the RabbitMQ and ActiveMQ web consoles without public accessibility<a name="accessing-web-console-of-broker-without-private-accessibility"></a>
+# Accessing the broker web console without public accessibility<a name="accessing-web-console-of-broker-without-public-accessibility"></a>
 
 If you disable public accessibility for your broker, you must perform the following steps to be able to access your broker's web console\.
 
 **Note**  
 The names of the VPCs and security groups are specific to the following example\.
 
-## Prerequisites<a name="accessing-web-console-of-broker-without-private-accessibility-prerequisites"></a>
+## Prerequisites<a name="accessing-web-console-of-broker-without-public-accessibility-prerequisites"></a>
 
 To perform the following steps, you must configure the following:
 + **VPCs**
@@ -19,13 +19,13 @@ To perform the following steps, you must configure the following:
   + `private-sg` must allow inbound connections from `public-sg`\. We recommend restricting this security group to port 8162\.
   + `public-sg` must allow inbound connections from your machine on port 22\.
 
-## To Access a broker's web console of a Broker without Public Accessibility<a name="accessing-web-console-of-broker-without-private-accessibility-tutorial"></a>
+## To Access a broker's web console of a Broker without Public Accessibility<a name="accessing-web-console-of-broker-without-public-accessibility-tutorial"></a>
 
 1. Create a Linux EC2 instance in `public-vpc` \(with a public IP, if necessary\)\.
 
 1. To verify that your VPC is configured correctly, establish an `ssh` connection to the EC2 instance and use the `curl` command with the URI of your broker\.
 
-1. From your machine, create an `ssh` tunnel to the EC2 instance using the path to your private key file and the IP address of your broker instance\. For example:
+1. From your machine, create an `ssh` tunnel to the EC2 instance using the path to your private key file and the IP address of your public EC2 instance\. For example:
 
    ```
    ssh -i ~/.ssh/id_rsa -N -C -q -f -D 8080 ec2-user@203.0.113.0

@@ -1,6 +1,6 @@
 # Listing Amazon MQ brokers and viewing broker details<a name="amazon-mq-listing-brokers"></a>
 
-When you request that Amazon MQ create a broker, the creation process can take about 15 minutes\.\.
+When you request that Amazon MQ create a broker, the creation process can take about 15 minutes\.
 
 The following example shows how you can confirm your broker's existence by listing your brokers in the current region using the AWS Management Console\.
 

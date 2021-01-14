@@ -1,7 +1,7 @@
 # Amazon MQ Developer Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -20,7 +20,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Creating and connecting to an ActiveMQ broker](getting-started-activemq.md)
    + [Creating and connecting to a RabbitMQ broker](getting-started-rabbitmq.md)
 + [Amazon MQ Tutorials](amazon-mq-tutorials.md)
-   + [Accessing the RabbitMQ and ActiveMQ web consoles without public accessibility](accessing-web-console-of-broker-without-private-accessibility.md)
+   + [Accessing the broker web console without public accessibility](accessing-web-console-of-broker-without-public-accessibility.md)
    + [Listing Amazon MQ brokers and viewing broker details](amazon-mq-listing-brokers.md)
    + [Rebooting an Amazon MQ broker](amazon-mq-rebooting-broker.md)
    + [Deleting an Amazon MQ broker](amazon-mq-deleting-broker.md)
@@ -29,14 +29,13 @@ Amazon's trademarks and trade dress may not be used in
       + [Creating and configuring an ActiveMQ broker](amazon-mq-creating-configuring-broker.md)
       + [Editing broker engine version, instance type, CloudWatch logs, and maintenance preferences](amazon-mq-editing-broker-preferences.md)
       + [Creating and configuring an Amazon MQ network of brokers](amazon-mq-creating-configuring-network-of-brokers.md)
-      + [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md)
+      + [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
       + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
       + [Connecting a Java application to your Amazon MQ broker](amazon-mq-connecting-application.md)
       + [Integrating ActiveMQ brokers with LDAP](security-authentication-authorization.md)
       + [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)
    + [RabbitMQ tutorials](rabbitmq-on-amazon-mq.md)
       + [Editing broker preferences](amazon-mq-rabbitmq-editing-broker-preferences.md)
-      + [Using the AMQP client library for Node.js](amazon-mq-rabbitmq-amqp-nodejs.md)
 + [Best practices for Amazon MQ](amazon-mq-best-practices.md)
    + [Best practices for ActiveMQ](best-practices-activemq.md)
       + [Connecting to Amazon MQ](connecting-to-amazon-mq.md)
@@ -55,7 +54,7 @@ Amazon's trademarks and trade dress may not be used in
          + [Configuration](configuration.md)
          + [User](user.md)
          + [Storage](broker-storage.md)
-      + [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)
+      + [Broker architecture](amazon-mq-broker-architecture.md)
          + [Amazon MQ single-instance broker](single-broker-deployment.md)
          + [Amazon MQ active/standby broker for high availability](active-standby-broker-deployment.md)
          + [Amazon MQ Network of brokers](network-of-brokers.md)

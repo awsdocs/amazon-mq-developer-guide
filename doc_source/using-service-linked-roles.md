@@ -17,17 +17,41 @@ The AWSServiceRoleForAmazonMQ service\-linked role trusts the following services
 
 The role permissions policy allows Amazon MQ to complete the following actions on the specified resources:
 + Action: `ec2:CreateVpcEndpoint` on the `vpc` resource\.
+
+  
 + Action: `ec2:CreateVpcEndpoint` on the `subnet` resource\.
+
+  
 + Action: `ec2:CreateVpcEndpoint` on the `security-group` resource\.
+
+  
 + Action: `ec2:CreateVpcEndpoint` on the `vpc-endpoint` resource\.
+
+  
 + Action: `ec2:DescribeVpcEndpoints` on the `vpc` resource\.
+
+  
 + Action: `ec2:DescribeVpcEndpoints` on the `subnet` resource\.
+
+  
 + Action: `ec2:CreateTags` on the `vpc-endpoint` resource\.
+
+  
 + Action: `logs:PutLogEvents` on the `log-group` resource\.
+
+  
 + Action: `logs:DescribeLogStreams` on the `log-group` resource\.
+
+  
 + Action: `logs:DescribeLogGroups` on the `log-group` resource\.
+
+  
 + Action: `CreateLogStream` on the `log-group` resource\.
+
+  
 + Action: `CreateLogGroup` on the `log-group` resource\.
+
+  
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 

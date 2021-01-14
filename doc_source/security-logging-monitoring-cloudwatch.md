@@ -14,10 +14,10 @@ The following statistics are valid for all of the metrics:
 The `AWS/AmazonMQ` namespace includes the following metrics\.
 
 **Topics**
-+ [Logging and monitoring ActievMQ brokers](#activemq-logging-monitoring)
++ [Logging and monitoring ActiveMQ brokers](#activemq-logging-monitoring)
 + [Logging and monitoring RabbitMQ brokers](#rabbitmq-logging-monitoring)
 
-## Logging and monitoring ActievMQ brokers<a name="activemq-logging-monitoring"></a>
+## Logging and monitoring ActiveMQ brokers<a name="activemq-logging-monitoring"></a>
 
 ### ActiveMQ broker metrics<a name="security-logging-monitoring-cloudwatch-metrics"></a>
 

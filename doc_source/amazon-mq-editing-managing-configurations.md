@@ -11,7 +11,7 @@ For more information, see the following:
 + [Configuration](configuration.md)
 + [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)
 + [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
-+ [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md)
++ [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
 
 The following examples show how you can edit Amazon MQ broker configurations and manage broker configuration revisions using the AWS Management Console\.
 

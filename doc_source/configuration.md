@@ -7,12 +7,12 @@ Making changes to a configuration does *not* apply the changes to the broker imm
 Currently, you can't delete a configuration\.
 
 For information about creating, editing, and managing configurations, see the following:
-+ [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md)
++ [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
 + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 + [Configurations](amazon-mq-limits.md#configuration-limits)
 + [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
 
-To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md) and [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)\.
+To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md) and [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)\.
 
 ## Attributes<a name="configuration-attributes"></a>
 

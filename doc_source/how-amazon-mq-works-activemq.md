@@ -4,6 +4,6 @@
 
 **Topics**
 + [Amazon MQ Basic elements](amazon-mq-basic-elements.md)
-+ [Amazon MQ Broker Architecture](amazon-mq-broker-architecture.md)
++ [Broker Architecture](amazon-mq-broker-architecture.md)
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
 + [Working Java Example](amazon-mq-working-java-example.md)

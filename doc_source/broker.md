@@ -4,7 +4,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 + A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EFS \(applicable only to ActiveMQ brokers\) or with Amazon EBS\.
 + An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\.
 
-For more information, see [Amazon MQ Broker architecture](amazon-mq-broker-architecture.md)\.
+For more information, see [Broker architecture](amazon-mq-broker-architecture.md)\.
 
 You can enable *automatic minor version upgrades* to new minor versions of the broker engine, as Apache releases new versions\. Automatic upgrades occur during the *maintenance window* defined by the day of the week, the time of day \(in 24\-hour format\), and the time zone \(UTC by default\)\.
 

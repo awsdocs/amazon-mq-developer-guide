@@ -22,7 +22,11 @@ Amazon MQ encrypts messages at rest and in transit using encryption keys that it
 
 ## Encryption at rest<a name="data-protection-encryption-at-rest"></a>
 
-Amazon MQ integrates with AWS Key Management Service \(KMS\) to offer transparent server\-side encryption\. Amazon MQ always encrypts your data at rest\. When you create a broker, you can specify the AWS KMS customer master key \(CMK\) that you want Amazon MQ to use to encrypt your data at rest\. If you don't specify a CMK, Amazon MQ creates an AWS managed CMK for you and uses it on your behalf\. For more information about CMKs, see [Customer Master Keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the AWS Key Management Service Developer Guide\.
+Amazon MQ integrates with AWS Key Management Service \(KMS\) to offer transparent server\-side encryption\. Amazon MQ always encrypts your data at rest\.
+
+### Encryption at rest for ActiveMQ brokers<a name="data-protection-encryption-at-rest-activemq"></a>
+
+When you create an ActiveMQ broker, you can specify the AWS KMS customer master key \(CMK\) that you want Amazon MQ to use to encrypt your data at rest\. If you don't specify a CMK, Amazon MQ creates an AWS managed CMK for you and uses it on your behalf\.
 
 When creating a broker, you can configure what Amazon MQ uses for your encryption key by selecting one of the following\.
 + **AWS owned CMK** — The key is owned by Amazon MQ and is not in your account\.
@@ -31,6 +35,12 @@ When creating a broker, you can configure what Amazon MQ uses for your encryptio
 
 **Important**  
 Amazon MQ uses Amazon Elastic File System \(EFS\) to store message data\. If you revoke the grant that gives Amazon EFS permission to use the KMS keys in your account, Amazon MQ cannot access this data and your broker will stop working\. When you revoke a grant for Amazon EFS, it will not take place immediately\. To revoke access rights, delete your broker rather than revoking the grant\.
+
+### Encryption at rest for RabbitMQ brokers<a name="data-protection-encryption-at-rest-rabbitmq"></a>
+
+When you create a RabbitMQ brokers, Amazon MQ creates an AWS managed Customer Master Key \(CMK\) and uses it on your behalf\. This AWS managed CMK is owned by Amazon MQ and is not stored in your AWS account\. Currently, Amazon MQ does not support AWS managed CMKs owned by you and saved in your account, or customer managed CMKs created and managed by you\.
+
+ For more information about CMKs, see [Customer Master Keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\. 
 
 ## Encryption in transit<a name="data-protection-encryption-in-transit"></a>
 

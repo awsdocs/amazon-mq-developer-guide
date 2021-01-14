@@ -11,7 +11,7 @@ The following design patterns can improve the security of your Amazon MQ broker\
 
 ## Prefer brokers without public accessibility<a name="prefer-brokers-without-public-accessibility"></a>
 
-Brokers created without public accessibility can't be accessed from outside of your [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html)\. This greatly reduces your broker's susceptibility to Distributed Denial of Service \(DDoS\) attacks from the public internet\. For more information, see [Accessing the RabbitMQ and ActiveMQ web consoles without public accessibility](accessing-web-console-of-broker-without-private-accessibility.md) in this guide and [How to Help Prepare for DDoS Attacks by Reducing Your Attack Surface](http://aws.amazon.com/blogs/security/how-to-help-prepare-for-ddos-attacks-by-reducing-your-attack-surface/) on the AWS Security Blog\.
+Brokers created without public accessibility can't be accessed from outside of your [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html)\. This greatly reduces your broker's susceptibility to Distributed Denial of Service \(DDoS\) attacks from the public internet\. For more information, see [Accessing the broker web console without public accessibility](accessing-web-console-of-broker-without-public-accessibility.md) in this guide and [How to Help Prepare for DDoS Attacks by Reducing Your Attack Surface](http://aws.amazon.com/blogs/security/how-to-help-prepare-for-ddos-attacks-by-reducing-your-attack-surface/) on the AWS Security Blog\.
 
 ## Always configure an authorization map<a name="always-configure-authorization-map"></a>
 

@@ -10,7 +10,7 @@ The next scheduled maintenance window triggers a reboot\. If the broker is reboo
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-configuration-lifecycle.png)
 
 For information about creating, editing, and managing configurations, see the following:
-+ [Creating and applying ActiveMQ broker onfigurations](amazon-mq-creating-applying-configurations.md)
++ [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
 + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 + [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
 

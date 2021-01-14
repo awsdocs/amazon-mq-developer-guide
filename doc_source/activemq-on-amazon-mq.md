@@ -10,4 +10,4 @@ The following tutorials show how you can create and connect to your ActiveMQ bro
 + [Editing and Managing Broker Configurations](amazon-mq-editing-managing-configurations.md)
 + [Connecting a Java application to your broker](amazon-mq-connecting-application.md)
 + [Integrating ActiveMQ brokers with LDAP](security-authentication-authorization.md)
-+ [Creating and managing AciveMQ broker users](amazon-mq-listing-managing-users.md)
++ [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)

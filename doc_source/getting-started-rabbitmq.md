@@ -5,7 +5,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 **Topics**
 + [Step 1: create a RabbitMQ broker](#create-rabbitmq-broker)
 + [Step 2: connect a JVM\-based application to your broker](#rabbitmq-connect-jvm-application)
-+ [Step 3: delete your broker](#w39aab9c15c11)
++ [Step 3: delete your broker](#w43aab9c15c11)
 + [Next steps](#next-steps-rabbitmq-tutorials)
 
 ## Step 1: create a RabbitMQ broker<a name="create-rabbitmq-broker"></a>
@@ -17,7 +17,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 1. On the **Select broker engine** page, choose **RabbitMQ**, and then choose **Next**\.
 
 1. On the **Select deployment mode** page, choose the **Deployment mode**, for example, **Cluster deployment**, and then choose **Next**\. 
-   + A **single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with with Amazon EBS\. Single\-instance brokers provide high throughput and lower latency\. For more information, see [Single\-instance broker](rabbitmq-broker-architecture-single-instance.md)\.
+   + A **single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EBS\. Single\-instance brokers provide high throughput and lower latency\. For more information, see [Single\-instance broker](rabbitmq-broker-architecture-single-instance.md)\.
    + A **RabbitMQ cluster deployment for high availability** is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer \(NLB\), each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\. For more information, see [Cluster deployment for high availability](rabbitmq-broker-architecture-cluster.md)\.
 
 1. On the **Configure settings** page, in the **Details** section, the following:
@@ -192,7 +192,7 @@ Because we specified `autoAck = false`, it is necessary to acknowledge messages 
 
 #### Close your connection and disconnect from the broker<a name="rabbitmq-disconnect"></a>
 
-In order disconnect from your RabbitMQ broker, close both the chanel and connection as shown in the following\.
+In order to disconnect from your RabbitMQ broker, close both the channel and connection as shown in the following\.
 
 ```
 channel.close();
@@ -200,9 +200,9 @@ conn.close();
 ```
 
 **Note**  
-For more information about working with the RabbitMQ Java client library, see the RabbitMQ [Java Client API Guide](https://www.rabbitmq.com/api-guide.html)\.
+For more information about working with the RabbitMQ Java client library, see the [RabbitMQ Java Client API Guide](https://www.rabbitmq.com/api-guide.html)\.
 
-## Step 3: delete your broker<a name="w39aab9c15c11"></a>
+## Step 3: delete your broker<a name="w43aab9c15c11"></a>
 
 If you don't use an Amazon MQ broker \(and don't foresee using it in the near future\), it is a best practice to delete it from Amazon MQ to reduce your AWS costs\.
 

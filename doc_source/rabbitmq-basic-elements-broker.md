@@ -1,7 +1,7 @@
 # Broker<a name="rabbitmq-basic-elements-broker"></a>
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t3`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance types](broker-instance-types.md)\.
-+ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with with Amazon EBS\. Single\-instance brokers provide high throughput and lower latency\.
++ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EBS\. Single\-instance brokers provide high throughput and lower latency\.
 + A *cluster deployment* is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer \(NLB\), each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\.
 
 For more information, see [Broker architecture](rabbitmq-broker-architecture.md)\.
@@ -16,7 +16,7 @@ You can access your RabbitMQ brokers by using [any programming language that Rab
 ## Listener ports<a name="rabbitmq-broker-listeners"></a>
 
  Amazon MQ managed RabbitMQ brokers support the following listener ports for application\-level connectivity via `amqps`, as well as client connections using the RabbitMQ web console and the management API\. 
-+ Listener port `5671` \- Used for connections made via the secure AMQP URL\. For example, given a broker with broker ID `b-c8352341-ec91-4a78-ad9c-a43f23d325bb`, deployed in the `us-west-2` region, the following is the broker's full `amqp` URL: `amqps://b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671`\.
++ Listener port `5671` \- Used for connections made via the secure AMQP URL\. For example, given a broker with broker ID `b-c8352341-ec91-4a78-ad9c-a43f23d325bb`, deployed in the `us-west-2` region, the following is the broker's full `amqp` URL: `b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671`\.
 + Listener ports `443` and `15671` \- Both listener ports can be used interchangably to access a broker via the RabbitMQ web console or the mangement API\.
 
 ## Attributes<a name="broker-attributes"></a>

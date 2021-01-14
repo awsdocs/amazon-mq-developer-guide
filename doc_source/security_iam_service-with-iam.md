@@ -108,20 +108,16 @@ If you specify multiple `Condition` elements in a statement, or multiple keys in
 
 AWS supports global condition keys and service\-specific condition keys\. To see all AWS global condition keys, see [AWS global condition context keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html) in the *IAM User Guide*\.
 
+Amazon MQ does not define any service\-specific condition keys, but supports using some global condition keys\. To see a list of Amazon MQ condition keys, see the table below or [Condition Keys for Amazon MQ](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-policy-keys) in the *IAM User Guide*\. To learn with which actions and resources you can use a condition key, see [Actions Defined by Amazon MQ](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-actions-as-permissions)\.
+
 
 ****  
 
 | Condition Keys | Description | Type | 
 | --- | --- | --- | 
-|   aws:RequestTag/$\{TagKey\}  |  | String | 
-|   aws:ResourceTag/$\{TagKey\}  |  | String | 
-|   aws:TagKeys  |  | String | 
-
-Amazon MQ defines its own set of condition keys and also supports using some global condition keys\. To see all AWS global condition keys, see [AWS Global Condition Context Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html) in the *IAM User Guide*\.
-
-
-
-To see a list of Amazon MQ condition keys, see [Condition Keys for Amazon MQ](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-policy-keys) in the *IAM User Guide*\. To learn with which actions and resources you can use a condition key, see [Actions Defined by Amazon MQ](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonmq.html#amazonmq-actions-as-permissions)\.
+|   [aws:RequestTag/$\{TagKey\}](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag)  |  Filters actions based on the tags that are passed in the request\.  | String | 
+|   [aws:ResourceTag/$\{TagKey\}](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag)  |  Filters actions based on the tags associated with the resource\.  | String | 
+|   [aws:TagKeys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys)  |  Filters actions based on the tag keys that are passed in the request\.  | String | 
 
 ### Examples<a name="security_iam_service-with-iam-id-based-policies-examples"></a>
 

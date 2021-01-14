@@ -10,6 +10,8 @@ You can edit your broker preferences, such as enabling or disabling CloudWatch l
 
 1. On the **Edit *MyBroker*** page, in the **Specifications** section, select a **Broker engine version** or a **Broker Instance type**\.
 
+   
+
 1. In the **CloudWatch Logs** section, click the toggle button to enable or disable general logs\. No other steps are required\.
 **Note**  
 For RabbitMQ brokers, Amazon MQ automatically uses a Service\-Linked Role \(SLR\) to publish general logs to CloudWatch\. For more information, see [Using service\-linked roles for Amazon MQ](using-service-linked-roles.md) 

@@ -8,7 +8,8 @@ For information about creating a CloudWatch alarm for a metrics, see [Create or 
 
 **Note**  
 There is no charge for the Amazon MQ metrics reported in CloudWatch\. These metrics are provided as part of the Amazon MQ service\.  
-CloudWatch monitors only the first 200 destinations\.
+For ActiveMQ brokers, CloudWatch monitors only the first 200 destinations\.  
+For RabbitMQ brokers, CloudWatch monitors only the first 500 destinations, ordered by number of consumers\.
 
 **Topics**
 + [AWS Management Console](#amazon-mq-accessing-metrics-console)

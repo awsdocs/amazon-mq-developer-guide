@@ -9,7 +9,10 @@
 ## ActiveMQ engine versions<a name="activemq-broker-engine"></a>
 
 Amazon MQ supports the following versions of ActiveMQ:
-+ ActiveMQ 5\.15\.13 \(recommended\)
++ ActiveMQ 5\.15\.14 \(recommended\)
+**Important**  
+Due to a known Apache ActiveMQ issue in this release, the new **Pause Queue** button in the ActiveMQ web console cannot be used with Amazon MQ for ActiveMQ brokers\. For more information about this issue, see [AMQ\-8104](https://issues.apache.org/jira/browse/AMQ-8104)\.
++ ActiveMQ 5\.15\.13
 + ActiveMQ 5\.15\.12
 + ActiveMQ 5\.15\.10
 + ActiveMQ 5\.15\.9

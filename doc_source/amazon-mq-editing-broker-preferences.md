@@ -15,6 +15,8 @@ The following example shows how you can edit Amazon MQ ActiveMQ broker preferenc
 
 1. On the **Edit *MyBroker*** page, in the **Specifications** section, select a **Broker engine version** or a **Broker Instance type**\.
 
+   
+
 1. In the **Configuration** section, select the configuration and revision for your broker\. For more information, see [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)\.
 
 1. In the **Security and network** section, select a group from the **Security group\(s\)** drop\-down, or choose **Create a new security group** to open the Amazon VPC console\.

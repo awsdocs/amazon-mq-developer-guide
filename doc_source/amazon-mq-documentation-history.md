@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| November 4, 2020 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | December 16, 2019 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | July 19, 2019 | Modified and added content on encryption management in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | April 22, 2019 | Added the following sections for tag\-based policies and resource\-level permissions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
@@ -21,7 +22,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | September 18, 2018 | Added the following note to the [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md) section: You can't configure groups independently of users\. A group label is created when you add at least one user to it and deleted when you remove all users from it\. | 
 | August 31, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | August 15, 2018 | Corrected the information in the [Step 1: create an ActiveMQ broker](getting-started-activemq.md#create-activemq-broker) section\. | 
-| August 13, 2018 | Added the [Accessing the RabbitMQ and ActiveMQ web consoles without public accessibility](accessing-web-console-of-broker-without-private-accessibility.md) section\. | 
+| August 13, 2018 | Added the [Accessing the broker web console without public accessibility](accessing-web-console-of-broker-without-public-accessibility.md) section\. | 
 | August 2, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | August 1, 2018 | Corrected the information in the following sections:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
 | July 31, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
