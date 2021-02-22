@@ -36,6 +36,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)
    + [RabbitMQ tutorials](rabbitmq-on-amazon-mq.md)
       + [Editing broker preferences](amazon-mq-rabbitmq-editing-broker-preferences.md)
+      + [Resolving RabbitMQ paused queue synchronization](rabbitmq-queue-sync.md)
 + [Best practices for Amazon MQ](amazon-mq-best-practices.md)
    + [Best practices for ActiveMQ](best-practices-activemq.md)
       + [Connecting to Amazon MQ](connecting-to-amazon-mq.md)

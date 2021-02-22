@@ -7,6 +7,6 @@ The following tutorials show how you can work with Amazon MQ brokers using the A
 + [Listing brokers and viewing broker details](amazon-mq-listing-brokers.md)
 + [Rebooting a Broker](amazon-mq-rebooting-broker.md)
 + [Deleting a broker](amazon-mq-deleting-broker.md)
-+ [Accessing CloudWatch Metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
++ [Accessing CloudWatch metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
 + [ActiveMQ on Amazon MQ](activemq-on-amazon-mq.md)
 + [RabbitMQ on Amazon MQ](rabbitmq-on-amazon-mq.md)

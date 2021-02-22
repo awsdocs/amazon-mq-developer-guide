@@ -2,7 +2,7 @@
 
 Amazon MQ supports the [RabbitMQ management plugin](https://www.rabbitmq.com/management.html) which powers the management API and the RabbitMQ web console\. You can use the web console and the management API to create and manage broker users and policies\. To learn about how Amazon MQ automatically manages broker policies to ensure high availability for cluster deployments, see [Cluster deployment for high availability](rabbitmq-broker-architecture-cluster.md)\.
 
- Amazon MQ also supports the shovel, and federation plugins, which you can configure and use to move messages from queues and exchanges in one broker to queues and exchanges in other broker instances\.
+ Amazon MQ also supports the [shovel](https://www.rabbitmq.com/shovel.html), and [federation](https://www.rabbitmq.com/federation.html) plugins, which you can configure and use to move messages from queues and exchanges in one broker to queues and exchanges in other broker instances\.
 
 **Topics**
 + [Shovel plugin](#rabbitmq-shovel-plugin)
@@ -33,6 +33,9 @@ In the request body, you must specify either a queue or an exchange but not both
 }
 ```
 
+**Important**  
+You cannot configure shovels between queues or exchanges if the destination queue or exchange is in a private broker\. You can only configure shovels between queues or exchanges in public brokers, or between a source queue or exchange in a private broker, and a destination queue or exchange in a public broker\.
+
 For more information about using dynamic shovels, see [RabbitMQ dynamic shovel plugin](https://www.rabbitmq.com/shovel-dynamic.html)\.
 
 **Note**  
@@ -43,6 +46,9 @@ Amazon MQ does not support using static shovels\.
  Amazon MQ supports federated exchanges and queues\. With federation, you can replicate the flow of messages between queues, exchages and consumers on separate brokers\. Federated queues and exchanges use point\-to\-point links to connect to peers in other brokers\. While federated exchanges, by default, route messages once, federated queues can move messages any number of times as needed by consumers\.
 
 You can use federation to allow a *downstream* broker to consume a message from an exchange or a queue on an *upstream*\. You can enable federation on downstream brokers by using the RabbitMQ web console or the management API\.
+
+**Important**  
+You cannot configure federation if the downstream queue or exchange is in a private broker\. You can only configure federation between queues or exchanges in public brokers, or between an upstream queue or exchange in a private broker, and a downstream queue or exchange in a public broker\.
 
 For example, using the managment API, you can configure federation by doing the following\.
 + Configure one or more upstreams that define federation connections to other nodes\. You can define federation connections by using the RabbitMQ web console or the management API\. Using the management API, you can create a `POST` requrest to `/api/parameters/federation-upstream/%2f/my-upstream` with the following request body\.

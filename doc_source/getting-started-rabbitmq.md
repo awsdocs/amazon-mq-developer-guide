@@ -5,7 +5,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 **Topics**
 + [Step 1: create a RabbitMQ broker](#create-rabbitmq-broker)
 + [Step 2: connect a JVM\-based application to your broker](#rabbitmq-connect-jvm-application)
-+ [Step 3: delete your broker](#w43aab9c15c11)
++ [Step 3: delete your broker](#w46aab9c15c11)
 + [Next steps](#next-steps-rabbitmq-tutorials)
 
 ## Step 1: create a RabbitMQ broker<a name="create-rabbitmq-broker"></a>
@@ -202,7 +202,7 @@ conn.close();
 **Note**  
 For more information about working with the RabbitMQ Java client library, see the [RabbitMQ Java Client API Guide](https://www.rabbitmq.com/api-guide.html)\.
 
-## Step 3: delete your broker<a name="w43aab9c15c11"></a>
+## Step 3: delete your broker<a name="w46aab9c15c11"></a>
 
 If you don't use an Amazon MQ broker \(and don't foresee using it in the near future\), it is a best practice to delete it from Amazon MQ to reduce your AWS costs\.
 

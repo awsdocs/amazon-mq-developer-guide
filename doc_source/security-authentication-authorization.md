@@ -62,12 +62,35 @@ The following image highlights where to supply these details\.
 In the **LDAP login configuration** section, provide the following required information:
 + **User Base** The distinguished name of the node in the directory information tree \(DIT\) that will be searched for users\.
 + **User Search Matching** The LDAP search filter that will be used to find users within the `userBase`\. The client's username will be substituted into the `{0}` placeholder in the search filter\. For more information, see [Authentication](#ldap-authentication) and [Authorization](#ldap-authorization)\.
-+ **Role Base** The distinguished name of the node in the DIT that will be searched for roles\. Not used\.
-+ **Role Search Matching** The LDAP search filter that will be used to find roles within the `roleBase`\. The distinguished name of the user matched by `userSearchMatching` will be substituted into the `{0}` placeholder in the search filter\. The client's username will be substituted in place of the `{1}` placeholder\.
++ **Role Base** The distinguished name of the node in the DIT that will be searched for roles\. Roles can be configured as explicit LDAP group entries in your directory\. A typical role entry may consist of one attribute for the name of the role, such as **common name \(CN\)**, and another attribute, such as `member`, with values representing the distinguished names or usernames of the users belonging to the role group\. For example, given the organizational unit, `group`, you can provide the following distinguished name: `ou=group,dc=example,dc=com`\.
++ **Role Search Matching** The LDAP search filter that will be used to find roles within the `roleBase`\. The distinguished name of the user matched by `userSearchMatching` will be substituted into the `{0}` placeholder in the search filter\. The client's username will be substituted in place of the `{1}` placeholder\. For example, if role entries in your directory include an attribute named `member`, containing the usernames for all users in that role, you can provide the following search filter: `(member:=uid={1})`\.
 
- The following image highlights where to specify these details\. 
+ The following image highlights where to specify these details\.
 
 ![\[Where to specify LDAP login details.\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/active-mq-ldap-login-configuration.png)
+
+In the **Optional settings** section, you can provide the following optional information:
++ **User Role Name** The name of the LDAP attribute in the user's directory entry for the user's group membership\. In some cases, user roles may be identified by the value of an attribute in the user's directory entry\. The `userRoleName` option allows you to provide the name of this attribute\. For example, let's consider the following user entry:
+
+  ```
+  dn: uid=jdoe,ou=user,dc=example,dc=com
+  objectClass: user
+  uid: jdoe
+  sn: jane
+  cn: Jane Doe
+  mail: j.doe@somecompany.com
+  memberOf: role1
+  userPassword: password
+  ```
+
+  To provide the correct `userRoleName` for the example above, you would specify the `memberOf` attribute\. If authentication is successful, the user is assigned the role `role1`\.
++ **Role Name** The group name attribute in a role entry whose value is the name of that role\. For example, you can specify `cn` for a group entry's **common name**\. If authentication succeeds, the user is assigned the the value of the `cn` attribute for each role entry that they are a member of\.
++ **User Search Subtree** Defines the scope for the LDAP user search query\. If true, the scope is set to search the entire subtree under the node defined by `userBase`\.
++ **Role Search Subtree** Defines the scope for the LDAP role search query\. If true, the scope is set to search the entire subtree under the node defined by `roleBase`\.
+
+The following image highlights where to specify these optional settings\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-active-ldap-optional-settings.png)
 
 ## How LDAP Integration Works<a name="ldap-support-details"></a>
 
@@ -89,18 +112,44 @@ The ActiveMQ broker would search at this location in the DIT for users in order 
 
 Because the ActiveMQ source code hardcodes the attribute name for users to `uid`, you must make sure that each user has this attribute set\. For simplicity, you can use the user’s connection username\. For more information, see the [activemq](https://github.com/apache/activemq/blob/c3d9b388e4f1fe73e348bf466122fe6862e064a0/activemq-broker/src/main/java/org/apache/activemq/security/SimpleCachedLDAPAuthorizationMap.java#L89) source code and [Configuring ID mappings in Active Directory Users and Computers for Windows Server 2016 \(and subsequent\) versions](https://www.ibm.com/support/knowledgecenter/en/STXKQY_5.0.3/com.ibm.spectrum.scale.v5r03.doc/bl1adm_confidmapaduc.htm)\.
 
- To enable ActiveMQ console access for specific users, make sure they belong to the `amazonmq-console-admins` group\. 
+To enable ActiveMQ console access for specific users, make sure they belong to the `amazonmq-console-admins` group\.
 
 ### Authorization<a name="ldap-authorization"></a>
 
-For authorization, permissions search bases are specified in the broker configuration\. Authorization is done on a per\-destination basis \(or wildcard, destination set\) via the `cachedLdapAuthorizationModule`, found in the broker’s `activemq.xml` configuration file\. For more information, see [Cached LDAP Authorization Module](https://activemq.apache.org/cached-ldap-authorization-module)\.
+For authorization, permissions search bases are specified in the broker configuration\. Authorization is done on a per\-destination basis \(or wildcard, destination set\) via the `cachedLdapAuthorizationMap` element, found in the broker’s `activemq.xml` configuration file\. For more information, see [Cached LDAP Authorization Module](https://activemq.apache.org/cached-ldap-authorization-module)\.
 
-You must provide the following three bases in the LDAP DIT:
+**Note**  
+To be able to use the `cachedLdapAuthorizationMap` element in your broker's `activemq.xml` configuration file, you must choose the **LDAP Authentication and Authorization** option when [creating a configuration via the AWS Management Console](amazon-mq-creating-applying-configurations.md), or set the [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/configurations.html#configurations-model-authenticationstrategy](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/configurations.html#configurations-model-authenticationstrategy) property to `LDAP` when creating a new configuration using the Amazon MQ API\.
+
+You must provide the following three attributes as part of the `cachedLDAPAuthorizationMap` element:
 + `queueSearchBase`
 + `topicSearchBase`
 + `tempSearchBase`
 
-These values identify the locations within the DIT where permissions for each type of destination are specified\. So for the above example with AWS Managed Directory, using the same domain components of `corp`, `example`, and `com`, you would specify an organizational unit named `destination` to contain all your destination types\. Within that OU, you would create one for `queues`, one for `topics`, and one for `temp` destinations\.
+**Important**  
+To prevent sensitive information from being directly placed in the broker's configuration file, Amazon MQ blocks the following attributes from being used in `cachedLdapAuthorizationMap`:  
+`connectionURL`
+`connectionUsername`
+`connectionPassword`
+When you create a broker, Amazon MQ substitutes the values you provide via the AWS Management Console, or in the [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers.html#brokers-prop-createbrokerinput-ldapservermetadata](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers.html#brokers-prop-createbrokerinput-ldapservermetadata) property of your API request, for the above attributes\.
+
+The following demonstrates a working example of the `cachedLdapAuthorizationMap`\.
+
+```
+<authorizationPlugin>
+    <map>
+        <cachedLDAPAuthorizationMap
+            queueSearchBase="ou=Queue,ou=Destination,ou=corp,dc=corp,dc=example,dc=com"
+            topicSearchBase="ou=Topic,ou=Destination,ou=corp,dc=corp,dc=example,dc=com"
+            tempSearchBase="ou=Temp,ou=Destination,ou=corp,dc=corp,dc=example,dc=com"
+            refreshInterval="300000"
+            legacyGroupMapping="false"
+        />
+    </map>
+</authorizationPlugin>
+```
+
+These values identify the locations within the DIT where permissions for each type of destination are specified\. So for the above example with AWS Managed Microsoft AD, using the same domain components of `corp`, `example`, and `com`, you would specify an organizational unit named `destination` to contain all your destination types\. Within that OU, you would create one for `queues`, one for `topics`, and one for `temp` destinations\.
 
 This would mean that your queue search base, which provides authorization information for destinations of type queue, would have the following location in your DIT:
 

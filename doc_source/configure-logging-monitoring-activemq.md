@@ -42,7 +42,7 @@ To allow Amazon MQ to create a CloudWatch Logs log group, you must ensure that t
 **Important**  
 If you don't add the `CreateLogGroup` permission to your Amazon MQ user before the user creates or reboots the broker, Amazon MQ doesn't create the log group\.
 
-The following example [IAM\-based policy](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#identity-based-policies-cwl) grants permission for `logs:CreateLogGroup` to user 111122223333\.
+The following example [IAM\-based policy](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#identity-based-policies-cwl) grants permission for `logs:CreateLogGroup` for users to whom this policy is attached\.
 
 ```
 {
@@ -74,11 +74,11 @@ If you don't configure a resource\-based policy for Amazon MQ, the broker can't 
 This resource\-based policy *must* be configured by using the AWS CLI\. The following command grants permission for `logs:CreateLogStream` and `logs:PutLogEvents` to AWS\.
 
 ```
-aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-logs \
-        		--policy-document '{ "Version": "2012-10-17", "Statement": [ { 
-        		"Effect": "Allow", "Principal": { "Service": "mq.amazonaws.com" }, 
-        		"Action":[ "logs:CreateLogStream", "logs:PutLogEvents" ],
-        		"Resource" : "arn:aws:logs:*:*:log-group:/aws/amazonmq/*" } ] }'
+aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-ActiveMQ-logs \
+        		--policy-document '{ "Version": "2012-10-17", "Statement": [ {
+        		"Effect": "Allow", "Principal": { "Service": "mq.amazonaws.com" },
+        		"Action": [ "logs:CreateLogStream", "logs:PutLogEvents" ],
+        		"Resource": "arn:aws:logs:*:*:log-group:/aws/amazonmq/*" } ]}'
 ```
 
 **Note**  
