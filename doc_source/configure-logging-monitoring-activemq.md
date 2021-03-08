@@ -7,7 +7,7 @@ The following describes the steps to configure CloudWatch logs for your ActiveMQ
 **Topics**
 + [Understanding the structure of logging in CloudWatch Logs](#security-logging-monitoring-configure-cloudwatch-structure)
 + [Add the CreateLogGroup Permission to Your Amazon MQ User](#security-logging-monitoring-configure-cloudwatch-permissions)
-+ [Configure a Resource\-Based Policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions)
++ [Configure a resource\-based policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions)
 + [Troubleshooting CloudWatch Logs Configuration](#security-logging-monitoring-configure-cloudwatch-troubleshoot)
 
 ## Understanding the structure of logging in CloudWatch Logs<a name="security-logging-monitoring-configure-cloudwatch-structure"></a>
@@ -62,23 +62,37 @@ Here, the term user refers to *IAM Users* and not *Amazon MQ users*, which are c
 
 For more information, see `[CreateLogGroup](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateLogGroup.html)` in the *Amazon CloudWatch Logs API Reference*\.
 
-## Configure a Resource\-Based Policy for Amazon MQ<a name="security-logging-monitoring-configure-cloudwatch-resource-permissions"></a>
+## Configure a resource\-based policy for Amazon MQ<a name="security-logging-monitoring-configure-cloudwatch-resource-permissions"></a>
+
+**Important**  
+If you don't configure a resource\-based policy for Amazon MQ, the broker can't publish the logs to CloudWatch Logs\.
 
 To allow Amazon MQ to publish logs to your CloudWatch Logs log group, configure a resource\-based policy to give Amazon MQ access to the following CloudWatch Logs API actions:
 + `[CreateLogStream](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateLogStream.html)` – Creates a CloudWatch Logs log stream for the specified log group\.
 + `[PutLogEvents](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutLogEvents.html)` – Delivers events to the specified CloudWatch Logs log stream\.
 
-**Important**  
-If you don't configure a resource\-based policy for Amazon MQ, the broker can't publish the logs to CloudWatch Logs\.
-
-This resource\-based policy *must* be configured by using the AWS CLI\. The following command grants permission for `logs:CreateLogStream` and `logs:PutLogEvents` to AWS\.
+The following resource\-based policy grants permission for `logs:CreateLogStream` and `logs:PutLogEvents` to AWS\.
 
 ```
-aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-ActiveMQ-logs \
-        		--policy-document '{ "Version": "2012-10-17", "Statement": [ {
-        		"Effect": "Allow", "Principal": { "Service": "mq.amazonaws.com" },
-        		"Action": [ "logs:CreateLogStream", "logs:PutLogEvents" ],
-        		"Resource": "arn:aws:logs:*:*:log-group:/aws/amazonmq/*" } ]}'
+{ 
+    "Version": "2012-10-17", 
+    "Statement": [ 
+        {
+            "Effect": "Allow",
+            "Principal": { "Service": "mq.amazonaws.com" },
+            "Action": [ "logs:CreateLogStream", "logs:PutLogEvents" ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/amazonmq/*"
+        } 
+    ]
+}
+```
+
+This resource\-based policy *must* be configured by using the AWS CLI as shown by the following command\. In the example, replace `us-east-1` with your own information\.
+
+```
+aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-logs \
+--policy-document "{\"Version\": \"2012-10-17\", \"Statement\":[{ \"Effect\": \"Allow\", \"Principal\": { \"Service\": \"mq.amazonaws.com\" },
+\"Action\": [\"logs:CreateLogStream\", \"logs:PutLogEvents\"], \"Resource\": \"arn:aws:logs:*:*:log-group:\/aws\/amazonmq\/*\" }]}"
 ```
 
 **Note**  

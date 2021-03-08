@@ -1,6 +1,6 @@
 # Cluster deployment for high availability<a name="rabbitmq-broker-architecture-cluster"></a>
 
-A *cluster deployment* is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer \(NLB\), each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\.
+A *cluster deployment* is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer, each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\.
 
 In a cluster deployment, Amazon MQ automatically manages broker policies to enable classic mirroring across all nodes, ensuring high availability \(HA\)\. Each mirrored queue consists of one *main* node and one or more *mirrors*\. Each queue has its own main node\. All operations for a given queue are first applied on the queue's main node and then propagated to mirrors\. Amazon MQ creates a default system policy that sets the `ha-mode ` to `all` and `ha-sync-mode` to `automatic`\. This ensures that data is replicated to all nodes in the cluster across different Availability Zones for better durability\.
 

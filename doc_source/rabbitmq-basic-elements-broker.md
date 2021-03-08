@@ -1,8 +1,8 @@
 # Broker<a name="rabbitmq-basic-elements-broker"></a>
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t3`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance types](broker-instance-types.md)\.
-+ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EBS\. Single\-instance brokers provide high throughput and lower latency\.
-+ A *cluster deployment* is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer \(NLB\), each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\.
++ A *single\-instance broker* is comprised of one broker in one Availability Zone behind a Network Load Balancer \(NLB\)\. The broker communicates with your application and with Amazon Elastic Block Store \(EBS\)\. Single\-instance brokers provide high throughput and lower latency\.
++ A *cluster deployment* is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer, each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\.
 
 For more information, see [Broker architecture](rabbitmq-broker-architecture.md)\.
 

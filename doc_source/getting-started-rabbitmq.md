@@ -17,8 +17,8 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 1. On the **Select broker engine** page, choose **RabbitMQ**, and then choose **Next**\.
 
 1. On the **Select deployment mode** page, choose the **Deployment mode**, for example, **Cluster deployment**, and then choose **Next**\. 
-   + A **single\-instance broker** is comprised of one broker in one Availability Zone\. The broker communicates with your application and with Amazon EBS\. Single\-instance brokers provide high throughput and lower latency\. For more information, see [Single\-instance broker](rabbitmq-broker-architecture-single-instance.md)\.
-   + A **RabbitMQ cluster deployment for high availability** is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer \(NLB\), each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\. For more information, see [Cluster deployment for high availability](rabbitmq-broker-architecture-cluster.md)\.
+   + A **single\-instance broker** is comprised of one broker in one Availability Zone behind a Network Load Balancer \(NLB\)\. The broker communicates with your application and with Amazon Elastic Block Store \(EBS\)\. Single\-instance brokers provide high throughput and lower latency\. For more information, see [Single\-instance broker](rabbitmq-broker-architecture-single-instance.md)\.
+   + A **RabbitMQ cluster deployment for high availability** is a logical grouping of three RabbitMQ broker nodes behind a Network Load Balancer, each sharing users, queues, and a distributed state across multiple Availability Zones \(AZ\)\. For more information, see [Cluster deployment for high availability](rabbitmq-broker-architecture-cluster.md)\.
 
 1. On the **Configure settings** page, in the **Details** section, the following:
 
