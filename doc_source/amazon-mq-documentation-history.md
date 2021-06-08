@@ -1,10 +1,14 @@
 # Amazon MQ Document History<a name="amazon-mq-documentation-history"></a>
 
-The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazon MQ feature releases and improvements, see [Amazon MQ Release notes](amazon-mq-release-notes.md)\.
+The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazon MQ feature releases and improvements, see [Amazon MQ release notes](amazon-mq-release-notes.md)\.
 
 
 | Date | Documentation Update | 
 | --- | --- | 
+| June 7, 2021 |  Added the following sections to describe Amazon MQ for ActiveMQ version management and upgrading Amazon MQ brokers to new minor and major engine versions as they are supported\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| May 18, 2021 |  Added the following section to describe Amazon MQ for RabbitMQ broker defaults [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| May 5, 2021 |  Added the following section for describing AWS managed policies for Amazon MQ and updates to these policies: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
+| February 16, 2021 |  Added the following tutorial section for Amazon MQ for RabbitMQ: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | November 4, 2020 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | December 16, 2019 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | July 19, 2019 | Modified and added content on encryption management in the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html) | 
@@ -66,7 +70,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 | February 13, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 25, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | January 24, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
-| January 19, 2018 | Updated the information in the [Apache ActiveMQ resources](amazon-mq-related-resources.md#activemq-resources) section\. | 
+| January 19, 2018 | Updated the information in the [Amazon MQ for ActiveMQ resources](amazon-mq-related-resources.md#activemq-resources) section\. | 
 | January 18, 2018 | Clarified and corrected the information in the [Quotas in Amazon MQ](amazon-mq-limits.md) section\. | 
 | January 17, 2018 | Reinstated the [recommendation to prefer virtual destinations over durable subscriptions](connecting-to-amazon-mq.md#prefer-virtual-destinations-to-durable-subscriptions), with an improved explanation\. | 
 | January 11, 2018 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

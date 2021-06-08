@@ -5,7 +5,7 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 **Topics**
 + [Step 1: create a RabbitMQ broker](#create-rabbitmq-broker)
 + [Step 2: connect a JVM\-based application to your broker](#rabbitmq-connect-jvm-application)
-+ [Step 3: delete your broker](#w46aab9c15c11)
++ [Step 3: delete your broker](#w77aab9c13c11)
 + [Next steps](#next-steps-rabbitmq-tutorials)
 
 ## Step 1: create a RabbitMQ broker<a name="create-rabbitmq-broker"></a>
@@ -29,10 +29,13 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 The **Additional settings** section provides options to enable CloudWatch logs and configure network access for your broker\. If you create a private RabbitMQ broker without public accessibility, you must select a Virtual Private Cloud \(VPC\) and configure a security group to access your broker\.
 
 1. On the **Configure settings** page, in the **RabbitMQ access** section, provide a **Username** and **Password**\.
+**Important**  
+Your username can contain only alphanumeric characters, dashes, periods, and underscores \(\- \. \_\)\. This value must not contain any tilde \(\~\) characters\. Amazon MQ prohibits using `guest` as a username\.
+ Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
 
 1. Choose **Next**\.
 
-1. On the **Review and create** page, you can reivew your selections and edit them as needed\.
+1. On the **Review and create** page, you can review your selections and edit them as needed\.
 
 1. Choose **Create broker**\.
 
@@ -202,7 +205,7 @@ conn.close();
 **Note**  
 For more information about working with the RabbitMQ Java client library, see the [RabbitMQ Java Client API Guide](https://www.rabbitmq.com/api-guide.html)\.
 
-## Step 3: delete your broker<a name="w46aab9c15c11"></a>
+## Step 3: delete your broker<a name="w77aab9c13c11"></a>
 
 If you don't use an Amazon MQ broker \(and don't foresee using it in the near future\), it is a best practice to delete it from Amazon MQ to reduce your AWS costs\.
 

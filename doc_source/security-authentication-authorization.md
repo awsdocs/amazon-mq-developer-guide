@@ -100,7 +100,7 @@ You can think of integration in two main categories: the structure for authentic
 
 For authentication, client credentials must be valid\. These credentials are validated against users in the user base in the LDAP server\.
 
-The user base supplied to the ActiveMQ broker must point to the node in the DIT where users are stored in the LDAP server\. For example, if you are using AWS Managed Directory, and you have the domain components `corp`, `example`, and `com`, and within those you have organizational units `corp` and `Users`, you would use the following as your user base:
+The user base supplied to the ActiveMQ broker must point to the node in the DIT where users are stored in the LDAP server\. For example, if you are using AWS Managed Microsoft AD, and you have the domain components `corp`, `example`, and `com`, and within those you have organizational units `corp` and `Users`, you would use the following as your user base:
 
 ```
 OU=Users,OU=corp,DC=corp,DC=example,DC=com

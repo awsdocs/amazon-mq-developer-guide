@@ -15,7 +15,7 @@ The following table lists useful resources for working with Amazon MQ\.
 | [Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=279) | A community\-based forum for developers to discuss technical questions related to Amazon MQ\. | 
 | [AWS Premium Support Information](https://aws.amazon.com/premiumsupport/) | The primary web page for information about AWS Premium Support, a one\-on\-one, fast\-response support channel to help you build and run applications on AWS infrastructure services | 
 
-## Apache ActiveMQ resources<a name="activemq-resources"></a>
+## Amazon MQ for ActiveMQ resources<a name="activemq-resources"></a>
 
 The following table lists useful resources for working with Apache ActiveMQ\.
 
@@ -26,7 +26,7 @@ The following table lists useful resources for working with Apache ActiveMQ\.
 | [ActiveMQ in Action](https://www.manning.com/books/activemq-in-action) | A guide to Apache ActiveMQ that covers the anatomy of JMS messages, connectors, message persistence, authentication, and authorization\. | 
 | [Cross\-Language Clients](http://activemq.apache.org/cross-language-clients.html) | A list of programming languages and corresponding Apache ActiveMQ libraries\. See also [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client) and [QpidJMS Client](https://mvnrepository.com/artifact/org.apache.qpid/qpid-jms-client)\. | 
 
-## RabbitMQ resources<a name="rabbitmq-resources"></a>
+## Amazon MQ for RabbitMQ resources<a name="rabbitmq-resources"></a>
 
 The following table lists useful resources for working with RabbitMQ\.
 

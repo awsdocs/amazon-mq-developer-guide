@@ -71,7 +71,7 @@ The following table lists quotas related to Amazon MQ data storage\.
 The following throttling quotas are aggregated per AWS account, *across all Amazon MQ APIs* to maintain service bandwidth\. For more information about Amazon MQ APIs, see the *[Amazon MQ REST API Reference](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/)*\.
 
 **Important**  
-These quotas don't apply to ActiveMQ or RabbitMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
+These quotas don't apply to Amazon MQ for ActiveMQ or Amazon MQ for RabbitMQ broker messaging APIs\. For example, Amazon MQ doesn't throttle the sending or receiving of messages\.
 
 
 | API burst limit | API rate limit | 

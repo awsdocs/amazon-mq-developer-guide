@@ -6,4 +6,5 @@
 + [Amazon MQ Basic elements](amazon-mq-basic-elements.md)
 + [Broker Architecture](amazon-mq-broker-architecture.md)
 + [Amazon MQ Broker Configuration Parameters](amazon-mq-broker-configuration-parameters.md)
++ [Managing Amazon MQ for ActiveMQ engine versions](activemq-version-management.md)
 + [Working Java Example](amazon-mq-working-java-example.md)

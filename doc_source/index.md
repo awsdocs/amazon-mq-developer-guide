@@ -1,7 +1,7 @@
 # Amazon MQ Developer Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -19,12 +19,13 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting started with Amazon MQ](amazon-mq-getting-started.md)
    + [Creating and connecting to an ActiveMQ broker](getting-started-activemq.md)
    + [Creating and connecting to a RabbitMQ broker](getting-started-rabbitmq.md)
-+ [Amazon MQ Tutorials](amazon-mq-tutorials.md)
-   + [Accessing the broker web console without public accessibility](accessing-web-console-of-broker-without-public-accessibility.md)
++ [Managing an Amazon MQ broker](managing-amazon-mq-broker.md)
    + [Listing Amazon MQ brokers and viewing broker details](amazon-mq-listing-brokers.md)
+   + [Upgrading an Amazon MQ broker engine version](upgrading-brokers.md)
    + [Rebooting an Amazon MQ broker](amazon-mq-rebooting-broker.md)
    + [Deleting an Amazon MQ broker](amazon-mq-deleting-broker.md)
-   + [Accessing CloudWatch metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
++ [Amazon MQ Tutorials](amazon-mq-tutorials.md)
+   + [Accessing the broker web console without public accessibility](accessing-web-console-of-broker-without-public-accessibility.md)
    + [ActiveMQ tutorials](activemq-on-amazon-mq.md)
       + [Creating and configuring an ActiveMQ broker](amazon-mq-creating-configuring-broker.md)
       + [Editing broker engine version, instance type, CloudWatch logs, and maintenance preferences](amazon-mq-editing-broker-preferences.md)
@@ -65,10 +66,12 @@ Amazon's trademarks and trade dress may not be used in
          + [Elements and Their Attributes Permitted in Amazon MQ Configurations](permitted-attributes.md)
          + [Elements, Child Collection Elements, and Their Child Elements Permitted in Amazon MQ Configurations](permitted-collections.md)
             + [Amazon MQ Child Element Attributes](child-element-details.md)
+      + [Managing Amazon MQ for ActiveMQ engine versions](activemq-version-management.md)
       + [Working examples of using Java Message Service (JMS) with ActiveMQ](amazon-mq-working-java-example.md)
    + [RabbitMQ engine](how-amazon-mq-works-rabbitmq.md)
       + [Basic elements](rabbitmq-basic-elements.md)
          + [Broker](rabbitmq-basic-elements-broker.md)
+         + [Broker defaults](rabbitmq-defaults.md)
          + [User](rabbitmq-basic-elements-user.md)
          + [Plugins](rabbitmq-basic-elements-plugins.md)
       + [Broker architecture](rabbitmq-broker-architecture.md)
@@ -80,6 +83,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Tagging resources](amazon-mq-tagging.md)
 + [Quotas in Amazon MQ](amazon-mq-limits.md)
 + [Logging and monitoring Amazon MQ brokers](security-logging-monitoring.md)
+   + [Accessing CloudWatch metrics for Amazon MQ](amazon-mq-accessing-metrics.md)
    + [Monitoring Amazon MQ brokers using Amazon CloudWatch](security-logging-monitoring-cloudwatch.md)
    + [Logging Amazon MQ API calls using AWS CloudTrail](security-logging-monitoring-cloudtrail.md)
    + [Configuring Amazon MQ to publish logs to Amazon CloudWatch Logs](security-logging-monitoring-configure-cloudwatch.md)
@@ -91,13 +95,14 @@ Amazon's trademarks and trade dress may not be used in
       + [How Amazon MQ works with IAM](security_iam_service-with-iam.md)
       + [Amazon MQ Identity-based policy examples](security_iam_id-based-policy-examples.md)
       + [API authentication and authorization for Amazon MQ](security-api-authentication-authorization.md)
-      + [Troubleshooting Amazon MQ identity and access](security_iam_troubleshoot.md)
+      + [AWS managed policies for Amazon MQ](security-iam-aws-managed-policies.md)
       + [Using service-linked roles for Amazon MQ](using-service-linked-roles.md)
+      + [Troubleshooting Amazon MQ identity and access](security_iam_troubleshoot.md)
    + [Compliance validation for Amazon MQ](AMQ-compliance.md)
    + [Resilience in Amazon MQ](disaster-recovery-resiliency.md)
    + [Infrastructure security in Amazon MQ](infrastructure-security.md)
    + [Security best practices for Amazon MQ](using-amazon-mq-securely.md)
 + [Related resources](amazon-mq-related-resources.md)
-+ [Amazon MQ Release notes](amazon-mq-release-notes.md)
++ [Amazon MQ release notes](amazon-mq-release-notes.md)
    + [Amazon MQ Document History](amazon-mq-documentation-history.md)
 + [AWS glossary](glossary.md)

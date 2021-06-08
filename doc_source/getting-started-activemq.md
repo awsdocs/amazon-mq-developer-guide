@@ -35,7 +35,10 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 
    1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance types](broker-instance-types.md)\.
 
-1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
+1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\.
+**Important**  
+Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\.
+ Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
 
 1. Choose **Deploy**\.
 
@@ -64,7 +67,7 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 
 After you create an Amazon MQ ActiveMQ broker, you can connect your application to it\. The following examples show how you can use the Java Message Service \(JMS\) to create a connection to the broker, create a queue, and send a message\. For a complete, working Java example, see [Working examples of using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md)\.
 
-You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client/5.15.0)\.
+You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client)\.
 
 ### Prerequisites<a name="connect-application-prerequisites-getting-started"></a>
 

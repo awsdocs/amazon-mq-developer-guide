@@ -23,15 +23,15 @@ The following example shows how you can confirm your broker's existence by listi
    For ActiveMQ brokers, on the ***MyBroker*** page, the [configured](configuration.md) **Details** are displayed for your broker:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-active-active-standby-detail-console.png)
 
-   For RabbitMQ brokers, on the ***MyBroker2*** page, your selected settings are displayed in the **Details**section as shown below\.  
+   For Amazon MQ for RabbitMQ brokers, you can view your selected settings on the ***MyBroker2*** page, under the **Details**section as shown in the following\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-rabbit-single-instance-detail-console.png)
 
-   Below the **Details** section, the following information is displayed:
-   + In the **Connections** section, for ActiveMQ brokers, the web console URL and the wire\-level protocol endpoints  
+   Under the **Details** section, the following information is displayed:
+   + In the **Connections** section, for Amazon MQ for ActiveMQ brokers, the web console URL and the wire\-level protocol endpoints\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-active-connections-console.png)
 
-     In the **Connections** section, for RabbitMQ brokers, the web console URL and the secure AMQP endpoint  
+     In the **Connections** section, for Amazon MQ for RabbitMQ brokers, the web console URL and the secure AMQP endpoint\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-rabbit-connections-console.png)
-   + For ActiveMQ brokers, in the **Users** section, the [users](user.md) associated with the broker
+   + For Amazon MQ for ActiveMQ brokers, in the **Users** section, the [users](user.md) associated with the broker
 **Important**  
-Managing users via the AWS Management Console and the Amazon MQ API is not supported for RabbitMQ brokers\.
+Managing users via the AWS Management Console and the Amazon MQ API is not supported for Amazon MQ for RabbitMQ brokers\.

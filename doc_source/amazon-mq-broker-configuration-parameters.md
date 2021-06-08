@@ -11,6 +11,8 @@ A *configuration* contains all of the settings for your ActiveMQ broker, in XML 
 ActiveMQ brokers are configured using [Spring XML](https://docs.spring.io/spring/docs/current/spring-framework-reference/) files\. You can configure many aspects of your ActiveMQ broker, such as predefined destinations, destination policies, authorization policies, and plugins\. Amazon MQ controls some of these configuration elements, such as network transports and storage\. Other configuration options, such as creating networks of brokers, aren't currently supported\.
 
 The full set of supported configuration options is specified in the Amazon MQ XML schemas\. Download zip files of the supported schemas using the following links\.
++  [ `amazon-mq-active-mq-5.16.2.xsd.zip` ](samples/amazon-mq-active-mq-5.16.2.xsd.zip) 
++  [ `amazon-mq-active-mq-5.15.15.xsd.zip` ](samples/amazon-mq-active-mq-5.15.15.xsd.zip) 
 +  [ `amazon-mq-active-mq-5.15.14.xsd.zip` ](samples/amazon-mq-active-mq-5.15.14.xsd.zip) 
 +  [ `amazon-mq-active-mq-5.15.13.xsd.zip` ](samples/amazon-mq-active-mq-5.15.13.xsd.zip) 
 +  [ `amazon-mq-active-mq-5.15.12.xsd.zip` ](samples/amazon-mq-active-mq-5.15.12.xsd.zip) 

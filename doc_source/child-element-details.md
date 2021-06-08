@@ -125,6 +125,15 @@ Specifies whether to use concurrent store and dispatch for queues\. For more inf
 
 **Default:** `true`
 
+#### cleanupOnStop<a name="cleanupOnStop"></a>
+
+**Supported in**  
+Apache ActiveMQ 15\.16\.x and above
+
+When deactivated,garbage collection and cleanup does not take place when the broker is sopped, which speeds up the shutdown process\. The increased speed is useful in cases with large databases or scheduler databases\.
+
+**Default:** `true`
+
 #### journalDiskSyncInterval<a name="journalDiskSyncInterval"></a>
 
 Interval \(ms\) for when to perform a disk sync if `journalDiskSyncStrategy=periodic`\. For more information, see the [Apache ActiveMQ kahaDB documentation](https://activemq.apache.org/kahadb)\.
@@ -133,7 +142,10 @@ Interval \(ms\) for when to perform a disk sync if `journalDiskSyncStrategy=peri
 
 #### journalDiskSyncStrategy<a name="journalDiskSyncStrategy"></a>
 
-From ActiveMQ 5\.14\.0: this setting configures the disk sync policy\. For more information, see the [Apache ActiveMQ kahaDB documentation](https://activemq.apache.org/kahadb)\.
+**Supported in**  
+Apache ActiveMQ 15\.14\.x and above
+
+Configures the disk sync policy\. For more information, see the [Apache ActiveMQ kahaDB documentation](https://activemq.apache.org/kahadb)\.
 
 **Default:** `always`
 

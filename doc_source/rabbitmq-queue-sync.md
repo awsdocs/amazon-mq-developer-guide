@@ -67,7 +67,7 @@ By default, Amazon MQ for RabbitMQ clusters are created with an initial broker p
 
    1. For **Apply to**, choose **Exchanges and queues** from the dropdown list\.
 
-   1. For **Priority**, enter an integer greater than zero\. Because the Amazon MQ managed policy `ha-all-AWS-OWNED-DO-NOT-DELETE` is configured with priority zero by default, you must enter a higher priority value for your custom batch policy to take effect\. For more information about policy priorities and how to combine policies, see [Policies](https://www.rabbitmq.com/parameters.html#policies) in the RabbitMQ Server Documentation\.
+   1. For **Priority**, enter an integer greater than all other policies in applied to the vhost\. You can apply exactly one set of policy definitions to RabbitMQ queues and exchanges at any given time\. RabbitMQ chooses the matching policy with the highest priority value\. For more information about policy priorities and how to combine policies, see [Policies](https://www.rabbitmq.com/parameters.html#policies) in the RabbitMQ Server Documentation\.
 
    1. For **Definition**, add the following key\-value pairs:
       + **ha\-sync\-batch\-size**=*100*\. Choose **Number** from the dropdown list\.
@@ -131,7 +131,7 @@ If synchronization pauses and doesn't finish successfully, try reducing the `ha-
 
 ## Next steps<a name="rabbitmq-queue-sync-next-steps"></a>
 + Once your queue synchronizes successfully, you can monitor the amount of memory that your RabbitMQ nodes use by viewing the Amazon CloudWatch metric `RabbitMQMemUsed`\. You can also view the `RabbitMQMemLimit` metric to monitor a node's memory limit\. For more information, see [Accessing CloudWatch metrics for Amazon MQ](amazon-mq-accessing-metrics.md) and [Logging and monitoring RabbitMQ brokers](security-logging-monitoring-cloudwatch.md#rabbitmq-logging-monitoring)\.
-+ To prevent paused queue synchronization, we recommend keeping queues short and processing messages\. For workloads with larger message sizes, we also recommend upgrading your broker instance type to a larger instance size with more memory\. For more information about broker instance types and editing broker preferences, see [RabbitMQ instance types](broker-instance-types.md#rabbitmq-broker-instance-types) and [Editing broker preferences](amazon-mq-rabbitmq-editing-broker-preferences.md)\.
++ To prevent paused queue synchronization, we recommend keeping queues short and processing messages\. For workloads with larger message sizes, we also recommend upgrading your broker instance type to a larger instance size with more memory\. For more information about broker instance types and editing broker preferences, see [Amazon MQ for RabbitMQ instance types](broker-instance-types.md#rabbitmq-broker-instance-types) and [Editing broker preferences](amazon-mq-rabbitmq-editing-broker-preferences.md)\.
 
 ## Related resources<a name="rabbitmq-queue-sync-related-resources"></a>
 +  [UpdateBrokerInput](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-model-updatebrokerinput) – Use this broker property to update a broker instance type using the Amazon MQ API\.

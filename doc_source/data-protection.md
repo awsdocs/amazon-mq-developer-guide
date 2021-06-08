@@ -26,29 +26,29 @@ Amazon MQ integrates with AWS Key Management Service \(KMS\) to offer transparen
 
 ### Encryption at rest for ActiveMQ brokers<a name="data-protection-encryption-at-rest-activemq"></a>
 
-When you create an ActiveMQ broker, you can specify the AWS KMS customer master key \(CMK\) that you want Amazon MQ to use to encrypt your data at rest\. If you don't specify a CMK, Amazon MQ creates an AWS managed CMK for you and uses it on your behalf\.
+When you create an Amazon MQ for ActiveMQ broker, you can specify the AWS KMS key that you want Amazon MQ to use to encrypt your data at rest\. If you don't specify a KMS key, Amazon MQ creates an AWS managed KMS key for you and uses it on your behalf\. For more information about KMS keys, see [AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the AWS Key Management Service Developer Guide\.
 
 When creating a broker, you can configure what Amazon MQ uses for your encryption key by selecting one of the following\.
-+ **AWS owned CMK** — The key is owned by Amazon MQ and is not in your account\.
-+ **AWS managed CMK** — The AWS managed CMK \(aws/mq\) is a CMK in your account that is created, managed, and used on your behalf by Amazon MQ\.
-+ **Select existing customer managed CMK** — Customer managed CMKs are created and managed by you in AWS Key Management Service \(KMS\)\.
++ **AWS owned KMS key** — The key is owned by Amazon MQ and is not in your account\.
++ **AWS managed KMS key** — The AWS managed KMS key \(aws/mq\) is a KMS key in your account that is created, managed, and used on your behalf by Amazon MQ\.
++ **Select existing customer managed KMS key** — Customer managed KMS keys are created and managed by you in AWS Key Management Service \(KMS\)\.
 
 **Important**  
 Amazon MQ uses Amazon Elastic File System \(EFS\) to store message data\. If you revoke the grant that gives Amazon EFS permission to use the KMS keys in your account, Amazon MQ cannot access this data and your broker will stop working\. When you revoke a grant for Amazon EFS, it will not take place immediately\. To revoke access rights, delete your broker rather than revoking the grant\.
 
 ### Encryption at rest for RabbitMQ brokers<a name="data-protection-encryption-at-rest-rabbitmq"></a>
 
-When you create a RabbitMQ brokers, Amazon MQ creates an AWS managed Customer Master Key \(CMK\) and uses it on your behalf\. This AWS managed CMK is owned by Amazon MQ and is not stored in your AWS account\. Currently, Amazon MQ does not support AWS managed CMKs owned by you and saved in your account, or customer managed CMKs created and managed by you\.
+When you create a RabbitMQ brokers, Amazon MQ creates an AWS managed KMS key and uses it on your behalf\. This AWS managed KMS key is owned by Amazon MQ and is not stored in your AWS account\. Currently, Amazon MQ does not support AWS managed KMS keys owned by you and saved in your account, or customer managed KMS keys created and managed by you\.
 
- For more information about CMKs, see [Customer Master Keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\. 
+ For more information about KMS keys, see [AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\. 
 
 ## Encryption in transit<a name="data-protection-encryption-in-transit"></a>
 
 Amazon MQ encrypts data in transit between the brokers of your Amazon MQ deployment\. All data that passes between Amazon MQ brokers is encrypted using Transport layer Security \(TLS\)\. This is true for all available protocols\. 
 
- By default, Amazon MQ brokers use the recommended TLS 1\.2 to encrypt data\. Amazon MQ does not currently support configuring brokers to use different TLS versions\. 
+ By default, Amazon MQ brokers use the recommended TLS 1\.2 to encrypt data\. 
 
-### ActiveMQ protocols<a name="activemq-protocol-and-ciphers"></a>
+### Amazon MQ for ActiveMQ protocols<a name="activemq-protocol-and-ciphers"></a>
 
 You can access your ActiveMQ brokers using the following protocols with TLS enabled:
 + [AMQP](http://activemq.apache.org/amqp.html)
@@ -80,7 +80,7 @@ ActiveMQ on Amazon MQ supports the following cipher suites:
 + TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA256
 + TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA
 
-### RabbitMQ protocols<a name="rabbitmq-protocol-and-ciphers"></a>
+### Amazon MQ for RabbitMQ protocols<a name="rabbitmq-protocol-and-ciphers"></a>
 
 You can access your RabbitMQ brokers using the following protocols with TLS enabled:
 + [AMQP \(0\-9\-1\)](https://www.rabbitmq.com/specification.html)

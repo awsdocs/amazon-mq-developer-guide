@@ -50,13 +50,13 @@ You can use federation to allow a *downstream* broker to consume a message from 
 **Important**  
 You cannot configure federation if the downstream queue or exchange is in a private broker\. You can only configure federation between queues or exchanges in public brokers, or between an upstream queue or exchange in a private broker, and a downstream queue or exchange in a public broker\.
 
-For example, using the managment API, you can configure federation by doing the following\.
-+ Configure one or more upstreams that define federation connections to other nodes\. You can define federation connections by using the RabbitMQ web console or the management API\. Using the management API, you can create a `POST` requrest to `/api/parameters/federation-upstream/%2f/my-upstream` with the following request body\.
+For example, using the management API, you can configure federation by doing the following\.
++ Configure one or more upstreams that define federation connections to other nodes\. You can define federation connections by using the RabbitMQ web console or the management API\. Using the management API, you can create a `POST` request to `/api/parameters/federation-upstream/%2f/my-upstream` with the following request body\.
 
   ```
   {"value":{"uri":"amqp://server-name","expires":3600000}}
   ```
-+ Configure a policy to enable your queues or exchanges to become federated\. You can configure policies by using the RabbitMQ web console, or the management API\. Using the management API, you can create a `POST` requrest to `/api/policies/%2f/federate-me` with the following request body\.
++ Configure a policy to enable your queues or exchanges to become federated\. You can configure policies by using the RabbitMQ web console, or the management API\. Using the management API, you can create a `POST` request to `/api/policies/%2f/federate-me` with the following request body\.
 
   ```
   {"pattern":"^amq\.", "definition":{"federation-upstream-set":"all"}, "apply-to":"exchanges"}

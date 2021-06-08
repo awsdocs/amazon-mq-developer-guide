@@ -3,16 +3,16 @@
 Before you can use Amazon MQ, you must complete the following steps\.
 
 **Topics**
-+ [Create an AWS account and an IAM administrator user](#create-aws-account)
-+ [Create an IAM User and Get Your AWS Credentials](#create-iam-user)
++ [Step 1: create an AWS account and an IAM administrator user](#create-aws-account)
++ [Step 2: create an IAM user and get your AWS credentials](#create-iam-user)
 + [Get Ready to Use the Example Code](#get-ready-to-use-example-code)
 + [Next steps](#next-steps-setting-up)
 
 ## Step 1: create an AWS account and an IAM administrator user<a name="create-aws-account"></a>
 
-To access any AWS service, you must first create an [AWS account](https://aws.amazon.com/)\. This is an Amazon account that can use AWS products\. You can use your AWS account to view your activity and usage reports and to manage authentication and access\.
+To access any AWS service, you must first create an [Amazon Web Services account](https://aws.amazon.com/)\. This is an Amazon account that can use AWS products\. You can use your AWS account to view your activity and usage reports and to manage authentication and access\.
 
-1. Navigate to the [AWS home page](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
+1. Navigate to the [AWS home page](https://aws.amazon.com/), and then choose **Create an Amazon Web Services \]Account**\.
 
 1. Follow the instructions\.
 
@@ -56,14 +56,10 @@ You can view or download your secret access key *only* when you create your cred
 
 ## Step 3: get ready to use the example codes<a name="get-ready-to-use-example-code"></a>
 
-The following tutorials show how you can work with Amazon MQ brokers using the AWS Management Console as well as how to connect to your ActiveMQ and RabbitMQ brokers programatically\. To use the ActiveMQ Java example code, you must install the [Java Standard Edition Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and make some changes to the code\.
+The following tutorials show how you can work with Amazon MQ brokers using the AWS Management Console as well as how to connect to your Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ brokers programatically\. To use the ActiveMQ Java example code, you must install the [Java Standard Edition Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and make some changes to the code\.
 
 You can also create and manage brokers programmatically using Amazon MQ [REST API](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/) and AWS SDKs\.
 
 ## Next steps<a name="next-steps-setting-up"></a>
 
-Now that you're prepared to work with Amazon MQ, get started by [creating a broker](amazon-mq-getting-started.md)\. Depending on your broker engine type, you can then [connect a Java application to your ActiveMQ broker](getting-started-activemq.md#connect-java-application) or use the RabbitMQ Java client library to [connect a JVM\-based application to your RabbitMQ broker](getting-started-rabbitmq.md#rabbitmq-connect-jvm-application)\.
-
-You can also try the more advanced Amazon MQ [tutorials](amazon-mq-tutorials.md)\.
-
-For more information on configuring a network of brokers for your ActiveMQ brokers, see [Network of brokers](network-of-brokers.md)\.
+Now that you're prepared to work with Amazon MQ, get started by [creating a broker](amazon-mq-getting-started.md)\. Depending on your broker engine type, you can then [connect a Java application to your Amazon MQ for ActiveMQ broker](getting-started-activemq.md#connect-java-application) or use the RabbitMQ Java client library to [connect a JVM\-based application to your Amazon MQ for RabbitMQ broker](getting-started-rabbitmq.md#rabbitmq-connect-jvm-application)\.

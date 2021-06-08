@@ -8,4 +8,4 @@ For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, 
 
 The following diagram illustrates an active/standby broker with Amazon EFS storage\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-active-standby-deployment-efs.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-activemq-broker-architecture-active-standby.png)

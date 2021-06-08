@@ -4,8 +4,8 @@ A *single\-instance broker* is comprised of one broker in one Availability Zone 
 
 The following diagram illustrates a single\-instance broker with Amazon EFS storage replicated across multiple Availability Zones \(AZs\)\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-single-broker-deployment-efs.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-activemq-broker-architecture-single-broker-efs.png)
 
 The following diagram illustrates a single\-instance broker with Amazon EBS storage replicated across multiple servers within a single AZ\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-architecture-single-broker-deployment-ebs.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-activemq-broker-architecture-single-broker-ebs.png)

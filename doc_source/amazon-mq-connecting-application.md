@@ -2,7 +2,7 @@
 
 After you create an Amazon MQ ActiveMQ broker, you can connect your application to it\. The following examples show how you can use the Java Message Service \(JMS\) to create a connection to the broker, create a queue, and send a message\. For a complete, working Java example, see [Working examples of using Java Message Service \(JMS\) with ActiveMQ](amazon-mq-working-java-example.md)\.
 
-You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client/5.15.0)\.
+You can connect to ActiveMQ brokers using [various ActiveMQ clients](http://activemq.apache.org/cross-language-clients.html)\. We recommend using the [ActiveMQ Client](https://mvnrepository.com/artifact/org.apache.activemq/activemq-client)\.
 
 **Topics**
 + [Prerequisites](#connect-application-prerequisites-tutorial)

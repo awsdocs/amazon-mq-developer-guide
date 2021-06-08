@@ -34,7 +34,10 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 
    1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance types](broker-instance-types.md)\.
 
-1. In the **ActiveMQ Web Console access** section, type a **Username** and **Password**\.
+1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\.
+**Important**  
+Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\.
+ Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
 
 ## Step 2: \(Optional\) Configure Additional Broker Settings<a name="configure-advanced-broker-settings-console"></a>
 

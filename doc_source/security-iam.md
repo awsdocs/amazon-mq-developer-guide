@@ -9,8 +9,9 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [How Amazon MQ works with IAM](security_iam_service-with-iam.md)
 + [Amazon MQ Identity\-based policy examples](security_iam_id-based-policy-examples.md)
 + [API authentication and authorization for Amazon MQ](security-api-authentication-authorization.md)
-+ [Troubleshooting Amazon MQ identity and access](security_iam_troubleshoot.md)
++ [AWS managed policies for Amazon MQ](security-iam-aws-managed-policies.md)
 + [Using service\-linked roles for Amazon MQ](using-service-linked-roles.md)
++ [Troubleshooting Amazon MQ identity and access](security_iam_troubleshoot.md)
 
 ## Audience<a name="security_iam_audience"></a>
 
