@@ -237,6 +237,6 @@ When `updateClusterClients` is set to true, clients can be configured to connect
 failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)
 ```
 
-When a new broker connects, it will be receive a list of URIs of all brokers in the network\. If the connection to the broker fails, it can dynamically switch to one of the brokers provided when it connected\.
+When a new broker connects, it will receive a list of URIs of all brokers in the network\. If the connection to the broker fails, it can dynamically switch to one of the brokers provided when it connected\.
 
 For more information on failover, see [Broker\-side Options for Failover](http://activemq.apache.org/failover-transport-reference.html#FailoverTransportReference-Broker-sideOptionsforFailover) in the Active MQ documentation\.
