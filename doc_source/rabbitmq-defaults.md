@@ -26,7 +26,7 @@ Single\-instance, cluster
 + **`max-length: number-of-messages`** \(policy\) – Sets a limit for the number of messages in a queue\. In cluster deployments, the limit prevents paused queue synchronization in cases such as broker reboots, or following a maintenance window\.
 **Deployment modes**  
 Cluster
-+ **`overflow: reject-publish`** \(policy\) – Enforces queues with a `max-length` policy to reject new messages after the number of messages in the queue reaches the `max-length` value\. To ensure that messages aren't lost if a queue is in an overflow state, client applications that publish messages to the broker must implement [publisher confirms](best-practices-rabbitmq-ack.md)\. For information about implementing publisher confirms, see [Publisher Confirms](https://www.rabbitmq.com/confirms.html#publisher-confirms) on the RabbitMQ website\.
++ **`overflow: reject-publish`** \(policy\) – Enforces queues with a `max-length` policy to reject new messages after the number of messages in the queue reaches the `max-length` value\. To ensure that messages aren't lost if a queue is in an overflow state, client applications that publish messages to the broker must implement [publisher confirms](best-practices-rabbitmq.md#best-practices-rabbitmq-ack)\. For information about implementing publisher confirms, see [Publisher Confirms](https://www.rabbitmq.com/confirms.html#publisher-confirms) on the RabbitMQ website\.
 **Deployment modes**  
 Cluster
 + **`max-queues: number-of-queues-per-vhost`** \(vhost limit\) – Sets the limit for the number of queues in a broker\. Similar to the `max-length` policy definition, limiting the number of queues in cluster deployments prevents paused queue synchronization following broker reboots or maintenance windows\. Limiting queues also prevents excessive amounts of CPU usage for maintaining queues\.
@@ -37,6 +37,9 @@ Single\-instance, cluster
 Single\-instance, cluster
 
 ## Recommended default values<a name="rabbitmq-defaults-values"></a>
+
+**Note**  
+The `max-length` and `max-queue` default limits are tested and evaluated based on an average message size of 5 kB\. If your messages are significantly larger than 5 kB, you will need to adjust and reduce the `max-length` and `max-queue` limits\.
 
 The following table lists the default limit values for a newly created broker\. Amazon MQ applies these values according to the broker's instance type and deployment mode\.
 

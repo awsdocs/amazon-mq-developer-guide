@@ -17,6 +17,9 @@ Brokers created without public accessibility can't be accessed from outside of y
 
 Because ActiveMQ has no authorization map configured by default, any authenticated user can perform any action on the broker\. Thus, it is a best practice to restrict permissions *by group*\. For more information, see `authorizationEntry`\.
 
+**Important**  
+If you specify an authorization map which doesn't include the `activemq-webconsole` group, you can't use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
+
 ## Block unnecessary protocols with VPC security groups<a name="amazon-mq-vpc-security-groups"></a>
 
 To improve security, you should restrict the connections of unnecessary protocols and ports by properly configuring your Amazon VPC Security Group\. For instance, to restrict access to most protocols while allowing access to OpenWire and the web console, you could allow access to only 61617 and 8162\. This limits your exposure by blocking protocols you are not using, while allowing OpenWire and the web console to function normally\.

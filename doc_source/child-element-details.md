@@ -10,13 +10,15 @@ The following is a detailed explanation of child element attributes\. For more i
 
 ## authorizationEntry<a name="authorizationEntry"></a>
 
-`authorizationEntry` is a child of the `authorizationEntries` child collection element\. 
+`authorizationEntry` is a child of the `authorizationEntries` child collection element\.
 
 ### Attributes<a name="admin-read-write-attributes"></a>
 
 #### admin\|read\|write<a name="admin-read-write"></a>
 
 The permissions granted to a group of users\. For more information, see [Always configure an authorization map](using-amazon-mq-securely.md#always-configure-authorization-map)\.
+
+If you specify an authorization map which doesn't include the `activemq-webconsole` group, you can't use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker\.
 
 **Default:** `null`
 

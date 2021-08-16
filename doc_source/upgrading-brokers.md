@@ -8,6 +8,7 @@
 
  For more information about major and minor version management for each specific broker engine type, see the following topics\. 
 + [Managing Amazon MQ for ActiveMQ engine versions](activemq-version-management.md)
++ [Managing Amazon MQ for RabbitMQ engine versions](rabbitmq-version-management.md)
 
 When you activate the[ automatic minor version upgrade](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-prop-updatebrokerinput-autominorversionupgrade) option, Amazon MQ upgrades your broker to new minor versions as they become available\. Automatic minor version upgrades occur only if the broker is running a minor engine version that is lower than the new recommended minor version\. For major upgrades, you must manually upgrade the engine version\. 
 

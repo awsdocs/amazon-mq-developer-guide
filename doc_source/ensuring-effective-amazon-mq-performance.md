@@ -5,7 +5,7 @@ The following design patterns can improve the effectiveness and performance of y
 **Topics**
 + [Disable Concurrent Store and Dispatch for Queues with Slow Consumers](#disable-concurrent-store-and-dispatch-queues-flag-slow-consumers)
 + [Choose the Correct Broker Instance Type for the Best Throughput](#broker-instance-types-choosing)
-+ [Choose the Correct Broker Storage Type for the Best Throughput](#broker-storage-types-choosing)
++ [Choose the correct broker storage type for the best throughput](#broker-storage-types-choosing)
 + [Configure Your Network of Brokers Correctly](#network-of-brokers-configure-correctly)
 
 ## Disable Concurrent Store and Dispatch for Queues with Slow Consumers<a name="disable-concurrent-store-and-dispatch-queues-flag-slow-consumers"></a>
@@ -24,7 +24,7 @@ The message throughput of a [broker instance type](broker-instance-types.md) dep
 + The number of producers and consumers
 + The number of destinations
 
-### Understanding the Relationship Between Message Size, Latency, and Throughput<a name="broker-instance-types-message-size-latency-throughput"></a>
+### Understanding the relationship between message size, latency, and throughput<a name="broker-instance-types-message-size-latency-throughput"></a>
 
 Depending on your use case, a larger broker instance type might not necessarily improve system throughput\. When ActiveMQ writes messages to durable storage, the size of your messages determines your system's limiting factor:
 + If your messages are smaller than 100 KB, persistent storage latency is the limiting factor\.
@@ -34,14 +34,14 @@ When you use ActiveMQ in persistent mode, writing to storage normally occurs whe
 
 To determine the best broker instance type for your application, we recommend testing different broker instance types\. For more information, see [Instance types](broker-instance-types.md) and also [Measuring the Throughput for Amazon MQ using the JMS Benchmark](https://aws.amazon.com/blogs/compute/measuring-the-throughput-for-amazon-mq-using-the-jms-benchmark/)\.
 
-### Use Cases for Larger Broker Instance Types<a name="broker-instance-types-larger-use-cases"></a>
+### Use cases for larger broker instance types<a name="broker-instance-types-larger-use-cases"></a>
 
 There are three common use cases when larger broker instance types improve throughput:
 + **Non\-persistent mode** – When your application is less sensitive to losing messages during [broker instance failover](active-standby-broker-deployment.md) \(for example, when broadcasting sports scores\), you can often use ActiveMQ's non\-persistent mode\. In this mode, ActiveMQ writes messages to persistent storage only if the heap memory of the broker instance is full\. Systems that use non\-persistent mode can benefit from the higher amount of memory, faster CPU, and faster network available on larger broker instance types\.
 + **Fast consumers** – When active consumers are available and the [`concurrentStoreAndDispatchQueues`](child-element-details.md#concurrentStoreAndDispatchQueues) flag is enabled, ActiveMQ allows messages to flow directly from producer to consumer without sending messages to storage \(even in persistent mode\)\. If your application can consume messages quickly \(or if you can design your consumers to do this\), your application can benefit from a larger broker instance type\. To let your application consume messages more quickly, add consumer threads to your application instances or scale up your application instances vertically or horizontally\.
 + **Batched transactions** – When you use persistent mode and send multiple messages per transaction, you can achieve an overall higher message throughput by using larger broker instance types\. For more information, see [Should I Use Transactions?](http://activemq.apache.org/should-i-use-transactions.html) in the ActiveMQ documentation\.
 
-## Choose the Correct Broker Storage Type for the Best Throughput<a name="broker-storage-types-choosing"></a>
+## Choose the correct broker storage type for the best throughput<a name="broker-storage-types-choosing"></a>
 
 To take advantage of high durability and replication across multiple Availability Zones, use Amazon EFS\. To take advantage of low latency and high throughput, use Amazon EBS\. For more information, see [Storage](broker-storage.md)\.
 

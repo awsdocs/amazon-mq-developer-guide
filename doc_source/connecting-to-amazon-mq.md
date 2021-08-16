@@ -8,6 +8,7 @@ The following design patterns can improve the effectiveness of your application'
 + [Always Use the Failover Transport to Connect to Multiple Broker Endpoints](#always-use-failover-transport-connect-to-multiple-broker-endpoints)
 + [Avoid Using Message Selectors](#avoid-using-message-selectors)
 + [Prefer Virtual Destinations to Durable Subscriptions](#prefer-virtual-destinations-to-durable-subscriptions)
++ [If using Amazon VPC peering, avoid client IPs in CIDR range `10.0.0.0/16`](#best-practices-activemq-vpc-cidr-restriction)
 
 ## Never Modify or Delete the Amazon MQ Elastic Network Interface<a name="never-modify-delete-elastic-network-interface"></a>
 
@@ -75,3 +76,7 @@ In general, avoid letting consumers route messages because, for optimal decoupli
 ## Prefer Virtual Destinations to Durable Subscriptions<a name="prefer-virtual-destinations-to-durable-subscriptions"></a>
 
 A [durable subscription](http://activemq.apache.org/how-do-durable-queues-and-topics-work.html) can help ensure that the consumer receives all messages published to a topic, for example, after a lost connection is restored\. However, the use of durable subscriptions also precludes the use of competing consumers and might have performance issues at scale\. Consider using [virtual destinations](http://activemq.apache.org/virtual-destinations.html) instead\.
+
+## If using Amazon VPC peering, avoid client IPs in CIDR range `10.0.0.0/16`<a name="best-practices-activemq-vpc-cidr-restriction"></a>
+
+ If you are setting up Amazon VPC peering between on\-premis infrastructure and your Amazon MQ broker, you must not configure client connections with IPs in CIDR range `10.0.0.0/16`\. 

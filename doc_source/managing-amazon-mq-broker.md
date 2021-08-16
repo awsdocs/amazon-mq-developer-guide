@@ -4,6 +4,7 @@ In the following sections, you can find instructions for managing and maintainin
 
 **Topics**
 + [Listing brokers and viewing broker details](amazon-mq-listing-brokers.md)
++ [Maintaining an Amazon MQ broker](maintaining-brokers.md)
 + [Upgrading an Amazon MQ broker engine version](upgrading-brokers.md)
 + [Rebooting a Broker](amazon-mq-rebooting-broker.md)
 + [Deleting a broker](amazon-mq-deleting-broker.md)

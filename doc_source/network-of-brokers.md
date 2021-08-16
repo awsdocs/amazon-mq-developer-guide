@@ -28,7 +28,7 @@ The following are benefits of using a network of brokers:
 
 Amazon MQ supports the ActiveMQ network of brokers feature in a number of ways\. First, you can edit the parameters within each broker's configuration to create a network of brokers, just as you would with native ActiveMQ\. Second, Amazon MQ has sample blueprints that use AWS CloudFormation to automate the creation of a network of brokers\. You can deploy these sample blueprints directly from the Amazon MQ console, or you can edit the related AWS CloudFormation templates to create your own topologies and configurations\.
 
-A network of brokers is established by connecting one broker to another using network connectors\. Once connected, these brokers provide message forwarding\. For instance, if *Broker1* establishes a network connector to *Broker2*, messages on *Broker1* are forwarded to *Broker2* if there is a consumer on that broker for the queue or topic\. If the network connector is configured as `duplex`, messages are also forwarded from *Broker2* to *Broker1*\. Network connectors are configured in the broker *configuration*\. See, [Configuration](configuration.md)\. For instance, here is and example `networkConnector` entry in a broker configuration:
+A network of brokers is established by connecting one broker to another using network connectors\. Once connected, these brokers provide message forwarding\. For instance, if *Broker1* establishes a network connector to *Broker2*, messages on *Broker1* are forwarded to *Broker2* if there is a consumer on that broker for the queue or topic\. If the network connector is configured as `duplex`, messages are also forwarded from *Broker2* to *Broker1*\. Network connectors are configured in the broker *configuration*\. See, [Configuration](configuration.md)\. For instance, here is an example `networkConnector` entry in a broker configuration:
 
 ```
 <networkConnectors>
@@ -237,6 +237,6 @@ When `updateClusterClients` is set to true, clients can be configured to connect
 failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)
 ```
 
-When a new broker connects, it will be receive a list of URIs of all brokers in the network\. If the connection to the broker fails, it can dynamically switch to one of the brokers provided when it connected\.
+When a new broker connects, it will receive a list of URIs of all brokers in the network\. If the connection to the broker fails, it can dynamically switch to one of the brokers provided when it connected\.
 
 For more information on failover, see [Broker\-side Options for Failover](http://activemq.apache.org/failover-transport-reference.html#FailoverTransportReference-Broker-sideOptionsforFailover) in the Active MQ documentation\.

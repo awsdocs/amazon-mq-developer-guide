@@ -14,12 +14,12 @@ The following statistics are valid for all of the metrics:
 The `AWS/AmazonMQ` namespace includes the following metrics\.
 
 **Topics**
-+ [Logging and monitoring ActiveMQ brokers](#activemq-logging-monitoring)
-+ [Logging and monitoring RabbitMQ brokers](#rabbitmq-logging-monitoring)
++ [Logging and monitoring Amazon MQ for ActiveMQ brokers](#activemq-logging-monitoring)
++ [Logging and monitoring Amazon MQ for RabbitMQ brokers](#rabbitmq-logging-monitoring)
 
-## Logging and monitoring ActiveMQ brokers<a name="activemq-logging-monitoring"></a>
+## Logging and monitoring Amazon MQ for ActiveMQ brokers<a name="activemq-logging-monitoring"></a>
 
-### ActiveMQ broker metrics<a name="security-logging-monitoring-cloudwatch-metrics"></a>
+### Amazon MQ for ActiveMQ metrics<a name="security-logging-monitoring-cloudwatch-metrics"></a>
 
 
 | Metric | Unit | Description | 
@@ -92,7 +92,7 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | Topic or Queue | The name of the topic or queue\. | 
 | NetworkConnector  | The name of the network connector\. | 
 
-## Logging and monitoring RabbitMQ brokers<a name="rabbitmq-logging-monitoring"></a>
+## Logging and monitoring Amazon MQ for RabbitMQ brokers<a name="rabbitmq-logging-monitoring"></a>
 
 ### RabbitMQ broker metrics<a name="security-logging-monitoring-cloudwatch-metrics-rabbitmq"></a>
 
@@ -138,7 +138,7 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | Node | The name of the node\.  A node name consists of two parts: a prefix \(usuallly `rabbit`\) and a hostname\. For example, `rabbit@ip-10-0-0-230.us-west-2.compute.internal` is a node name with the prefix `rabbit` and the hostname `ip-10-0-0-230.us-west-2.compute.internal`\.   | 
 | Broker |  The name of the broker\.  | 
 
-### RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-metrics-rabbitmq"></a>
+### RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-queue-metrics-rabbitmq"></a>
 
 
 | Metric | Unit | Description | 
@@ -148,7 +148,11 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | MessageUnacknowledgedCount | Count | The number of messages for which the server is awaiting acknowledgement\. | 
 | MessageCount | Counter | The total number of MessageReadyCount and MessageUnacknowledgedCount \(also known as queue depth\)\. | 
 
-### Dimensions for RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-dimensions-rabbitmq"></a>
+### Dimensions for RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-dimensions-queue-rabbitmq"></a>
+
+**Note**  
+Amazon MQ for RabbitMQ will not publish metrics for virtual hosts and queues with names containing blank spaces, tabs or other non\-ASCII characters\.  
+For more information about dimension names, see [Dimension](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Dimension.html#API_Dimension_Contents) in the *Amazon CloudWatch API Reference*\. 
 
 
 | Dimension | Description | 

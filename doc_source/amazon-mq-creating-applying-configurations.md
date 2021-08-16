@@ -29,7 +29,7 @@ The following example shows how you can create and apply an Amazon MQ broker con
 
 1. On the **Create configuration** page, in the **Details** section, type the **Configuration name** \(for example, `MyConfiguration`\) and select a **Broker engine** version\.
 **Note**  
-To learn more about ActiveMQ engine versions that Amazon MQ supports, see [Supported engine versions](broker-engine.md)\.
+To learn more about ActiveMQ engine versions supported by Amazon MQ for ActiveMQ, see [Managing Amazon MQ for ActiveMQ engine versions](activemq-version-management.md)\.
 
 1. Choose **Create configuration**\.
 

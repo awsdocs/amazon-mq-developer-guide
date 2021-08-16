@@ -3,5 +3,5 @@
 Use these best practices to make the most of Amazon MQ\.
 
 **Topics**
-+ [Best practices for ActiveMQ](best-practices-activemq.md)
-+ [Best practices for RabbitMQ](best-practices-rabbitmq.md)
++ [Amazon MQ for ActiveMQ best practices](best-practices-activemq.md)
++ [Amazon MQ for RabbitMQ best practices](best-practices-rabbitmq.md)
