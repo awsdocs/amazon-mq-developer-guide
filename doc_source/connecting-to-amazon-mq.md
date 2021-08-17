@@ -79,4 +79,4 @@ A [durable subscription](http://activemq.apache.org/how-do-durable-queues-and-to
 
 ## If using Amazon VPC peering, avoid client IPs in CIDR range `10.0.0.0/16`<a name="best-practices-activemq-vpc-cidr-restriction"></a>
 
- If you are setting up Amazon VPC peering between on\-premis infrastructure and your Amazon MQ broker, you must not configure client connections with IPs in CIDR range `10.0.0.0/16`\. 
+ If you are setting up Amazon VPC peering between on\-premises infrastructure and your Amazon MQ broker, you must not configure client connections with IPs in CIDR range `10.0.0.0/16`\. 
