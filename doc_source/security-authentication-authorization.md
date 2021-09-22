@@ -22,7 +22,7 @@ Currently, Amazon MQ doesn't support Client Certificate Authentication\.
 + [Integrate LDAP with ActiveMQ](#integrate-ldap)
 + [Prerequisites](#ldap-prerequisites)
 + [Getting Started with LDAP](#ldap-get-started)
-+ [How LDAP Integration Works](#ldap-support-details)
++ [How LDAP integration works](#ldap-support-details)
 
 ## Integrate LDAP with ActiveMQ<a name="integrate-ldap"></a>
 
@@ -92,7 +92,7 @@ The following image highlights where to specify these optional settings\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/images/amazon-mq-active-ldap-optional-settings.png)
 
-## How LDAP Integration Works<a name="ldap-support-details"></a>
+## How LDAP integration works<a name="ldap-support-details"></a>
 
 You can think of integration in two main categories: the structure for authentication, and the structure for authorization\.
 
