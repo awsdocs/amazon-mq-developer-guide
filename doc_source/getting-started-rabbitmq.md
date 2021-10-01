@@ -33,7 +33,7 @@ The **Additional settings** section provides options to enable CloudWatch logs a
 
 1. On the **Configure settings** page, in the **RabbitMQ access** section, provide a **Username** and **Password**\.
 **Important**  
-Your username can contain only alphanumeric characters, dashes, periods, and underscores \(\- \. \_\)\. This value must not contain any tilde \(\~\) characters\. Amazon MQ prohibits using `guest` as a username\.
+Your username can contain only alphanumeric characters, dashes, periods, and underscores \(\- \. \_\)\. This value must not contain any tilde \(\~\) characters\. Amazon MQ prohibits using `guest` as a username\. We strongly recommend that you never use any personally identifiable information in broker usernames\.
  Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
 
 1. Choose **Next**\.

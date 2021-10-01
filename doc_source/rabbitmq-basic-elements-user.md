@@ -2,7 +2,7 @@
 
  Every AMQP 0\-9\-1 client connection has an associated user which must be authenticated\. Each client connection also targets a virtual host \(vhost\) for which the user must have a set of permissions\. A user may have permission to **configure**, **write** to, and **read** from queues and exchanges in a vhost\. User credentials, and the target vhost are specified at the time the connection is established\.
 
- When you first create a RabbitMQ broker, Amazon MQ uses the username and password you provide to create a RabbitMQ user with the `administrator` tag\. You can then add and manage users via the RabbitMQ [management API](https://pulse.mozilla.org/api/) or the RabbitMQ web console\. You can also use the RabbitMQ web console or the management API to set or modify user permissions and tags\. 
+ When you first create an Amazon MQ for RabbitMQ broker, Amazon MQ uses the username and password you provide to create a RabbitMQ user with the `administrator` tag\. You can then add and manage users via the RabbitMQ [management API](https://pulse.mozilla.org/api/) or the RabbitMQ web console\. You can also use the RabbitMQ web console or the management API to set or modify user permissions and tags\. 
 
 **Note**  
 RabbitMQ users will not be stored or displayed via the Amazon MQ [Users](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-users.html) API\.
@@ -17,6 +17,7 @@ POST /api/users/username HTTP/1.1
 
 **Important**  
 When creating users via the RabbitMQ web console or the management API, avoid `guest` as a username\. RabbitMQ prohibits users with the `guest` username from accessing the broker remotely via the RabbitMQ web console, the management API, or via an application\-level connection\.
+ We strongly recommend that you never use any personally identifiable information in your broker usernames\. 
 
 The `tags` key is mandatory, and is a comma\-separated list of tags for the user\. Amazon MQ supports `administrator`, `management`, and `monitoring` user tags\.
 
