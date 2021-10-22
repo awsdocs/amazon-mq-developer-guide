@@ -7,7 +7,7 @@
 **Note**  
 RabbitMQ users will not be stored or displayed via the Amazon MQ [Users](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-users.html) API\.
 
-To create a new user with the RabbitMQ management API, use the following API endpoint and request body\. Replace *username* and *password* with your new username and password\. 
+ To create a new user with the RabbitMQ management API, use the following API endpoint and request body\. Replace *username* and *password* with your new username and password\. When creating users via the RabbitMQ web console or the management API, avoid `guest` as a username\. Amazon MQ for RabbitMQ prohibits users with the `guest` username from accessing the broker remotely via the RabbitMQ web console, the management API, or via an application\-level connection\. 
 
 ```
 POST /api/users/username HTTP/1.1
@@ -16,8 +16,7 @@ POST /api/users/username HTTP/1.1
 ```
 
 **Important**  
-When creating users via the RabbitMQ web console or the management API, avoid `guest` as a username\. RabbitMQ prohibits users with the `guest` username from accessing the broker remotely via the RabbitMQ web console, the management API, or via an application\-level connection\.
- We strongly recommend that you never use any personally identifiable information in your broker usernames\. 
+ Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker usernames\. Broker usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\. 
 
 The `tags` key is mandatory, and is a comma\-separated list of tags for the user\. Amazon MQ supports `administrator`, `management`, and `monitoring` user tags\.
 

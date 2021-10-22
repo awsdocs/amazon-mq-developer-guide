@@ -5,11 +5,12 @@ Use the information in this section to help you diagnose and resolve common issu
 **Contents**
 + [I can't see general or audit logs for my broker in CloudWatch Logs even though I’ve activated logging\.](#issues-cw-logging-activemq)
 + [After broker restart or maintenance window, I can't connect to my broker even though the status is `RUNNING`\. Why?](#issues-connection-after-restart)
++ [I see some of my clients connecting to the broker, while others are unable to connect\.](#issues-connection-limit)
 + [I'm seeing exception `org.apache.jasper.JasperException: An exception occurred processing JSP page` on the ActiveMQ console when performing operations\.](#issues-jsp-exception)
 
 ## I can't see general or audit logs for my broker in CloudWatch Logs even though I’ve activated logging\.<a name="issues-cw-logging-activemq"></a>
 
- If you’re unable to view logs for your broker in CloudWatch Logs Logs, do the following\. 
+ If you’re unable to view logs for your broker in CloudWatch Logs, do the following\. 
 
 1. Check if the IAM user who creates or reboots the broker has the `logs:CreateLogGroup` permission\. If you don't add the `CreateLogGroup` permission to a user before the user creates or reboots the broker, Amazon MQ will not create the log group\.
 
@@ -27,6 +28,17 @@ Use the information in this section to help you diagnose and resolve common issu
 +  **`OpenTransactionCount`** — A number larger than zero following a restart indicates that the broker will attempt to store previously consumed messages, as a result causing connection issues\. 
 
  To resolve this issue, we recommend resolving your XA transactions with either a `rollback()` or a `commid()`\. For more information, and to see a code example of resolving XA transactions using `rollback()`, see [recovering XA transactions](recover-xa-transactions.md)\. 
+
+## I see some of my clients connecting to the broker, while others are unable to connect\.<a name="issues-connection-limit"></a>
+
+ If your broker is in the `RUNNING` status and some clients are able to connect to the broker successfully, while others are unable to do so, you may have reached the [wire\-level connections](amazon-mq-limits.md#broker-limits) limit for the broker\. To verify that you've reached the wire\-level connections limit, do the following: 
++  Check the *general* broker logs for your Amazon MQ for ActiveMQ broker in CloudWatch Logs\. If the limit has been reached, you will see `Reached Maximum Connections` in the broker logs\. For more information on CloudWatch Logs for Amazon MQ for ActiveMQ brokers, see [Understanding the structure of logging in CloudWatch Logs](configure-logging-monitoring-activemq.md#security-logging-monitoring-configure-cloudwatch-structure)\. 
+
+Once the wire\-level connections limit is reached, the broker will actively refuse additional incoming connections\. To resolve this issue, we recommend upgrading your broker instance type\. For more information on choosing the best instance type for your workload, see [Broker instance types](broker-instance-types.md)\.
+
+ If you've confirmed that the number of your wire\-level connections is less than the broker connection limit, the issue might be related to rebooting clients\. Check your broker logs for numerous and frequent entries of `... Inactive for longer than 600000 ms - removing ...`\. The log entry is indicative of rebooting clients or connectivity issues\. This effect is more evident when clients connect to the broker via a Network Load Balancer \(NLB\) with clients that frequently disconnect and reconnect to the broker\. This is more typically observed in container based clients\. 
+
+ Check your client\-side logs for further details\. The broker will clean up inactive TCP connections after 600000 ms, and free up the connection socket\. 
 
 ## I'm seeing exception `org.apache.jasper.JasperException: An exception occurred processing JSP page` on the ActiveMQ console when performing operations\.<a name="issues-jsp-exception"></a>
 

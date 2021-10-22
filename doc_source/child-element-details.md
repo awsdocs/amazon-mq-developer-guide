@@ -132,7 +132,7 @@ Specifies whether to use concurrent store and dispatch for queues\. For more inf
 **Supported in**  
 Apache ActiveMQ 15\.16\.x and above
 
-When deactivated,garbage collection and cleanup does not take place when the broker is sopped, which speeds up the shutdown process\. The increased speed is useful in cases with large databases or scheduler databases\.
+If deactivated, garbage collection and cleanup does not take place when the broker is stopped, which speeds up the shutdown process\. The increased speed is useful in cases with large databases or scheduler databases\.
 
 **Default:** `true`
 

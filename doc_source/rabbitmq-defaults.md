@@ -32,7 +32,7 @@ Cluster
 + **`max-queues: number-of-queues-per-vhost`** \(vhost limit\) – Sets the limit for the number of queues in a broker\. Similar to the `max-length` policy definition, limiting the number of queues in cluster deployments prevents paused queue synchronization following broker reboots or maintenance windows\. Limiting queues also prevents excessive amounts of CPU usage for maintaining queues\.
 **Deployment modes**  
 Single\-instance, cluster
-+ **`max-connections: number-of-connections-per-vhost`** \(vhost limit\) – Sets the limit for the number of client connections to the broker\. Limiting the number connections according to the recommended values prevents excessive broker memory usage that could result in the broker raising a high memory alarm and pausing operations\.
++ **`max-connections: number-of-connections-per-vhost`** \(vhost limit\) – Sets the limit for the number of client connections to the broker\. Limiting the number of connections according to the recommended values prevents excessive broker memory usage, which could result in the broker raising a high memory alarm and pausing operations\.
 **Deployment modes**  
 Single\-instance, cluster
 
@@ -101,7 +101,7 @@ If you have not created additional vhosts, the **Virtual host** option is not sh
 
    1. For **Apply to**, choose **Exchanges and queues** from the dropdown list\.
 
-   1. For **Priority**, enter an integer greater than all other policies in applied to the vhost\. You can apply exactly one set of policy definitions to RabbitMQ queues and exchanges at any given time\. RabbitMQ chooses the matching policy with the highest priority value\. For more information about policy priorities and how to combine policies, see [Policies](https://www.rabbitmq.com/parameters.html#policies) in the RabbitMQ Server Documentation\.
+   1. For **Priority**, enter an integer greater than all other policies applied to the vhost\. You can apply exactly one set of policy definitions to RabbitMQ queues and exchanges at any given time\. RabbitMQ chooses the matching policy with the highest priority value\. For more information about policy priorities and how to combine policies, see [Policies](https://www.rabbitmq.com/parameters.html#policies) in the RabbitMQ Server Documentation\.
 
    1. For **Definition**, add the following key\-value pairs:
       + **queue\-mode**=**lazy**\. Choose **String** from the dropdown list\.

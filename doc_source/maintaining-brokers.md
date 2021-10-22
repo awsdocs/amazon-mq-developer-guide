@@ -23,7 +23,7 @@ You can schedule the maintenance window when you first create your broker, or by
 
 **Important**  
  You can only adjust the maintenance window of a broker up to **four** times before the next scheduled maintenance window\. Amazon MQ applies a limit of four maintenance window adjustments to ensure that critical software and security patches, as well as important hardware upgrades, are not indefinitely deferred and postponed\.   
- Once a broker maintenance window is completed, Amazon MQ resets the limit, allowing you to adjust the schedule before the next mainteance window occurs\. 
+ Once a broker maintenance window is completed, Amazon MQ resets the limit, allowing you to adjust the schedule before the next maintenance window occurs\. 
 
 ### AWS Management Console<a name="maintaining-brokers-adjusting-maintenance-window-console"></a>
 
@@ -37,15 +37,15 @@ You can schedule the maintenance window when you first create your broker, or by
 
 1. Under **Maintenance**, do the following\.
 
-   1.  For **Start day**, choose a day of the week, for example, **Sunday**, from the dropdown list\. 
+   1.  For **Start day**, choose a day of the week, for example, **Sunday**, from the drop\-down list\. 
 
-   1.  For **Start time**, choose the hour and minute of the day that you want to schedule for the next broker maintenance widnow, for exmaple, **12**:**00**\. 
+   1.  For **Start time**, choose the hour and minute of the day that you want to schedule for the next broker maintenance window, for example, **12**:**00**\. 
 **Note**  
  The **Start time** options are configured in UTC\+0 time zone\. 
 
 1. Scroll to the bottom of the page, and choose **Save**\. The maintenance window is adjusted immediately\.
 
-1. On the broker details page, under **Maintenance widnow**, verify that your new preferred schedule is displayed\.
+1. On the broker details page, under **Maintenance window**, verify that your new preferred schedule is displayed\.
 
 ### AWS CLI<a name="maintaining-brokers-adjusting-maintenance-window-cli"></a>
 

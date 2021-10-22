@@ -34,14 +34,15 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 
    1. Enter the **Broker name**\.
 **Important**  
- We recommend not using any personally identifiable information in broker names\. 
+ Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker names\. Broker names are accessible to other AWS services, including CloudWatch Logs\. Broker names are not intended to be used for private or sensitive data\. 
 
    1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance types](broker-instance-types.md)\.
 
-1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\.
+1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passowrds:
+   +  Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\. 
+   +  Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\. 
 **Important**  
-Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\. We strongly recommend that you never use any personally identifiable information in your broker usernames\.
- Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
+Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker usernames\. Broker usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\.
 
 1. Choose **Deploy**\.
 
@@ -273,7 +274,7 @@ Without the necessary IAM permissions, your function will not be able to success
 
 1.  [Configure your broker as an event source](https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-eventsourcemapping) for a Lambda function using the AWS Management Console\. You can also use the [https://docs.aws.amazon.com/cli/latest/reference/lambda/create-event-source-mapping.html](https://docs.aws.amazon.com/cli/latest/reference/lambda/create-event-source-mapping.html) AWS Command Line Interface command\. 
 
-1.  Write some code for your Lambda function to process the messages from your consumed from your broker\. The Lambda payload that retrieved by your event source mapping depends on the engine type of the broker\. The following is an example of a Lambda payload for an Amazon MQ for ActiveMQ queue\. 
+1.  Write some code for your Lambda function to process the messages consumed from your broker\. The Lambda payload that retrieved by your event source mapping depends on the engine type of the broker\. The following is an example of a Lambda payload for an Amazon MQ for ActiveMQ queue\. 
 **Note**  
  In the example, `testQueue` is the name of the queue\. 
 

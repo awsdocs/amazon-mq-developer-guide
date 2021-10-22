@@ -126,7 +126,7 @@ Your broker will be offline while it is being rebooted\.
 
 ### AWS CLI<a name="upgrading-brokers-automatic-upgrades-cli"></a>
 
- To activate automatic minor version upgrades by using the by using the AWS CLI, use the [update\-broker](https://docs.aws.amazon.com/cli/latest/reference/mq/update-broker.html) CLI command and specify the following parameters\. 
+ To activate automatic minor version upgrades via the AWS CLI, use the [update\-broker](https://docs.aws.amazon.com/cli/latest/reference/mq/update-broker.html) CLI command and specify the following parameters\. 
 +  `--broker-id` – The unique ID that Amazon MQ generates for the broker\. You can parse the ID from your broker ARN\. For example, given the following ARN, `arn:aws:mq:us-east-2:123456789012:broker:MyBroker:b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9`, the broker ID would be `b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
 +  `--auto-minor-version-upgrade` – Activates the auto minor version upgrade option\. 
 
@@ -138,7 +138,7 @@ If you want to deactivate auto minor version upgrades for your broker, use the `
 
 ### Amazon MQ API<a name="upgrading-brokers-automatic-upgrades-api"></a>
 
- To activate automatic minor version upgrades by using the Amazon MQ API, use the [UpdateBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#UpdateBroker) API operation\. Specify `broker-id` as a path parameter\. The following example assumes a broker in the `us-west-2` region\. For more information about available Amazon MQ endpoints, see [Amazon MQ endpoints and quotas\.](https://docs.aws.amazon.com/general/latest/gr/amazon-mq.html#amazon-mq_region) in the *AWS General Reference* 
+ To activate automatic minor version upgrades via the Amazon MQ API, use the [UpdateBroker](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#UpdateBroker) API operation\. Specify `broker-id` as a path parameter\. The following example assumes a broker in the `us-west-2` region\. For more information about available Amazon MQ endpoints, see [Amazon MQ endpoints and quotas\.](https://docs.aws.amazon.com/general/latest/gr/amazon-mq.html#amazon-mq_region) in the *AWS General Reference* 
 
 ```
 PUT /v1/brokers/broker-id HTTP/1.1

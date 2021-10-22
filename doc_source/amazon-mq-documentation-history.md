@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| October 8, 2021 |  Added the following troubleshooting topics for both Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ broker engines: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | September 22, 2021 |  Added the following topics for troubleshooting common connection, and authorization issues with Amazon MQ for ActiveMQ brokers: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | August 12, 2021 |  Added the following section to describe troubleshooting common issues when working with Amazon MQ brokers\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | July 29, 2021 |  Added the following sections to describe Amazon MQ for RabbitMQ version management and upgrading Amazon MQ brokers to new minor and major engine versions as they are supported\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

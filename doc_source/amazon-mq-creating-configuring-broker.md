@@ -2,7 +2,7 @@
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t3`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Broker](broker.md)\.
 
-The first and most common Amazon MQ task is creating a broker\. The following example shows how you can use the AWS Management Console to create and configure a broker using the AWS Management Console\.
+The first and most common Amazon MQ task is creating a broker\. The following example shows how you can create and configure a broker using the AWS Management Console\.
 
 **Topics**
 + [Configure Basic Broker Settings](#configure-basic-broker-settings-console)
@@ -32,14 +32,15 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 
    1. Enter the **Broker name**\.
 **Important**  
- We recommend not using any personally identifiable information in broker names\. 
+ Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker names\. Broker names are accessible to other AWS services, including CloudWatch Logs\. Broker names are not intended to be used for private or sensitive data\. 
 
    1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance types](broker-instance-types.md)\.
 
-1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\.
+1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passowrds:
+   +  Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\. 
+   +  Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\. 
 **Important**  
-Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\. We strongly recommend that you never use any personally identifiable information in your broker usernames\.
- Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
+Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker usernames\. Broker usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\.
 
 ## Step 2: \(Optional\) Configure Additional Broker Settings<a name="configure-advanced-broker-settings-console"></a>
 

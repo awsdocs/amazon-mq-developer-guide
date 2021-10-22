@@ -25,16 +25,17 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 
    1. Enter the Broker name\.
 **Important**  
- We recommend not using any personally identifiable information in broker names\. 
+ Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker names\. Broker names are accessible to other AWS services, including CloudWatch Logs\. Broker names are not intended to be used for private or sensitive data\. 
 
    1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance types](broker-instance-types.md)\.
 **Note**  
 The **Additional settings** section provides options to enable CloudWatch logs and configure network access for your broker\. If you create a private RabbitMQ broker without public accessibility, you must select a Virtual Private Cloud \(VPC\) and configure a security group to access your broker\.
 
-1. On the **Configure settings** page, in the **RabbitMQ access** section, provide a **Username** and **Password**\.
+1. On the **Configure settings** page, in the **RabbitMQ access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passowrds:
+   +  Your username can contain only alphanumeric characters, dashes, periods, and underscores \(\- \. \_\)\. This value must not contain any tilde \(\~\) characters\. Amazon MQ prohibits using `guest` as a username\. 
+   +  Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\. 
 **Important**  
-Your username can contain only alphanumeric characters, dashes, periods, and underscores \(\- \. \_\)\. This value must not contain any tilde \(\~\) characters\. Amazon MQ prohibits using `guest` as a username\. We strongly recommend that you never use any personally identifiable information in broker usernames\.
- Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\.
+Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker usernames\. Broker usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\.
 
 1. Choose **Next**\.
 

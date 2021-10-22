@@ -12,7 +12,7 @@ For data protection purposes, we recommend that you protect AWS account credenti
 
 We strongly recommend that you never put confidential or sensitive information, such as your customers' email addresses, into tags or free\-form fields such as a **Name** field\. This includes when you work with Amazon MQ or other AWS services using the console, API, AWS CLI, or AWS SDKs\. Any data that you enter into tags or free\-form fields used for names may be used for billing or diagnostic logs\. If you provide a URL to an external server, we strongly recommend that you do not include credentials information in the URL to validate your request to that server\.
 
- For both Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ brokers, we also strongly recommend that you never use any personally identifiable information for broker usernames\. This recommendation extends to Amazon MQ for RabbitMQ users created using the RabbitMQ web console, as well as users created using the Amazon MQ API\. 
+ For both Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ brokers, do not use any personally identifiable information \(PII\) or other confidential or sensitive information for broker names or usernames when creating resources via the broker web console, or the Amazon MQ API\. Broker names and usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\. 
 
 ## Encryption<a name="data-protection-encryption"></a>
 

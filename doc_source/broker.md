@@ -1,7 +1,7 @@
 # Broker<a name="broker"></a>
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\. The combined description of the broker instance *class* \(`m5`, `t3`\) and *size* \(`large`, `micro`\) is a *broker instance type* \(for example, `mq.m5.large`\)\. For more information, see [Instance types](broker-instance-types.md)\.
-+ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an Amazon EBS or Amazon EFS storage storage volume\.
++ A *single\-instance broker* is comprised of one broker in one Availability Zone\. The broker communicates with your application and with an Amazon EBS or Amazon EFS storage volume\.
 + An *active/standby broker* is comprised of two brokers in two different Availability Zones, configured in a *redundant pair*\. These brokers communicate synchronously with your application, and with Amazon EFS\.
 
 For more information, see [Broker architecture](amazon-mq-broker-architecture.md)\.

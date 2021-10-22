@@ -4,14 +4,17 @@
 
 **Contents**
 + [I can't connect to my broker web console or endpoints\.](#issues-connecting-to-console-or-endpoint)
++ [My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returing SSL exceptions\.](#issues-ssl-certificate-exception)
 + [I created a broker but broker creation failed\.](#issues-creating-a-broker)
-+ [My broker restarted and I'm not sure why\.](#w248aac33b7c11)
++ [My broker restarted and I'm not sure why\.](#w251aac33b7c13)
 
 ## I can't connect to my broker web console or endpoints\.<a name="issues-connecting-to-console-or-endpoint"></a>
 
 If you're experiencing issues connecting to your broker using the web console or wire\-level endpoints, we recommend the following steps\.
 
 1.  Check whether you're attempting to connect to your broker from behind a firewall\. You might need to configure the firewall to allow access to your broker\. 
+
+1.  Check whether you're trying to connect to your broker using a [FIPS](http://aws.amazon.com/compliance/fips/) endpoint\. Amazon MQ only supports FIPS endpoints when using API operations, and not for wire\-level connections to the broker instance itself\. 
 
 1.  Check if the **Public Accessibility** option for your broker is set to **Yes**\. If this is set to **No**, check your subnet's network [Access Control List \(ACL\)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) rules\. If you've created custom network ACLs, you might need to change the network ACL rules to provide access to your broker\. For more information about Amazon VPC networking, see [Enabling internet access](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html#vpc-igw-internet-access) in the *Amazon VPC User Guide* 
 
@@ -167,16 +170,25 @@ This step does not apply to Amazon MQ for RabbitMQ brokers with public accessibi
 
 ------
 
+## My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returing SSL exceptions\.<a name="issues-ssl-certificate-exception"></a>
+
+ Your broker endpoint certificate may have been updated during the broker [maintenance window](maintaining-brokers.md)\. Amazon MQ broker certificates are rotated every 12 months and updated about a month before a certificate expires\.
+
+ We recommend using the Amazon root certificate authority \(CA\) in [Amazon Trust Services](https://www.amazontrust.com/repository/) to authenticate against in your clients' trust store\. All Amazon MQ broker certificates are signed with this root CA\. By using an Amazon root CA, you will no longer need to download the new Amazon MQ broker certificate every time there is a certificate update on the broker\. 
+
+**Note**  
+ With Amazon MQ for ActiveMQ, the certificate is placed on the instance, while with Amazon MQ for RabbitMQ ,the certificate is on the Network Load Balancer\. 
+
 ## I created a broker but broker creation failed\.<a name="issues-creating-a-broker"></a>
 
 If your broker is in a `CREATION_FAILED` status, do the following\.
 +  Check your IAM permissions\. To create a broker must either use the AWS managed IAM policy `AmazonMQFullAccess` or have the correct set of Amazon EC2 permissions in your custome IAM policy\. To learn more about the required Amazon EC2 permissions you need, see [ IAM permissions required to create an Amazon MQ broker](security-api-authentication-authorization.md#security-permissions-required-to-create-broker)\. 
 +  Check if the subnet you are choosing for your broker is in a shared Amazon Virtual Private Cloud \(VPC\)\. To create an Amazon MQ broker in a shared Amazon VPC, you must create it in the account that owns the Amazon VPC\. 
 
-## My broker restarted and I'm not sure why\.<a name="w248aac33b7c11"></a>
+## My broker restarted and I'm not sure why\.<a name="w251aac33b7c13"></a>
 
 If your broker has restarted automatically, it may be due to one of the following reasons\.
-+  Your broker may have restarted because of a scheduled weekly maintenance window\. Periodically, Amazon MQ performs maintenance to the hardware, operating system, or the engine software a message broker\. The duration of the maintenance varies, but can last up to two hours, depending on the operations that are scheduled for your message broker\. Brokers might restart at any point during the two hour maintenance window\. For more information about broker maintenance windows, see [Maintaining an Amazon MQ broker](maintaining-brokers.md)\. 
++  Your broker may have restarted because of a scheduled weekly maintenance window\. Periodically, Amazon MQ performs maintenance to the hardware, operating system, or the engine software of a message broker\. The duration of the maintenance varies, but can last up to two hours, depending on the operations that are scheduled for your message broker\. Brokers might restart at any point during the two hour maintenance window\. For more information about broker maintenance windows, see [Maintaining an Amazon MQ broker](maintaining-brokers.md)\. 
 +  Your broker instance type might not be suitable to your application workload\. For example, running a production workload on a `mq.t2.micro` might result in the broker running out of resources\. High CPU utilization, or high broker memory usage can cause a broker to unexpectedly restart\. To see how much CPU and memory is being utilized by your broker, use the following CloudWatch metrics for your engine type\.
   +  **Amazon MQ for ActiveMQ** – Check `CpuUtilization` for the percentage of allocated Amazon EC2 compute units that the broker currently uses\. Check `HeapUsage`for the percentage of the ActiveMQ JVM memory limit that the broker currently uses\. 
   +  **Amazon MQ for RabbitMQ** – Check `SystemCpuUtilization` for the percentage of allocated Amazon EC2 compute units that the broker currently uses\. Check `RabbitMQMemUsed` for the volume of RAM used in Bytes, and divide by `RabbitMQMemLimit` for the percentage of memory used by the RabbitMQ node\. 
