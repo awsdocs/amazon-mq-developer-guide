@@ -4,4 +4,5 @@ The following tutorials show how you can configure and use RabbitMQ on Amazon MQ
 
 **Topics**
 + [Editing broker preferences](amazon-mq-rabbitmq-editing-broker-preferences.md)
++ [Using Python Pika with Amazon MQ for RabbitMQ](amazon-mq-rabbitmq-pika.md)
 + [Resolving RabbitMQ paused queue synchronization](rabbitmq-queue-sync.md)
