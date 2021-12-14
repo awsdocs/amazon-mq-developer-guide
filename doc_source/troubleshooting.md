@@ -7,7 +7,7 @@
   + [I can't connect to my broker web console or endpoints\.](general.md#issues-connecting-to-console-or-endpoint)
   + [My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returing SSL exceptions\.](general.md#issues-ssl-certificate-exception)
   + [I created a broker but broker creation failed\.](general.md#issues-creating-a-broker)
-  + [My broker restarted and I'm not sure why\.](general.md#w251aac33b7c13)
+  + [My broker restarted and I'm not sure why\.](general.md#w252aac33b7c13)
 + [Troubleshooting: Amazon MQ for ActiveMQ](troubleshooting-activemq.md)
   + [I can't see general or audit logs for my broker in CloudWatch Logs even though I’ve activated logging\.](troubleshooting-activemq.md#issues-cw-logging-activemq)
   + [After broker restart or maintenance window, I can't connect to my broker even though the status is `RUNNING`\. Why?](troubleshooting-activemq.md#issues-connection-after-restart)

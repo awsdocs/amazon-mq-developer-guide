@@ -144,7 +144,7 @@ Amazon MQ supports policies based on tags\. For instance, you could deny access 
             "Action": [
                 "mq:DeleteBroker",
                 "mq:RebootBroker",
-                "mq:DeleteTag"
+                "mq:DeleteTags"
             ],
             "Resource": "*",
             "Condition": {
