@@ -83,7 +83,7 @@ You can schedule the maintenance window when you first create your broker, or by
    Authorization: authorization-string
    ```
 
-   Use the `maintenanceWindowStartTime` parameter and the [ `WeeklyStartTime`](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-model-weeklystarttime) resource type in the request payload\.
+   Use the `maintenanceWindowStartTime` parameter and the [https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-model-weeklystarttime](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-model-weeklystarttime) resource type in the request payload\.
 
    ```
    {

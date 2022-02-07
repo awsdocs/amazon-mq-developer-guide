@@ -1,4 +1,4 @@
-# Configuring RabbitMQ logs<a name="security-logging-monitoring-rabbitmq"></a>
+# Configuring Amazon MQ for RabbitMQ logs<a name="security-logging-monitoring-rabbitmq"></a>
 
  When you enable CloudWatch logging for your RabbitMQ brokers, Amazon MQ uses a service\-linked role to publish general logs to CloudWatch\. If no Amazon MQ service\-linked role exists when you first create a broker, Amazon MQ will automatically create one\. All subsequent RabbitMQ brokers will use the same service\-linked role to publish logs to CloudWatch\.
 

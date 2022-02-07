@@ -5,6 +5,7 @@ The following table lists changes to the *Amazon MQ Developer Guide*\. For Amazo
 
 | Date | Documentation Update | 
 | --- | --- | 
+| January 13, 2022 |  Added a new troubleshooting section that lists the status codes that Amazon MQ returns when a broker is in an unhealthy state, along with detailed information about diagnosing, and recovering the broker\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | November 8, 2021 |  Added new tutorial that describes setting up a Python Pika client with Amazon MQ for RabbitMQ brokers\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | October 8, 2021 |  Added the following troubleshooting topics for both Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ broker engines: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 
 | September 22, 2021 |  Added the following topics for troubleshooting common connection, and authorization issues with Amazon MQ for ActiveMQ brokers: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-documentation-history.html)  | 

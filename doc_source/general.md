@@ -1,4 +1,4 @@
-# Troubleshooting: general<a name="general"></a>
+# Troubleshooting: General<a name="general"></a>
 
  Use the information in this section to help you diagnose common issues you might encounter when working with Amazon MQ brokers, such as issues connecting to your broker, and broker reboots\. 
 
@@ -6,7 +6,7 @@
 + [I can't connect to my broker web console or endpoints\.](#issues-connecting-to-console-or-endpoint)
 + [My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returing SSL exceptions\.](#issues-ssl-certificate-exception)
 + [I created a broker but broker creation failed\.](#issues-creating-a-broker)
-+ [My broker restarted and I'm not sure why\.](#w252aac33b7c13)
++ [My broker restarted and I'm not sure why\.](#w268aac33b7c13)
 
 ## I can't connect to my broker web console or endpoints\.<a name="issues-connecting-to-console-or-endpoint"></a>
 
@@ -185,7 +185,7 @@ If your broker is in a `CREATION_FAILED` status, do the following\.
 +  Check your IAM permissions\. To create a broker must either use the AWS managed IAM policy `AmazonMQFullAccess` or have the correct set of Amazon EC2 permissions in your custome IAM policy\. To learn more about the required Amazon EC2 permissions you need, see [ IAM permissions required to create an Amazon MQ broker](security-api-authentication-authorization.md#security-permissions-required-to-create-broker)\. 
 +  Check if the subnet you are choosing for your broker is in a shared Amazon Virtual Private Cloud \(VPC\)\. To create an Amazon MQ broker in a shared Amazon VPC, you must create it in the account that owns the Amazon VPC\. 
 
-## My broker restarted and I'm not sure why\.<a name="w252aac33b7c13"></a>
+## My broker restarted and I'm not sure why\.<a name="w268aac33b7c13"></a>
 
 If your broker has restarted automatically, it may be due to one of the following reasons\.
 +  Your broker may have restarted because of a scheduled weekly maintenance window\. Periodically, Amazon MQ performs maintenance to the hardware, operating system, or the engine software of a message broker\. The duration of the maintenance varies, but can last up to two hours, depending on the operations that are scheduled for your message broker\. Brokers might restart at any point during the two hour maintenance window\. For more information about broker maintenance windows, see [Maintaining an Amazon MQ broker](maintaining-brokers.md)\. 

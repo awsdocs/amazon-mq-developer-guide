@@ -24,6 +24,7 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 
 | Metric | Unit | Description | 
 | --- | --- | --- | 
+| AmqpMaximumConnections | Count | The maximum number of clients you can connect to your broker using AMQP\. For more information on connection quotas, see [Quotas in Amazon MQ](amazon-mq-limits.md)\. | 
 | BurstBalance | Percent | The percentage of burst credits remaining on the Amazon EBS volume used to persist message data for throughput\-optimized brokers\. If this balance reaches zero, the IOPS provided by the Amazon EBS volume will decrease until the Burst Balance refills\. For more information on how Burst Balances work in Amazon EBS, see: [I/O Credits and Burst Performance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html#IOcredit)\. | 
 | CpuCreditBalance | Credits \(vCPU\-minutes\) |   This metric is available only for the `mq.t2.micro` broker instance type\. CPU credit metrics are available only at five\-minute intervals\.  The number of earned CPU credits that an instance has accrued since it was launched or started \(including the number of launch credits\)\. The credit balance is available for the broker instance to spend on bursts beyond the baseline CPU utilization\. Credits are accrued in the credit balance after they're earned and removed from the credit balance after they're spent\. The credit balance has a maximum limit\. Once the limit is reached, any newly earned credits are discarded\.  | 
 | CpuUtilization | Percent | The percentage of allocated Amazon EC2 compute units that the broker currently uses\. | 
@@ -34,9 +35,13 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 | JobSchedulerStorePercentUsage | Percent | The percentage of disk space used by the job scheduler store\. | 
 | JournalFilesForFastRecovery | Count | The number of journal files that will be replayed after a clean shutdown\. | 
 | JournalFilesForFullRecovery | Count | The number of journal files that will be replayed after an unclean shutdown\. | 
+| MqttMaximumConnections | Count | The maximum number of clients you can connect to your broker using MQTT\. For more information on connection quotas, see [Quotas in Amazon MQ](amazon-mq-limits.md)\. | 
+| NetworkConnectorConnectionCount | Count | The number of nodes connected to the broker in a [network of brokers](network-of-brokers.md) using NetworkConnector\. | 
 | NetworkIn | Bytes | The volume of incoming traffic for the broker\. | 
 | NetworkOut | Bytes | The volume of outgoing traffic for the broker\. | 
 | OpenTransactionCount | Count | The total number of transactions in progress\. | 
+| OpenwireMaximumConnections | Count | The maximum number of clients you can connect to your broker using OpenWire\. For more information on connection quotas, see [Quotas in Amazon MQ](amazon-mq-limits.md)\. | 
+| StompMaximumConnections | Count | The maximum number of clients you can connect to your broker using STOMP\. For more information on connection quotas, see [Quotas in Amazon MQ](amazon-mq-limits.md)\. | 
 | StorePercentUsage | Percent | The percent used by the storage limit\. If this reaches 100, the broker will refuse messages\. | 
 | TempPercentUsage | Percent | The percentage of available temporary storage used by non\-persistent messages\.  | 
 | TotalConsumerCount | Count | The number of message consumers subscribed to destinations on the current broker\. | 
@@ -44,6 +49,7 @@ The `AWS/AmazonMQ` namespace includes the following metrics\.
 | TotalProducerCount | Count | The number of message producers active on destinations on the current broker\. | 
 | VolumeReadOps | Count | The number of read operations performed on the Amazon EBS volume\. | 
 | VolumeWriteOps | Count | The number of write operations performed on the Amazon EBS volume\. | 
+| WsMaximumConnections | Count | The maximum number of clients you can connect to your broker using WebSocket\. For more information on connection quotas, see [Quotas in Amazon MQ](amazon-mq-limits.md)\. | 
 
 #### Dimensions for ActiveMQ broker metrics<a name="security-logging-monitoring-cloudwatch-dimensions"></a>
 
@@ -110,6 +116,12 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | PublishRate | Count | The rate at which messages are published to the broker\. The number produced represents the number of messages per second at the time of sampling\.  | 
 | ConfirmRate | Count | The rate at which the RabbitMQ server is confirming published messages\. You can compare this metric with PublishRate to better understand how your broker is performing\. The number produced represents the number of messages per second at the time of sampling\. | 
 | AckRate | Count | The rate at which messages are being acknowledged by consumers\. The number produced represents the number of messages per second at the time of sampling\. | 
+| SystemCpuUtilization | Percent | The percentage of allocated Amazon EC2 compute units that the broker currently uses\. For cluster deployments, this value represents the aggregate of all three RabbitMQ nodes' correspondig metric values\. | 
+| RabbitMQMemLimit | Bytes | The RAM limit for a RabbitMQ broker\. For cluster deployments, this value represents the aggregate of all three RabbitMQ nodes' correspondig metric values\. | 
+| RabbitMQMemUsed | Bytes | The volume of RAM used by a RabbitMQ broker\. For cluster deployments, this value represents the aggregate of all three RabbitMQ nodes' correspondig metric values\. | 
+| RabbitMQDiskFreeLimit | Bytes | The disk limit for a RabbitMQ broker\. For cluster deployments, this value represents the aggregate of all three RabbitMQ nodes' correspondig metric values\. This metric is different per instance size\. For more information about Amazon MQ instance types, see [Amazon MQ for RabbitMQ instance types](broker-instance-types.md#rabbitmq-broker-instance-types)\. | 
+| RabbitMQDiskFree | Bytes | The total volume of free disk space available in a RabbitMQ broker\. When disk usage goes above its limit, the cluster will block all producer connections\. For cluster deployments, this value represents the aggregate of all three RabbitMQ nodes' correspondig metric values\. | 
+| RabbitMQFdUsed | Count | Number of file descriptors used\. For cluster deployments, this value represents the aggregate of all three RabbitMQ nodes' correspondig metric values\. | 
 
 ### Dimensions for RabbitMQ broker metrics<a name="security-logging-monitoring-cloudwatch-dimensions-rabbitmq"></a>
 
@@ -126,7 +138,7 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | SystemCpuUtilization | Percent | The percentage of allocated Amazon EC2 compute units that the broker currently uses\. | 
 | RabbitMQMemLimit | Bytes | The RAM limit for a RabbitMQ node\. | 
 | RabbitMQMemUsed | Bytes | The volume of RAM used by a RabbitMQ node\. When memory use goes above the limit, the cluster will block all producer connections\. | 
-| RabbitMQDiskFreeLimit | Bytes | The disk limit for a RabbitMQ node\. This metric is different per instance size\. For more information about Amazon MQ instance types, see  | 
+| RabbitMQDiskFreeLimit | Bytes | The disk limit for a RabbitMQ node\. This metric is different per instance size\. For more information about Amazon MQ instance types, see [Amazon MQ for RabbitMQ instance types](broker-instance-types.md#rabbitmq-broker-instance-types)\. | 
 | RabbitMQDiskFree | Bytes | The total volume of free disk space available in a RabbitMQ node\. When disk usage goes above its limit, the cluster will block all producer connections\. | 
 | RabbitMQFdUsed | Count | Number of file descriptors used\. | 
 

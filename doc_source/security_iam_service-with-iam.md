@@ -63,8 +63,8 @@ In the Amazon MQ, the primary AWS resources are an Amazon MQ message broker and 
 
 | Resource Types | ARN | Condition Keys | 
 | --- | --- | --- | 
-|   brokers  |  arn:$\{Partition\}:mq:$\{Region\}:$\{Account\}:broker:$\{broker\-id\}  |   [ aws:ResourceTag/$\{TagKey\} ](#amazonmq-aws_ResourceTag___TagKey_)   | 
-|   configurations  |  arn:$\{Partition\}:mq:$\{Region\}:$\{Account\}:configuration:$\{configuration\-id\}  |   [ aws:ResourceTag/$\{TagKey\} ](#amazonmq-aws_ResourceTag___TagKey_)   | 
+|   brokers  |  arn:$\{Partition\}:mq:$\{Region\}:$\{Account\}:broker:$\{broker\-id\}  |   [aws:ResourceTag/$\{TagKey\}](#amazonmq-aws_ResourceTag___TagKey_)   | 
+|   configurations  |  arn:$\{Partition\}:mq:$\{Region\}:$\{Account\}:configuration:$\{configuration\-id\}  |   [aws:ResourceTag/$\{TagKey\}](#amazonmq-aws_ResourceTag___TagKey_)   | 
 
 For more information about the format of ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\.
 

@@ -1,4 +1,4 @@
-# Configuring ActiveMQ logs<a name="configure-logging-monitoring-activemq"></a>
+# Configuring Amazon MQ for ActiveMQ logs<a name="configure-logging-monitoring-activemq"></a>
 
 To allow Amazon MQ to publish logs to CloudWatch Logs, you must [add a permission to your Amazon MQ user](#security-logging-monitoring-configure-cloudwatch-permissions) and also [configure a resource\-based policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions) before you create or restart the broker\.
 
@@ -6,8 +6,9 @@ The following describes the steps to configure CloudWatch logs for your ActiveMQ
 
 **Topics**
 + [Understanding the structure of logging in CloudWatch Logs](#security-logging-monitoring-configure-cloudwatch-structure)
-+ [Add the CreateLogGroup Permission to Your Amazon MQ User](#security-logging-monitoring-configure-cloudwatch-permissions)
++ [Add the `CreateLogGroup` permission to your Amazon MQ user](#security-logging-monitoring-configure-cloudwatch-permissions)
 + [Configure a resource\-based policy for Amazon MQ](#security-logging-monitoring-configure-cloudwatch-resource-permissions)
++ [Cross\-service confused deputy prevention](#security-logging-monitoring-configure-cloudwatch-confused-deputy)
 + [Troubleshooting CloudWatch Logs Configuration](#security-logging-monitoring-configure-cloudwatch-troubleshoot)
 
 ## Understanding the structure of logging in CloudWatch Logs<a name="security-logging-monitoring-configure-cloudwatch-structure"></a>
@@ -35,7 +36,7 @@ activemq-b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-2.log
 
 The `-1` and `-2` suffixes denote individual broker instances\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html) in the *[Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)*\. 
 
-## Add the CreateLogGroup Permission to Your Amazon MQ User<a name="security-logging-monitoring-configure-cloudwatch-permissions"></a>
+## Add the `CreateLogGroup` permission to your Amazon MQ user<a name="security-logging-monitoring-configure-cloudwatch-permissions"></a>
 
 To allow Amazon MQ to create a CloudWatch Logs log group, you must ensure that the IAM user who creates or reboots the broker has the `logs:CreateLogGroup` permission\.
 
@@ -97,6 +98,75 @@ aws --region us-east-1 logs put-resource-policy --policy-name AmazonMQ-logs \
 
 **Note**  
 Because this example uses the `/aws/amazonmq/` prefix, you need to configure the resource\-based policy only once per AWS account, per region\.
+
+## Cross\-service confused deputy prevention<a name="security-logging-monitoring-configure-cloudwatch-confused-deputy"></a>
+
+ The confused deputy problem is a security issue where an entity that doesn't have permission to perform an action can coerce a more\-privileged entity to perform the action\. In AWS, cross\-service impersonation can result in the confused deputy problem\. Cross\-service impersonation can occur when one service \(the *calling service*\) calls another service \(the *called service*\)\. The calling service can be manipulated to use its permissions to act on another customer's resources in a way it should not otherwise have permission to access\. To prevent this, AWS provides tools that help you protect your data for all services with service principals that have been given access to resources in your account\. 
+
+ We recommend using the `[aws:SourceArn](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn)` and `[aws:SourceAccount](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount)` global condition context keys in your Amazon MQ resource\-based policy to limit CloudWatch Logs access to one or more specified brokers\. 
+
+**Note**  
+ If you use both global condition context keys, the `aws:SourceAccount` value and the account in the `aws:SourceArn` value must use the same account ID when used in the same policy statement\. 
+
+ The following example demonstrates a resource\-based policy that limits CloudWatch Logs access to a single Amazon MQ broker\. 
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "mq.amazonaws.com"
+      },
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:/aws/amazonmq/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "123456789012",
+          "aws:SourceArn": "arn:aws:mq:us-east-2:123456789012:broker:MyBroker:b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9"
+        }
+      }
+    }
+  ]
+}
+```
+
+ You can also configure your resource\-based policy to limit CloudWatch Logs access to all brokers in an account, as shown in the following\. 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": [
+            "mq.amazonaws.com"
+          ]
+        },
+        "Action": [
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ],
+        "Resource": "arn:aws:logs:*:*:log-group:/aws/amazonmq/*",
+        "Condition": {
+          "ArnLike": {
+            "aws:SourceArn": "arn:aws:mq:*:123456789012:broker:*"
+          },
+          "StringEquals": {
+            "aws:SourceAccount": "123456789012"
+          }
+        }
+      }
+    ]
+  }
+```
+
+For more information about the confused deputy security issue, see [The confused deputy problem](https://docs.aws.amazon.com/hIAM/latest/UserGuide/confused-deputy.html) in the *IAM User Guide*\.
 
 ## Troubleshooting CloudWatch Logs Configuration<a name="security-logging-monitoring-configure-cloudwatch-troubleshoot"></a>
 
