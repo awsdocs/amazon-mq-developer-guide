@@ -26,12 +26,12 @@ The following ports are grouped according to engine types because Amazon MQ for 
    + Web console – Port `8162`
    + OpenWire – Port `61617`
    + AMQP – Port `5671`
-   + STOPM – Port `61614`
+   + STOMP – Port `61614`
    + MQTT – Port `8883`
    + WSS – Port `61619`
 
 **Amazon MQ for RabbitMQ**
-   + Web console and management API – Port ` 443` and `15671`
+   + Web console and management API – Port `443` and `15671`
    + AMQP – Port `5671`
 
 1.  Run the following network connectivity tests for your broker engine type\. 
