@@ -8,6 +8,7 @@ Use this as a reference to quickly find recommendations for maximizing performan
 + [Keep queues short](#best-practices-rabbitmq-keep-queues-short)
 + [Configure acknowledgement and confirmation](#best-practices-rabbitmq-ack)
 + [Configure pre\-fetching](#best-practices-rabbitmq-prefetch)
++ [Configure Celery](#best-practices-rabbitmq-celery)
 + [Automatically recover from network failures](#best-practices-rabbitmq-connection-recovery)
 
 ## Enable lazy queues<a name="best-practices-rabbitmq-lazy-queues"></a>
@@ -122,6 +123,14 @@ channel.basicConsume("my_queue", false, consumer);
 
 **Note**  
 In the RabbitMQ Java client library, the default value for the `global` flag is set to `false`, so the above example can be written simply as `channel.basicQos(10)`\.
+
+## Configure Celery<a name="best-practices-rabbitmq-celery"></a>
+
+ Python Celery sends a lot of unnecessary messages that can make finding and processing the useful information harder\. To reduce the noise and make processing easier, enter the following command: 
+
+```
+celery -A app_name worker --without-heartbeat --without-gossip --without-mingle
+```
 
 ## Automatically recover from network failures<a name="best-practices-rabbitmq-connection-recovery"></a>
 

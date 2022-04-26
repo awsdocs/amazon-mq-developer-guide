@@ -17,13 +17,14 @@ POST /api/users/username HTTP/1.1
 
 **Important**  
  Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker usernames\. Broker usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\. 
+ If you've forgetten the admin password you set while creating the broker, you cannot reset your credentials\. If you've created multiple administrators, you can log in using another admin user and reset or recreate your credentials\. If you have only one admin user, you must delete the broker and create a new one with new credentials\. We recommend consuming or backing up messages before deleting the broker\. 
 
 The `tags` key is mandatory, and is a comma\-separated list of tags for the user\. Amazon MQ supports `administrator`, `management`, and `monitoring` user tags\.
 
 You can set permissions for an individual user by using the following API endpoint and request body\. Replace *vhost* and *username* with your information\. For the default vhost `/`, use `2f%`\.
 
 ```
-POST /api/users/vhost/username HTTP/1.1
+POST /api/permissions/vhost/username HTTP/1.1
 
 {"configure":".*","write":".*","read":".*"}
 ```

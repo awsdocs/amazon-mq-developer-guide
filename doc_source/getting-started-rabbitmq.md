@@ -31,7 +31,7 @@ The first and most common Amazon MQ task is creating a broker\. The following ex
 **Note**  
 The **Additional settings** section provides options to enable CloudWatch logs and configure network access for your broker\. If you create a private RabbitMQ broker without public accessibility, you must select a Virtual Private Cloud \(VPC\) and configure a security group to access your broker\.
 
-1. On the **Configure settings** page, in the **RabbitMQ access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passowrds:
+1. On the **Configure settings** page, in the **RabbitMQ access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passwords:
    +  Your username can contain only alphanumeric characters, dashes, periods, and underscores \(\- \. \_\)\. This value must not contain any tilde \(\~\) characters\. Amazon MQ prohibits using `guest` as a username\. 
    +  Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\. 
 **Important**  

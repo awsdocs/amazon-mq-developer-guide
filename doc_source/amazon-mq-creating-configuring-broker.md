@@ -36,7 +36,7 @@ Amazon EBS replicates data within a single Availability Zone and doesn't support
 
    1. Choose the **Broker instance type** \(for example, **mq\.m5\.large**\)\. For more information, see [Instance types](broker-instance-types.md)\.
 
-1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passowrds:
+1. In the **ActiveMQ Web Console access** section, provide a **Username** and **Password**\. The following restrictions apply to broker usernames and passwords:
    +  Your username can contain only alphanumeric characters, dashes, periods, underscores, and tildas \(\- \. \_ \~\)\. 
    +  Your password must be at least 12 characters long, contain at least 4 unique characters and must not contain commas, colons, or equal signs \(,:=\)\. 
 **Important**  
@@ -53,7 +53,7 @@ Do not add personally identifiable information \(PII\) or other confidential or 
 
 1. Expand the **Additional settings** section\.
 
-1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](configuration.md) and [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.
+1. In the **Configuration** section, choose **Create a new configuration with default values** or **Select an existing configuration**\. For more information, see [Configuration](configuration.md) and [Amazon MQ for ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.
 
 1. In the **Logs** section, choose whether to publish **General** logs and **Audit** logs to Amazon CloudWatch Logs\. For more information, see [Configuring Amazon MQ to publish logs to Amazon CloudWatch Logs](security-logging-monitoring-configure-cloudwatch.md)\.
 **Important**  

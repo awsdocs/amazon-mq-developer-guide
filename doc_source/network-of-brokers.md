@@ -109,7 +109,7 @@ This topology, and one that includes a mesh of *active/standby* pairs of brokers
 </networkConnectors>
 ```
 
-By adding the above connectors to the configurations of *Broker1* and *Broker2*, you can create a mesh between these three brokers that forwards message between all the brokers on demand\. For more information, see [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.
+By adding the above connectors to the configurations of *Broker1* and *Broker2*, you can create a mesh between these three brokers that forwards message between all the brokers on demand\. For more information, see [Amazon MQ for ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.
 
 ### Hub and Spoke Topology<a name="nob-topologies-hub"></a>
 

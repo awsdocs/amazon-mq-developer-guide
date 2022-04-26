@@ -42,9 +42,9 @@ Once the wire\-level connections limit is reached, the broker will actively refu
 
 ## I'm seeing exception `org.apache.jasper.JasperException: An exception occurred processing JSP page` on the ActiveMQ console when performing operations\.<a name="issues-jsp-exception"></a>
 
- If you are using simple authentication and configuring `AuthorizationPlugin` for queue and topic authorization, make sure to use the `AuthorizationEntries` element in your XML configuration file, and allow the `activmemq.webconsole` group permission to all queues and topics\. This ensures that the ActiveMQ web console can communicate with the ActiveMQ broker\. 
+ If you are using simple authentication and configuring `AuthorizationPlugin` for queue and topic authorization, make sure to use the `AuthorizationEntries` element in your XML configuration file, and allow the `activemq-webconsole` group permission to all queues and topics\. This ensures that the ActiveMQ web console can communicate with the ActiveMQ broker\. 
 
- The following example `AuthorizationEntry` grants read and write permissions for all queues and topics to the `activemq.webconsole` group\. 
+ The following example `AuthorizationEntry` grants read and write permissions for all queues and topics to the `activemq-webconsole` group\. 
 
 ```
 <authorizationEntries>

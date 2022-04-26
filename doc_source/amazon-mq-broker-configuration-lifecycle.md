@@ -12,7 +12,7 @@ The next scheduled maintenance window triggers a reboot\. If the broker is reboo
 For information about creating, editing, and managing configurations, see the following:
 + [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
 + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
-+ [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
++ [Amazon MQ for ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
 
 For information about creating, editing, and deleting ActiveMQ users, see the following:
 + [Creating and managing ActiveMQ broker users](amazon-mq-listing-managing-users.md)

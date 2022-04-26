@@ -10,7 +10,7 @@ For information about creating, editing, and managing configurations, see the fo
 + [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md)
 + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 + [Configurations](amazon-mq-limits.md#configuration-limits)
-+ [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
++ [Amazon MQ for ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
 
 To keep track of the changes you make to your configuration, you can create *configuration revisions*\. For more information, see [Creating and applying ActiveMQ broker configurations](amazon-mq-creating-applying-configurations.md) and [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)\.
 

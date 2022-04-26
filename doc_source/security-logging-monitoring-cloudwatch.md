@@ -156,9 +156,9 @@ For example, in a five\-minute [CloudWatch period](https://docs.aws.amazon.com/A
 | Metric | Unit | Description | 
 | --- | --- | --- | 
 | ConsumerCount | Count | The number of consumers subscribed to the queue\. | 
-| MessageReadyCount | Counter | The number of messages that are currently available to be delivered\. | 
+| MessageReadyCount | Count | The number of messages that are currently available to be delivered\. | 
 | MessageUnacknowledgedCount | Count | The number of messages for which the server is awaiting acknowledgement\. | 
-| MessageCount | Counter | The total number of MessageReadyCount and MessageUnacknowledgedCount \(also known as queue depth\)\. | 
+| MessageCount | Count | The total number of MessageReadyCount and MessageUnacknowledgedCount \(also known as queue depth\)\. | 
 
 ### Dimensions for RabbitMQ queue metrics<a name="security-logging-monitoring-cloudwatch-dimensions-queue-rabbitmq"></a>
 
@@ -170,4 +170,4 @@ For more information about dimension names, see [Dimension](https://docs.aws.ama
 | Dimension | Description | 
 | --- | --- | 
 | Queue | The name of the queue\. | 
-| Virtual host | Name of the virtual host\. | 
+| VirtualHost | Name of the virtual host\. | 

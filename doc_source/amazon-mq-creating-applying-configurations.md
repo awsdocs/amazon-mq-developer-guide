@@ -8,7 +8,7 @@ For an active/standby broker, if one of the broker instances undergoes maintenan
 For more information, see the following:
 + [Configuration](configuration.md)
 + [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)
-+ [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
++ [Amazon MQ for ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)
 + [Editing ActiveMQ broker configurations and managing configuration revisions](amazon-mq-editing-managing-configurations.md)
 
 The following example shows how you can create and apply an Amazon MQ broker configuration using the AWS Management Console\.
@@ -58,7 +58,7 @@ Editing the current configuration creates a new configuration revision\.
 
    The new revision of the configuration is saved\.
 **Important**  
-The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.  
+The Amazon MQ console automatically sanitizes invalid and prohibited configuration parameters according to a schema\. For more information and a full list of permitted XML parameters, see [Amazon MQ for ActiveMQ broker configuration parameters](amazon-mq-broker-configuration-parameters.md)\.  
 Making changes to a configuration does *not* apply the changes to the broker immediately\. To apply your changes, you must [wait for the next maintenance window](amazon-mq-editing-managing-configurations.md#apply-configuration-revision-editing-console) or [reboot the broker](amazon-mq-rebooting-broker.md)\. For more information, see [Amazon MQ broker configuration lifecycle](amazon-mq-broker-configuration-lifecycle.md)\.  
 Currently, you can't delete a configuration\.
 

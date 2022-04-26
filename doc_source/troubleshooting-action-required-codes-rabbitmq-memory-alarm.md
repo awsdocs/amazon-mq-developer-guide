@@ -1,4 +1,4 @@
-# Amazon MQ for RabbitMQ: High memory alarm<a name="troubleshooting-status-codes-rabbitmq-memory-alarm"></a>
+# Amazon MQ for RabbitMQ: High memory alarm<a name="troubleshooting-action-required-codes-rabbitmq-memory-alarm"></a>
 
 RabbitMQ will raise a high memory alarm when the broker's memory usage, identified by CloudWatch metric `RabbitMQMemUsed`, exceeds the memory limit, identified by `RabbitMQMemLimit`\. `RabbitMQMemLimit` is set by Amazon MQ and has been specifically tuned considering the memory available for each host instance type\.
 
@@ -16,7 +16,7 @@ Use the information in this section to help you diagnose and resolve RabbitMQ hi
 + [Addressing high memory alarm](#addressing-high-memory-alarm)
 + [Reducing the number of connections and channels](#reducing-connections-and-channels)
 + [Addressing paused queue synchronizations in cluster deployments](#addressing-paused-queue-sync)
-+ [Addressing restart loops in single\-instance brokers](#w268aac33c15b9c25)
++ [Addressing restart loops in single\-instance brokers](#w277aac33c15b9c25)
 + [Preventing high memory alarms](#preventing-high-memory-alarm)
 
 ## Diagnosing high memory alarm using the RabbitMQ web console<a name="diagnose-using-console"></a>
@@ -52,7 +52,7 @@ For each contributor that you identify, we recommended the following set of acti
 
 | Reason for high memory use | Amazon MQ recommendation | 
 | --- | --- | 
-| The number of messages in the queues is too high\. |  Do any of the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/troubleshooting-status-codes-rabbitmq-memory-alarm.html)  | 
+| The number of messages in the queues is too high\. |  Do any of the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/troubleshooting-action-required-codes-rabbitmq-memory-alarm.html)  | 
 | The number of queues configured on the broker is too high\. | Reduce the number of queues\. | 
 | The number of connections established on the broker is too high\. | Reduce the number of connections\. For more information, see [Reducing the number of connections and channels](#reducing-connections-and-channels)\. | 
 | The number of channels established on the broker is too high\. | Reduce the number of channels\. For more information see, [Reducing the number of connections and channels](#reducing-connections-and-channels)\. | 
@@ -87,7 +87,7 @@ While addressing RabbitMQ's high memory alarms, you may find that messages on on
 
 For information about stopping and retrying paused queue syncs, see [Resolving RabbitMQ paused queue synchronization](rabbitmq-queue-sync.md)\.
 
-## Addressing restart loops in single\-instance brokers<a name="w268aac33c15b9c25"></a>
+## Addressing restart loops in single\-instance brokers<a name="w277aac33c15b9c25"></a>
 
 An Amazon MQ for RabbitMQ single\-instance broker that raises a high memory alarm is at risk of becoming unavailable if it restarts and does not have enough memory to start up\. This can cause RabbitMQ to enter a restart loop and prevent any further interactions with the broker until the issue is resolved\. If your broker is in a restart loop, you will not be able to apply the Amazon MQ recommended actions previously described in this section to resolve the high memory alarm\.
 
@@ -100,7 +100,7 @@ For each contributing factor you identify, we recommends the following set of ac
 
 | Reason high memory use | Amazon MQ recommendation | 
 | --- | --- | 
-| The number of messages in the queues is too high\. |  Do the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/troubleshooting-status-codes-rabbitmq-memory-alarm.html)  | 
+| The number of messages in the queues is too high\. |  Do the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/troubleshooting-action-required-codes-rabbitmq-memory-alarm.html)  | 
 | The number of queues configured on the broker is too high\. | Set, or reduce the [queue count limit](rabbitmq-defaults.md)\. | 
 | The number of connections established on the broker is too high\. | Set, or reduce the [connection count limit](rabbitmq-defaults.md)\. | 
 | The number of channels established on the broker is too high\. | Set a maximum number of channels per connection on client applications\. | 

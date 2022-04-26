@@ -4,9 +4,9 @@
 
 **Contents**
 + [I can't connect to my broker web console or endpoints\.](#issues-connecting-to-console-or-endpoint)
-+ [My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returing SSL exceptions\.](#issues-ssl-certificate-exception)
++ [My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returning SSL exceptions\.](#issues-ssl-certificate-exception)
 + [I created a broker but broker creation failed\.](#issues-creating-a-broker)
-+ [My broker restarted and I'm not sure why\.](#w268aac33b7c13)
++ [My broker restarted and I'm not sure why\.](#w277aac33b7c13)
 
 ## I can't connect to my broker web console or endpoints\.<a name="issues-connecting-to-console-or-endpoint"></a>
 
@@ -67,7 +67,7 @@ The following ports are grouped according to engine types because Amazon MQ for 
 
    1.  Run the following `telnet` command to test the network path for your broker\. Replace the endpoint with your information\. Replace *port* with port number `8162` for the web console, or other wire\-level ports to test additional protocols as needed\. 
 **Note**  
- For acive/standby deployments, you will recieve a `Connect failed` error message if you run `telnet` with the standby endpoint\. This is expected, as the standby instance itself is running, but the ActiveMQ process is not running and does not have acess to the broker's Amazon EFS storage volume\. Run the command for both `-1` and `-2` endpoints to ensure you test both the active and the standby instances\. 
+ For active/standby deployments, you will receive a `Connect failed` error message if you run `telnet` with the standby endpoint\. This is expected, as the standby instance itself is running, but the ActiveMQ process is not running and does not have access to the broker's Amazon EFS storage volume\. Run the command for both `-1` and `-2` endpoints to ensure you test both the active and the standby instances\. 
 
       ```
       $ telnet b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-west-2.amazonaws.com port
@@ -170,22 +170,19 @@ This step does not apply to Amazon MQ for RabbitMQ brokers with public accessibi
 
 ------
 
-## My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returing SSL exceptions\.<a name="issues-ssl-certificate-exception"></a>
+## My broker is running, and I can verify connectivity using `telnet`, but my clients are unable to connect and are returning SSL exceptions\.<a name="issues-ssl-certificate-exception"></a>
 
- Your broker endpoint certificate may have been updated during the broker [maintenance window](maintaining-brokers.md)\. Amazon MQ broker certificates are rotated every 12 months and updated about a month before a certificate expires\.
+ Your broker endpoint certificate may have been updated during the broker [maintenance window](maintaining-brokers.md)\. Amazon MQ broker certificates are rotated periodically to ensure continued availability and security of brokers\.
 
  We recommend using the Amazon root certificate authority \(CA\) in [Amazon Trust Services](https://www.amazontrust.com/repository/) to authenticate against in your clients' trust store\. All Amazon MQ broker certificates are signed with this root CA\. By using an Amazon root CA, you will no longer need to download the new Amazon MQ broker certificate every time there is a certificate update on the broker\. 
-
-**Note**  
- With Amazon MQ for ActiveMQ, the certificate is placed on the instance, while with Amazon MQ for RabbitMQ ,the certificate is on the Network Load Balancer\. 
 
 ## I created a broker but broker creation failed\.<a name="issues-creating-a-broker"></a>
 
 If your broker is in a `CREATION_FAILED` status, do the following\.
-+  Check your IAM permissions\. To create a broker must either use the AWS managed IAM policy `AmazonMQFullAccess` or have the correct set of Amazon EC2 permissions in your custome IAM policy\. To learn more about the required Amazon EC2 permissions you need, see [ IAM permissions required to create an Amazon MQ broker](security-api-authentication-authorization.md#security-permissions-required-to-create-broker)\. 
++  Check your IAM permissions\. To create a broker must either use the AWS managed IAM policy `AmazonMQFullAccess` or have the correct set of Amazon EC2 permissions in your custom IAM policy\. To learn more about the required Amazon EC2 permissions you need, see [ IAM permissions required to create an Amazon MQ broker](security-api-authentication-authorization.md#security-permissions-required-to-create-broker)\. 
 +  Check if the subnet you are choosing for your broker is in a shared Amazon Virtual Private Cloud \(VPC\)\. To create an Amazon MQ broker in a shared Amazon VPC, you must create it in the account that owns the Amazon VPC\. 
 
-## My broker restarted and I'm not sure why\.<a name="w268aac33b7c13"></a>
+## My broker restarted and I'm not sure why\.<a name="w277aac33b7c13"></a>
 
 If your broker has restarted automatically, it may be due to one of the following reasons\.
 +  Your broker may have restarted because of a scheduled weekly maintenance window\. Periodically, Amazon MQ performs maintenance to the hardware, operating system, or the engine software of a message broker\. The duration of the maintenance varies, but can last up to two hours, depending on the operations that are scheduled for your message broker\. Brokers might restart at any point during the two hour maintenance window\. For more information about broker maintenance windows, see [Maintaining an Amazon MQ broker](maintaining-brokers.md)\. 

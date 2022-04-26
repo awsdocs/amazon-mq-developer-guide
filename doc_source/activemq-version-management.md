@@ -21,7 +21,7 @@
 
 ## Major and minor version upgrades<a name="activemq-version-management-upgrading"></a>
 
- With Amazon MQ, you control when to upgrade your brokers to new versions\. When [ automatic minor version upgrade](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-prop-updatebrokerinput-autominorversionupgrade) is activated, Amazon MQ will automatically upgrade your broker engine to new ActiveMQ minor versions as they are released and supported by Amazon MQ\. 
+ With Amazon MQ, you control when to upgrade your brokers to new versions\. When [ automatic minor version upgrade](https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id.html#brokers-broker-id-prop-updatebrokerinput-autominorversionupgrade) is activated, Amazon MQ will automatically upgrade your broker engine to new minor versions as they are released and supported by Amazon MQ\. 
 
  To perform a major version upgrade, you must manually upgrade your broker's engine version number\. Minor and major version upgrades occure at the same time as other broker patching operations, during your scheduled [maintenance window](maintaining-brokers.md)\. If you opt out of automatic minor version upgrades, you can manually upgrade your broker to a new supported minor version by following the same procedure as a major upgrade\. 
 

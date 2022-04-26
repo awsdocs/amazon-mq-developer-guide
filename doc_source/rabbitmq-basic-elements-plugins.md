@@ -34,6 +34,9 @@ In the request body, you must specify either a queue or an exchange but not both
 }
 ```
 
+**Important**  
+You cannot configure shovel between queues or exchanges if the shovel destination is a private broker\. You can only configure shovel between queues or exchanges in public brokers, or between a source in a private broker, and a destination in a public broker\.
+
 For more information about using dynamic shovels, see [RabbitMQ dynamic shovel plugin](https://www.rabbitmq.com/shovel-dynamic.html)\.
 
 **Note**  
@@ -44,6 +47,9 @@ Amazon MQ does not support using static shovels\.
  Amazon MQ supports federated exchanges and queues\. With federation, you can replicate the flow of messages between queues, exchanges and consumers on separate brokers\. Federated queues and exchanges use point\-to\-point links to connect to peers in other brokers\. While federated exchanges, by default, route messages once, federated queues can move messages any number of times as needed by consumers\.
 
 You can use federation to allow a *downstream* broker to consume a message from an exchange or a queue on an *upstream*\. You can enable federation on downstream brokers by using the RabbitMQ web console or the management API\.
+
+**Important**  
+You cannot configure federation if the downstream queue or exchange is in a private broker\. You can only configure federation between queues or exchanges in public brokers, or between an upstream queue or exchange in a private broker, and a downstream queue or exchange in a public broker\.
 
 For example, using the management API, you can configure federation by doing the following\.
 + Configure one or more upstreams that define federation connections to other nodes\. You can define federation connections by using the RabbitMQ web console or the management API\. Using the management API, you can create a `POST` request to `/api/parameters/federation-upstream/%2f/my-upstream` with the following request body\.
