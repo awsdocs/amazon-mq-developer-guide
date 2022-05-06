@@ -16,7 +16,7 @@ Use the information in this section to help you diagnose and resolve RabbitMQ hi
 + [Addressing high memory alarm](#addressing-high-memory-alarm)
 + [Reducing the number of connections and channels](#reducing-connections-and-channels)
 + [Addressing paused queue synchronizations in cluster deployments](#addressing-paused-queue-sync)
-+ [Addressing restart loops in single\-instance brokers](#w277aac33c15b9c25)
++ [Addressing restart loops in single\-instance brokers](#w279aac33c15b9c25)
 + [Preventing high memory alarms](#preventing-high-memory-alarm)
 
 ## Diagnosing high memory alarm using the RabbitMQ web console<a name="diagnose-using-console"></a>
@@ -87,7 +87,7 @@ While addressing RabbitMQ's high memory alarms, you may find that messages on on
 
 For information about stopping and retrying paused queue syncs, see [Resolving RabbitMQ paused queue synchronization](rabbitmq-queue-sync.md)\.
 
-## Addressing restart loops in single\-instance brokers<a name="w277aac33c15b9c25"></a>
+## Addressing restart loops in single\-instance brokers<a name="w279aac33c15b9c25"></a>
 
 An Amazon MQ for RabbitMQ single\-instance broker that raises a high memory alarm is at risk of becoming unavailable if it restarts and does not have enough memory to start up\. This can cause RabbitMQ to enter a restart loop and prevent any further interactions with the broker until the issue is resolved\. If your broker is in a restart loop, you will not be able to apply the Amazon MQ recommended actions previously described in this section to resolve the high memory alarm\.
 

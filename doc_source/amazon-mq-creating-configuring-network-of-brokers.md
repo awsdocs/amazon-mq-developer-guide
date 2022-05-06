@@ -94,13 +94,13 @@ After you allow traffic between your brokers, you must configure network connect
               uri="static:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)"/>
           </networkConnectors>
           ```
-        + If you are connecting the broker to an active/standby broker, use the `masterslave:` prefix and the OpenWire endpoint `uri` for both brokers\. For example:
+        + If you are connecting the broker to an active/standby broker, use the `static+failover` transport and the OpenWire endpoint `uri` for both brokers with the following query parameters `?randomize=false&maxReconnectAttempts=0`\. For example:
 
           ```
           <networkConnectors>
             <networkConnector name="connector_1_to_2" userName="myCommonUser" duplex="true"
-              uri="masterslave:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617,
-              ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)"/>
+              uri="static:(failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617,
+              ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)?randomize=false&maxReconnectAttempts=0)"/>
           </networkConnectors>
           ```
 **Note**  

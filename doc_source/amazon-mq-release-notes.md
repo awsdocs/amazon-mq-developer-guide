@@ -5,6 +5,7 @@ The following table lists Amazon MQ feature releases and improvements\. For chan
 
 | Date | Documentation Update | 
 | --- | --- | 
+| May 4, 2022 |  Amazon MQ adds inclusive language for `networkConnector` element in broker configuration\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | April 25, 2022 |  Amazon MQ This release adds the `CRITICAL_ACTION_REQUIRED` broker state and the `ActionRequired` API property\. `CRITICAL_ACTION_REQUIRED` informs you when your broker is degraded\. `ActionRequired` provides you with a code which you can use to find instructions in the Developer Guide on how to resolve the issue\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html)  | 
 | April 20, 2022 | Amazon MQ now supports ActiveMQ 5\.16\.4, a minor engine version release\. For more information, see the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-release-notes.html) | 
 | March 1, 2022 |  Amazon MQ is now available in the Asia Pacific \(Jakarta\) Region\. For information on available regions, see [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/amazon-mq.html) in the *AWS General Reference guide*\.  | 

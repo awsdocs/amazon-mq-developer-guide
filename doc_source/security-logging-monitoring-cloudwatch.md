@@ -170,4 +170,5 @@ For more information about dimension names, see [Dimension](https://docs.aws.ama
 | Dimension | Description | 
 | --- | --- | 
 | Queue | The name of the queue\. | 
-| VirtualHost | Name of the virtual host\. | 
+| VirtualHost | The name of the virtual host\. | 
+| Broker | The name of the broker\. | 
