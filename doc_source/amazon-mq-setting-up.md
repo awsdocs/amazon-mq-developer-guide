@@ -12,7 +12,7 @@ Before you can use Amazon MQ, you must complete the following steps\.
 
 To access any AWS service, you must first create an [Amazon Web Services account](https://aws.amazon.com/)\. This is an Amazon account that can use AWS products\. You can use your AWS account to view your activity and usage reports and to manage authentication and access\.
 
-1. Navigate to the [AWS home page](https://aws.amazon.com/), and then choose **Create an Amazon Web Services \]Account**\.
+1. Navigate to the [AWS home page](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
 
 1. Follow the instructions\.
 
