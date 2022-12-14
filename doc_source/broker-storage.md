@@ -6,6 +6,7 @@ Amazon MQ for ActiveMQ supports Amazon Elastic File System \(EFS\) and Amazon El
 You can use Amazon EBS only with the `mq.m5` broker instance type family\.
 Although you can change the *broker instance type*, you can't change the *broker storage type* after you create the broker\.
 Amazon EBS replicates data within a single Availability Zone and doesn't support the [ActiveMQ active/standby](active-standby-broker-deployment.md) deployment mode\.
+Storage capacity is determined by *broker instance type* as noted in [Quotas](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html#data-storage-limits)\.
 
 ## Differences between Storage Types<a name="differences-between-storage-types"></a>
 
