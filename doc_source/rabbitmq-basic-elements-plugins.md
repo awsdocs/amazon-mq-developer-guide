@@ -33,6 +33,20 @@ In the request body, you must specify either a queue or an exchange but not both
   }
 }
 ```
+When creating a dynamic shovel that uses an Amazon MQ managed exhange as a source, make sure to specify `amqps://` in `src-uri` as only port `5671` is available for communication\.
+
+```
+{
+  "value": {
+    "src-protocol": "amqp091",
+    "src-uri":  "amqps://localhost",
+    "src-queue":  "source-queue-name",
+    "dest-protocol": "amqp091",
+    "dest-uri": "amqp:///b-c8352341-ec91-4a78-ad9c-a43f23d325bb.mq.us-west-2.amazonaws.com:5671",
+    "dest-queue": "destination-queue-name"
+  }
+}
+```
 
 **Important**  
 You cannot configure shovel between queues or exchanges if the shovel destination is a private broker\. You can only configure shovel between queues or exchanges in public brokers, or between a source in a private broker, and a destination in a public broker\.
