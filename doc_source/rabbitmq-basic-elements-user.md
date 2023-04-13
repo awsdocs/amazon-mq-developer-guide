@@ -21,7 +21,7 @@ POST /api/users/username HTTP/1.1
 
 The `tags` key is mandatory, and is a comma\-separated list of tags for the user\. Amazon MQ supports `administrator`, `management`, and `monitoring` user tags\.
 
-You can set permissions for an individual user by using the following API endpoint and request body\. Replace *vhost* and *username* with your information\. For the default vhost `/`, use `2f%`\.
+You can set permissions for an individual user by using the following API endpoint and request body\. Replace *vhost* and *username* with your information\. For the default vhost `/`, use `%2f`\.
 
 ```
 POST /api/permissions/vhost/username HTTP/1.1
